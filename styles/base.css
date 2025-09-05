@@ -1,0 +1,52 @@
+
+
+*{
+font-family: "josefin sans", sans-serif;
+box-sizing: border-box;
+}
+
+/* =======================HEADER============================*/
+   header {
+    display: grid;
+    grid-template-columns: 30px auto 44px;
+    border-bottom: solid 1px #ddd;
+    column-gap: 5px;
+    align-items: center;
+   }
+   header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    
+
+   }
+   header span {
+    font-size: 1.2rem;
+    color: #3D405B;
+   }
+   /* =======================HAMBURGER============================*/
+   .hamburger::before {
+      content: "\2630";
+}
+   .hamburger.show::before {
+     content: "\00D7";
+     font-size: 2rem;
+}
+   .hamburger {
+      background: none;
+      color: #3D405B;
+      border: none;
+      cursor: pointer;
+      font-size: 2rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+/* =======================NAVIGATION============================*/
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
