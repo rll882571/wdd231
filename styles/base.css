@@ -4,7 +4,7 @@
 :root {
   /* City colors */
   --color-blue: #003366;
-  --color-sky: #66CCFF;
+  --color-sky: #0099E6; /* <-- CORRIGIDO! Este novo azul tem bom contraste com texto branco. */
   --color-sand: #FFCC00;
   --color-nature: #006633;
   --color-background: #F0F8FF;
