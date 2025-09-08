@@ -55,13 +55,115 @@ box-sizing: border-box;
 }
 
 /* =======================NAVIGATION============================*/
+@media (max-width: 768px) {
 .navigation {
     display: none;
+    
 }
-
 .navigation.show {
     display: block;
 }
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-sky); /* Cor de fundo principal fica aqui */
+}
+.navigation li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Linha divisória sutil */
+    height: 30px;
+    
+
+}
+.navigation li:last-child {
+    border-bottom: none;
+}
+.navigation li a {
+    display: block; /* Faz o link ocupar toda a área do <li> */
+    padding: 1rem;  /* Espaçamento interno generoso, ótimo para toque */
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-align: center; /* Centraliza o texto */
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+}
+.navigation li a:hover {
+    background-color: var(--color-blue); /* Muda a cor de fundo ao passar o mouse */
+}
+}
+
+
+/* =======================HOME SECTIONS============================*/
+
+main {
+    display: grid;
+    grid-template-columns: 1fr; /* Muda para apenas UMA coluna */
+    gap: 20px;
+    padding: 30px;
+	  max-width: 85%;
+	  margin:  auto;
+    margin-bottom: 2%;
+}
+.third-card {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+.inner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de larguras iguais */
+    gap: 15px; /* Um espaço entre os 6 itens do curso */   
+}
+.inner-grid .inner {
+    background-color: var(--color-background);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.card {
+    background-color: var(--color-background);
+    padding: 0px;
+  
+  
+}
+.card header {
+  
+    color: #fff;
+
+    margin-bottom: 10px;
+}
+
+
+.card h2 {
+    text-align: center;
+    margin-top: 0%;
+    margin-bottom: 5%;
+    padding-top: 0%;
+    padding-left: 0%;
+    padding-right: 0%;
+
+}
+.card p {
+    margin-left: 10px;
+    
+}
+
+.card-one h2{
+    background-color: var(--color-sky);
+    color: #fff;
+    padding: 3px;
+    
+    
+	
+}
+.profile  {
+  display: flex;
+    width: 100px;
+    height: 80%;
+    padding: 0px;
+    
+}
+
 
 /* =======================fOOTER============================*/
 
