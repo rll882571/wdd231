@@ -88,7 +88,7 @@ box-sizing: border-box;
     transition: background-color 0.3s ease; /* Transição suave para o hover */
 }
 .navigation li a:hover {
-    background-color: var(--color-blue); /* Muda a cor de fundo ao passar o mouse */
+    color: var(--color-sand); /* Muda a cor do texto ao passar o mouse */
 }
 }
 
