@@ -20,7 +20,8 @@
 }
 
 /* =======================fOOTER============================*/
-footer {
+@media screen and (min-width: 769px) {
+.footer-grid {
   display: grid;
   grid-template-columns: 1fr auto 1fr; 
   background-color: var(--color-sky);
@@ -37,15 +38,20 @@ footer {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: -200px;
+  
 }
 
-.right-content {
+.company-address p {
   grid-column: 1;
   text-align: right;
 }
 
-.left-content {
+.company-info{
   grid-column: 3;
   text-align: left;
+}
+.company-info p{
+  text-align: right;
+  margin: 0;  
+}
 }

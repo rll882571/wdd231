@@ -64,14 +64,16 @@ box-sizing: border-box;
 }
 
 /* =======================fOOTER============================*/
-@media screen and (max-width: 768px) {
+
   /* Seus estilos aqui */
   .footer-grid {
   display: flex;
   flex-direction: column;
   gap: 10px;  
+  background-color: var(--color-sky);
+  
 }
-}
+
 .company-address p {
   display: flex;
   flex-direction: column;
@@ -100,6 +102,11 @@ box-sizing: border-box;
   height: 22px;
 }
 .social a:hover {
-  background-color: var(--color-sky);
-  border: 1px solid var(--color-sky);
+  background-color: var(--color-sand);
+  
+}
+
+.company-info p{
+ 
+  margin: 0;
 }
