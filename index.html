@@ -19,10 +19,7 @@
 </head>
 <body>
    <header>
-      <picture>
-        <source srcset="images/logo-_1_.webp" type="image/webp">
         <img src="images/logo-_1_.webp" alt="Logo da empresa" width="150" height="75" loading="lazy" decoding="async">
-      </picture>
 
       <span>Fortaleza Chamber of Commerce</span>
       <button id="nav-button" class="hamburger" aria-label="navigation"></button>
@@ -55,24 +52,22 @@
             <section class="card">
                <div class="card-one">
                 <h2>Student Photo</h2>
-                <picture>
-                  <img class="profile" src="images/profile.webp" alt="profile photo" width="100" height="133" loading="lazy" decoding="async">
-               </picture>
+                <img class="profile" src="images/profile.webp" alt="profile photo" width="100" height="133" loading="lazy" decoding="async">
                </div>
             </section>
             <section class="third-card">
-                 <div class="card-one">
-                    <h2>Web Certification Courses</h2>
-                     <div class="inner-grid">
-                         <div class="inner">Item 1 (Curso)</div>
-                         <div class="inner">Item 2 (Curso)</div>
-                         <div class="inner"> Item 3 (Curso)</div>
-                         <div class="inner">Item 4 (Curso)</div>
-                         <div class="inner">Item 5 (Curso)</div>
-                         <div class="inner">Item 6 (Curso)</div>
-                    </div>
+                   <div class="card-one">
+                      <h2>Web Certification Courses</h2>
+                     <div id="filter-buttons">
+                       <button id="all" class="active">Show All</button>
+                  <button id="cse">CSE</button>
+                 <button id="wdd">WDD</button>
                 </div>
-            </section>
+                 <p>Total Credits: <span id="total-credits">0</span></p> 
+              <div id="course-grid" class="inner-grid">
+            </div>
+        </div>
+</section>
         
 </main>
 <footer>
@@ -83,9 +78,9 @@
         </div>
 
         <div class="social">
-            <a href="" target="_blank"><img src="images/whatsapp.svg" alt="whatsapp" width="16" height="16"></a>
-            <a href="" target="_blank"><img src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
-            <a href="" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
+            <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"><img src="images/whatsapp.svg" alt="whatsapp" width="16" height="16"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
+            <a href="https://br.linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
         </div>
         <div class="company-info">
             <p>WDD231 Class project</p>

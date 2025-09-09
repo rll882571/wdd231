@@ -212,3 +212,31 @@ main {
  
   margin: 0;
 }
+/* corrections */
+.navigation li.current a {
+    color: var(--color-sand); /* Cor de destaque */
+    font-weight: bold;
+    
+}
+
+/* Estilo para os cursos completados */
+.inner.completed {
+    background-color: #d4edda; /* Um verde claro para indicar sucesso */
+    border-left: 5px solid #28a745; /* Uma borda verde */
+}
+
+/* Estilo para os botões de filtro */
+#filter-buttons button {
+    padding: 8px 16px;
+    margin: 0 5px 15px;
+    border: 1px solid var(--color-blue);
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#filter-buttons button:hover {
+    background-color: var(--color-sky);
+    color: #fff;
+}
