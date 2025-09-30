@@ -240,3 +240,87 @@ main {
     background-color: var(--color-sky);
     color: #fff;
 }
+
+
+#member-list {
+    /* O Grid substitui o display:grid e grid-template-columns do 'main' */
+    display: grid;
+    /* Faz as colunas se ajustarem (1 coluna em telas pequenas) */
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    padding: 20px 0;
+    margin: 0 auto; /* Centraliza o grid */
+    max-width: 1200px; /* Limita a largura para telas grandes, se quiser diferente do 'main' */
+}
+
+
+.company-card { /* Seu JS cria a tag <section> com esta classe */
+    background-color: #e0e0e8; 
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Usa Flexbox para organizar o conteúdo verticalmente */
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Para espaçar o conteúdo uniformemente */
+    min-height: 350px; /* Ajuda a manter uma altura mínima consistente */
+}
+
+.company-card img {
+    width: 100px; /* Tamanho fixo para logos */
+    height: 100px;
+    object-fit: contain; /* Melhor para logos, garante que caiba sem cortar */
+    margin-bottom: 15px;
+}
+
+.company-card h3 {
+    color: var(--color-blue);
+    font-size: 1.4em;
+    margin: 0 0 10px 0;
+}
+
+.company-card p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.company-card hr {
+    width: 80%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+/* 3. Estilos Específicos para Níveis de Associação */
+.membership-level {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.gold {
+    background-color: var(--color-sand);
+    color: var(--color-blue);
+}
+.silver {
+    background-color: #c0c0c0;
+    color: #333;
+}
+.member {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Adaptação do Grid para telas maiores no DIRECTORY */
+@media (min-width: 769px) {
+    /* Faz os cartões do diretório irem para 3 colunas em telas maiores */
+    #member-list {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}

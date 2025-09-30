@@ -1,0 +1,67 @@
+{
+  "companies": [
+    {
+      "name": "TechSoluções Digitais",
+      "address": "Rua das Inovações, 101 - São Paulo, SP",
+      "phone": "+55 11 98765-4321",
+      "website": "https://www.techsolucoes.com.br",
+      "image_filename": "techsolucoes_logo.webp",
+      "membership_level": 3,
+      "services": ["Desenvolvimento Web", "Cloud Computing"]
+    },
+    {
+      "name": "AgroVerde Sustentável",
+      "address": "Av. Principal, 500 - Ribeirão Preto, SP",
+      "phone": "+55 16 3333-2222",
+      "website": "https://www.agroverde.com",
+      "image_filename": "agroverde_icon.png",
+      "membership_level": 2,
+      "services": ["Consultoria Agrícola", "Produtos Orgânicos"]
+    },
+    {
+      "name": "Construtora Horizonte",
+      "address": "Alameda dos Edifícios, 303 - Rio de Janeiro, RJ",
+      "phone": "+55 21 2121-5555",
+      "website": "https://www.horizonteconstrutora.com",
+      "image_filename": "horizonte_logo.jpg",
+      "membership_level": 1,
+      "services": ["Obras Residenciais", "Reformas Comerciais"]
+    },
+    {
+      "name": "Café Aroma Fino",
+      "address": "Praça Central, 12 - Belo Horizonte, MG",
+      "phone": "+55 31 99888-7777",
+      "website": "https://www.aromafino.com.br",
+      "image_filename": "aroma_fino_icon.svg",
+      "membership_level": 3,
+      "services": ["Torrefação Artesanal", "Vendas Online"]
+    },
+    {
+      "name": "Logística Rápida BR",
+      "address": "Rodovia Expressa, Km 5 - Curitiba, PR",
+      "phone": "+55 41 4000-1010",
+      "website": "https://www.logisticarapida.com",
+      "image_filename": "logistica_rapida_logo.webp",
+      "membership_level": 2,
+      "services": ["Transporte de Cargas", "Rastreamento Global"]
+    },
+    {
+      "name": "Clínica Saúde Total",
+      "address": "Rua dos Médicos, 202 - Porto Alegre, RS",
+      "phone": "+55 51 3030-4040",
+      "website": "https://www.saudetotal.com.br",
+      "image_filename": "saude_total_icon.png",
+      "membership_level": 1,
+      "services": ["Atendimento Clínico", "Exames Laboratoriais"]
+    },
+    {
+      "name": "Editora Saber Mais",
+      "address": "Av. da Leitura, 777 - Brasília, DF",
+      "phone": "+55 61 3232-1313",
+      "website": "https://www.editorasabermais.com",
+      "image_filename": "saber_mais_logo.jpg",
+      "membership_level": 3,
+      "services": ["Publicação de Livros", "Materiais Didáticos"]
+    }
+  ]
+}
