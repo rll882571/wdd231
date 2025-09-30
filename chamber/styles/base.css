@@ -26,6 +26,7 @@ header {
   border-bottom: solid 1px #ddd;
   column-gap: 5px;
   align-items: center;
+  
 }
 
 /* <-- SEÇÃO 2.2: Header Imagem */
@@ -79,9 +80,10 @@ header span {
   /* <-- SEÇÃO 3.3: Lista de Navegação */
   .navigation ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     background-color: var(--color-sky);
+    max-width: 85%;   /* igual ao main */
+    margin-left: auto;
+    padding: 0 30px;  /* mesmo espaçamento interno do main */
   }
 
   /* <-- SEÇÃO 3.4: Item da Lista (Divisor) */
