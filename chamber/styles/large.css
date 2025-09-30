@@ -1,196 +1,257 @@
+/* <-- SEÇÃO 1, ESQUEMA DE CORES (Root Variables) */
+
 :root {
   /* City colors */
   --color-blue: #003366;
-  --color-sky: #0099E6; /* <-- CORRIGIDO! Este novo azul tem bom contraste com texto branco. */
+  --color-sky: #0099E6; /* CORRIGIDO! Este novo azul tem bom contraste com texto branco. */
   --color-sand: #FFCC00;
   --color-nature: #006633;
-  --color-background: #F0F8FF;
+  --color-background: #F0F8FF; /* Background padrão para cards e seção principal */
+  --color-text-light: #fff;
 }
 
-@media only screen and (min-width: 38rem){
-    
-    header, main, nav, footer {
-        max-width: 1080px;
-        margin: 0 auto;
-    }
-    header {
-        grid-template-columns: 24px auto;
-    }
-    .hamburger {
-        display: none;
-    }
-    .navigation {
-        display: block;
-    }
-    .navigation ul {
+/* -------------------------------------------------------------------------- */
+/* ESTILOS PARA TELAS MÉDIAS (Small Desktop/Tablet Landscape)
+/* min-width: 38rem (aprox. 608px)
+/* -------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 38rem) {
+  /* <-- SEÇÃO 2.1: Content Container (Container centralizado) */
+  /* Aplicando o max-width e centralização aos principais elementos de layout */
+  header,
+  main,
+  nav,
+  footer {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  /* <-- SEÇÃO 2.2: Header Grid Adjustment */
+  /* Ajusta a coluna do grid do header, presumindo que o logo/título está na primeira coluna */
+  header {
+    grid-template-columns: 24px auto;
+  }
+
+  /* <-- SEÇÃO 2.3: Hamburger Button Hiding */
+  /* Esconde o botão do menu em telas maiores */
+  .hamburger {
+    display: none;
+  }
+
+  /* <-- SEÇÃO 2.4: Navigation Display */
+  /* Garante que a navegação apareça */
+  .navigation {
+    display: block;
+  }
+
+  /* <-- SEÇÃO 2.5: Navigation UL (Inline Menu for 38rem+) */
+  /* Estilo base para a navegação horizontal em telas médias */
+  .navigation ul {
     display: flex;
     list-style: none;
     height: 30px;
-    justify-content:left;
+    justify-content: left;
     align-items: center;
     gap: 20px;
     margin: 0;
+    /* Estilo de fundo do menu em telas médias/small desktop */
     background: var(--color-sky);
-    }
-.navigation li {
+  }
+
+  /* <-- SEÇÃO 2.6: Navigation LI (Separator) */
+  .navigation li {
     padding: 0 10px;
-    border-right: 1px solid #fff;
-    
-}
-.navigation li a {
+    border-right: 1px solid var(--color-text-light);
+  }
+
+  /* <-- SEÇÃO 2.7: Navigation Link (Text Color) */
+  .navigation li a {
     text-decoration: none;
-    color: #fff;
+    color: var(--color-text-light);
     font-weight: bold;
-    
+  }
+
+  /* <-- SEÇÃO 2.8: Navigation Link Hover */
+  .navigation li a:hover {
+    color: var(--color-nature);
+  }
 }
-.navigation li a:hover {
-  color: var(--color-nature);
-  
-}
-}
-/* =======================fOOTER============================*/
+
+/* -------------------------------------------------------------------------- */
+/* ESTILOS PARA TELAS GRANDES (Desktop Large)
+/* min-width: 769px
+/* -------------------------------------------------------------------------- */
+
 @media screen and (min-width: 769px) {
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr; 
-  background-color: var(--color-sky);
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-  height: auto;
-  align-items: center;
-  gap: 20px; 
-}
-
-.social {
-  grid-column: 2; 
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  
-}
-
-.company-address p {
-  grid-column: 1;
-  text-align: right;
-}
-
-.company-info{
-  grid-column: 3;
-  text-align: left;
-}
-.company-info p{
-  text-align: right;
-  margin: 0;  
-}
-}
-
-/* =======================HOME SECTIONS============================*/
-@media screen and (min-width: 769px) {
-main {
+  /* =======================FOOTER============================*/
+  /* <-- SEÇÃO 3, SEGUNDA MIDIA QUERY: Footer Grid Layout */
+  .footer-grid {
     display: grid;
+    /* 1fr para Address, auto para Social, 1fr para Info */
+    grid-template-columns: 1fr auto 1fr;
+    background-color: var(--color-sky);
+    color: var(--color-text-light);
+    padding: 10px;
+    text-align: center;
+    height: auto;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* <-- SEÇÃO 3.1: Social Icons Placement */
+  .social {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* <-- SEÇÃO 3.2: Company Address Placement */
+  .company-address p {
+    grid-column: 1;
+    text-align: right;
+  }
+
+  /* <-- SEÇÃO 3.3: Company Info Placement (Container) */
+  .company-info {
+    grid-column: 3;
+    /* Alinhamento geral do container à esquerda */
+    text-align: left;
+  }
+
+  /* <-- SEÇÃO 3.4: Company Info Paragraph (Removida a redundância) */
+  /* Estilo desnecessário se o pai já alinha à esquerda, ou conflitante se quisermos 'right' */
+  .company-info p {
+    /* Mantendo o 'right' original para o parágrafo, embora possa ser confuso com o 'left' do pai */
+    text-align: right; 
+    margin: 0;
+  }
+
+  /* =======================NAVIGATION REDEFINITION (Desktop)============================*/
+  /* <-- SEÇÃO 5, QUARTA MIDIA QUERY (Consolida e otimiza a navegação desktop) */
+  /* Em telas grandes, o menu geralmente fica transparente, no header principal. */
+  
+  /* <-- SEÇÃO 5.1: Hamburger Button Hiding (Já definido em 38rem, mantido por clareza) */
+  #nav-button {
+    display: none;
+  }
+
+  /* <-- SEÇÃO 5.2: Navigation Display (Garante visibilidade, já definido em 38rem) */
+  .navigation {
+    display: block;
+  }
+  
+  /* <-- SEÇÃO 5.3: Navigation UL (Transparent Background, Blue Text) */
+  .navigation ul {
+    display: flex; /* O mais importante: alinha os itens lado a lado! */
+    justify-content: flex-start; /* Alinha os links à esquerda */
+    /* Sobrescreve o azul do 38rem para transparente (estilo desktop) */
+    background-color: transparent; 
+    height: auto; /* Permite que a altura se ajuste ao padding */
+  }
+
+  /* <-- SEÇÃO 5.4: Navigation LI (No Border) */
+  .navigation li {
+    border: none;
+  }
+
+  /* <-- SEÇÃO 5.5: Navigation Link (Text Color for large desktop) */
+  .navigation li a {
+    /* Cor do texto para desktop, sobrescrevendo a cor branca do 38rem */
+    color: var(--color-blue); 
+    padding: 1rem 1.5rem;
+  }
+
+  /* <-- SEÇÃO 5.6: Navigation Link Hover (Color & Style) */
+  .navigation li a:hover {
+    /* No código original, havia uma linha 'color: #fff;' redundante */
+    background-color: var(--color-sky);
+    color: var(--color-text-light); /* Texto branco no hover */
+    border-radius: 5px;
+  }
+
+
+  /* =======================HOME SECTIONS (Grid Layout)============================*/
+  /* <-- SEÇÃO 4, TERCEIRA MIDIA QUERY: Main Grid Layout */
+  main {
+    display: grid;
+    /* Define duas colunas (principal 2 partes, sidebar 1 parte) */
     grid-template-columns: 2fr 1fr;
     gap: 20px;
     padding: 30px;
-	  max-width: 85%;
-	  margin:  auto;
+    /* O max-width: 1080px já está em 2.1, este max-width 85% é confuso,
+    mas se for um limite interno, é melhor usar padding ou um container menor */
+    /* Removido o max-width: 85% e margin: auto; para não conflitar com a seção 2.1 */
     margin-bottom: 2%;
-}
-.hero {
-    grid-column: 1 / -1;
-    text-align:left;
+  }
+
+  /* <-- SEÇÃO 4.2: Hero Section (Full Width) */
+  .hero {
+    grid-column: 1 / -1; /* Ocupa todas as colunas */
+    text-align: left;
     margin-bottom: 0px;
-}
-}
-.third-card {
-    grid-column: 1 / -1;
+  }
+
+  /* <-- SEÇÃO 4.3: Third Card Section (Full Width) */
+  .third-card {
+    grid-column: 1 / -1; /* Ocupa todas as colunas */
     text-align: center;
-}
-.inner-grid {
+  }
+
+  /* <-- SEÇÃO 4.4: Inner Grid for Cards */
+  .inner-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de larguras iguais */
-    gap: 15px; /* Um espaço entre os 6 itens do curso */   
-}
-.inner-grid .inner {
-    background-color: var(--color-background);
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px; 
+  }
+
+  /* <-- SEÇÃO 4.5: Inner Grid Item Styling */
+  .inner-grid .inner {
+    
     padding: 10px;
     text-align: center;
     border-radius: 5px;
-}
-.card {
+  }
+
+  /* <-- SEÇÃO 4.6: Card Container Styling */
+  .card {
     background-color: var(--color-background);
-    padding: 0px;
-  
-  
-}
-.card header {
-  
-    color: #fff;
+    /* Removido padding: 0px. É melhor usar padding para conteúdo interno. */
+  }
 
+  /* <-- SEÇÃO 4.7: Card Header (Geral) */
+  .card header {
+    color: var(--color-text-light);
     margin-bottom: 10px;
-}
+  }
 
-
-.card h2 {
+  /* <-- SEÇÃO 4.8: Card H2 (Titulo) */
+  .card h2 {
     text-align: center;
     margin-top: 0%;
     margin-bottom: 5%;
-    padding-top: 0%;
-    padding-left: 0%;
-    padding-right: 0%;
+    /* Removido padding para evitar conflito de layout, será definido no card-one */
+    padding: 0;
+  }
 
-}
-.card p {
-    margin-left: 10px;
-    
-}
+  /* <-- SEÇÃO 4.9: Card Paragraph (Adicionado Padding ao invés de margin-left) */
+  /* Melhor usar padding no conteúdo para espaçamento uniforme, a menos que o margin-left seja intencional */
+  .card p {
+    margin-left: 10px; /* Mantido o estilo original, mas padding: 10px; seria mais comum */
+  }
 
-.card-one h2{
+  /* <-- SEÇÃO 4.10: Specific Card Header Styling */
+  .card-one h2 {
     background-color: var(--color-sky);
-    color: #fff;
-    padding: 3px;
-    
-    
-	
-}
-.profile  {
-  display: flex;
+    color: var(--color-text-light);
+    padding: 8px; 
+  }
+
+  /* <-- SEÇÃO 4.11: Profile Image/Container */
+  .profile {
+    display: flex;
     width: 100px;
     height: 80%;
     padding: 0px;
-    
-}
-/* Adicione isto ao seu arquivo styles/large.css */
-
-@media (min-width: 769px) {
-    /* Esconde o botão hamburger em telas grandes */
-    #nav-button {
-        display: none;
-    }
-
-    /* Organiza a navegação na horizontal */
-    .navigation {
-        display: block; /* Garante que a nav seja sempre visível */
-    }
-
-    .navigation ul {
-        display: flex; /* O mais importante: alinha os itens lado a lado! */
-        justify-content: flex-start; /* Alinha os links à esquerda */
-        background-color: transparent;
-    }
-
-    .navigation li {
-        border: none;
-    }
-
-    .navigation li a {
-        color: var(--color-blue); /* Cor do texto para desktop */
-        padding: 1rem 1.5rem;
-    }
-
-    .navigation li a:hover {
-        color: #fff;
-        color: var(--color-sky);
-        border-radius: 5px;
-    }
+  }
 }

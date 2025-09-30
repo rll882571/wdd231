@@ -1,5 +1,4 @@
-
-
+/* <-- SEÇÃO 1: VARIAVEIS GLOBAIS E ESTILOS BASE */
 
 :root {
   /* City colors */
@@ -8,187 +7,219 @@
   --color-sand: #FFCC00;
   --color-nature: #006633;
   --color-background: #F0F8FF;
+  --color-text-light: #fff; /* Adicionei esta variável para clareza */
 }
 
-*{
-font-family: "josefin sans", sans-serif;
-box-sizing: border-box;
+/* <-- SEÇÃO 1.1: Reset Básico */
+* {
+  font-family: "josefin sans", sans-serif;
+  box-sizing: border-box;
 }
 
+/* -------------------------------------------------------------------------- */
+/* <-- SEÇÃO 2: HEADER E BOTÃO HAMBURGER (Base/Mobile) */
 
-
-/* =======================HEADER============================*/
-   header {
-    display: grid;
-    grid-template-columns: 30px auto 44px;
-    border-bottom: solid 1px #ddd;
-    column-gap: 5px;
-    align-items: center;
-   }
-   header img {
-    display: block;
-    width: 100%;
-    height: auto;
-    
-
-   }
-   header span {
-    font-size: 1.2rem;
-    color: #3D405B;
-   }
-   /* =======================HAMBURGER============================*/
-   .hamburger::before {
-      content: "\2630";
-}
-   .hamburger.show::before {
-     content: "\00D7";
-     font-size: 2rem;
-}
-   .hamburger {
-      background: none;
-      color: #3D405B;
-      border: none;
-      cursor: pointer;
-      font-size: 2rem;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+/* <-- SEÇÃO 2.1: Header Grid */
+header {
+  display: grid;
+  grid-template-columns: 30px auto 44px; /* Logo | Título | Hamburger */
+  border-bottom: solid 1px #ddd;
+  column-gap: 5px;
+  align-items: center;
 }
 
-/* =======================NAVIGATION============================*/
+/* <-- SEÇÃO 2.2: Header Imagem */
+header img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* <-- SEÇÃO 2.3: Header Título/Span */
+header span {
+  font-size: 1.2rem;
+  color: #3D405B;
+}
+
+/* <-- SEÇÃO 2.4: Hamburger Ícone */
+.hamburger::before {
+  content: "\2630";
+}
+
+/* <-- SEÇÃO 2.5: Hamburger 'X' (Estado 'show') */
+.hamburger.show::before {
+  content: "\00D7";
+  font-size: 2rem;
+}
+
+/* <-- SEÇÃO 2.6: Hamburger Estilo Base */
+.hamburger {
+  background: none;
+  color: #3D405B;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* -------------------------------------------------------------------------- */
+/* <-- SEÇÃO 3: NAVEGAÇÃO MOBILE (max-width: 768px) */
+
 @media (max-width: 768px) {
-.navigation {
+  /* <-- SEÇÃO 3.1: Esconde navegação por padrão */
+  .navigation {
     display: none;
-    
-}
-.navigation.show {
+  }
+
+  /* <-- SEÇÃO 3.2: Mostra navegação no mobile (via JS) */
+  .navigation.show {
     display: block;
-}
-.navigation ul {
+  }
+
+  /* <-- SEÇÃO 3.3: Lista de Navegação */
+  .navigation ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: var(--color-sky); /* Cor de fundo principal fica aqui */
-}
-.navigation li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Linha divisória sutil */
-    height: 30px;
-    
-
-}
-.navigation li:last-child {
-    border-bottom: none;
-}
-.navigation li a {
-    display: block; /* Faz o link ocupar toda a área do <li> */
-    padding: 1rem;  /* Espaçamento interno generoso, ótimo para toque */
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    text-align: center; /* Centraliza o texto */
-    transition: background-color 0.3s ease; /* Transição suave para o hover */
-}
-.navigation li a:hover {
-    color: var(--color-sand); /* Muda a cor do texto ao passar o mouse */
-}
-}
-
-
-/* =======================HOME SECTIONS============================*/
-
-main {
-    display: grid;
-    grid-template-columns: 1fr; /* Muda para apenas UMA coluna */
-    gap: 20px;
-    padding: 30px;
-	  max-width: 85%;
-	  margin:  auto;
-    margin-bottom: 2%;
-}
-.third-card {
-    grid-column: 1 / -1;
-    text-align: center;
-}
-.inner-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de larguras iguais */
-    gap: 15px; /* Um espaço entre os 6 itens do curso */   
-}
-.inner-grid .inner {
-    background-color: var(--color-background);
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-}
-
-.card {
-    background-color: var(--color-background);
-    padding: 0px;
-  
-  
-}
-.card header {
-  
-    color: #fff;
-
-    margin-bottom: 10px;
-}
-
-
-.card h2 {
-    text-align: center;
-    margin-top: 0%;
-    margin-bottom: 5%;
-    padding-top: 0%;
-    padding-left: 0%;
-    padding-right: 0%;
-
-}
-.card p {
-    margin-left: 10px;
-    
-}
-
-.card-one h2{
     background-color: var(--color-sky);
-    color: #fff;
-    padding: 3px;
-    
-    
-	
+  }
+
+  /* <-- SEÇÃO 3.4: Item da Lista (Divisor) */
+  .navigation li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    height: 30px;
+  }
+
+  /* <-- SEÇÃO 3.5: Último Item da Lista */
+  .navigation li:last-child {
+    border-bottom: none;
+  }
+
+  /* <-- SEÇÃO 3.6: Link de Navegação */
+  .navigation li a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  /* <-- SEÇÃO 3.7: Link Hover Mobile */
+  .navigation li a:hover {
+    color: var(--color-sand);
+  }
 }
-.profile  {
+
+/* -------------------------------------------------------------------------- */
+/* <-- SEÇÃO 4: HOME SECTIONS (Layout e Cards) */
+
+/* <-- SEÇÃO 4.1: Main Grid Mobile */
+main {
+  display: grid;
+  grid-template-columns: 1fr; /* Apenas UMA coluna para mobile */
+  gap: 20px;
+  padding: 30px;
+  max-width: 85%;
+  margin: auto;
+  margin-bottom: 2%;
+}
+
+/* <-- SEÇÃO 4.2: Third Card (Full Width) */
+.third-card {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+/* <-- SEÇÃO 4.3: Inner Grid (Cursos) */
+.inner-grid {
+  /* Nota: 3 colunas em mobile pode ser apertado, mas mantido conforme o original */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+/* <-- SEÇÃO 4.4: Inner Grid Item */
+.inner-grid .inner {
+  background-color: var(--color-background);
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* <-- SEÇÃO 4.5: Card Container */
+.card {
+  background-color: var(--color-background);
+  padding: 0px;
+}
+
+/* <-- SEÇÃO 4.6: Card Header */
+.card header {
+  color: var(--color-text-light);
+  margin-bottom: 10px;
+}
+
+/* <-- SEÇÃO 4.7: Card Título (H2) */
+.card h2 {
+  text-align: center;
+  margin-top: 0%;
+  margin-bottom: 5%;
+  padding-top: 0%;
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+/* <-- SEÇÃO 4.8: Card Parágrafo */
+.card p {
+  margin-left: 10px;
+}
+
+/* <-- SEÇÃO 4.9: Estilo Específico Card 1 */
+.card-one h2 {
+  background-color: var(--color-sky);
+  color: var(--color-text-light);
+  padding: 3px;
+}
+
+/* <-- SEÇÃO 4.10: Profile Container */
+.profile {
   display: flex;
-    width: 100px;
-    height: 80%;
-    padding: 0px;
-    
+  width: 100px;
+  height: 80%;
+  padding: 0px;
 }
 
+/* -------------------------------------------------------------------------- */
+/* <-- SEÇÃO 5: RODAPÉ BASE/MOBILE (Flex Column) */
 
-/* =======================fOOTER============================*/
-
-  /* Seus estilos aqui */
-  .footer-grid {
+/* <-- SEÇÃO 5.1: Footer Grid (Layout Mobile) */
+.footer-grid {
   display: flex;
   flex-direction: column;
-  gap: 10px;  
+  gap: 10px;
   background-color: var(--color-sky);
-  
+  color: var(--color-text-light);
 }
 
+/* <-- SEÇÃO 5.2: Endereço */
 .company-address p {
   display: flex;
   flex-direction: column;
-   align-items: flex-start;
-   text-align: left;
-   font-size: 0.9rem;
-   margin: 0%;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 0.9rem;
+  margin: 0%;
 }
+
+/* <-- SEÇÃO 5.3: Social Icons Container */
 .social {
   display: flex;
   justify-content: center;
   column-gap: 8px;
 }
+
+/* <-- SEÇÃO 5.4: Social Icon Wrapper */
 .social a {
   display: flex;
   justify-content: center;
@@ -197,130 +228,144 @@ main {
   height: 44px;
   border: 1px solid #ccc;
   border-radius: 22px;
-
 }
+
+/* <-- SEÇÃO 5.5: Social Icon Imagem */
 .social img {
   width: 22px;
   height: 22px;
 }
+
+/* <-- SEÇÃO 5.6: Social Icon Hover */
 .social a:hover {
   background-color: var(--color-sand);
+}
+
+/* <-- SEÇÃO 5.7: Company Info Parágrafo */
+.company-info p {
+  margin: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/* <-- SEÇÃO 6: ESTILOS DE COMPONENTES E CORREÇÕES */
+
+/* <-- SEÇÃO 6.1: Navegação - Link Atual (Active Link) */
+.navigation li.current a {
+  color: var(--color-sand);
+  font-weight: bold;
+}
+
+/* <-- SEÇÃO 6.2: Cursos - Status Completo */
+.inner.completed {
+  background-color: #d4edda;
   
 }
 
-.company-info p{
- 
-  margin: 0;
-}
-/* corrections */
-.navigation li.current a {
-    color: var(--color-sand); /* Cor de destaque */
-    font-weight: bold;
-    
-}
-
-/* Estilo para os cursos completados */
-.inner.completed {
-    background-color: #d4edda; /* Um verde claro para indicar sucesso */
-    border-left: 5px solid #28a745; /* Uma borda verde */
-}
-
-/* Estilo para os botões de filtro */
+/* <-- SEÇÃO 6.3: Botões de Filtro */
 #filter-buttons button {
-    padding: 8px 16px;
-    margin: 0 5px 15px;
-    border: 1px solid var(--color-blue);
-    background-color: #fff;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
+  padding: 8px 16px;
+  margin: 0 5px 15px;
+  border: 1px solid var(--color-blue);
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
+/* <-- SEÇÃO 6.4: Botões de Filtro Hover */
 #filter-buttons button:hover {
-    background-color: var(--color-sky);
-    color: #fff;
+  background-color: var(--color-sky);
+  color: var(--color-text-light);
 }
 
-
+/* <-- SEÇÃO 6.5: Diretório - Member List Grid (Mobile) */
 #member-list {
-    /* O Grid substitui o display:grid e grid-template-columns do 'main' */
-    display: grid;
-    /* Faz as colunas se ajustarem (1 coluna em telas pequenas) */
-    grid-template-columns: 1fr; 
-    gap: 20px;
-    padding: 20px 0;
-    margin: 0 auto; /* Centraliza o grid */
-    max-width: 1200px; /* Limita a largura para telas grandes, se quiser diferente do 'main' */
+  display: grid;
+  grid-template-columns: 1fr; /* 1 coluna no mobile */
+  gap: 20px;
+  padding: 20px 0;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
-
-.company-card { /* Seu JS cria a tag <section> com esta classe */
-    background-color: #e0e0e8; 
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    
-    /* Usa Flexbox para organizar o conteúdo verticalmente */
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between; /* Para espaçar o conteúdo uniformemente */
-    min-height: 350px; /* Ajuda a manter uma altura mínima consistente */
+/* <-- SEÇÃO 6.6: Diretório - Company Card Estilo Geral */
+.company-card {
+  background-color: #e0e0e8;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 350px;
 }
 
+/* <-- SEÇÃO 6.7: Diretório - Company Card Imagem */
 .company-card img {
-    width: 100px; /* Tamanho fixo para logos */
-    height: 100px;
-    object-fit: contain; /* Melhor para logos, garante que caiba sem cortar */
-    margin-bottom: 15px;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
 }
 
+/* <-- SEÇÃO 6.8: Diretório - Company Card Título (H3) */
 .company-card h3 {
-    color: var(--color-blue);
-    font-size: 1.4em;
-    margin: 0 0 10px 0;
+  color: var(--color-blue);
+  font-size: 1.4em;
+  margin: 0 0 10px 0;
 }
 
+/* <-- SEÇÃO 6.9: Diretório - Company Card Parágrafo */
 .company-card p {
-    margin: 5px 0;
-    color: #666;
+  margin: 5px 0;
+  color: #666;
 }
 
+/* <-- SEÇÃO 6.10: Diretório - Company Card Divisor */
 .company-card hr {
-    width: 80%;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 10px 0;
+  width: 80%;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 10px 0;
 }
 
-/* 3. Estilos Específicos para Níveis de Associação */
+/* <-- SEÇÃO 6.11: Níveis de Associação - Base */
 .membership-level {
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9em;
-    font-weight: bold;
-    margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
+/* <-- SEÇÃO 6.12: Níveis de Associação - Gold */
 .gold {
-    background-color: var(--color-sand);
-    color: var(--color-blue);
-}
-.silver {
-    background-color: #c0c0c0;
-    color: #333;
-}
-.member {
-    background-color: #f0f0f0;
-    color: #333;
+  background-color: var(--color-sand);
+  color: var(--color-blue);
 }
 
-/* Adaptação do Grid para telas maiores no DIRECTORY */
+/* <-- SEÇÃO 6.13: Níveis de Associação - Silver */
+.silver {
+  background-color: #c0c0c0;
+  color: #333;
+}
+
+/* <-- SEÇÃO 6.14: Níveis de Associação - Member */
+.member {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* -------------------------------------------------------------------------- */
+/* <-- SEÇÃO 7: MEDIA QUERY DIRETÓRIO (Desktop/Grid) */
+
 @media (min-width: 769px) {
-    /* Faz os cartões do diretório irem para 3 colunas em telas maiores */
-    #member-list {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
+  /* <-- SEÇÃO 7.1: Diretório - Member List Grid (Desktop) */
+  #member-list {
+    /* Layout responsivo de 3 colunas em telas grandes */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }

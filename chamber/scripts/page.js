@@ -1,5 +1,5 @@
-// 1. DADOS DOS CURSOS (Array de Objetos)
-// Colocamos os dados principais no topo.
+
+// SEÇÃO 1
 const courses = [
     { subject: 'CSE', number: 110, title: 'Introduction to Programming', credits: 2, completed: true },
     { subject: 'WDD', number: 130, title: 'Web Fundamentals', credits: 2, completed: true },
@@ -9,16 +9,16 @@ const courses = [
     { subject: 'WDD', number: 330, title: 'Web Frontend Development II', credits: 2, completed: false }
 ];
 
-// 2. FUNÇÕES PRINCIPAIS
-// Aqui definimos as "ferramentas" que vamos usar: uma para exibir cursos e outra para calcular créditos.
+// SEÇÃO 2
+// Esta parte do código cria os cartões dos cursos e os exibe na página.
 function calculateTotalCredits(filteredCourses) {
     const total = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
     document.querySelector('#total-credits').textContent = total;
 }
-
+// SEÇÃO 3
 function displayCourses(courseArray) {
     const grid = document.querySelector('#course-grid');
-    grid.innerHTML = ''; // Limpa o grid antes de adicionar novos cursos
+    grid.innerHTML = ''; 
 
     courseArray.forEach(course => {
         const courseElement = document.createElement('div');
@@ -39,25 +39,22 @@ function displayCourses(courseArray) {
     calculateTotalCredits(courseArray);
 }
 
-// 3. EVENT LISTENERS (CÓDIGO QUE RODA COM INTERAÇÃO)
-// Esta parte faz os botões e outras interações funcionarem.
-
-// Filtros dos Cursos
+/// SEÇÃO 4
 document.querySelector('#all').addEventListener('click', () => {
     displayCourses(courses);
 });
-
+// SEÇÃO 5
 document.querySelector('#cse').addEventListener('click', () => {
     const cseCourses = courses.filter(course => course.subject === 'CSE');
     displayCourses(cseCourses);
 });
-
+// SEÇÃO 6
 document.querySelector('#wdd').addEventListener('click', () => {
     const wddCourses = courses.filter(course => course.subject === 'WDD');
     displayCourses(wddCourses);
 });
 
-// Lógica do Menu Hamburger (seu código antigo)
+// SEÇÃO 7
 const navButton = document.querySelector('#nav-button');
 const navBar = document.querySelector('#nav-bar');
 
@@ -66,11 +63,9 @@ navButton.addEventListener('click', () => {
   navBar.classList.toggle('show');
 });
 
-// 4. CÓDIGO QUE RODA QUANDO A PÁGINA CARREGA
-// Exibe todos os cursos assim que a página é aberta.
+/// SEÇÃO 8
 displayCourses(courses);
 
-// Rodapé: Ano e Data de Modificação (seu código antigo)
 document.addEventListener('DOMContentLoaded', function() {
   const yearEl = document.getElementById('currentyear');
   const currentYear = new Date().getFullYear();
@@ -80,14 +75,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const lastModified = document.lastModified;
   lastModifiedEl.textContent = `Last modified: ${lastModified}`;
 });
-// 1. Seleciona o contêiner onde os cartões serão exibidos
+// SEÇÃO 9
 const memberList = document.getElementById('member-list');
-
-// 2. Define o caminho para o seu arquivo JSON
-// Certifique-se de que o nome 'companies.json' está correto no seu projeto.
 const jsonURL = 'companies.json'; 
-
-// Função principal assíncrona para buscar e processar os dados
+// SEÇÃO 10
 async function getCompanyData() {
     try {
         // A. FAZ A REQUISIÇÃO: Usa fetch para buscar o arquivo JSON
@@ -111,7 +102,7 @@ async function getCompanyData() {
     }
 }
 
-// Função para iterar sobre os dados e criar os cartões HTML
+// SEÇÃO 11
 function displayMembers(companies) {
     companies.forEach(company => {
         // Cria o elemento principal para o cartão (card)
