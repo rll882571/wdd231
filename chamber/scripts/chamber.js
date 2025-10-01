@@ -128,4 +128,4 @@ if (memberList) {
         display.classList.add("list");
         display.classList.remove("grid");
     }
-}
+}   
