@@ -20,104 +20,7 @@
 /* <-- SEÇÃO 2: HEADER E BOTÃO HAMBURGER (Base/Mobile) */
 
 /* <-- SEÇÃO 2.1: Header Grid */
-header {
-  display: grid;
-  grid-template-columns: 30px auto 44px; /* Logo | Título | Hamburger */
-  border-bottom: solid 1px #ddd;
-  column-gap: 5px;
-  align-items: center;
-  
-}
 
-/* <-- SEÇÃO 2.2: Header Imagem */
-header img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* <-- SEÇÃO 2.3: Header Título/Span */
-header span {
-  font-size: 1.2rem;
-  color: #3D405B;
-}
-
-/* <-- SEÇÃO 2.4: Hamburger Ícone */
-.hamburger::before {
-  content: "\2630";
-}
-
-/* <-- SEÇÃO 2.5: Hamburger 'X' (Estado 'show') */
-.hamburger.show::before {
-  content: "\00D7";
-  font-size: 2rem;
-}
-
-/* <-- SEÇÃO 2.6: Hamburger Estilo Base */
-.hamburger {
-  background: none;
-  color: #3D405B;
-  border: none;
-  cursor: pointer;
-  font-size: 2rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-/* -------------------------------------------------------------------------- */
-/* <-- SEÇÃO 3: NAVEGAÇÃO MOBILE (max-width: 768px) */
-
-@media (max-width: 768px) {
-  /* <-- SEÇÃO 3.1: Esconde navegação por padrão */
-  .navigation {
-    display: none;
-  }
-
-  /* <-- SEÇÃO 3.2: Mostra navegação no mobile (via JS) */
-  .navigation.show {
-    display: block;
-  }
-
-  /* <-- SEÇÃO 3.3: Lista de Navegação */
-  .navigation ul {
-    list-style: none;
-    background-color: var(--color-sky);
-    max-width: 85%;   /* igual ao main */
-    margin-left: auto;
-    padding: 0 30px;  /* mesmo espaçamento interno do main */
-  }
-
-  /* <-- SEÇÃO 3.4: Item da Lista (Divisor) */
-  .navigation li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    height: 30px;
-  }
-
-  /* <-- SEÇÃO 3.5: Último Item da Lista */
-  .navigation li:last-child {
-    border-bottom: none;
-  }
-
-  /* <-- SEÇÃO 3.6: Link de Navegação */
-  .navigation li a {
-    display: block;
-    padding: 1rem;
-    text-decoration: none;
-    color: var(--color-text-light);
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s ease;
-  }
-
-  /* <-- SEÇÃO 3.7: Link Hover Mobile */
-  .navigation li a:hover {
-    color: var(--color-sand);
-  }
-}
-
-/* -------------------------------------------------------------------------- */
-/* <-- SEÇÃO 4: HOME SECTIONS (Layout e Cards) */
-
-/* <-- SEÇÃO 4.1: Main Grid Mobile */
 main {
   display: grid;
   grid-template-columns: 1fr; /* Apenas UMA coluna para mobile */
@@ -251,11 +154,7 @@ main {
 /* -------------------------------------------------------------------------- */
 /* <-- SEÇÃO 6: ESTILOS DE COMPONENTES E CORREÇÕES */
 
-/* <-- SEÇÃO 6.1: Navegação - Link Atual (Active Link) */
-.navigation li.current a {
-  color: var(--color-sand);
-  font-weight: bold;
-}
+
 
 /* <-- SEÇÃO 6.2: Cursos - Status Completo */
 .inner.completed {

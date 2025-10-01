@@ -23,28 +23,36 @@
     <title>WDD 231: Web Frontend Development I- Rodrigo Lima</title>
         <!-- Favicon HERE -->
     <link rel="icon" href="images/favicon-16x16.png" type="image/png" sizes="16x16">
+    
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- HERE IS MY CSS -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
+
 </head>
 <body>
-   <header>
-        <img src="images/logo-_1_.webp" alt="Logo da empresa" width="150" height="75" loading="lazy" decoding="async">
-
-      <span>Fortaleza Chamber of Commerce</span>
-      <button id="nav-button" class="hamburger" aria-label="navigation"></button>
-   </header>
-      <nav id="nav-bar" class="navigation">
-          <ul>
-              <li class="current"><a href="https://www.facebook.com/?locale=pt_BR">Home</a></li>
-              <li><a href="https://www.facebook.com/?locale=pt_BR">Directory</a></li>
-              <li><a href="https://www.facebook.com/?locale=pt_BR">Discover</a></li>
+<header>
+    <div class="logo-area">
+        <img src="images/logo-_1_.webp" alt="Logo da Câmara de Comércio de Fortaleza" width="90" height="60" loading="lazy" decoding="async">
+        <h1>Fortaleza Chamber of Commerce</h1>
+    </div>
+    
+    <nav id="nav-bar" class="navigation">
+        <button id="nav-button" class="hamburger" aria-label=" open navigation menu"></button>
+        <ul>
+              <li><a href="chamber/directory.html">Home</a></li>
+              <li class="current"><a href="https://www.facebook.com/?locale=pt_BR">Directory</a></li>
               <li><a href="https://www.facebook.com/?locale=pt_BR">Join</a></li>
+              <li><a href="https://www.facebook.com/?locale=pt_BR">Discover</a></li>
 
-          </ul>
-      </nav>
+
+        </ul>
+    </nav>
+</header> 
 <main>
     <div id="main-header-section">
     <h1>Chamber of Commerce - Member Directory</h1> 
