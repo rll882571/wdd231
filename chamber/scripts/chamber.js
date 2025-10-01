@@ -17,12 +17,14 @@ if (navButton && navBar) {
 // =========================================================================
 
 document.addEventListener('DOMContentLoaded', function() {
+    // 1. Inserir Ano Atual
     const yearEl = document.getElementById('currentyear');
     if (yearEl) {
         const currentYear = new Date().getFullYear();
         yearEl.textContent = currentYear;
     }
     
+    // 2. Inserir Data da Última Modificação
     const lastModifiedEl = document.getElementById('lastModified');
     if (lastModifiedEl) {
         const lastModified = document.lastModified;
@@ -36,17 +38,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // memberList é o seu <article id="member-list"> no HTML
 const memberList = document.getElementById('member-list'); 
-const jsonURL = 'data/companies.json';
+
+// CORREÇÃO APLICADA: O nome do arquivo JSON deve ser 'members.json'
+const jsonURL = 'data/members.json'; 
 
 if (memberList) {
     
     // 1. CONFIGURAÇÃO PADRÃO: Define o visual inicial como "grid"
     memberList.classList.add('grid');
     
-    // --- LÓGICA DE CARREGAMENTO DE DADOS ---
+    // --- LÓGICA DE CARREGAMENTO DE DADOS (fetch e async/await) ---
     async function getCompanyData() {
         try {
             const response = await fetch(jsonURL);
+            
             if (!response.ok) {
                 throw new Error(`Erro na requisição: ${response.status} - ${response.statusText}`);
             }
@@ -61,12 +66,16 @@ if (memberList) {
     }
 
     function displayMembers(companies) {
+        // Limpa o conteúdo antes de preencher
+        memberList.innerHTML = ''; 
+        
         companies.forEach(company => {
-            // Cada item é uma SECTION dentro do ARTICLE
+            // Cria o card do membro
             const card = document.createElement('section');
             card.classList.add('company-card');
             
-            let levelName = 'Member'; 
+            // Define o nome do nível de associação com base no código
+            let levelName = 'Basic Member'; 
             if (company.membership_level === 3) {
                 levelName = 'Gold';
             } else if (company.membership_level === 2) {
@@ -86,7 +95,7 @@ if (memberList) {
                 
                 <hr>
                 <p class="membership-level">
-                    Nível: <strong>${levelName}</strong> (Code: ${company.membership_level})
+                    Nível: <strong>${levelName}</strong>
                 </p>
                 <p class="services-list">
                     Serviços: ${company.services.join(' | ')}
@@ -98,14 +107,14 @@ if (memberList) {
         });
     }
 
+    // Inicia o carregamento dos dados
     getCompanyData();
 
 
-    // --- LÓGICA DE VISUALIZAÇÃO (GRID/LIST) ---
+    // --- LÓGICA DE VISUALIZAÇÃO (Toggle GRID/LIST) ---
     
     const gridbutton = document.querySelector("#grid");
     const listbutton = document.querySelector("#list");
-    // 'display' aponta para o <article id="member-list">
     const display = memberList; 
 
     gridbutton.addEventListener("click", () => {
