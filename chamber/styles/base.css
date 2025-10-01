@@ -1,272 +1,377 @@
-/* <-- SEÇÃO 1: VARIAVEIS GLOBAIS E ESTILOS BASE */
-
+/* <-- SEÇÃO 1, ESQUEMA DE CORES (Root Variables) */
+/* CORREÇÃO: Variáveis movidas para cá para estarem disponíveis em todo o site (Desktop e Mobile) */
 :root {
-  /* City colors */
-  --color-blue: #003366;
-  --color-sky: #0099E6; /* <-- CORRIGIDO! Este novo azul tem bom contraste com texto branco. */
-  --color-sand: #FFCC00;
-  --color-nature: #006633;
-  --color-background: #F0F8FF;
-  --color-text-light: #fff; /* Adicionei esta variável para clareza */
+    /* City colors */
+    --color-sky: #9ad0ec; /* Azul Claro/Sky Blue para hover/bordas/títulos */
+    --color-text-light: white;
+    --color-background: white; 
 }
 
-/* <-- SEÇÃO 1.1: Reset Básico */
-* {
-  font-family: "josefin sans", sans-serif;
-  box-sizing: border-box;
+/* =======================ESTILOS BASE (Desktop/Geral)============================*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Fundo cinza claro */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    width: 100%; 
+    max-width: 100%;
 }
-
-/* -------------------------------------------------------------------------- */
-/* <-- SEÇÃO 2: HEADER E BOTÃO HAMBURGER (Base/Mobile) */
-
-/* <-- SEÇÃO 2.1: Header Grid */
-
 main {
-  display: grid;
-  grid-template-columns: 1fr; /* Apenas UMA coluna para mobile */
-  gap: 20px;
-  padding: 30px;
-  max-width: 85%;
-  margin: auto;
-  margin-bottom: 2%;
-}
-
-/* <-- SEÇÃO 4.2: Third Card (Full Width) */
-.third-card {
-  grid-column: 1 / -1;
-  text-align: center;
-}
-
-/* <-- SEÇÃO 4.3: Inner Grid (Cursos) */
-.inner-grid {
-  /* Nota: 3 colunas em mobile pode ser apertado, mas mantido conforme o original */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
-
-/* <-- SEÇÃO 4.4: Inner Grid Item */
-.inner-grid .inner {
-  background-color: var(--color-background);
-  padding: 10px;
-  text-align: center;
-  border-radius: 5px;
-}
-
-/* <-- SEÇÃO 4.5: Card Container */
-.card {
-  background-color: var(--color-background);
-  padding: 0px;
-}
-
-/* <-- SEÇÃO 4.6: Card Header */
-.card header {
-  color: var(--color-text-light);
-  margin-bottom: 10px;
-}
-
-/* <-- SEÇÃO 4.7: Card Título (H2) */
-.card h2 {
-  text-align: center;
-  margin-top: 0%;
-  margin-bottom: 5%;
-  padding-top: 0%;
-  padding-left: 0%;
-  padding-right: 0%;
-}
-
-/* <-- SEÇÃO 4.8: Card Parágrafo */
-.card p {
-  margin-left: 10px;
-}
-
-/* <-- SEÇÃO 4.9: Estilo Específico Card 1 */
-.card-one h2 {
-  background-color: var(--color-sky);
-  color: var(--color-text-light);
-  padding: 3px;
-}
-
-/* <-- SEÇÃO 4.10: Profile Container */
-.profile {
-  display: flex;
-  width: 100px;
-  height: 80%;
-  padding: 0px;
-}
-
-/* -------------------------------------------------------------------------- */
-/* <-- SEÇÃO 5: RODAPÉ BASE/MOBILE (Flex Column) */
-
-/* <-- SEÇÃO 5.1: Footer Grid (Layout Mobile) */
-.footer-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background-color: var(--color-sky);
-  color: var(--color-text-light);
-}
-
-/* <-- SEÇÃO 5.2: Endereço */
-.company-address p {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  font-size: 0.9rem;
-  margin: 0%;
-}
-
-/* <-- SEÇÃO 5.3: Social Icons Container */
-.social {
-  display: flex;
-  justify-content: center;
-  column-gap: 8px;
-}
-
-/* <-- SEÇÃO 5.4: Social Icon Wrapper */
-.social a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border: 1px solid #ccc;
-  border-radius: 22px;
-}
-
-/* <-- SEÇÃO 5.5: Social Icon Imagem */
-.social img {
-  width: 22px;
-  height: 22px;
-}
-
-/* <-- SEÇÃO 5.6: Social Icon Hover */
-.social a:hover {
-  background-color: var(--color-sand);
-}
-
-/* <-- SEÇÃO 5.7: Company Info Parágrafo */
-.company-info p {
-  margin: 0;
-}
-
-/* -------------------------------------------------------------------------- */
-/* <-- SEÇÃO 6: ESTILOS DE COMPONENTES E CORREÇÕES */
-
-
-
-/* <-- SEÇÃO 6.2: Cursos - Status Completo */
-.inner.completed {
-  background-color: #d4edda;
+    margin: 0 auto;
+    max-width: 90%; /* Limite de largura para o conteúdo */
   
+    font-family: Acme, Arial, sans-serif; 
 }
 
-/* <-- SEÇÃO 6.3: Botões de Filtro */
-#filter-buttons button {
-  padding: 8px 16px;
-  margin: 0 5px 15px;
-  border: 1px solid var(--color-blue);
-  background-color: #fff;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
+header {
+    display: grid; 
+    grid-template-columns: 1fr auto; 
+    align-items: center; 
+    background-color: #2c3042;
+    color: white;
+    padding: 20px;
+    gap: 20px;
 }
 
-/* <-- SEÇÃO 6.4: Botões de Filtro Hover */
-#filter-buttons button:hover {
-  background-color: var(--color-sky);
-  color: var(--color-text-light);
+.logo-area {
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
 }
 
-/* <-- SEÇÃO 6.5: Diretório - Member List Grid (Mobile) */
-#member-list {
-  display: grid;
-  grid-template-columns: 1fr; /* 1 coluna no mobile */
-  gap: 20px;
-  padding: 20px 0;
-  margin: 0 auto;
-  max-width: 1200px;
+h1 {
+    margin: 0;
 }
 
-/* <-- SEÇÃO 6.6: Diretório - Company Card Estilo Geral */
-.company-card {
-  background-color: #e0e0e8;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 350px;
+.navigation {
+    display: flex; 
+    align-items: center;
+    gap: 20px; 
 }
 
-/* <-- SEÇÃO 6.7: Diretório - Company Card Imagem */
-.company-card img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
-  margin-bottom: 15px;
+.navigation ul {
+    display: flex; 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    gap: 25px; 
 }
 
-/* <-- SEÇÃO 6.8: Diretório - Company Card Título (H3) */
-.company-card h3 {
-  color: var(--color-blue);
-  font-size: 1.4em;
-  margin: 0 0 10px 0;
+.navigation a {
+    color: white; 
+    text-decoration: none; 
+    font-weight: bold;
+    /* Estilo de padding inicial de Desktop (sobrescrito abaixo) */
+    padding: 5px 0; 
 }
 
-/* <-- SEÇÃO 6.9: Diretório - Company Card Parágrafo */
-.company-card p {
-  margin: 5px 0;
-  color: #666;
+/* Estilos de links (Se aplica a Desktop e Mobile - o último padding sobrescreve o anterior) */
+.navigation a {
+    padding: 10px 15px; 
+    border-radius: 4px;
 }
 
-/* <-- SEÇÃO 6.10: Diretório - Company Card Divisor */
-.company-card hr {
-  width: 80%;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 10px 0;
+.navigation a:hover {
+    background-color: var(--color-sky); /* Usando variável */
+    color: #000000; 
+    transition: all 0.3s ease;
 }
 
-/* <-- SEÇÃO 6.11: Níveis de Associação - Base */
-.membership-level {
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.9em;
-  font-weight: bold;
-  margin-top: 10px;
+.navigation ul li.current a {
+    /* Usando variável */
+    border-bottom: 2px solid var(--color-sky); 
+    padding-bottom: 5px; 
 }
 
-/* <-- SEÇÃO 6.12: Níveis de Associação - Gold */
-.gold {
-  background-color: var(--color-sand);
-  color: var(--color-blue);
+/* MODIFICAÇÃO: Oculta o botão por padrão (Desktop) */
+.hamburger {
+    background: none;
+    border: 1px solid white; 
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    display: none; /* Oculto no Desktop */
 }
 
-/* <-- SEÇÃO 6.13: Níveis de Associação - Silver */
-.silver {
-  background-color: #c0c0c0;
-  color: #333;
+
+/* =======================ESTILOS MOBILE (max-width: 768px)============================*/
+@media (max-width: 768px) {
+    
+    /* 1. LAYOUT DO HEADER E LOGO (Consolidado) */
+    header {
+        /* Mantém o Grid com duas colunas, logo (1fr) e botão (auto) */
+        grid-template-columns: 1fr auto; 
+        align-items: center; 
+        padding: 5px 10px;
+        gap: 0; /* Removendo gap para economizar espaço */
+    }
+    
+    .logo-area {
+        justify-content: flex-start;
+    }
+    
+    .logo-area h1 {
+        font-size: 1.1rem; /* Tamanho ajustado do título */
+    }
+    
+    .logo-area img {
+        width: 30px; 
+        height: auto;
+    }
+
+    /* 2. BOTÃO HAMBURGER (Consolidado e corrigido o conflito de borda) */
+    .hamburger {
+        display: block; /* Exibido no Mobile */
+        justify-self: end; 
+        border: none; /* Garante que não tenha borda no mobile */
+        font-size: 2rem;
+        padding: 5px 10px; 
+    }
+
+    .hamburger::before {
+        content: "\2630"; /* Ícone de três linhas */
+    }
+    
+    .hamburger.show::before {
+        content: "\00D7"; /* Ícone de 'X' */
+    }
+
+    /* 3. NAVEGAÇÃO / MENU FECHADO */
+    .navigation {
+        /* Garante que o menu fique alinhado com o hamburger */
+        justify-content: flex-end;
+    }
+    
+    /* MODIFICAÇÃO: Oculta a lista de links para dar lugar ao menu hamburger */
+    .navigation ul {
+        display: none; /* Oculta por padrão no mobile */
+        
+        /* Estilos de posicionamento do menu (fora da tela) */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        position: absolute; 
+        top: 65px; /* Ajuste para a altura exata do seu header */
+        left: 0;
+        background-color: #333;
+        z-index: 99; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* 4. NAVEGAÇÃO / MENU ABERTO (Adicionado a classe 'show' para JS) */
+    .navigation.show ul {
+        display: flex; /* Exibe o menu quando a classe 'show' é adicionada */
+    }
+
+    /* Opcional: Estilo dos itens da lista */
+    .navigation.show ul li {
+        padding: 10px 0;
+        border-bottom: 1px solid #444;
+    }
+    
+    /* 5. MAIN / GRID MOBILE */
+    main {
+        padding: 10px;
+    }
+
+    #cards {
+        /* O nome do seletor para inner-grid (4.4) ou apenas uma div de cards */
+        grid-template-columns: 1fr; 
+        gap: 10px; 
+    }
+    
+    #cards section {
+        max-width: 100%;
+    }
+    
+    #cards section img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 6. FOOTER MOBILE (Simplificado e adaptado do Desktop Grid) */
+    .footer-grid {
+        display: flex;
+        flex-direction: column; /* Empilha os itens */
+        background-color: #2c3042; /* Cor mais escura para contraste */
+        color: var(--color-text-light);
+        padding: 15px;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .social {
+        order: -1; /* Coloca os ícones no topo (opcional) */
+        justify-content: center;
+        display: flex;
+        gap: 10px;
+    }
+
+    .company-address p,
+    .company-info {
+        text-align: center;
+        margin: 0;
+    }
 }
 
-/* <-- SEÇÃO 6.14: Níveis de Associação - Member */
-.member {
-  background-color: #f0f0f0;
-  color: #333;
+
+
+    /* 5. FOOTER GRID LAYOUT */
+    .footer-grid {
+        display: grid;
+        /* 1fr para Address, auto para Social, 1fr para Info */
+        grid-template-columns: 1fr auto 1fr;
+        background-color: #2c3042; /* Cor fixa ou use uma variável (se definida) */
+        color: var(--color-text-light);
+        padding: 10px;
+        text-align: center;
+        height: auto;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .social {
+        grid-column: 2;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .company-address p {
+        grid-column: 1;
+        text-align: right;
+        margin: 0;
+    }
+
+    .company-info {
+        grid-column: 3;
+        text-align: left;
+    }
+
+    .company-info p {
+        text-align: left; /* Alinhado à esquerda do container */
+        margin: 0;
+    }
+
+.menu button {
+    padding: 0.9rem 0.9rem;
+    font-weight: 700;
+    background-color: var(--color-text-light); 
+    color: #2c3042; 
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    
+}
+.menu button:hover {
+    background-color: var(--color-sky);
+}
+#member-list section {
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 0.5rem;
+    background-color: #f4f4f4; /* Fundo cinza claro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; 
+}
+#member-list section a {
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    color: #2c3042; 
+    text-decoration: none;
+}
+#member-list section h3 {
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
-/* -------------------------------------------------------------------------- */
-/* <-- SEÇÃO 7: MEDIA QUERY DIRETÓRIO (Desktop/Grid) */
+/* Tamanho padrão da imagem */
+#member-list section img {
+    width: auto;
+    height: 75px;
+}
+@media (min-width: 1024px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* Três colunas iguais */
+        grid-gap: 5px;
+        align-items: center;
+    }
 
-@media (min-width: 769px) {
-  /* <-- SEÇÃO 7.1: Diretório - Member List Grid (Desktop) */
-  #member-list {
-    /* Layout responsivo de 3 colunas em telas grandes */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
+    .grid section {
+        text-align: center;
+    }
+
+    .grid section > * {
+        margin: 0.1rem;
+    }
+
+    .grid img {
+        border: 1px solid #fff;
+        box-shadow: 0 0 1rem #555;
+    }
+}
+
+.grid section {
+    text-align: center;
+}
+
+.grid section > * {
+    margin: 0.1rem;
+}
+
+.grid img {
+    border: 1px solid #fff;
+    box-shadow: 0 0 1rem #555;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin: 0;
+    padding: 0.25rem;
+    border: none; 
+}
+
+.list section > * {
+    margin: 0 1rem;
+}
+
+.list img {
+    display: none; /* Oculta a imagem na visualização de lista */
+}
+
+.list section h3 {
+    font-size: 1rem;
+}
+
+/* Estilo para linhas pares (Alternando cores) */
+.list section:nth-child(even) {
+    background-color: #f4f4f4; 
+}
+
+.list section:nth-child(odd) {
+    background-color: #fff; 
+}
+.list img, 
+.list section hr {
+    display: none;
+}
+
+/* Oculta TODOS os parágrafos (<p>) */
+.list section p {
+    display: none; 
+}
+
+/* REVELA o parágrafo que contém o link do Website/Detalhes.
+   No seu código JavaScript, esse é o sexto elemento filho da SECTION. */
+.list section p:nth-child(6) {
+    display: block; 
+    text-align: right; 
 }

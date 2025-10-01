@@ -7,13 +7,13 @@ const navBar = document.querySelector('#nav-bar');
 
 if (navButton && navBar) {
     navButton.addEventListener('click', () => {
-        navButton.classList.toggle('show');  
+        navButton.classList.toggle('show');  
         navBar.classList.toggle('show');
     });
 }
 
 // =========================================================================
-// SEÇÃO 8 (Parte 2): LÓGICA DO RODAPÉ (Ano Atual e Última Modificação)
+// SEÇÃO 8: LÓGICA DO RODAPÉ (Ano Atual e Última Modificação)
 // =========================================================================
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -31,29 +31,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // =========================================================================
-// SEÇÃO 9, 10, 11: LÓGICA DO DIRETÓRIO DE MEMBROS
+// SEÇÃO 9, 10, 11: LÓGICA DO DIRETÓRIO DE MEMBROS E VISUALIZAÇÃO
 // =========================================================================
 
-const memberList = document.getElementById('member-list');
+// memberList é o seu <article id="member-list"> no HTML
+const memberList = document.getElementById('member-list'); 
 const jsonURL = 'data/companies.json';
 
-// Só executa o carregamento se o contêiner do diretório existir (ideal para reutilização)
 if (memberList) {
     
+    // 1. CONFIGURAÇÃO PADRÃO: Define o visual inicial como "grid"
+    memberList.classList.add('grid');
+    
+    // --- LÓGICA DE CARREGAMENTO DE DADOS ---
     async function getCompanyData() {
         try {
-            // A. FAZ A REQUISIÇÃO: Usa fetch para buscar o arquivo JSON
             const response = await fetch(jsonURL);
-
-            // Verifica se a requisição falhou
             if (!response.ok) {
                 throw new Error(`Erro na requisição: ${response.status} - ${response.statusText}`);
             }
 
-            // B. PROCESSA O JSON
             const data = await response.json();
-            
-            // C. CHAMA A EXIBIÇÃO
             displayMembers(data.companies);
 
         } catch (error) {
@@ -64,6 +62,7 @@ if (memberList) {
 
     function displayMembers(companies) {
         companies.forEach(company => {
+            // Cada item é uma SECTION dentro do ARTICLE
             const card = document.createElement('section');
             card.classList.add('company-card');
             
@@ -94,10 +93,30 @@ if (memberList) {
                 </p>
             `;
 
+            // Anexa a SECTION ao ARTICLE
             memberList.appendChild(card);
         });
     }
 
-    // Chama a função para iniciar o carregamento dos dados
     getCompanyData();
+
+
+    // --- LÓGICA DE VISUALIZAÇÃO (GRID/LIST) ---
+    
+    const gridbutton = document.querySelector("#grid");
+    const listbutton = document.querySelector("#list");
+    // 'display' aponta para o <article id="member-list">
+    const display = memberList; 
+
+    gridbutton.addEventListener("click", () => {
+        display.classList.add("grid");
+        display.classList.remove("list");
+    });
+
+    listbutton.addEventListener("click", showList); 
+
+    function showList() {
+        display.classList.add("list");
+        display.classList.remove("grid");
+    }
 }
