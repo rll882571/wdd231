@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <!-- HERE MY VIEWPORT IS RESPONSIBLE FOR CONTROLLING THE PAGE'S SCALE AND ADAPTATION TO DIFFERENT SCREEN SIZES -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- THIS META DESCRIPTION IS RESPONSIBLE FOR PROVIDING A SHORT SUMMARY OF THE PAGE (USED BY SEARCH ENGINES) -->
+    <meta name="description" content="Welcome to my website! Here you'll find resources HTML, CSS, JavaScript, and more.">
+    <!-- THIS META AUTHOR IS RESPONSIBLE FOR SPECIFYING THE NAME OF THE CONTENT CREATOR -->
+    <meta name="author" content="Rodrigo Lima">
+    <!-- THIS META KEYWORDS IS RESPONSIBLE FOR DEFINING SEARCH KEYWORDS RELATED TO THE PAGE (NOT MUCH USED BY MODERN SEARCH ENGINES) -->
+    <meta name="keywords" content="etc..">
+     <!--  THIS META TAG DEFINES THE TITLE THAT WILL BE DISPLAYED WHEN YOUR WEB PAGE IS SHARED ON SOCIAL MEDIA (SPECIFICALLY USING THE OPEN GRAPH PROTOCOL, LIKE ON FACEBOOK).-->
+    <meta property="og:title" content="WDD 231: Web Frontend Development I - Rodrigo Lima">
+    <!-- THIS META TAG DEFINES THE DESCRIPTION THAT WILL BE DISPLAYED WHEN YOUR WEB PAGE IS SHARED ON SOCIAL MEDIA (SPECIFICALLY USING THE OPEN GRAPH PROTOCOL, LIKE ON FACEBOOK).-->
+    <meta property="og:description" content="Main page for WDD 231 course. See my portfolio of front-end development projects in HTML, CSS, and JavaScript.">
+    <!-- THIS META TAG DEFINES THE IMAGE THAT WILL BE DISPLAYED WHEN YOUR WEB PAGE IS SHARED ON SOCIAL MEDIA (SPECIFICALLY USING THE OPEN GRAPH PROTOCOL, LIKE ON FACEBOOK).-->
+     <meta property="og:image" content="https://rll882571.github.io/wdd231/images/card-preview.png"> 
+     <meta property="og:image:width" content="1200"> 
+     <meta property="og:image:height" content="630">   
+    <meta property="og:url" content="https://rodrigolima.github.io/wdd231/index.html">
+    <script src="scripts/page.js" defer></script>
+    <title>WDD 231: Web Frontend Development I- Rodrigo Lima</title>
+        <!-- Favicon HERE -->
+    <link rel="icon" href="images/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+   <header>
+        <img src="images/logo-_1_.webp" alt="Logo da empresa" width="150" height="75" loading="lazy" decoding="async">
+
+      <span>Fortaleza Chamber of Commerce</span>
+      <button id="nav-button" class="hamburger" aria-label="navigation"></button>
+</header>
+      <nav id="nav-bar" class="navigation">
+          <ul>
+              <li class="current"><a href="https://www.facebook.com/?locale=pt_BR">Home</a></li>
+              <li><a href="directory.html">Chamber Project</a></li>
+              <li><a href="https://www.facebook.com/?locale=pt_BR">Final Project</a></li>
+
+          </ul>
+      </nav>
+<main> 
+    <div class="hero"><h1>Home</h1></div>
+
+         <section class="card">
+        
+              <div class="card-one">
+                <h2>About Me</h2>
+                <div>
+                    
+                    <p>
+                        Hello! My name is Rodrigo and I am from Ceará, Brazil. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Impartamesoluta voluptatem error, sint id, ratione saepe doloribus tempora. Eaque,
+                        quisquam nisi quibusdam vitae iusto quidem.
+                    </p>
+                </div>
+             </div>
+        </section>
+            <section class="card">
+               <div class="card-one">
+                <h2>Student Photo</h2>
+                <img class="profile" src="images/profile.webp" alt="profile photo" width="100" height="133" loading="lazy" decoding="async">
+               </div>
+            </section>
+            <section class="third-card">
+                   <div class="card-one">
+                      <h2>Web Certification Courses</h2>
+                     <div id="filter-buttons">
+                       <button id="all" class="active">Show All</button>
+                  <button id="cse">CSE</button>
+                 <button id="wdd">WDD</button>
+                </div>
+                 <p>Total Credits: <span id="total-credits">0</span></p> 
+              <div id="course-grid" class="inner-grid">
+            </div>
+        </div>
+</section>
+        
+</main>
+<footer>
+    <div class="footer-grid">
+
+        <div class="company-address">
+            <p>Fortaleza Chamber of Commerce</p>
+        </div>
+
+        <div class="social">
+            <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"><img src="images/whatsapp.svg" alt="whatsapp" width="16" height="16"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
+            <a href="https://br.linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
+        </div>
+        <div class="company-info">
+            <p>WDD231 Class project</p>
+
+            <p>&copy; <span id="currentyear"></span> Rodrigo F. Lima - Fortaleza, Brazil</p>
+            <p id="lastModified"></p>
+        </div>
+
+    </div>
+</footer>
+</body>
+</html> 

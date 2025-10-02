@@ -370,3 +370,150 @@ html, body {
         right: 0;      /* garante que não extrapole */
     }
 }
+/* ========================================================================= */
+/* ESTILOS ESPECÍFICOS: INDEX.HTML (Home Page) */
+/* Aplicados por padrão ao Desktop e depois adaptados no Mobile */
+/* ========================================================================= */
+
+/* --- 1. HERO AREA (Contêiner e Responsividade da Imagem) --- */
+#hero-area {
+    position: relative; /* Base para o posicionamento absoluto do CTA */
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+#hero-area img {
+    display: block;
+    width: 100%; 
+    height: 660px;
+    object-fit: cover; 
+    margin: 20px auto;
+}
+
+/* --- 2. CTA OVERLAY (Posicionamento e Estilo do Botão "Join Now") --- */
+.cta-overlay {
+    position: absolute;
+    top: 50%; 
+    right: 5%; 
+    transform: translateY(-50%); /* Centraliza verticalmente o CTA */
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: var(--color-text-light, white);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.cta-overlay h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-sky); 
+    color: #000;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #6699ff; 
+}
+
+/* --- 3. ESTILO GERAL DOS CARDS (Eventos, Clima, Spotlights) --- */
+.card {
+    background-color: var(--color-background); 
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.card h2 {
+    border-bottom: 2px solid var(--color-sky);
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+
+/* --- 4. HOME GRID LAYOUT (Desktop/Telas Grandes) --- */
+#home-grid {
+    display: grid;
+    /* 3 colunas para Desktop: 1 evento, 1 clima, 1 spotlight */
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto auto; /* Duas linhas */
+    gap: 25px;
+    padding: 0;
+}
+
+/* Posicionamento dos Itens no Grid */
+#events {
+    grid-column: 1; /* Coluna 1 */
+    grid-row: 1; /* Linha 1 */
+    height: 280px;
+}
+
+#weather {
+    grid-column: 2; /* Coluna 2 */
+    grid-row: 1; /* Linha 1 */
+}
+
+#spotlights {
+    grid-column: 3; /* Coluna 3 */
+    display: flex; /* Para empilhar os spotlight-cards */
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Garante o layout dos spotlights internos (um em cima do outro) */
+#spotlight-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+/* --- 5. ESTILIZAÇÃO INTERNA DA SEÇÃO CLIMA --- */
+#weather {
+    text-align: center;
+}
+
+#current-weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+#temp-current {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+#weather-icon {
+    width: 60px;
+    height: 60px;
+}
+
+#forecast-days {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.forecast-card {
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.forecast-card:last-child {
+    border-right: none;
+    padding-right: 0;
+}
