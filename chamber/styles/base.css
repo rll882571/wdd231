@@ -60,6 +60,10 @@ h1 {
 /* ======================================================= */
 /* ====== 2. ESTILOS HEADER E NAVEGAÇÃO (Comum a todas as páginas) ====== */
 /* ======================================================= */
+/* --- VOU EXPLICAR O QUE CADA UM DESSES ATRIBUTOS FAS EM LINGUAGEM HUMANA ---
+O  
+*/
+
 header {
     display: grid; 
     grid-template-columns: 1fr auto; 
