@@ -1,50 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- =========================
+     META BÁSICO / ESSENCIAL
+     <meta charset="UTF-8"> 
+➡ Define a codificação de caracteres usada no documento.
+➡ UTF-8 é o padrão mais utilizado na web porque suporta praticamente todos os caracteres e símbolos,
+   incluindo letras acentuadas (á, ç, ã) e até emojis (😊).
+➡ Sem isso, acentos e caracteres especiais podem aparecer de forma errada.
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+➡ Define como a página deve ser exibida em dispositivos móveis.
+➡ "width=device-width" faz a largura do site se ajustar à largura da tela do dispositivo.
+➡ "initial-scale=1.0" define o nível de zoom inicial para 100%.
+➡ ESSENCIAL para design responsivo (se não tiver, o site pode ficar minúsculo ou distorcido em celulares).
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+========================= -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta property="og:description" content="Explore the Fortaleza Chamber of Commerce Member Directory. Find local businesses, services, and opportunities in Fortaleza, Brazil.">
-    <meta name="description" content="Home page of the Fortaleza Chamber of Commerce. Find local services, hotels, and event spaces in Fortaleza, Brazil.">
+<!-- =========================
+     SEO (Search Engine Optimization)
+     <meta name="description" ... >
+➡ Fornece um resumo curto da página (até 160 caracteres recomendados).
+➡ É esse texto que aparece no resultado de busca logo abaixo do título.
+➡ Importante para atrair cliques: deve ser claro, objetivo e incluir palavras-chave relevantes.
+<meta name="keywords" ... >
+➡ Lista de palavras-chave relacionadas ao conteúdo da página.
+➡ Hoje em dia, o Google dá pouco ou nenhum peso para esta meta (foi muito usada no passado e abusada com "keyword stuffing").
+➡ Ainda pode ser útil em outros buscadores ou sistemas de indexação menores.
+<meta name="author" ... >
+➡ Indica o autor ou responsável pelo conteúdo da página.
+➡ Útil para credibilidade, documentação e identificação em ferramentas de análise ou manutenção do site.
+========================= -->
+<meta name="description" content="Home page of the Fortaleza Chamber of Commerce. Find local services, hotels, and event spaces in Fortaleza, Brazil.">
+<meta name="keywords" content="Fortaleza, Chamber of Commerce, Home, Local Businesses, Services">
+<meta name="author" content="Rodrigo Lima">
 
-    <meta name="author" content="Rodrigo Lima">
+<!-- =========================
+     SOCIAL MEDIA / OPEN GRAPH
+     <meta property="og:title" ... >
+➡ Define o título que aparecerá na prévia ao compartilhar o link.
+➡ Deve ser curto, objetivo e conter a identidade principal da página.
+<meta property="og:description" ... >
+➡ Descrição que aparece logo abaixo do título na prévia.
+➡ Complementa o título e incentiva o clique.
+➡ Deve ser atrativa e resumir bem o conteúdo.
+<meta property="og:image" ... >
+➡ Define a imagem exibida na prévia.
+➡ É a parte mais chamativa do link nas redes sociais.
+➡ Recomendado: imagem em boa qualidade e que represente o conteúdo/identidade visual do site.
+<meta property="og:image:width" ... > e <meta property="og:image:height" ... >
+➡ Informam as dimensões da imagem (em pixels).
+➡ Garantem que a imagem seja exibida corretamente e sem distorção.
+➡ O padrão mais usado é 1200x630 (formato retangular ideal para Facebook e LinkedIn).
+<meta property="og:url" ... >
+➡ Define a URL oficial da página.
+➡ Evita problemas quando o mesmo conteúdo pode ser acessado por links diferentes.
+➡ Importante para consistência no compartilhamento (ex: canonical link para redes sociais).
+========================= -->
+<meta property="og:title" content="Fortaleza Chamber of Commerce - Home">
+<meta property="og:description" content="Explore the Fortaleza Chamber of Commerce Member Directory. Find local businesses, services, and opportunities in Fortaleza, Brazil.">
+<meta property="og:image" content="https://rll882571.github.io/wdd231/images/card-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://rll882571.github.io/wdd231/chamber/index.html">
+<!-- Scripts para o javascript, utilizei apenas um arquivo css para todas as paginas -->
+<script src="scripts/chamber.js" defer></script>
 
-    <meta name="keywords" content="Fortaleza, Chamber of Commerce, Home, Local Businesses, Services">
+<!-- Titulo da pagina -->
 
-    <meta property="og:title" content="Fortaleza Chamber of Commerce - Home">
-    <meta property="og:image" content="https://rll882571.github.io/wdd231/images/card-preview.png"> 
-    <meta property="og:image:width" content="1200"> 
-    <meta property="og:image:height" content="630">   
-    <meta property="og:url" content="https://rll882571.github.io/wdd231/chamber/index.html">
-    
-    <script src="scripts/chamber.js" defer></script>
-
-    <title>Fortaleza Chamber of Commerce - Home</title>
+<title>Fortaleza Chamber of Commerce - Home</title>
 
         
-    <!-- Favicon HERE -->
-    <link rel="icon" href="images/favicon-16x16.png" type="image/png" sizes="16x16">
+<!-- Favicon que vai aparecer na pagina -->
+<link rel="icon" href="images/favicon-16x16.png" type="image/png" sizes="16x16">
     
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+<!-- GOOGLE FONTS, verifique se esta sendo usado no css -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- HERE IS MY CSS -->
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    
+<!-- styles para o css, utilizei apenas um arquivo css para todas as paginas, e um normalize que eu vou ver a função depois -->
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/base.css">   
+
 </head>
 <body>
+<!-- Sessão 1 -->
 <header>
+    <!-- Sessão 1.1 -->
     <div class="logo-area">
+        <!-- Sessão 1.2 -->
         <img src="images/logo-_1_.webp" alt="Logo da Câmara de Comércio de Fortaleza" width="90" height="60" loading="lazy" decoding="async">
-        <h1>Fortaleza Chamber of Commerce</h1>
+        <!-- Sessão 1.3 -->
+        <h1>Fortaleza Chamber of Commerce - Home</h1>
     </div>
-    
+    <!-- Sessão 1.4 -->
     <nav id="nav-bar" class="navigation">
+        <!-- Sessão 1.5 -->
         <button id="nav-button" class="hamburger" aria-label=" open navigation menu"></button>
+        <!-- Sessão 1.6 -->
         <ul>
               <li class="current"><a href="index.html">Home</a></li> 
               <li><a href="directory.html">Directory</a></li>
