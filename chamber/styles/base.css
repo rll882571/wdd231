@@ -34,13 +34,13 @@ h1, h2, h3 {
 
 main {
     margin: 0 auto;
-    max-width: 90%; 
+    max-width: 70%; 
 }
 
 h1 {
     margin: 0;
 }
-
+/* --- MODIFICA  OS BOTOES GRID E LINE NA PAGINA DO DIRETORIO --- */
 .menu button {
     padding: 0.9rem 0.9rem;
     font-weight: 700;
@@ -51,7 +51,7 @@ h1 {
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-
+/* --- DAR O EFEITO  HOVER PARA OS BOTOES GRID E LINE NA PAGINA DO DIRETORIO --- */
 .menu button:hover {
     background-color: var(--color-sky);
 }
