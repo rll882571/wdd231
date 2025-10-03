@@ -21,7 +21,7 @@ html, body {
 
 body {
     font-family: var(--fonte-texto); 
-    background-color: #f4f4f4; 
+    background-color: #f0f2f5;; 
     margin: 0;
     padding: 0;
     width: 100%; 
