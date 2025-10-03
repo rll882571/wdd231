@@ -330,7 +330,7 @@ header {
 
 #home-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 2fr 1fr 1fr; 
     grid-template-rows: auto auto; 
     gap: 25px;
     padding: 0;
@@ -409,6 +409,170 @@ header {
         grid-column: 1; 
         grid-row: auto; 
         height: auto;
+    }
+    
+}
+
+/* -------------------------------------- */
+#home-grid2 {
+    /* Exibe os cartões em uma grade */
+    display: grid; 
+    /* Cria 3 colunas de largura igual */
+    grid-template-columns: repeat(3, 1fr); 
+    /* Espaço entre os cartões */
+    gap: 20px; 
+    /* Garante que o conteúdo fique centralizado e com um bom espaçamento (ajuste conforme seu design) */
+     
+    /* Cor de fundo leve (ajuste se necessário) */
+    background-color: #f7f7f7; 
+}
+
+/* -------------------------------------- */
+/* 2. Estilo do Cartão Base */
+/* -------------------------------------- */
+.card {
+    /* Cor de fundo do cartão, igual ao do frame */
+    background-color: #e0e0e0; 
+    /* Borda suave */
+    border-radius: 5px; 
+    /* Sombra sutil para dar profundidade */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    /* Espaçamento interno */
+    padding: 20px; 
+    /* Usaremos Flexbox para alinhar itens dentro do cartão, se necessário */
+    display: flex;
+    flex-direction: column;
+}
+
+/* -------------------------------------- */
+/* 3. Estilo do Conteúdo do Cartão */
+/* -------------------------------------- */
+
+.card h2 {
+    
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.card .tag-line {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 15px; /* Espaço antes da linha horizontal */
+}
+
+/* Linha horizontal */
+.card hr {
+    border: none;
+    border-top: 1px solid #c9c9c9; /* Cor da linha de separação */
+    margin: 10px 0;
+}
+
+/* -------------------------------------- */
+/* 4. Layout Imagem + Contato (lado a lado) */
+/* -------------------------------------- */
+.card .details {
+    /* Coloca a imagem e os detalhes em uma linha */
+    display: flex; 
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    margin-top: 10px;
+}
+
+/* Estilos para os detalhes de contato */
+.card .contact-details {
+    /* Ocupa o espaço restante */
+    flex-grow: 1; 
+    padding-left: 15px; /* Espaçamento entre a imagem e o texto */
+    line-height: 1.4; /* Espaçamento entre as linhas */
+}
+
+.card .contact-details p {
+    margin: 3px 0; /* Remove margens padrão e adiciona um pequeno espaço */
+    font-size: 0.95em;
+}
+
+/* Estilo para as labels (EMAIL, PHONE, URL) */
+.card .contact-details strong {
+    font-weight: bold;
+    color: #555;
+    /* Ajuste para garantir que fiquem bem visíveis */
+    margin-right: 5px; 
+}
+
+
+/* -------------------------------------- */
+/* 5. Placeholder da Imagem */
+/* -------------------------------------- */
+.card .image-placeholder {
+    /* Tamanho do box da imagem (ajuste conforme a proporção que você quer) */
+    width: 100px; 
+    height: 100px;
+    /* Cor de fundo do placeholder */
+    background-color: #bdbdbd; 
+    /* Adiciona a borda */
+    border: 1px solid #a0a0a0; 
+    /* Centraliza o conteúdo (as linhas) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Para criar as linhas diagonais */
+    background-image: 
+        linear-gradient(to top right, transparent calc(50% - 1px), #808080, transparent calc(50% + 1px)),
+        linear-gradient(to top left, transparent calc(50% - 1px), #808080, transparent calc(50% + 1px));
+}
+/* ======================================= */
+/* ====== 7. MEDIA QUERIES (Responsividade) ====== */
+/* ======================================= */
+
+/* -------------------------------------- */
+/* 7.1. Adaptando HOME-GRID2 para TELA PEQUENA */
+/* -------------------------------------- */
+
+/* Se a tela for MENOR que 768px (tablets e smartphones) */
+@media (max-width: 767px) {
+    
+    /* 1. Mudar o Layout da Grade para 1 Coluna */
+    #home-grid2 {
+        /* Os cards aparecerão empilhados verticalmente */
+        grid-template-columns: 1fr; 
+    }
+
+    /* 2. Ajustar o Layout Interno do Cartão (Imagem e Detalhes) */
+    .card .details {
+        /* Em telas menores, a imagem e os detalhes devem ficar empilhados */
+        flex-direction: column;
+        align-items: center; /* Centraliza a imagem no topo */
+        text-align: center;
+    }
+
+    /* 3. Remover/Ajustar Espaçamento */
+    .card .contact-details {
+        padding-left: 0; /* Remove o padding lateral */
+        padding-top: 10px; /* Adiciona espaço entre a imagem e o texto de contato */
+    }
+    #hero-area img {
+    display: block;
+    width: 100%; 
+    height: 200px;
+    object-fit: cover; 
+    margin: 20px auto;
+}
+}
+
+
+/* -------------------------------------- */
+/* 7.2. Adaptando para TELA MÉDIA (Tablets) */
+/* -------------------------------------- */
+
+/* Se a tela estiver ENTRE 768px e 1023px (Tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+    /* Mudar o Layout da Grade para 2 Colunas */
+    #home-grid2 {
+        /* Exibe 2 cards por linha */
+        grid-template-columns: 1fr 1fr; 
     }
 }
 
@@ -510,6 +674,7 @@ header {
     display: block; 
     text-align: right; 
 }
+
 
 
 /* ======================================================= */

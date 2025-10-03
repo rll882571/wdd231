@@ -129,3 +129,47 @@ if (memberList) {
         display.classList.remove("grid");
     }
 }   
+// ===============================
+// chamber.js - Preencher cards
+// ===============================
+
+// 1. Selecionar o container dos cards
+const container = document.getElementById('home-grid2');
+
+// 2. Carregar o JSON
+fetch('./data/members.json')  // Caminho do JSON
+    .then(response => response.json())
+    .then(data => {
+        const companies = data.companies;
+
+        // 3. Pegar apenas os 3 primeiros
+        const top3 = companies.slice(0, 3);
+
+        // 4. Criar os cards dinamicamente
+        top3.forEach(company => {
+            const card = document.createElement('section');
+            card.classList.add('card');
+
+            card.innerHTML = `
+                <div class="business-info">
+                    <h2>${company.name}</h2>
+                    <p class="tag-line">${company.services[0]}</p>
+                    
+                    <div class="details">
+                        <div class="image-placeholder">
+                            <img src="./images/${company.image_filename}" alt="${company.name}" 
+                                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+                        </div>
+                        <div class="contact-details">
+                            <p><strong>PHONE:</strong> ${company.phone}</p>
+                            <p><strong>URL:</strong> <a href="${company.website}" target="_blank">${company.website}</a></p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // 5. Adicionar o card ao container
+            container.appendChild(card);
+        });
+    })
+    .catch(error => console.error('Erro ao carregar o JSON:', error));
