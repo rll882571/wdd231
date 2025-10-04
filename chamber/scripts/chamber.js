@@ -86,36 +86,53 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================
   // CHAMBER CARDS (home-grid2)
   // ==========================
-  const container2 = document.getElementById('home-grid2');
-  if (container2) {
-    fetch('./data/members.json')
-      .then(resp => resp.json())
-      .then(data => {
-        const top3 = data.companies.slice(0, 3);
-        top3.forEach(company => {
-          const card = document.createElement('section');
-          card.classList.add('card');
-          card.innerHTML = `
-            <div class="business-info">
-              <h2>${company.name}</h2>
-              <p class="tag-line">${company.services[0]}</p>
-              <div class="details">
-                <div class="image-placeholder">
-                  <img src="./images/${company.image_filename}" alt="${company.name}" 
-                       style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
-                </div>
-                <div class="contact-details">
-                  <p><strong>PHONE:</strong> ${company.phone}</p>
-                  <p><strong>URL:</strong> <a href="${company.website}" target="_blank">${company.website}</a></p>
-                </div>
+   // CÓDIGO CORRIGIDO (Copie e cole este bloco inteiro)
+
+const container2 = document.getElementById('home-grid2');
+if (container2) {
+  fetch('./data/members.json')
+    .then(resp => resp.json())
+    .then(data => {
+      // 1. Filtra para pegar apenas membros Gold (3) e Silver (2)
+      const highLevelMembers = data.companies.filter(company =>
+        company.membership_level === 2 || company.membership_level === 3
+      );
+
+      // 2. Embaralha (randomiza) a lista de membros filtrada
+      // Algoritmo de Fisher-Yates para embaralhar
+      for (let i = highLevelMembers.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [highLevelMembers[i], highLevelMembers[j]] = [highLevelMembers[j], highLevelMembers[i]];
+      }
+
+      // 3. Pega os 3 primeiros membros da lista já embaralhada
+      const spotlights = highLevelMembers.slice(0, 3);
+
+      // 4. Usa a nova lista 'spotlights' para criar os cards
+      spotlights.forEach(company => {
+        const card = document.createElement('section');
+        card.classList.add('card');
+        card.innerHTML = `
+          <div class="business-info">
+            <h2>${company.name}</h2>
+            <p class="tag-line">${company.services[0]}</p>
+            <div class="details">
+              <div class="image-placeholder">
+                <img src="./images/${company.image_filename}" alt="${company.name}" 
+                     style="width: 100%; height: 100%; object-fit: cover; border-radius: 5px;">
+              </div>
+              <div class="contact-details">
+                <p><strong>PHONE:</strong> ${company.phone}</p>
+                <p><strong>URL:</strong> <a href="${company.website}" target="_blank">${company.website}</a></p>
               </div>
             </div>
-          `;
-          container2.appendChild(card);
-        });
-      })
-      .catch(err => console.error('Erro ao carregar JSON:', err));
-  }
+          </div>
+        `;
+        container2.appendChild(card);
+      });
+    })
+    .catch(err => console.error('Erro ao carregar JSON:', err));
+}
 
   // ==========================
   // SESSÕES DINÂMICAS (home-grid)
