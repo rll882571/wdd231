@@ -384,8 +384,7 @@ header {
 
 #forecast-days {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
 }
 
 .forecast-card {
@@ -432,7 +431,7 @@ header {
 /* -------------------------------------- */
 .card {
     /* Cor de fundo do cartão, igual ao do frame */
-    background-color: #e0e0e0; 
+    background-color: #ffffff;
     /* Borda suave */
     border-radius: 5px; 
     /* Sombra sutil para dar profundidade */

@@ -138,25 +138,25 @@ document.addEventListener('DOMContentLoaded', () => {
     weatherSection.id = "weather";
     weatherSection.classList.add("card");
     weatherSection.innerHTML = `
-      <h2>Current Weather</h2>
-      <div id="weather-display">
-        <div id="current-weather">
-          <p id="temp-current">--</p>
-          <img id="weather-icon" src="" alt="Weather Icon">
-          <p id="weather-description">--</p>
-        </div>
-        <h3>3-Day Forecast</h3>
-        <div id="forecast-days"></div>
+     <h2>Current Weather</h2>
+     <div id="weather-display">
+     <div id="current-weather">
+      <p id="temp-current">--</p>
+      <img id="weather-icon" src="" alt="Weather Icon">
+      <p id="weather-description">--</p>
       </div>
-    `;
+     </div>
+`;
     homeGrid.appendChild(weatherSection);
+   
 
     // Sessão 3: Spotlights
-    const spotlightsSection = document.createElement("section");
-    spotlightsSection.id = "spotlights";
-    spotlightsSection.classList.add("card");
-    spotlightsSection.innerHTML = `<h2>Weather Forecast</h2><div id="spotlight-cards"></div>`;
-    homeGrid.appendChild(spotlightsSection);
+    // CÓDIGO CORRIGIDO
+   const spotlightsSection = document.createElement("section");
+   spotlightsSection.id = "spotlights";
+   spotlightsSection.classList.add("card");
+   spotlightsSection.innerHTML = `<h2>Weather Forecast</h2><div id="forecast-days"></div>`; // <-- ID corrigido!
+   homeGrid.appendChild(spotlightsSection);
 
     // ==========================
     // API WEATHER
@@ -166,7 +166,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const descEl = document.getElementById('weather-description');
 
     const weatherURL = 'https://api.openweathermap.org/data/2.5/weather?lat=3.73&lon=38.52&units=metric&appid=77bc9df4dcd1687411c2db397682c283';
-
+    // URL para a previsão (inclui os próximos 5 dias, de 3 em 3 horas)
+    const forecastURL = 'https://api.openweathermap.org/data/2.5/forecast?lat=3.73&lon=38.52&units=metric&appid=77bc9df4dcd1687411c2db397682c283&lang=pt_br';
     async function fetchWeather() {
       try {
         const resp = await fetch(weatherURL);
@@ -177,6 +178,40 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error(err);
       }
     }
+    async function fetchForecast() {
+  try {
+    const resp = await fetch(forecastURL);
+    if (!resp.ok) throw new Error('Erro na API de Forecast');
+    const data = await resp.json();
+
+    // Filtra só registros do meio-dia e pega só 3 dias
+    const dailyForecasts = data.list.filter(item =>
+      item.dt_txt.includes("12:00:00")
+    ).slice(0, 3);
+
+    const forecastContainer = document.getElementById('forecast-days');
+    forecastContainer.innerHTML = '';
+
+    dailyForecasts.forEach(day => {
+      const date = new Date(day.dt * 1000);
+      const dayName = date.toLocaleDateString('pt-BR', { weekday: 'short' });
+
+      const div = document.createElement('div');
+      div.classList.add('forecast-day');
+      div.innerHTML = `
+        <p class="day-name">${dayName.replace('.', '')}</p>
+        <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}.png" alt="${day.weather[0].description}">
+        <p class="temp">${Math.round(day.main.temp)}°C</p>
+      `;
+      forecastContainer.appendChild(div);
+    });
+
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+
 
     function displayWeather(data) {
       const temp = data.main.temp.toFixed(1);
@@ -192,6 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     fetchWeather();
+    fetchForecast();
   }
 
 }); // Fim do DOMContentLoaded
