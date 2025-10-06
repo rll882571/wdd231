@@ -248,7 +248,7 @@ select {
 }
 
 .alizarin {
-    color: #a51707; /* Darker red */
+    color: black; /* Darker red */
 }
 
 .wisteria {
@@ -260,11 +260,11 @@ select {
 }
 
 .emerald {
-    color: #055125; /* Deeper green */
+    color: black; /* Deeper green */
 }
 
 .sun-flower {
-    color: #695a1d; /* Darker yellow */
+    color: black; /* Darker yellow */
 }
 
 dialog {
