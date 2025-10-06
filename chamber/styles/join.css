@@ -4,7 +4,7 @@
 main {
     max-width: 859px;
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: repeat(auto-fill, minmax(360px, 2fr));
     gap: 1em;
     margin: 0 auto;
 }
@@ -290,12 +290,6 @@ dialog button {
     background-color: var(--king-kong);
     color: var(--white);
 }
-main > div:first-child {
-    /* Faz a div ocupar todas as colunas, da primeira à última */
-    grid-column: 1 / -1; 
-}
+/* Adicione estas regras no seu arquivo join.css */
 
-main h1 {
-    text-align: center; /* Centraliza o texto do h1 */
-    width: 100%; /* Garante que ele ocupe todo o espaço */
-}
+/* 1. Faz o container do H1 ocupar toda a largura do grid */

@@ -240,3 +240,12 @@ header {
         grid-column: 1;
     }
 }
+main > div:first-child {
+    grid-column: 1 / -1; /* Esta é a linha chave! */
+    text-align: center;  /* Opcional: para centralizar o título */
+}
+
+/* 2. Garante que o H1 dentro do container não tenha margens estranhas */
+main > div:first-child h1 {
+    margin: 0.5em 0; /* Ajuste a margem conforme necessário */
+}
