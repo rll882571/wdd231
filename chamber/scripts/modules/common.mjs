@@ -13,3 +13,18 @@ if (navButton && navBar) {
   });
 }
 }
+// --- SCRIPT PARA O FOOTER ---
+
+// Seleciona o <span> para o ano atual
+const currentYearSpan = document.getElementById("currentyear");
+// Cria um objeto de data e pega o ano completo
+const currentYear = new Date().getFullYear();
+// Insere o ano no HTML
+currentYearSpan.textContent = currentYear;
+
+// Seleciona o <p> para a data de modificação
+const lastModifiedParagraph = document.getElementById("lastModified");
+// Pega a data da última modificação do documento
+const lastModifiedDate = document.lastModified;
+// Insere o texto e a data no HTML
+lastModifiedParagraph.textContent = `Last Modified: ${lastModifiedDate}`;

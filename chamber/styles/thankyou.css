@@ -72,3 +72,8 @@ main {
     font-weight: bold;
     text-decoration: underline black;
 }
+.form-data-display span {
+    color: red; /* Use um cinza escuro ou a mesma cor do seu texto principal */
+    /* Se você tiver uma variável de cor para texto, use-a aqui! Ex: color: var(--paragraph-color); */
+    font-weight: normal; /* Garante que a resposta não fique em negrito como o rótulo */
+}

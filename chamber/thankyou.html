@@ -67,7 +67,7 @@ SOCIAL MEDIA / OPEN GRAPH
 <!-- Scripts para o javascript, utilizei apenas um arquivo css para todas as paginas -->
 
 <script type="module" src="scripts/modules/main.mjs" defer></script>
-<script type="module" src="scripts/modules/join.js" defer></script>
+<script type="module" src="scripts/modules/thankyou.js" defer></script>
 
 
 <!-- Titulo da pagina -->
@@ -86,8 +86,7 @@ SOCIAL MEDIA / OPEN GRAPH
 <!-- styles para o css, utilizei apenas um arquivo css para todas as paginas, e um normalize que eu vou ver a função depois -->
 <link rel="stylesheet" href="styles/normalize.css">
 <link rel="stylesheet" href="styles/base.css">
-<link rel="stylesheet" href="styles/join.css"> 
-
+<link rel="stylesheet" href="styles/thankyou.css"> 
 
 
 </head>
@@ -115,127 +114,31 @@ SOCIAL MEDIA / OPEN GRAPH
         </ul>
     </nav>
 </header> 
-<main>
+<main class="thank-you-container">
 
-    <form method="get" action="thankyou.html">
-        <h2 class="sub-title-form">Membership Application</h2>
-        <label class="name-lb">
-            First Name:
-        </label>
-        <input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required
-            placeholder="Type your first name">
-             <label class="name-lb">
-            Last Name:
-        </label>
-        <input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required
-            placeholder="Type your last name">
-        <br><br>
 
-        <label>
-            Organizational Title:
-        </label>
-        <input type="text" name="organizationTitle" title="Enter your organizational title"
-            autocomplete="organization-title" pattern="[A-Za-z\s\-.,']{2,}" required>
-        <br><br>
-
-        <label>
-            Email Address:
-        </label>
-        <input type="email" name="email" title="Enter your email address" autocomplete="email"
-            placeholder="example@email.com" required>
-        <br><br>
-
-        <label>
-            Mobile Phone Number:
-        </label>
-        <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required
-            placeholder="+1 123-456-7890">
-        <br><br>
-
-        <label>
-            Business/Organization Name:
-        </label>
-        <input type="text" name="organization" title="Enter your business or organization name"
-            autocomplete="organization" required>
-        <br><br>
-
-        <label>
-            Membership Level:
-        </label>
-        <select name="membershipLevel" required>
-            <option value="" disabled selected>Select a membership level</option>
-            <option value="NP">NP Membership (Non-Profit)</option>
-            <option value="Bronze">Bronze Membership</option>
-            <option value="Silver">Silver Membership</option>
-            <option value="Gold">Gold Membership</option>
-        </select>
-        <br><br>
-
-        <label>
-            Business/Organization Description:
-        </label>
-        <textarea name="organizationDescription" title="Describe your business or organization" rows="4"
-            cols="50"></textarea>
-        <br><br>
-
-        <input type="hidden" name="timestamp" id="timestamp" value="">
-        <button class="css-button-fully-rounded--grey" type="submit">Submit</button>
-
-        <br><br>
-    </form>
-
-    <section class="membership-container">
-        <h2 class="sub-title-member">Membership Levels</h2>
-
-        <div class="card">
-            <h3>Non Profit Membership Level</h3>
-            <button class="css-button-arrow--black" id="npButton"
-                aria-label="Learn more about Non-Profit Membership">
-                <span class="visually-hidden">Learn More</span>
-            </button>
-        </div>
-
-        <div class="card">
-            <h3>Bronze Membership Level</h3>
-            <button class="css-button-arrow--black" id="bronzeButton"
-                aria-label="Learn more about bronze Membership">
-                <span class="visually-hidden">Learn More</span></button>
-        </div>
-
-        <div class="card">
-            <h3>Silver Membership Level</h3>
-            <button class="css-button-arrow--black" id="silverButton"
-                aria-label="Learn more about silver Membership">
-                <span class="visually-hidden">Learn More</span></button>
-        </div>
-
-        <div class="card">
-            <h3>Gold Membership Level</h3>
-            <button class="css-button-arrow--black" id="goldButton" aria-label="Learn more about gold Membership">
-                <span class="visually-hidden">Learn More</span></button>
-        </div>
-
-        <section class="msg-box">
-            <div class="rotating-text">
-                <h3 class="start-p">Become part of our</h3>
-                <p>
-                    <span class="word alizarin">Awesome</span>
-                    <span class="word wisteria">Amazing</span>
-                    <span class="word peter-river">Incredible</span>
-                    <span class="word emerald">Fantastic</span>
-                    <span class="word sun-flower">Fabulous</span>
-                </p>
-                <h3 class="end-p">community!</h3>
+        <section class="thank-you-section">
+            <h2>Thank You!</h2>
+            <p>We appreciate your interest in joining our organization. Your application has been successfully
+                submitted.</p>
+            <div class="form-data-display">
+                <h3>Your Submitted Information:</h3>
+                <p><strong>First Name:</strong> <span id="first-name"></span></p>
+                <p><strong>Last Name:</strong> <span id="last-name"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong>Mobile Number:</strong> <span id="mobile-number"></span></p>
+                <p><strong>Business Name:</strong> <span id="business-name"></span></p>
+                <p><strong>Submission Date:</strong> <span id="timestamp"></span></p>
             </div>
+
+
+            <p>If you're curious or want to explore further, feel free to <a class="discover-link"
+                    href="discover.html">discover more</a>.</p>
+            <a href="index.html" class="css-button-sharp--grey">Return to Home</a>
         </section>
+    </main>
 
-    </section>
-
-    <dialog id="npModal"></dialog>
-    <dialog id="bronzeModal"></dialog>
-    <dialog id="silverModal"></dialog>
-    <dialog id="goldModal"></dialog>
-</main>
+    
 <footer>
     <div class="footer-grid">
 
