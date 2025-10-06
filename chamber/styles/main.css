@@ -75,7 +75,7 @@
 }
 
 .card h2 {
-    border-bottom: 2px solid var(--color-sky);
+    border-bottom: 2px solid #2c3042;
     padding-bottom: 5px;
     margin-top: 0;
 }
