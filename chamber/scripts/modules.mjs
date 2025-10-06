@@ -2,8 +2,7 @@
 // scripts/modules.mjs - MÓDULO PRINCIPAL (O Hub)
 // =========================================================================
 
-// Importa o objeto de dados (default export)
-import byuiCourse from "./course.mjs"; 
+// Importa o objeto de dados (default export)port byuiCourse from "./course.mjs"; 
 
 // Importa as funções nomeadas de outros módulos
 import { setSectionSelection } from "./sections.mjs"; 
