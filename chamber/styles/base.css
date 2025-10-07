@@ -80,14 +80,42 @@ header {
     border-radius: 4px;
 }
 
+/* --- EFEITO 1: SUBLINHADO ANIMADO --- */
+
+/* Primeiro, preparamos o link */
+.navigation a {
+    position: relative; /* Essencial para o sublinhado funcionar */
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 0; /* Ajuste o padding vertical se necessário */
+    transition: color 0.3s ease;
+}
+
+/* Agora, criamos o sublinhado (que começa invisível) */
+.navigation a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-sky); /* A cor do seu tema */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); /* Começa com largura zero */
+    transform-origin: center; /* A animação cresce do centro */
+    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1); /* Transição suave */
+}
+
+/* Ao passar o mouse, o sublinhado aparece e a cor do texto muda */
 .navigation a:hover {
-    background-color: var(--color-sky); 
-    color: #000000; 
-    transition: all 0.3s ease;
+    color: var(--color-sky); /* Opcional: muda a cor do texto */
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1); /* Aumenta a largura para 100% */
 }
 
 .navigation ul li.current a {
-    border-bottom: 2px solid var(--color-sky); 
+    border-bottom: 2px solid white; 
     padding-bottom: 5px; 
 }
 
