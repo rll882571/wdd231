@@ -1,0 +1,44 @@
+{
+  "readingSection": {
+    "title": "The Power of Colors in Our Lives",
+    "text": "Colors are more than just visual elements—they carry emotional, psychological, and cultural meanings that influence how we feel, think, and behave. Warm colors like red, orange, and yellow are often associated with energy, passion, and enthusiasm... (coloque o resto do texto aqui)"
+  },
+  "questions": [
+    {
+      "id": 1,
+      "questionText": "According to the text, what is the primary role of colors in our lives?",
+      "options": [
+        "They influence how we feel, think, and behave.",
+        "They are only visual elements without deeper meaning.",
+        "They are exclusively used in fashion and advertising.",
+        "Their main purpose is to show a person's financial status.",
+        "They only serve to make environments more beautiful."
+      ],
+      "correctAnswer": "They influence how we feel, think, and behave."
+    },
+    {
+      "id": 2,
+      "questionText": "Which colors are mentioned as being suitable for environments where relaxation and concentration are desired?",
+      "options": [
+        "Red, orange, and yellow.",
+        "Black, white, and gray.",
+        "Blue, green, and purple.",
+        "Only red and blue.",
+        "Bright and neon colors."
+      ],
+      "correctAnswer": "Blue, green, and purple."
+    },
+    {
+      "id": 3,
+      "questionText": "In the context of marketing and design, what does the color red often suggest?",
+      "options": [
+        "Calm and peace.",
+        "Trust and professionalism.",
+        "Urgency or power.",
+        "Stability and concentration.",
+        "Sadness and nostalgia."
+      ],
+      "correctAnswer": "Urgency or power."
+    }
+  ]
+}

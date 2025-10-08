@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- =========================
+     META BÁSICO / ESSENCIAL
+     <meta charset="UTF-8"> 
+➡ Define a codificação de caracteres usada no documento.
+➡ UTF-8 é o padrão mais utilizado na web porque suporta praticamente todos os caracteres e símbolos,
+   incluindo letras acentuadas (á, ç, ã) e até emojis (😊).
+➡ Sem isso, acentos e caracteres especiais podem aparecer de forma errada.
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+➡ Define como a página deve ser exibida em dispositivos móveis.
+➡ "width=device-width" faz a largura do site se ajustar à largura da tela do dispositivo.
+➡ "initial-scale=1.0" define o nível de zoom inicial para 100%.
+➡ ESSENCIAL para design responsivo (se não tiver, o site pode ficar minúsculo ou distorcido em celulares).
+
+========================= -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- =========================
+     SEO (Search Engine Optimization)
+     <meta name="description" ... >
+➡ Fornece um resumo curto da página (até 160 caracteres recomendados).
+➡ É esse texto que aparece no resultado de busca logo abaixo do título.
+➡ Importante para atrair cliques: deve ser claro, objetivo e incluir palavras-chave relevantes.
+<meta name="keywords" ... >
+➡ Lista de palavras-chave relacionadas ao conteúdo da página.
+➡ Hoje em dia, o Google dá pouco ou nenhum peso para esta meta (foi muito usada no passado e abusada com "keyword stuffing").
+➡ Ainda pode ser útil em outros buscadores ou sistemas de indexação menores.
+<meta name="author" ... >
+➡ Indica o autor ou responsável pelo conteúdo da página.
+➡ Útil para credibilidade, documentação e identificação em ferramentas de análise ou manutenção do site.
+========================= -->
+<meta name="description" content="join page of the Fortaleza Chamber of Commerce. Join us to connect with local businesses and services.">
+<meta name="keywords" content="Fortaleza, Chamber of Commerce, Join, Local Businesses, Services">
+<meta name="author" content="Rodrigo Lima">
+
+<!-- =========================
+SOCIAL MEDIA / OPEN GRAPH
+<meta property="og:title" ... >
+➡ Define o título que aparecerá na prévia ao compartilhar o link.
+➡ Deve ser curto, objetivo e conter a identidade principal da página.
+<meta property="og:description" ... >
+➡ Descrição que aparece logo abaixo do título na prévia.
+➡ Complementa o título e incentiva o clique.
+➡ Deve ser atrativa e resumir bem o conteúdo.
+<meta property="og:image" ... >
+➡ Define a imagem exibida na prévia.
+➡ É a parte mais chamativa do link nas redes sociais.
+➡ Recomendado: imagem em boa qualidade e que represente o conteúdo/identidade visual do site.
+<meta property="og:image:width" ... > e <meta property="og:image:height" ... >
+➡ Informam as dimensões da imagem (em pixels).
+➡ Garantem que a imagem seja exibida corretamente e sem distorção.
+➡ O padrão mais usado é 1200x630 (formato retangular ideal para Facebook e LinkedIn).
+<meta property="og:url" ... >
+➡ Define a URL oficial da página.
+➡ Evita problemas quando o mesmo conteúdo pode ser acessado por links diferentes.
+➡ Importante para consistência no compartilhamento (ex: canonical link para redes sociais).
+========================= -->
+<meta property="og:title" content="Fortaleza Chamber of Commerce - join">
+<meta property="og:description" content="Join the Fortaleza Chamber of Commerce to connect with local businesses and services.">
+<meta property="og:image" content="https://rll882571.github.io/wdd231/images/card-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://rll882571.github.io/wdd231/chamber/join.html">
+<!-- Scripts para o javascript, utilizei apenas um arquivo css para todas as paginas -->
+
+<script type="module" src="scripts/modules/main.mjs" ></script>
+<script type="module" src="scripts/modules/join.js" ></script>
+
+
+<!-- Titulo da pagina -->
+
+<title>Fortaleza Chamber of Commerce - Join</title>
+
+        
+<!-- Favicon que vai aparecer na pagina -->
+<link rel="icon" href="images/favicon-16x16.png" type="image/png" sizes="16x16">
+    
+<!-- GOOGLE FONTS, verifique se esta sendo usado no css -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- styles para o css, utilizei apenas um arquivo css para todas as paginas, e um normalize que eu vou ver a função depois -->
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/join.css"> 
+
+
+
+</head>
+<body>
+<!-- Sessão 1 -->
+<header>
+    <!-- Sessão 1.1 -->
+    <div class="logo-area">
+        <!-- Sessão 1.2 -->
+        <img src="images/logo-_1_.webp" alt="Logo da Câmara de Comércio de Fortaleza" width="90" height="60"  decoding="async">
+        <!-- Sessão 1.3 -->
+        
+    </div>
+    <!-- Sessão 1.4 -->
+    <nav id="nav-bar" class="navigation">
+        <!-- Sessão 1.5 -->
+        <button id="nav-button" class="hamburger" aria-label=" open navigation menu"></button>
+        <!-- Sessão 1.6 -->
+        <ul>
+              
+              <li class=""><a href="index.html">Home</a></li> 
+              <li><a href="directory.html">Directory</a></li>
+              <li class="current"><a href="join.html">Join</a></li>
+              <li><a href="discover.html">Discover</a></li> 
+        </ul>
+    </nav>
+</header> 
+<main>
+    <div>
+    <h1>Fortaleza Chamber of Commerce - Join</h1>
+    </div>
+
+    <form method="get" action="thankyou.html">
+        <h2 class="sub-title-form">Membership Application</h2>
+        <label class="name-lb">
+            First Name:
+        </label>
+        <input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required
+            placeholder="Type your first name">
+             <label class="name-lb">
+            Last Name:
+        </label>
+        <input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required
+            placeholder="Type your last name">
+        <br><br>
+
+        <label>
+            Organizational Title:
+        </label>
+        <input type="text" name="organizationTitle" title="Enter your organizational title"
+        autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" required>
+
+        <br><br>
+
+        <label>
+            Email Address:
+        </label>
+        <input type="email" name="email" title="Enter your email address" autocomplete="email"
+            placeholder="example@email.com" required>
+        <br><br>
+
+        <label>
+            Mobile Phone Number:
+        </label>
+        <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required
+            placeholder="+1 123-456-7890">
+        <br><br>
+
+        <label>
+            Business/Organization Name:
+        </label>
+        <input type="text" name="organization" title="Enter your business or organization name"
+            autocomplete="organization" required>
+        <br><br>
+
+        <label>
+            Membership Level:
+        </label>
+        <select name="membershipLevel" required>
+            <option value="" disabled selected>Select a membership level</option>
+            <option value="NP">NP Membership (Non-Profit)</option>
+            <option value="Bronze">Bronze Membership</option>
+            <option value="Silver">Silver Membership</option>
+            <option value="Gold">Gold Membership</option>
+        </select>
+        <br><br>
+
+        <label>
+            Business/Organization Description:
+        </label>
+        <textarea name="organizationDescription" title="Describe your business or organization" rows="4"
+            cols="50"></textarea>
+        <br><br>
+
+        <input type="hidden" name="timestamp" id="timestamp" value="">
+        <button class="css-button-fully-rounded--grey" type="submit">Submit</button>
+
+        <br><br>
+    </form>
+
+    <section class="membership-container">
+        <h2 class="sub-title-member">Membership Levels</h2>
+
+        <div class="card">
+            <h3>Non Profit Membership Level</h3>
+            <button class="css-button-arrow--black" id="npButton"
+                aria-label="Learn more about Non-Profit Membership">
+                <span class="visually-hidden">Learn More</span>
+            </button>
+        </div>
+
+        <div class="card">
+            <h3>Bronze Membership Level</h3>
+            <button class="css-button-arrow--black" id="bronzeButton"
+                aria-label="Learn more about bronze Membership">
+                <span class="visually-hidden">Learn More</span></button>
+        </div>
+
+        <div class="card">
+            <h3>Silver Membership Level</h3>
+            <button class="css-button-arrow--black" id="silverButton"
+                aria-label="Learn more about silver Membership">
+                <span class="visually-hidden">Learn More</span></button>
+        </div>
+
+        <div class="card">
+            <h3>Gold Membership Level</h3>
+            <button class="css-button-arrow--black" id="goldButton" aria-label="Learn more about gold Membership">
+                <span class="visually-hidden">Learn More</span></button>
+        </div>
+
+        <section class="msg-box">
+            <div class="rotating-text">
+                <h3 class="start-p">Become part of our</h3>
+                <p>
+                    
+                    <span class="word emerald">Fantastic</span>
+                    <span class="word sun-flower">Fabulous</span>
+                </p>
+                <h3 class="end-p">community!</h3>
+            </div>
+        </section>
+
+    </section>
+
+    <dialog id="npModal"></dialog>
+    <dialog id="bronzeModal"></dialog>
+    <dialog id="silverModal"></dialog>
+    <dialog id="goldModal"></dialog>
+</main>
+<footer>
+    <div class="footer-grid">
+
+        <div class="company-address">
+            <p>Fortaleza Chamber of Commerce</p>
+        </div>
+
+        <div class="social">
+            <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"><img src="images/whatsapp.svg" alt="whatsapp" width="25" height="25"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.svg" alt="instagram" width="25" height="25"></a>
+            <a href="https://br.linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="25" height="25"></a>
+        </div>
+        <div class="company-info">
+            <p>WDD231 Class project</p>
+
+            <p>&copy; <span id="currentyear"></span> Rodrigo F. Lima - Fortaleza, Brazil</p>
+            <p id="lastModified"></p>
+        </div>
+
+    </div>
+</footer>
+</body>
+</html> 

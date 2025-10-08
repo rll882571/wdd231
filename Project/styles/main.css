@@ -1,0 +1,385 @@
+/* --- MODIFICA  OS BOTOES GRID E LINE NA PAGINA DO DIRETORIO --- */
+.menu button {
+    padding: 0.9rem 0.9rem;
+    font-weight: 700;
+    background-color: var(--color-text-light); 
+    color: #2c3042; 
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+/* --- DAR O EFEITO  HOVER PARA OS BOTOES GRID E LINE NA PAGINA DO DIRETORIO --- */
+.menu button:hover {
+    background-color: var(--color-sky);
+}
+
+
+/* ======================================================= */
+/* ====== 5. ESTILOS DO MAIN: PÁGINA INICIAL (HOME) ====== */
+/* ======================================================= */
+#hero-area {
+    position: relative; 
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+#hero-area img {
+    display: block;
+    width: 100%; 
+    height: 660px;
+    object-fit: cover; 
+    margin: 20px auto;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 50%; 
+    right: 5%; 
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: var(--color-text-light, white);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.cta-overlay h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-sky); 
+    color: #000;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #6699ff; 
+}
+
+/* Cards e Grid */
+.card {
+    background-color: var(--color-background); 
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.card h2 {
+    border-bottom: 2px solid #2c3042;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+#home-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; 
+    grid-template-rows: auto auto; 
+    gap: 25px;
+    padding: 0;
+}
+
+#events {
+    grid-column: 1; 
+    grid-row: 1; 
+    height: 280px;
+}
+
+#weather {
+    grid-column: 2; 
+    grid-row: 1; 
+    text-align: center;
+}
+
+#spotlights {
+    grid-column: 3; 
+    display: flex; 
+    flex-direction: column;
+    gap: 15px;
+}
+
+#spotlight-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+/* Detalhes Clima */
+#current-weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+#temp-current {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+#weather-icon {
+    width: 60px;
+    height: 60px;
+}
+
+#forecast-days {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forecast-card {
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.forecast-card:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+/* Media Query Mobile para Home Grid */
+@media (max-width: 768px) {
+    #home-grid {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+    #events, #weather, #spotlights {
+        grid-column: 1; 
+        grid-row: auto; 
+        height: auto;
+    }
+    
+}
+
+/* -------------------------------------- */
+#home-grid2 {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    background-color: #f7f7f7; 
+}
+
+/* -------------------------------------- */
+.card {
+    background-color: #ffffff;
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* -------------------------------------- */
+.card h2 {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.card .tag-line {
+    font-size: 0.9em;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.card hr {
+    border: none;
+    border-top: 1px solid #c9c9c9;
+    margin: 10px 0;
+}
+
+/* -------------------------------------- */
+.card .details {
+    display: flex; 
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.card .contact-details {
+    flex-grow: 1; 
+    padding-left: 15px;
+    line-height: 1.4;
+}
+
+.card .contact-details p {
+    margin: 3px 0;
+    font-size: 0.95em;
+}
+
+.card .contact-details strong {
+    font-weight: bold;
+    color: #555;
+    margin-right: 5px; 
+}
+
+
+/* -------------------------------------- */
+.card .image-placeholder {
+    width: 100px; 
+    height: 100px;
+    background-color: #bdbdbd; 
+    border: 1px solid #a0a0a0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: 
+        linear-gradient(to top right, transparent calc(50% - 1px), #808080, transparent calc(50% + 1px)),
+        linear-gradient(to top left, transparent calc(50% - 1px), #808080, transparent calc(50% + 1px));
+}
+/* ======================================= */
+/* ====== 7. MEDIA QUERIES (Responsividade) ====== */
+/* ======================================= */
+
+/* -------------------------------------- */
+@media (max-width: 767px) {
+    #home-grid2 {
+        grid-template-columns: 1fr; 
+    }
+
+    .card .details {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card .contact-details {
+        padding-left: 0;
+        padding-top: 10px;
+    }
+    #hero-area img {
+        display: block;
+        width: 100%; 
+        height: 200px;
+        object-fit: cover; 
+        margin: 20px auto;
+    }
+}
+
+
+/* -------------------------------------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #home-grid2 {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+
+/* ======================================================= */
+/* ====== 6. ESTILOS DO MAIN: PÁGINA DE MEMBROS (DIRECTORY) ====== */
+/* ======================================================= */
+#member-list section {
+    border: 1px solid rgb(0 0 0 / 10%);
+    padding: 0.5rem;
+    background-color: #f4f4f4; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; 
+}
+#member-list section a {
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    color: #2c3042; 
+    text-decoration: none;
+}
+#member-list section h3 {
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+#member-list section img {
+    width: auto;
+    height: 250px;
+}
+
+/* --- Visualização GRID --- */
+@media (min-width: 1024px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-gap: 5px;
+        align-items: center;
+    }
+}
+
+.grid section {
+    text-align: center;
+}
+
+.grid section > * {
+    margin: 0.1rem;
+}
+
+.grid img {
+    border: 1px solid #fff;
+    box-shadow: 0 0 1rem #555;
+}
+
+/* --- Visualização LISTA --- */
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin: 0;
+    padding: 0.25rem;
+    border: none; 
+}
+
+.list section > * {
+    margin: 0 1rem;
+}
+
+.list img, 
+.list section hr {
+    display: none;
+}
+
+.list section h3 {
+    font-size: 1rem;
+}
+
+.list section:nth-child(even) {
+    background-color: #f4f4f4; 
+}
+
+.list section:nth-child(odd) {
+    background-color: #fff; 
+}
+
+.list section p {
+    display: none; 
+}
+
+.list section p:nth-child(6) {
+    display: block; 
+    text-align: right; 
+}
+
+/* ======================================================= */
+/* ====== 7. ESTILOS DO MAIN: PÁGINA 3 (Nome da página) ====== */
+/* ======================================================= */
+/* Insira aqui os estilos exclusivos para o MAIN da sua 3ª página. */
+
+
+/* ======================================================= */
+/* ====== 8. ESTILOS DO MAIN: PÁGINA 4 (Nome da página) ====== */
+/* ======================================================= */
+/* Insira aqui os estilos exclusivos para o MAIN da sua 4ª página. */

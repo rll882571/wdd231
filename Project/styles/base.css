@@ -1,0 +1,275 @@
+/* ======================================================= */
+/* ====== 1. ESTILOS GLOBAIS & ROOT VARIABLES (Comum a todas as páginas) ====== */
+/* ======================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Josefin+Sans:wght@700&family=Roboto&display=swap');
+
+:root {
+    /* City colors */
+    --color-sky: #9ad0ec; 
+    --color-text-light: white;
+    --color-background: white; 
+    --fonte-titulo: 'Josefin Sans', sans-serif; 
+    --fonte-texto: 'Roboto', sans-serif;
+    --fonte-codigo: 'Consolas', 'Courier New', monospace;
+}
+
+/* --- Estilos Base (Body, Tipografia) --- */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--fonte-texto); 
+    background-color: #f0f2f5;; 
+    margin: 0;
+    padding: 0;
+    width: 100%; 
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-titulo);
+    font-weight: 700; 
+}
+
+main {
+    margin: 0 auto;
+    max-width: 70%; 
+}
+
+h1 {
+    margin: 0;
+}
+
+/* ======================================================= */
+/* ====== 2. ESTILOS HEADER E NAVEGAÇÃO (Comum a todas as páginas) ====== */
+/* ======================================================= */
+header {
+    display: grid; 
+    grid-template-columns: 1fr auto; 
+    align-items: center; 
+    background-color: white;    
+    padding: 10px;
+    gap: 20px;
+}
+.logo-area {
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+}
+.navigation {
+    display: flex; 
+    align-items: center;
+    gap: 20px; 
+}
+
+.navigation ul {
+    display: flex; 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    gap: 25px; 
+}
+
+.navigation a {
+    color: red; 
+    text-decoration: none; 
+    font-weight: bold;
+    padding: 10px 15px; 
+    border-radius: 4px;
+}
+
+/* --- EFEITO 1: SUBLINHADO ANIMADO --- */
+
+/* Primeiro, preparamos o link */
+.navigation a {
+    position: relative; /* Essencial para o sublinhado funcionar */
+    text-decoration: none;
+    padding: 10px 0; /* Ajuste o padding vertical se necessário */
+    transition: color 0.3s ease;
+}
+
+/* Agora, criamos o sublinhado (que começa invisível) */
+.navigation a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-sky); /* A cor do seu tema */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); /* Começa com largura zero */
+    transform-origin: center; /* A animação cresce do centro */
+    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1); /* Transição suave */
+}
+
+/* Ao passar o mouse, o sublinhado aparece e a cor do texto muda */
+.navigation a:hover {
+    color: var(--color-sky); /* Opcional: muda a cor do texto */
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1); /* Aumenta a largura para 100% */
+}
+
+.navigation ul li.current a {
+    border-bottom: 1px solid black; 
+    padding-bottom: 5px; 
+}
+
+.hamburger {
+    background: none;
+    border: 1px solid white; 
+    color: rgb(252, 95, 95);
+    padding: 10px;
+    cursor: pointer;
+    display: none; /* Oculto no Desktop */
+}
+
+
+/* ======================================================= */
+/* ====== 3. ESTILOS FOOTER (Comum a todas as páginas) ====== */
+/* ======================================================= */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #2c3042; 
+    color: var(--color-text-light);
+    padding: 10px;
+    text-align: center;
+    height: auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.social {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.company-address p {
+    grid-column: 1;
+    text-align: right;
+    margin: 0;
+}
+
+.company-info {
+    grid-column: 3;
+    text-align: left;
+}
+
+.company-info p {
+    text-align: left; 
+    margin: 0;
+}
+
+
+/* ======================================================= */
+/* ====== 4. ESTILOS MOBILE GERAIS (Comum a todas as páginas) ====== */
+/* ======================================================= */
+@media (max-width: 768px) {
+    
+    /* 4.1. HEADER E LOGO */
+    header {
+        grid-template-columns: 1fr auto; 
+        padding: 5px 10px;
+        gap: 0; 
+    }
+    
+    .logo-area h1 {
+        font-size: 1.1rem; 
+    }
+    
+    .logo-area img {
+        width: 50px; 
+        height: 50px;
+    }
+
+    /* 4.2. BOTÃO HAMBURGER */
+    .hamburger {
+        display: block; 
+        justify-self: end; 
+        border: none; 
+        font-size: 2rem;
+        padding: 5px 10px; 
+    }
+
+    .hamburger::before {
+        content: "\2630"; 
+    }
+    
+    .hamburger.show::before {
+        content: "\00D7"; 
+    }
+
+    /* 4.3. NAVEGAÇÃO / MENU */
+     .navigation ul {
+    max-height: 0;
+    overflow: hidden; 
+    transition: max-height 0.4s ease-in-out; 
+
+   
+    flex-direction: column;
+    width: 40%;
+    text-align: center;
+    background-color: white; 
+   
+    margin-top: 0;
+    position: absolute;
+    top: 100%;
+    left: 60%;
+    z-index: 1000;
+}
+
+
+/* Mude a regra da classe .show */
+.navigation.show ul {
+    
+    
+    max-height: 300px; 
+}
+
+/* Você pode manter o resto do CSS como está */
+.navigation.show ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+   }
+
+    header {
+    position: relative; 
+   }
+
+
+    /* 4.4. MAIN / FOOTER MOBILE GERAL */
+    main {
+        padding: 10px;
+        max-width: 95%; /* Ajuste para telas pequenas */
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        padding: 20px 10px;
+    }
+
+    .company-address p, .company-info p {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    
+    .social {
+        order: -1; 
+        margin-bottom: 10px;
+        grid-column: 1;
+    }
+}
+main > div:first-child {
+    grid-column: 1 / -1; /* Esta é a linha chave! */
+    text-align: center;  /* Opcional: para centralizar o título */
+}
+
+/* 2. Garante que o H1 dentro do container não tenha margens estranhas */
+main > div:first-child h1 {
+    margin: 0.5em 0; /* Ajuste a margem conforme necessário */
+}

@@ -1,0 +1,22 @@
+{
+  "testimonials": [
+    {
+      "name": "Ana S.",
+      "photo": "girl.jpg",
+      "quote": "This simulator was a game-changer! The questions are very similar to the real test, and I could practice whenever I had free time.",
+      "improvement": "Result: Improved my score from 75 to 90!"
+    },
+    {
+      "name": "Bruno L.",
+      "photo": "bruno.jpg",
+      "quote": "I was struggling with verb tenses, but the focused practice here helped me finally understand them. The instant feedback is amazing.",
+      "improvement": "Result: Aced the grammar section!"
+    },
+    {
+      "name": "Carla M.",
+      "photo": "boy2.jpg",
+      "quote": "The best part is being able to simulate the pressure of the real test. I felt much more confident and prepared on the actual exam day.",
+      "improvement": "Result: Passed with a high grade!"
+    }
+  ]
+}
