@@ -273,3 +273,13 @@ main > div:first-child {
 main > div:first-child h1 {
     margin: 0.5em 0; /* Ajuste a margem conforme necessário */
 }
+#main {
+    max-width: 21cm;
+    width: 90%;
+    min-height: 29.7cm;
+    background-color: #ffffff;
+    padding: 2cm;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    margin-top: 2cm;
+}
