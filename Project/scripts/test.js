@@ -1,29 +1,33 @@
 // Espera o documento HTML ser completamente carregado
-export function initializeTestPage() {
-document.addEventListener('DOMContentLoaded', function() { // <<< TUDO FOI UNIFICADO AQUI DENTRO
+document.addEventListener('DOMContentLoaded', function() {
 
     // --- PARTE 1: LÓGICA PARA EMBARALHAR AS QUESTÕES ---
 
     function shuffleQuestions() {
-        const header = document.querySelector('main');
+        const main = document.querySelector('main'); // 🔹 Era 'header', agora é 'main'
         const submitContainer = document.querySelector('.submit-container');
         const questions = Array.from(document.querySelectorAll('.test-paper'));
 
+        // Salva a posição original das questões
         questions.forEach((question, index) => {
             question.dataset.originalIndex = index;
         });
 
+        // Embaralha as questões
         for (let i = questions.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [questions[i], questions[j]] = [questions[j], questions[i]];
         }
 
+        // Reinsere as questões embaralhadas dentro do MAIN
         questions.forEach(question => {
-            header.appendChild(question);
+            main.appendChild(question);
         });
 
-        header.appendChild(submitContainer);
+        // Reinsere o botão ENVIAR no final
+        main.appendChild(submitContainer);
 
+        // Atualiza numeração (1., 2., 3....)
         const reorderedQuestions = document.querySelectorAll('.test-paper');
         reorderedQuestions.forEach((question, index) => {
             const questionTextElement = question.querySelector('.question p');
@@ -35,12 +39,14 @@ document.addEventListener('DOMContentLoaded', function() { // <<< TUDO FOI UNIFI
 
     shuffleQuestions(); // Chama a função para embaralhar
 
+
     // --- PARTE 2: LÓGICA DE SELEÇÃO DAS RESPOSTAS ---
 
     const questionsNodeList = document.querySelectorAll('.test-paper');
     questionsNodeList.forEach((question) => {
         const originalIndex = question.dataset.originalIndex;
         if (originalIndex === '2') {
+            // Questão com múltiplos verbos (Q3)
             const linesInQ3 = question.querySelectorAll('.option');
             linesInQ3.forEach(line => {
                 const verbs = line.querySelectorAll('.verb-option');
@@ -52,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function() { // <<< TUDO FOI UNIFI
                 });
             });
         } else {
+            // Questões de múltipla escolha normal
             const options = question.querySelectorAll('.option');
             options.forEach(option => {
                 option.addEventListener('click', function() {
@@ -62,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() { // <<< TUDO FOI UNIFI
         }
     });
 
+
     // --- PARTE 3: LÓGICA DE CORREÇÃO AO CLICAR EM "ENVIAR" ---
 
     const submitBtn = document.getElementById('submit-btn');
@@ -69,11 +77,14 @@ document.addEventListener('DOMContentLoaded', function() { // <<< TUDO FOI UNIFI
     const gradeDisplay = document.querySelector('.grade-box .resultado');
 
     submitBtn.addEventListener('click', function() {
-        // (Toda a sua lógica de correção continua aqui, sem alterações)
         let totalScore = 0;
         let isAllAnswered = true;
+
         const correctAnswersQ3 = ["have seen", "has worked", "hasn't done", "traveled", "lived"];
-        const otherCorrectAnswers = { 0: "C", 1: "C", 3: "D", 4: "A", 5: "D", 6: "D", 7: "B", 8: "B", 9: "B" };
+        const otherCorrectAnswers = { 
+            0: "C", 1: "C", 3: "D", 4: "A", 
+            5: "D", 6: "D", 7: "B", 8: "B", 9: "B" 
+        };
 
         questionsNodeList.forEach((question) => {
             const originalIndex = question.dataset.originalIndex;
@@ -119,20 +130,16 @@ document.addEventListener('DOMContentLoaded', function() { // <<< TUDO FOI UNIFI
     });
 
 
-    // --- PARTE 4: LÓGICA DO MODAL DE VÍDEO (A PARTE QUE MUDOU) ---
+    // --- PARTE 4: LÓGICA DO MODAL DE VÍDEO ---
 
     const modal = document.getElementById('video-modal');
     const closeBtn = document.querySelector('.close-btn');
     const helpButtons = document.querySelectorAll('.help-btn-question');
     const videoContainer = document.getElementById('video-container');
 
-    // <<< REMOVEMOS A LINHA FIXA DAQUI
-    // const videoURL = 'https://www.youtube.com/embed/ENZ0-KRAcp0';
-
     helpButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // <<< ADICIONAMOS ESSA LINHA INTELIGENTE
-            const videoURL = button.dataset.videoUrl; // Pega o URL do atributo do botão clicado
+            const videoURL = button.dataset.videoUrl; // Pega o URL do atributo do botão
 
             if (!videoURL) {
                 console.error("Botão de ajuda não possui o atributo 'data-video-url'.");
@@ -140,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() { // <<< TUDO FOI UNIFI
             }
             
             const iframe = document.createElement('iframe');
-            iframe.setAttribute('src', videoURL); // Usa o URL que pegamos do botão
+            iframe.setAttribute('src', videoURL);
             iframe.setAttribute('frameborder', '0');
             iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
             iframe.setAttribute('allowfullscreen', '');
@@ -160,10 +167,8 @@ document.addEventListener('DOMContentLoaded', function() { // <<< TUDO FOI UNIFI
     closeBtn.addEventListener('click', closeModal);
 
     window.addEventListener('click', (event) => {
-        if (event.target == modal) {
+        if (event.target === modal) {
             closeModal();
         }
     });
-
 });
-} // <<< FIM DO CÓDIGO UNIFICADO

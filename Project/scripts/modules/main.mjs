@@ -1,14 +1,25 @@
-import { initializeHome } from './home.js';
-import { initializeDirectory } from './directory.js';
-import { initializeTestPage } from './test.js'; // 1. IMPORTA A NOVA FUNÇÃO
 
-// Lógica para decidir qual função rodar
-const path = window.location.pathname;
+import { initializeCommon } from './common.mjs';
 
-if (path.includes("index.html") || path.endsWith("/")) {
-    initializeHome();
-} else if (path.includes("directory.html")) {
-    initializeDirectory();
-} else if (path.includes("test.html")) { // 2. ADICIONA A CONDIÇÃO PARA A PÁGINA DE TESTE
-    initializeTestPage();
+// Inicializa funcionalidades comuns (menu hamburger, footer, etc.)
+initializeCommon();
+
+// Verifica em qual página estamos e carrega o módulo específico
+if (window.location.pathname.includes('test.html') || 
+    window.location.pathname.includes('test-simulator.html')) {
+    // Carrega o módulo do teste
+    import('./test.js')
+        .then(module => {
+            console.log('Test module loaded');
+        })
+        .catch(err => console.error('Error loading test module:', err));
+} else if (window.location.pathname.includes('index.html') || 
+           window.location.pathname === '/' || 
+           window.location.pathname.endsWith('/')) {
+    // Carrega o módulo da home
+    import('./home.js')
+        .then(module => {
+            console.log('Home module loaded');
+        })
+        .catch(err => console.error('Error loading home module:', err));
 }

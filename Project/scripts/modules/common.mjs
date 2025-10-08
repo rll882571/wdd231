@@ -1,30 +1,32 @@
 // ==========================
-// MENU HAMBURGER
+// COMMON FUNCTIONALITY
 // ==========================
-export function initializeCommon() {
-const navButton = document.querySelector('#nav-button');
-const navBar = document.querySelector('#nav-bar');
 
-// Verifica se os dois elementos existem na página antes de adicionar o evento
-if (navButton && navBar) {
-  navButton.addEventListener('click', () => {
-    navButton.classList.toggle('show');  
-    navBar.classList.toggle('show');
-  });
+// Menu Hamburger
+function initializeCommon() {
+    const navButton = document.querySelector('#nav-button');
+    const navBar = document.querySelector('#nav-bar');
+
+    if (navButton && navBar) {
+        navButton.addEventListener('click', () => {
+            navButton.classList.toggle('show');  
+            navBar.classList.toggle('show');
+        });
+    }
+    
+    // Footer year and last modified
+    const currentYearSpan = document.getElementById("currentyear");
+    if (currentYearSpan) {
+        const currentYear = new Date().getFullYear();
+        currentYearSpan.textContent = currentYear;
+    }
+
+    const lastModifiedParagraph = document.getElementById("lastModified");
+    if (lastModifiedParagraph) {
+        const lastModifiedDate = document.lastModified;
+        lastModifiedParagraph.textContent = `Last Modified: ${lastModifiedDate}`;
+    }
 }
-}
-// --- SCRIPT PARA O FOOTER ---
 
-// Seleciona o <span> para o ano atual
-const currentYearSpan = document.getElementById("currentyear");
-// Cria um objeto de data e pega o ano completo
-const currentYear = new Date().getFullYear();
-// Insere o ano no HTML
-currentYearSpan.textContent = currentYear;
-
-// Seleciona o <p> para a data de modificação
-const lastModifiedParagraph = document.getElementById("lastModified");
-// Pega a data da última modificação do documento
-const lastModifiedDate = document.lastModified;
-// Insere o texto e a data no HTML
-lastModifiedParagraph.textContent = `Last Modified: ${lastModifiedDate}`;
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', initializeCommon);
