@@ -248,23 +248,23 @@ select {
 }
 
 .alizarin {
-    color: red; /* Darker red */
+    color: black; /* Darker red */
 }
 
 .wisteria {
-    color: red; /* Deeper purple */
+    color: black; /* Deeper purple */
 }
 
 .peter-river {
-    color: red; /* Stronger blue */
+    color: black; /* Stronger blue */
 }
 
 .emerald {
-    color: red; /* Deeper green */
+    color: black; /* Deeper green */
 }
 
 .sun-flower {
-    color: red; /* Darker yellow */
+    color: black; /* Darker yellow */
 }
 
 dialog {
