@@ -82,7 +82,8 @@ function createTestimonialCards(container) {
                         <div class="details">
                             <div class="image-placeholder">
                                 <img src="./images/${testimonial.photo}" alt="${testimonial.name}" 
-                                     style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;">
+                                     style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                     loading="lazy">
                             </div>
                             <div class="testimonial-details">
                                 <p class="quote">"${testimonial.quote}"</p>
