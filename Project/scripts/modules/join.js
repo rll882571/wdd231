@@ -17,26 +17,23 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const modalContent = {
-        npModal: {
-            title: "Non Profit Membership Benefits",
-            content: "Access to community events, free resources, and more.",
-        },
-        bronzeModal: {
-            title: "Bronze Membership Benefits",
-            content:
-                "Discounted services, networking opportunities, and exclusive events.",
-        },
-        silverModal: {
-            title: "Silver Membership Benefits",
-            content:
-                "Includes everything from Bronze plus premium resources and marketing support.",
-        },
-        goldModal: {
-            title: "Gold Membership Benefits",
-            content:
-                "Full premium support, priority services, and elite event invitations.",
-        },
-    };
+    npModal: {
+        title: "Basic Plan (Free)",
+        content: "Unlimited access to the English Test Simulator, basic scores report, and community forum access.",
+    },
+    bronzeModal: {
+        title: "Premium Study Plan",
+        content: "Includes Basic features PLUS: Detailed performance analytics, personalized study tips, and priority email support.",
+    },
+    silverModal: {
+        title: "Elite Study Plan",
+        content: "Includes Premium features PLUS: Live Q&A sessions with tutors, 1-on-1 feedback on practice essays, and exclusive advanced test materials.",
+    },
+    goldModal: {
+        title: "Teacher/Tutor Account",
+        content: "Tools to track student progress, create custom quizzes, and manage study groups. Ideal for educators and language schools.",
+    },
+};
 
     function displayModal(modal, { title, content }) {
         modal.innerHTML = `

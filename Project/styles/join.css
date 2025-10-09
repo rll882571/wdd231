@@ -137,6 +137,25 @@ select {
     background-color: #e9ecef;
 }
 
+.grade-levels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.grade-level {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.grade-level:hover {
+    background-color: #e9ecef;
+}
+
+
 .css-button-fully-rounded--grey {
     min-width: 130px;
     height: 40px;
