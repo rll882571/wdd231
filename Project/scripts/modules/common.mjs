@@ -16,16 +16,12 @@ function initializeCommon() {
     
     // Footer year and last modified
     const currentYearSpan = document.getElementById("currentyear");
-    if (currentYearSpan) {
-        const currentYear = new Date().getFullYear();
-        currentYearSpan.textContent = currentYear;
-    }
-
+    const currentYear = new Date().getFullYear();
+    currentYearSpan.textContent = currentYear;
     const lastModifiedParagraph = document.getElementById("lastModified");
-    if (lastModifiedParagraph) {
-        const lastModifiedDate = document.lastModified;
-        lastModifiedParagraph.textContent = `Last Modified: ${lastModifiedDate}`;
-    }
+    const lastModifiedDate = document.lastModified;
+    lastModifiedParagraph.textContent = `Last Modified: ${lastModifiedDate}`;
+
 }
 
 // Initialize when DOM is loaded

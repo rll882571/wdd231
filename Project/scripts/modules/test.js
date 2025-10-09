@@ -143,6 +143,7 @@ function initializeTestPage() {
         gradeDisplay.textContent = finalScore;
         gradeDisplay.style.color = '#0055ff';
         gradeDisplay.classList.add('final-score');
+        document.querySelector('h1').scrollIntoView({ behavior: 'smooth' });
         
         this.disabled = true;
         this.style.opacity = 0.6;

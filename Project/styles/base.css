@@ -133,7 +133,7 @@ header {
 .footer-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: #2c3042; 
+    background-color: white; 
     color: var(--color-text-light);
     padding: 10px;
     text-align: center;
@@ -153,6 +153,7 @@ header {
     grid-column: 1;
     text-align: right;
     margin: 0;
+    color: red;
 }
 
 .company-info {
@@ -163,6 +164,7 @@ header {
 .company-info p {
     text-align: left; 
     margin: 0;
+    color: red;
 }
 
 
