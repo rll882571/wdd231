@@ -13,7 +13,7 @@
     --fonte-codigo: 'Consolas', 'Courier New', monospace;
 }
 
-/* --- Estilos Base (Body, Tipografia) --- */
+
 html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -41,9 +41,9 @@ h1 {
     margin: 0;
 }
 
-/* ======================================================= */
 /* ====== 2. ESTILOS HEADER E NAVEGAÇÃO (Comum a todas as páginas) ====== */
-/* ======================================================= */
+
+
 header {
     display: grid; 
     grid-template-columns: 1fr auto; 
@@ -83,13 +83,13 @@ header {
 
 /* Primeiro, preparamos o link */
 .navigation a {
-    position: relative; /* Essencial para o sublinhado funcionar */
+    position: relative; 
     text-decoration: none;
-    padding: 10px 0; /* Ajuste o padding vertical se necessário */
+    padding: 10px 0; 
     transition: color 0.3s ease;
 }
 
-/* Agora, criamos o sublinhado (que começa invisível) */
+
 .navigation a::after {
     content: '';
     position: absolute;
@@ -519,4 +519,101 @@ main > div:first-child h1 {
   hr {
     display: none !important;
   }
+}
+/* --- ESTILOS PARA A NOVA LÓGICA DA QUESTÃO 3 --- */
+
+/* Estilo para todas as opções de verbo (antes de serem clicadas) */
+.verb-option {
+    font-weight: bold;          /* Deixa o texto em negrito, como você queria */
+    padding: 4px 8px;           /* Cria um espaço interno para o círculo não ficar colado no texto */
+    border-radius: 15px;        /* Deixa as bordas bem arredondadas, essencial para o círculo */
+    cursor: pointer;            /* Mostra a "mãozinha" ao passar o mouse, indicando que é clicável */
+    transition: all 0.2s ease;  /* Adiciona uma transição suave para os efeitos */
+    border: 2px solid transparent; /* Uma borda invisível para evitar que o layout "pule" quando a azul aparecer */
+}
+
+/* Efeito simples quando o mouse passa por cima */
+.verb-option:hover {
+    background-color: #f0f0f0; /* Um fundo cinza bem claro para indicar a seleção */
+}
+
+/* Estilo do verbo DEPOIS de ser clicado (o círculo azul) */
+.verb-option.selected {
+    border-color: #1133da;      /* A borda agora fica azul (usei a cor do seu botão ENVIAR) */
+    background-color: #eef2ff;  /* Adiciona um fundo azul bem clarinho para destacar mais */
+}
+
+/* --- ESTILOS PARA O BOTÃO DE AJUDA AO LADO DE CADA QUESTÃO --- */
+
+/* Torna o container da pergunta flexível para alinhar os itens */
+
+
+
+
+
+/* Formata o botão de ajuda */
+.help-btn-question {
+    background-color: #5c677d; /* Cor cinza-azulado */
+    color: white;
+    padding: 5px 12px; /* Botão menor e mais delicado */
+    border-radius: 5px;
+    font-size: 0.8em; /* Fonte pequena */
+    font-weight: bold;
+    text-align: left;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-left: 600px;
+}
+
+.help-btn-question:hover {
+    background-color: #4a5468;
+}
+
+/* --- ESTILOS PARA O MODAL DE VÍDEO --- */
+
+/* O fundo escuro que cobre a página inteira */
+.modal {
+    display: none; /* Começa escondido */
+    position: fixed; /* Fica fixo na tela mesmo com rolagem */
+    z-index: 1000; /* Garante que fique na frente de tudo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semi-transparente */
+}
+
+/* A caixa branca onde o vídeo ficará */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* Centraliza verticalmente e horizontalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 720px; /* Largura máxima para o vídeo */
+    position: relative;
+    border-radius: 8px;
+}
+
+/* O botão de fechar (o "X") */
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+}
+
+/* Garante que o vídeo ocupe o espaço corretamente */
+#video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Proporção de vídeo widescreen */
 }
