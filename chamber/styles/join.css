@@ -160,7 +160,7 @@ select {
 .css-button-arrow--black {
     min-width: 130px;
     height: 40px;
-    color: #fff;
+    color: black;
     padding: 10px 20px;
     font-weight: bold;
     cursor: pointer;
@@ -170,7 +170,7 @@ select {
     outline: none;
     border-radius: 5px;
     border: none;
-    background-color: #343a40;
+    background-color: white;
 }
 .css-button-arrow--black:hover {
     border-radius: 5px;
@@ -248,33 +248,34 @@ select {
 }
 
 .alizarin {
-    color: black; /* Darker red */
+    color: red; /* Darker red */
 }
 
 .wisteria {
-    color: #5b057d; /* Deeper purple */
+    color: red; /* Deeper purple */
 }
 
 .peter-river {
-    color: #033a72; /* Stronger blue */
+    color: red; /* Stronger blue */
 }
 
 .emerald {
-    color: black; /* Deeper green */
+    color: red; /* Deeper green */
 }
 
 .sun-flower {
-    color: black; /* Darker yellow */
+    color: red; /* Darker yellow */
 }
 
 dialog {
     border: 1px solid var(--king-kong);
     border-radius: 0.25rem;
     padding: 2.5rem;
-    background-color: #dadce0f4;
+    background-color: white;
     box-shadow: 0 0 3rem var(--king-kong);
     width: 90%;
     max-width: 600px;
+    color: #1a1a1a;
 }
 
 ::backdrop {
