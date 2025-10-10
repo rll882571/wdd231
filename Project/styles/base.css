@@ -11,7 +11,7 @@
 
     --color-text-dark: black;
     --color-text-light: white;
-    --color-link: red;
+    --color-link: #095697;
     
     --color-background-body: #f0f2f5;
     --color-background-section: white;
@@ -121,7 +121,7 @@ header {
 .navigation ul li.current a {
     border-bottom: 1px solid black; 
     padding-bottom: 5px;
-    color: #FFD700;
+    
     
 }
 
@@ -161,7 +161,7 @@ header {
     grid-column: 1;
     text-align: right;
     margin: 0;
-    color: red;
+    color: #000000;
 }
 
 .company-info {
@@ -172,7 +172,7 @@ header {
 .company-info p {
     text-align: left; 
     margin: 0;
-    color: red;
+    color: #000000;
 }
 
 
