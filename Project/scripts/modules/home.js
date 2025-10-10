@@ -3,6 +3,23 @@
 // ==========================
 
 function initializeHome() {
+    // --- NOVO CÓDIGO: LOCAL STORAGE PARA ÚLTIMA VISITA (Critério 9) ---
+    const lastVisitKey = 'lastSimulatorVisit';
+    const lastVisit = localStorage.getItem(lastVisitKey);
+    const now = Date.now();
+
+    if (lastVisit) {
+        const dateLastVisit = new Date(parseInt(lastVisit)).toLocaleString();
+        // Você pode exibir essa mensagem no console para fins de auditoria.
+        console.log(`Welcome back! Your last visit was on: ${dateLastVisit}`);
+    } else {
+        console.log("Welcome! This is your first visit to A+ Test Simulator.");
+    }
+
+    // ATUALIZA A DATA DA ÚLTIMA VISITA PARA A VISITA ATUAL
+    localStorage.setItem(lastVisitKey, now.toString());
+    // -----------------------------------------------------------------
+    
     const homeGrid = document.getElementById('home-grid');
     const homeGrid2 = document.getElementById('home-grid2');
     
@@ -82,8 +99,8 @@ function createTestimonialCards(container) {
                         <div class="details">
                             <div class="image-placeholder">
                                 <img src="./images/${testimonial.photo}" alt="${testimonial.name}" 
-                                     style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
-                                     loading="lazy">
+                                    style="width: 100px; height: 100px; object-fit: cover; border-radius: 5px;"
+                                    loading="lazy">
                             </div>
                             <div class="testimonial-details">
                                 <p class="quote">"${testimonial.quote}"</p>
@@ -128,7 +145,7 @@ function fetchQuoteOfTheDay() {
                 quoteText.textContent = '"The limits of my language are the limits of my world."';
                 quoteAuthor.textContent = '- Ludwig Wittgenstein';
             }
-        });
+r        });
 }
 
 function fetchWordOfTheDay() {
