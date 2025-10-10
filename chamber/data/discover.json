@@ -1,0 +1,17 @@
+{
+  "places": [
+    {
+      "name": "Praia do Futuro",
+      "address": "Av. Zezé Diogo, Fortaleza - CE",
+      "description": "Famosa por suas barracas e culinária regional.",
+      "image": "images/praia.webp"
+    },
+    {
+      "name": "Centro Dragão do Mar",
+      "address": "R. Dragão do Mar, Fortaleza - CE",
+      "description": "Espaço cultural com museus, cinema e vida noturna.",
+      "image": "images/dragao.webp"
+    }
+    
+  ]
+}
