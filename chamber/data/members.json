@@ -4,25 +4,25 @@
       "name": "Praia do Futuro",
       "address": "Av. Zezé Diogo, Fortaleza - CE",
       "description": "Famous for its beach tents (barracas) and regional cuisine.",
-      "image": "images/praia.webp"
+      "image": "images/beachpark.webp"
     },
     {
       "name": "Centro Dragão do Mar de Arte e Cultura",
       "address": "R. Dragão do Mar, Fortaleza - CE",
       "description": "Cultural center featuring museums, cinema, and nightlife.",
-      "image": "images/dragao.webp"
+      "image": "images/beachpark.webp"
     },
     {
       "name": "Mercado Central",
       "address": "Av. Alberto Nepomuceno, 199 - Centro, Fortaleza - CE",
       "description": "Large indoor market for buying regional crafts, clothing, and souvenirs.",
-      "image": "images/mercado.webp"
+      "image": "images/beachpark.webp"
     },
     {
       "name": "Beira Mar Avenue",
       "address": "Av. Beira Mar, Fortaleza - CE",
       "description": "Fortaleza's main waterfront avenue, popular for jogging, street vendors, and the nightly craft fair.",
-      "image": "images/beiramar.webp"
+      "image": "images/beachpark.webp"
     },
     {
       "name": "Beach Park",
@@ -34,19 +34,19 @@
       "name": "Metropolitan Cathedral of Fortaleza",
       "address": "Praça da Sé - Centro, Fortaleza - CE",
       "description": "A magnificent cathedral in Gothic-Roman style, one of the city's main historical landmarks.",
-      "image": "images/catedral.webp"
+      "image": "images/beachpark.webp"
     },
     {
       "name": "Theatro José de Alencar",
       "address": "R. Liberato Barroso, 525 - Centro, Fortaleza - CE",
       "description": "Historic and beautiful theater with stunning art nouveau architecture and lush gardens.",
-      "image": "images/teatro.webp"
+      "image": "images/beachpark.webp"
     },
     {
       "name": "Ponte dos Ingleses (English Bridge)",
       "address": "R. dos Tabajaras, 461 - Praia de Iracema, Fortaleza - CE",
       "description": "A pier known for watching the sunset and spotting dolphins.",
-      "image": "images/ponte.webp"
+      "image": "images/beachpark.webp"
     }
   ]
 }
