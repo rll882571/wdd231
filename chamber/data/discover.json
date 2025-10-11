@@ -3,15 +3,62 @@
     {
       "name": "Praia do Futuro",
       "address": "Av. Zezé Diogo, Fortaleza - CE",
-      "description": "Famosa por suas barracas e culinária regional.",
-      "image": "images/praia.webp"
+      "description": "Famous for its beachfront 'barracas' (kiosks/restaurants) and regional cuisine, especially crab.",
+      "image": "beach.webp"
     },
     {
       "name": "Centro Dragão do Mar",
       "address": "R. Dragão do Mar, Fortaleza - CE",
-      "description": "Espaço cultural com museus, cinema e vida noturna.",
-      "image": "images/dragao.webp"
+      "description": "A large cultural complex featuring museums, a cinema, theaters, and a lively nightlife.",
+      "image": "beach.webp"
+    },
+    {
+      "name": "Avenida Beira Mar (Meireles Beach)",
+      "address": "Av. Beira Mar, Fortaleza - CE",
+      "description": "The main urban beachfront avenue, famous for the daily handicraft fair and sunset views.",
+      "image": "beach.webp"
+    },
+    {
+      "name": "Mercado Central de Fortaleza",
+      "address": "Av. Alberto Nepomuceno, 199 - Centro, Fortaleza - CE",
+      "description": "A large indoor market with hundreds of stalls selling local crafts, clothing, hammocks, and regional products.",
+      "image": "beach.webp"
+    },
+    {
+      "name": "Theatro José de Alencar",
+      "address": "R. Conde D'Eu, 230 - Centro, Fortaleza - CE",
+      "description": "An impressive and historic theater known for its stunning Art Nouveau architecture and cultural programming.",
+      "image": "beach.webp"
+    },
+    {
+      "name": "Catedral Metropolitana de Fortaleza",
+      "address": "Praça da Sé - Centro, Fortaleza - CE",
+      "description": "A striking neo-Gothic cathedral, one of the largest in Brazil, located in the historic city center.",
+      "image": "beach.webp"
+    },
+    {
+      "name": "Ponte dos Ingleses (English Bridge) / Espigão de Iracema",
+      "address": "Praia de Iracema, Fortaleza - CE",
+      "description": "A pier popular for watching the sunset and spotting dolphins, offering a great view of the city skyline.",
+      "image": "beach.webp"
+    },
+    {
+      "name": "Praia de Mucuripe",
+      "address": "Av. Beira Mar, Fortaleza - CE",
+      "description": "Known for the traditional jangadas (sail rafts) and the Fish Market, a great spot for fresh seafood.",
+      "image": "beach.webp"
+    },
+    {
+      "name": "Beach Park (Porto das Dunas)",
+      "address": "R. Porto das Dunas, 2734 - Porto das Dunas, Aquiraz - CE",
+      "description": "Located near Fortaleza, this is one of Latin America's largest and most famous aquatic parks, featuring the 'Insano' slide.",
+      "image": "beach.webp"
+    },
+    {
+      "name": "Parque Estadual do Cocó",
+      "address": "Av. Padre Antônio Tomás, S/N - Cocó, Fortaleza - CE",
+      "description": "Fortaleza's largest urban park, an important ecological reserve with trails, boat rides, and recreational areas.",
+      "image": "beach.webp"
     }
-    
   ]
 }

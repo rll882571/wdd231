@@ -1,28 +1,85 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231 | Latter-day Prophets</title>
-    <meta name="description" content="A dynamic page created using the Fetch API to display Latter-day Prophets data from a JSON source for WDD 231.">
-    <meta name="author" content="Rodrigo Lima">
-    <link rel="stylesheet" href="/chamber/styles/discover.css">
-    <script src="/chamber/scripts/modules/directory.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Discover  page of the Fortaleza Chamber of Commerce.">
+<meta name="keywords" content="Fortaleza, Chamber of Commerce, Discover, Local Businesses, Services">
+<meta name="author" content="Rodrigo Lima">
+<meta property="og:title" content="Fortaleza Chamber of Commerce - Discover">
+<meta property="og:description" content="Join the Fortaleza Chamber of Commerce to connect with local businesses and services.">
+<meta property="og:image" content="https://rll882571.github.io/wdd231/images/card-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://rll882571.github.io/wdd231/chamber/discover.html">
+<script type="module" src="scripts/modules/main.mjs" ></script>
+<script defer src="scripts/modules/discover.js"></script> 
+
+
+
+
+
+<title>Fortaleza Chamber of Commerce - Join</title>      
+<link rel="icon" href="images/favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/base.css">
+<link rel="stylesheet" href="styles/discover.css">
+
 </head>
 <body>
     
     <header>
-        <img src="images/logo-_1_.webp" alt="Logo da empresa" width="150" height="75" loading="lazy" decoding="async">
-        <h1>Latter-day Prophets</h1>
-    </header>
+    <!-- Sessão 1.1 -->
+    <div class="logo-area">
+        <!-- Sessão 1.2 -->
+        <img src="images/logo-_1_.webp" alt="Logo da Câmara de Comércio de Fortaleza" width="90" height="60"  decoding="async">
+        <!-- Sessão 1.3 -->
+        
+    </div>
+    <!-- Sessão 1.4 -->
+    <nav id="nav-bar" class="navigation">
+        <!-- Sessão 1.5 -->
+        <button id="nav-button" class="hamburger" aria-label=" open navigation menu"></button>
+        <!-- Sessão 1.6 -->
+        <ul>
+              
+              <li class=""><a href="index.html">Home</a></li> 
+              <li><a href="directory.html">Directory</a></li>
+              <li class=""><a href="join.html">Join</a></li>
+              <li class="current"><a href="discover.html">Discover</a></li> 
+        </ul>
+    </nav>
+</header> 
     
     <main>
-        <div id="cards"></div>
-    </main>
+    <div id="visit-message" class="visit-message"></div>
+    <div id="discover-gallery" class="gallery-grid"></div>
+  </main>
     
     <footer>
-        <p>&copy; <span id="currentyear"></span> | Rodrigo Lima | WDD 231</p>
-    </footer>
+    <div class="footer-grid">
+
+        <div class="company-address">
+            <p>Fortaleza Chamber of Commerce</p>
+        </div>
+
+        <div class="social">
+            <a href="https://www.facebook.com/?locale=pt_BR" target="_blank"><img src="images/whatsapp.svg" alt="whatsapp" width="25" height="25"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.svg" alt="instagram" width="25" height="25"></a>
+            <a href="https://br.linkedin.com/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="25" height="25"></a>
+        </div>
+        <div class="company-info">
+            <p>WDD231 Class project</p>
+
+            <p>&copy; <span id="currentyear"></span> Rodrigo F. Lima - Fortaleza, Brazil</p>
+            <p id="lastModified"></p>
+        </div>
+
+    </div>
+</footer>
 
    
 </body>

@@ -72,3 +72,101 @@ footer {
     color: white;
     margin-top: 20px;
 }
+/* Estilos adicionais para os elementos dentro do card */
+.place-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ajuda a alinhar o conteúdo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.place-card h2 {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+    color: #2c3042;
+}
+
+.place-card figure {
+    margin: 0;
+    padding: 0;
+}
+
+.place-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    transition: transform 0.3s, filter 0.3s; /* Adicionado para a transição do hover */
+}
+
+.place-card p {
+    font-size: 0.9rem;
+    flex-grow: 1; /* Faz a descrição ocupar o espaço disponível */
+}
+
+.place-card address {
+    font-style: normal;
+    font-size: 0.8rem;
+    color: #555;
+    margin-top: auto; /* Empurra o endereço e botão para baixo */
+}
+
+.place-card button {
+    background-color: #4a4e69;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.place-card button:hover {
+    background-color: #5a6dc8;
+}
+
+/* Estilo para a mensagem de visita */
+.visit-message {
+    text-align: center;
+    background-color: #e0e0e8;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.place-dialog {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px; /* Limita a largura em telas grandes */
+    margin: auto; /* Centraliza o dialog */
+}
+
+.place-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente */
+    backdrop-filter: blur(3px); /* Efeito de desfoque (opcional) */
+}
+
+.place-dialog h2 {
+    margin-top: 0;
+    color: #2c3042;
+}
+
+.place-dialog .close-button {
+    /* Estiliza o botão de fechar */
+    display: block;
+    margin-top: 1.5rem;
+    margin-left: auto; /* Alinha à direita */
+    background-color: #4a4e69;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.place-dialog .close-button:hover {
+    background-color: #5a6dc8;
+}
