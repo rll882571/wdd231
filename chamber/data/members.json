@@ -1,52 +1,67 @@
 {
-  "places": [
+  "companies": [
     {
-      "name": "Praia do Futuro",
-      "address": "Av. Zezé Diogo, Fortaleza - CE",
-      "description": "Famous for its beach tents (barracas) and regional cuisine.",
-      "image": "images/beachpark.webp"
+      "name": "Beach Park Hotéis e Resorts",
+      "address": "Rua Porto das Dunas, 2734 - Aquiraz, CE",
+      "phone": "+55 85 9999-0000",
+      "website": "https://www.beachpark.com.br",
+      "image_filename": "empresa.jpg",
+      "membership_level": 3,
+      "services": ["Resorts de Luxo", "Espaços para Eventos Corporativos"]
     },
     {
-      "name": "Centro Dragão do Mar de Arte e Cultura",
-      "address": "R. Dragão do Mar, Fortaleza - CE",
-      "description": "Cultural center featuring museums, cinema, and nightlife.",
-      "image": "images/beachpark.webp"
+      "name": "Centro de Eventos do Ceará",
+      "address": "Av. Washington Soares, 999 - Fortaleza, CE",
+      "phone": "+55 85 3535-4000",
+      "website": "https://www.ceventos.ce.gov.br",
+      "image_filename": "empresa.jpg",
+      "membership_level": 3,
+      "services": ["Locação de Salões", "Infraestrutura para Feiras"]
     },
     {
-      "name": "Mercado Central",
-      "address": "Av. Alberto Nepomuceno, 199 - Centro, Fortaleza - CE",
-      "description": "Large indoor market for buying regional crafts, clothing, and souvenirs.",
-      "image": "images/beachpark.webp"
+      "name": "Agência Ceará Viagens Corporativas",
+      "address": "Rua do Turismo, 101 - Aldeota, CE",
+      "phone": "+55 85 3333-2222",
+      "website": "https://www.cearaviagens.com",
+      "image_filename": "empresa.jpg",
+      "membership_level": 2,
+      "services": ["Passagens Aéreas Executivas", "Logística de Transporte"]
     },
     {
-      "name": "Beira Mar Avenue",
-      "address": "Av. Beira Mar, Fortaleza - CE",
-      "description": "Fortaleza's main waterfront avenue, popular for jogging, street vendors, and the nightly craft fair.",
-      "image": "images/beachpark.webp"
+      "name": "Restaurante O Peixe Grelhado",
+      "address": "Av. Beira Mar, 100 - Meireles, CE",
+      "phone": "+55 85 4444-1111",
+      "website": "https://www.opeixegrelhado.com",
+      "image_filename": "empresa.jpg",
+      "membership_level": 2,
+      "services": ["Gastronomia Regional de Alto Nível", "Jantares Executivos"]
     },
     {
-      "name": "Beach Park",
-      "address": "Rua Porto das Dunas, 2734 - Porto das Dunas, Aquiraz - CE",
-      "description": "One of the largest water parks in Latin America, known for its thrilling slides.",
-      "image": "images/beachpark.webp"
+      "name": "Serviços de Tradução Global",
+      "address": "Rua dos Intérpretes, 20 - Dionísio Torres, CE",
+      "phone": "+55 85 5555-6666",
+      "website": "https://www.traducaoglobal.com",
+      "image_filename": "empresa.jpg",
+      "membership_level": 1,
+      "services": ["Tradução Simultânea para Congressos", "Interpretação de Negócios"]
     },
     {
-      "name": "Metropolitan Cathedral of Fortaleza",
-      "address": "Praça da Sé - Centro, Fortaleza - CE",
-      "description": "A magnificent cathedral in Gothic-Roman style, one of the city's main historical landmarks.",
-      "image": "images/beachpark.webp"
+      "name": "Hotel Fazenda Sol Nascente",
+      "address": "Estrada do Sol, Km 10 - Eusébio, CE",
+      "phone": "+55 85 7070-8080",
+      "website": "https://www.solnascente.com.br",
+      "image_filename": "empresa.jpg",
+      "membership_level": 1,
+      "services": ["Retiros Corporativos", "Atividades de Team Building"]
     },
     {
-      "name": "Theatro José de Alencar",
-      "address": "R. Liberato Barroso, 525 - Centro, Fortaleza - CE",
-      "description": "Historic and beautiful theater with stunning art nouveau architecture and lush gardens.",
-      "image": "images/beachpark.webp"
-    },
-    {
-      "name": "Ponte dos Ingleses (English Bridge)",
-      "address": "R. dos Tabajaras, 461 - Praia de Iracema, Fortaleza - CE",
-      "description": "A pier known for watching the sunset and spotting dolphins.",
-      "image": "images/beachpark.webp"
+      "name": "Consultoria e Marketing Digital NE",
+      "address": "Rua das Mídias, 50 - Cocó, CE",
+      "phone": "+55 85 3000-0101",
+      "website": "https://www.marketingdigitalne.com",
+      "image_filename": "empresa.jpg",
+      "membership_level": 3,
+      "services": ["Estratégias de Branding", "Otimização de SEO Local"]
     }
   ]
 }
