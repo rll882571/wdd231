@@ -1,0 +1,120 @@
+<h1>Modals</h1>
+<p>This is an example of how to use classic modals with JavaScript supporting the user behavior.<br> Click the button below to open a modal newsletter signup form.</p>
+<button class="button open-button">Sign Up</button>
+
+<dialog id="signup">
+  <h2>Newsletter</h2>
+  <p>Stay updated with our latest news and promotions by signing up for our newsletter!</p>
+  <button class="close-button">❌</button>
+  <form class="form" method="dialog">
+    <label>Name<input type="text"></label>
+    <label>Email<input type="email"></label>
+    <button class="button" type="submit">Sign Up</button>
+  </form>
+</dialog>
+<hr>
+<p>This is an example of using HTML only <code>popover</code> to support the dialog.<br> Click the button below to open a modal newsletter signup form.</p>
+<button class="button open-button" popovertarget="newsletter">Sign Up</button>
+
+<p>Note that the <code>popovertarget</code> attribute needs to point to the dialog element using its <code>id </code> attribute value to open and close the modal.</p>
+
+<dialog class="modal" id="newsletter" popover>
+  <button class="close-button" popovertarget="newsletter" popovertargetaction="hide">❌</button>
+  <h2>Stake Trek</h2>
+  <h3>Volunteer Signup</h3>
+  <form class="form" method="dialog">
+    <label>Name<input type="text" required></label>
+    <label>Phone<input type="tel" pattern="^\+?\d{1,4}?\s?(\(?\d{3}\)?\s?-?\s?\d{3}\s?-?\s?\d{4})$" placeholder="+1 555-123-4567" required></label>
+    <button class="button" type="submit">Sign Up</button>
+  </form>
+
+</dialog>
+
+
+body {
+  margin: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+/* Styles for dialog elements with IDs #signup or #newsletter */
+#signup,
+#newsletter {
+  padding: 1em;
+  max-width: 40ch;
+  border: 0;
+  box-shadow: 0 0 1em rgb(0 0 0 / 30%);
+
+  /* Style for the backdrop when the dialog is modal */
+  &::backdrop {
+    background: rgb(0 0 0 / 70%);
+  }
+
+  /* Styles for forms within these dialogs */
+  form {
+    display: grid;
+    gap: 0.5em;
+
+    /* Styles for input fields within the forms */
+    input {
+      width: 90%;
+      padding: 0.5rem;
+    }
+  }
+
+  /* Styles for the close button within these dialogs */
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    cursor: pointer; /* Added for better UX */
+  }
+}
+
+/* General button styles */
+.button {
+  border: 0;
+  cursor: pointer;
+  background: #333;
+  color: #eee;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+
+  /* Hover and focus states for buttons */
+  &:hover,
+  &:focus {
+    background: purple;
+  }
+}
+
+/* Styles for any 'dialog' element when it's open */
+dialog[open] {
+  background-color: beige;
+  border-radius: 10px;
+  border: 1px solid rgb(0 0 0 / 0.1);
+}
+
+/* The :modal pseudo-class is not yet fully supported across all browsers and may cause errors in some environments. dialog[open] targets all dialog elements ... */
+
+code {
+  color: forestgreen;
+}
+
+const modal = document.querySelector("#signup");
+const openModal = document.querySelector(".open-button");
+const closeModal = document.querySelector(".close-button");
+
+openModal.addEventListener("click", () => {
+  modal.showModal();
+});
+
+closeModal.addEventListener("click", () => {
+  modal.close();
+});

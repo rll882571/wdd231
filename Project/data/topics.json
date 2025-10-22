@@ -1,0 +1,50 @@
+[
+  {
+    "id": "simple-present",
+    "title": "Simple Present",
+    "description": "Aprenda a expressar hábitos, fatos e rotinas diárias.",
+    "link": "simple-present-details.html"
+  },
+  {
+    "id": "simple-past",
+    "title": "Simple Past",
+    "description": "Descubra como falar sobre ações finalizadas no passado. (Verbos Regulares e Irregulares)",
+    "link": "simple-past-details.html"
+  },
+  {
+    "id": "simple-present-vs-past",
+    "title": "Simple Present x Simple Past",
+    "description": "Compare e contraste os usos e estruturas dos dois tempos verbais.",
+    "link": "simple-present-vs-past-details.html"
+  },
+  {
+    "id": "to-be-present",
+    "title": "To Be no Presente",
+    "description": "Domine o uso do 'am, is, are' para descrever estados e identificar coisas.",
+    "link": "to-be-present-details.html"
+  },
+  {
+    "id": "to-be-past",
+    "title": "To Be no Passado",
+    "description": "Use 'was' e 'were' para descrever situações, lugares e estados passados.",
+    "link": "to-be-past-details.html"
+  },
+  {
+    "id": "to-be-past-vs-present",
+    "title": "To Be no Passado x To Be no Presente",
+    "description": "Diferencie quando usar as formas presente e passada do verbo 'To Be'.",
+    "link": "to-be-past-vs-present-details.html"
+  },
+  {
+    "id": "simple-present-vs-to-be-present",
+    "title": "Simple Present x To Be no Presente",
+    "description": "Entenda a diferença crucial entre o verbo 'To Be' e outros verbos de ação no presente.",
+    "link": "simple-present-vs-to-be-present-details.html"
+  },
+  {
+    "id": "simple-past-vs-to-be-past",
+    "title": "Simple Past x To Be no Passado",
+    "description": "Saiba quando usar o auxiliar 'did/didn't' e quando usar 'was/were'.",
+    "link": "simple-past-vs-to-be-past-details.html"
+  }
+]

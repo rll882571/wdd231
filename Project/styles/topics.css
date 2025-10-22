@@ -1,0 +1,140 @@
+/* --- OPÇÃO 5: Tema Lousa e Notas Adesivas (Cards Menores) --- */
+
+:root {
+    /* Cores da Lousa */
+    --chalkboard-bg: #3a504b;
+    --chalkboard-border: #8d6e63;
+    --chalk-color: #f7e090;
+    /* Cores das Notas Adesivas */
+    --note-yellow: #fff380;
+    --note-pink: #ffc9f7;
+    --note-blue: #b4e6ff;
+    --note-green: #caffd8;
+    --note-text: #212121;
+    --link-color: #3f51b5;
+}
+
+/* ---------------------- ESTILO GERAL (LOUSA) ---------------------- */
+
+.grammar-modules {
+    padding: 50px 20px;
+    background-color: var(--chalkboard-bg);
+    min-height: 90vh;
+    max-width: 1300px;
+    margin: 30px auto;
+    border: 20px solid var(--chalkboard-border);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.main-title {
+    text-align: center;
+    color: var(--chalk-color);
+    margin-bottom: 50px;
+    font-size: 3em;
+    font-family: 'Chalkduster', 'Permanent Marker', cursive, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    border-bottom: 3px dashed var(--chalk-color);
+    padding-bottom: 10px;
+}
+
+.module-list {
+    display: grid;
+    /* REDUÇÃO: O minmax foi diminuído de 280px para 220px */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 45px;
+    padding: 0 10px;
+}
+
+
+/* ---------------------- ESTILO DOS CARDS (NOTAS ADESIVAS) ---------------------- */
+
+.card {
+    background-color: var(--note-yellow);
+    color: var(--note-text);
+    border: none;
+    border-radius: 0 15px 0 15px;
+    /* REDUÇÃO: Padding interno diminuído para reduzir o tamanho total */
+    padding: 15px; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transform: rotate(var(--rotation));
+}
+
+.card:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    z-index: 10;
+}
+
+/* Títulos, Descrição e Link */
+.card-title {
+    color: var(--note-text);
+    /* Fonte do título ligeiramente reduzida */
+    font-size: 1.3em;
+    margin-bottom: 8px;
+    border-bottom: 2px dashed rgba(0, 0, 0, 0.1);
+    padding-bottom: 5px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.card-description {
+    color: var(--note-text);
+    /* Fonte da descrição ligeiramente reduzida */
+    font-size: 0.95em;
+    flex-grow: 1;
+    margin-bottom: 10px; /* Margem da descrição reduzida */
+}
+
+.card-link {
+    display: inline-block;
+    color: var(--note-text);
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
+    transition: color 0.2s ease;
+}
+
+.card-link:hover {
+    color: var(--link-color);
+}
+
+/* ---------------------- VARIAÇÃO DE CORES E ROTAÇÃO ---------------------- */
+
+/* Card 1, 5, ... (Amarelo Padrão) */
+.card:nth-child(4n + 1) {
+    background-color: var(--note-yellow);
+    --rotation: -2deg;
+}
+
+/* Card 2, 6, ... (Rosa) */
+.card:nth-child(4n + 2) {
+    background-color: var(--note-pink);
+    --rotation: 3deg;
+}
+
+/* Card 3, 7, ... (Azul) */
+.card:nth-child(4n + 3) {
+    background-color: var(--note-blue);
+    --rotation: -1deg;
+}
+
+/* Card 4, 8, ... (Verde) */
+.card:nth-child(4n + 4) {
+    background-color: var(--note-green);
+    --rotation: 2.5deg;
+}
+
+/* Aplica o estilo de comparação também */
+.comparison-card .card-title {
+    color: var(--note-text);
+}
+.comparison-card .vs {
+    color: var(--link-color);
+    font-weight: 900;
+}

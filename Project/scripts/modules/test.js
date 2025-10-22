@@ -1,135 +1,196 @@
 // ==========================
-// TEST PAGE FUNCTIONALITY
+// ARQUIVO: scripts/main.js
 // ==========================
+//
+// Este arquivo contém APENAS a lógica do quiz.
+// Ele DEPENDE que o 'questoes.js' seja carregado primeiro no HTML.
 
-function initializeTestPage() {
-    // --- PARTE 1: LÓGICA PARA EMBARALHAR AS QUESTÕES ---
+// Guarda as 10 perguntas sorteadas para este teste
+let currentTestQuestions = [];
 
-    function shuffleQuestions() {
-        const main = document.getElementById('main');
-        const questions = Array.from(document.querySelectorAll('.test-paper'));
-        const submitContainer = document.querySelector('.submit-container');
+// --- FUNÇÃO 1: CRIAR O CABEÇALHO ---
+function createHeader(mainElement) {
+    const headerHTML = `
+        <div class="titulo">
+            <h1>AVALIAÇÃO CONTINUA 1 - 7º - AVANÇADO</h1>
+            <h3>INGLÊS - 3ª ETAPA - DATA: 04/06/2025</h3>
+        </div>
+        <hr class="first">
+        <div class="aluno">
+            <p>ALUNO</p>
+            <hr class="second">
+        </div>
+        <div class="sede">
+            <p>SEDE</p>
+            <hr class="quarto">
+        </div>
+        <div class="tur">
+            <p>TURMA</p>
+            <hr class="quinto">
+        </div>
+        <div class="scores">
+            <p class="score-display">TOTAL SCORES</p>
+            <hr class="sexto">
+        </div>
+        <div class="turma">
+            <p>N°</p>
+            <hr class="third">
+        </div>
+        <div class="header-container">
+            <div class="grade-box">
+                <p class="grade-display">NOTA</p>
+                <p class="resultado">Resultado</p>
+            </div>
+        </div>
+    `;
+    mainElement.insertAdjacentHTML('afterbegin', headerHTML);
+}
 
-        if (!submitContainer) return; 
+// --- FUNÇÃO 2: SORTEAR E CONSTRUIR AS QUESTÕES ---
+function buildTest(mainElement, submitContainer) {
+    
+    // 1. Embaralha o 'questionBank' (que veio do questoes.js)
+    const shuffledBank = [...questionBank].sort(() => Math.random() - 0.5);
+    
+    // 2. Pega as 10 primeiras
+    currentTestQuestions = shuffledBank.slice(0, 10);
+    
+    // 3. Construir o HTML para cada questão
+    currentTestQuestions.forEach((questionData, index) => {
+        let questionHTML = '';
+        
+        questionHTML += `<div class="test-paper" data-question-id="${questionData.id}">`;
+        
+        // Cabeçalho da questão
+        questionHTML += `
+            <div class="question-header">
+                <div class="question">
+                    <p>${questionData.questionText.replace('1.', `${index + 1}.`).replace(/^\d+/, `${index + 1}`)}</p>
+                </div>
+                ${questionData.videoUrl ? 
+                `<button class="help-btn-question" data-video-url="${questionData.videoUrl}">
+                    help?
+                 </button>` : ''}
+            </div>
+        `;
 
-        // 1. Marcar o índice original e remover do DOM
-        questions.forEach((question, index) => {
-            question.dataset.originalIndex = index;
-            question.remove(); 
-        });
-
-        // 2. Embaralhar o array
-        for (let i = questions.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [questions[i], questions[j]] = [questions[j], questions[i]];
+        if (questionData.type === 'mc') {
+            questionHTML += '<div class="options">';
+            questionData.options.forEach(option => {
+                questionHTML += `
+                    <div class="option" data-answer="${option.letter}">
+                        <p>${option.text}</p>
+                    </div>
+                `;
+            });
+            questionHTML += '</div>';
+        
+        } else if (questionData.type === 'fill-verb') {
+            questionHTML += '<div class="options-fill-verb">';
+            questionData.lines.forEach(line => {
+                questionHTML += `<div class="option">`; 
+                // .innerHTML para o texto da linha
+                questionHTML += `<p class="line-text">${line.text}</p>`;
+                questionHTML += `<div class="verb-choices">`;
+                line.verbs.forEach(verb => {
+                    questionHTML += `<span class="verb-option">${verb}</span>`;
+                });
+                questionHTML += `</div>`; 
+                questionHTML += `</div>`;
+            });
+            questionHTML += '</div>';
         }
         
-        // 3. Re-anexar as perguntas em ordem aleatória
-        questions.forEach(question => {
-            main.insertBefore(question, submitContainer);
-        });
-
-        // 4. Renumerar as perguntas
-        const reorderedQuestions = document.querySelectorAll('.test-paper');
-        reorderedQuestions.forEach((question, index) => {
-            const questionTextElement = question.querySelector('.question p');
-            if (questionTextElement) {
-                questionTextElement.textContent = questionTextElement.textContent.replace(/^\d+\.\s*/, `${index + 1}. `);
-            }
-        });
-    }
-
-    shuffleQuestions();
-
-    // --- PARTE 2: LÓGICA DE SELEÇÃO DAS RESPOSTAS (Ajustado para a Q3) ---
-
-    const questionsNodeList = document.querySelectorAll('.test-paper');
-    questionsNodeList.forEach((question) => {
-        const originalIndex = question.dataset.originalIndex; 
+        questionHTML += '</div>'; // fecha .test-paper
         
-        // **LÓGICA CORRIGIDA PARA Q3** (originalIndex '2')
-        if (originalIndex === '2') {
-            // Seleciona as 5 linhas da questão. IMPORTANTE: O HTML PRECISA
-            // usar a classe '.option' para cada linha, não '.options'.
-            const linesInQ3 = question.querySelectorAll('.option'); 
-            
-            linesInQ3.forEach(line => {
-                const verbs = line.querySelectorAll('.verb-option');
-                verbs.forEach(verb => {
-                    verb.addEventListener('click', function() {
-                        // **A CHAVE:** Desseleciona todos os verbos APENAS nesta LINHA (line/verbs),
-                        // mantendo a seleção nas outras linhas intacta.
-                        verbs.forEach(v => v.classList.remove('selected'));
-                        this.classList.add('selected');
-                    });
-                });
-            });
-        } else { // Questões de múltipla escolha padrão
-            const options = question.querySelector('.options').querySelectorAll('.option');
+        mainElement.insertBefore(document.createRange().createContextualFragment(questionHTML), submitContainer);
+    });
+
+    // Renumera as perguntas (Ajuste fino para garantir que o número 1. 2. etc. esteja correto)
+    document.querySelectorAll('.test-paper .question p').forEach((p, index) => {
+        // Remove qualquer número antigo e poe o novo
+        p.innerHTML = p.innerHTML.trim().replace(/^\d+\.\s*/, '');
+        p.innerHTML = `${index + 1}. ${p.innerHTML}`;
+    });
+}
+
+// --- FUNÇÃO 3: ADICIONAR LÓGICA DE CLIQUE NAS OPÇÕES ---
+function attachOptionListeners() {
+    const allQuestions = document.querySelectorAll('.test-paper');
+    
+    allQuestions.forEach(questionElement => {
+        const questionId = questionElement.dataset.questionId;
+        const questionData = currentTestQuestions.find(q => q.id === questionId);
+        if (!questionData) return; 
+
+        if (questionData.type === 'mc') {
+            const options = questionElement.querySelectorAll('.option');
             options.forEach(option => {
                 option.addEventListener('click', function() {
-                    // Desseleciona todas as opções nesta QUESTÃO (comportamento padrão)
                     options.forEach(opt => opt.classList.remove('selected'));
                     this.classList.add('selected');
                 });
             });
+        } else if (questionData.type === 'fill-verb') {
+            const lines = questionElement.querySelectorAll('.option'); 
+            lines.forEach(line => {
+                const verbsInLine = line.querySelectorAll('.verb-option');
+                verbsInLine.forEach(verb => {
+                    verb.addEventListener('click', function() {
+                        verbsInLine.forEach(v => v.classList.remove('selected'));
+                        this.classList.add('selected');
+                    });
+                });
+            });
         }
     });
+}
 
-    // --- PARTE 3: LÓGICA DE CORREÇÃO AO CLICAR EM "ENVIAR" (Ajustado para a Q3) ---
-
+// --- FUNÇÃO 4: ADICIONAR LÓGICA DE CORREÇÃO (SUBMIT) ---
+function attachSubmitLogic() {
     const submitBtn = document.getElementById('submit-btn');
     const scoreDisplay = document.querySelector('.score-display');
     const gradeDisplay = document.querySelector('.grade-box .resultado');
-
-    // Mapeamento das respostas corretas
-    const correctAnswersQ3 = ["have seen", "has worked", "hasn't done", "traveled", "lived"]; // 5 itens
-    const otherCorrectAnswers = { 
-        0: "C", 1: "C", 3: "D", 4: "A", 
-        5: "D", 6: "D", 7: "B", 8: "B", 
-        9: "B" 
-    };
 
     submitBtn.addEventListener('click', function() {
         let totalScore = 0;
         let isAllAnswered = true;
         
-        questionsNodeList.forEach((question) => {
-            const originalIndex = question.dataset.originalIndex;
-            
-            if (originalIndex === '2') { // Questão 3 (5 sub-itens)
-                // **SELETOR CORRIGIDO:** Seleciona corretamente as 5 linhas
-                const linesInQ3 = question.querySelectorAll('.option'); 
+        const allQuestionElements = document.querySelectorAll('.test-paper');
+        
+        allQuestionElements.forEach((questionElement) => {
+            const questionId = questionElement.dataset.questionId;
+            const questionData = currentTestQuestions.find(q => q.id === questionId);
+            if (!questionData) return;
+
+            if (questionData.type === 'mc') {
+                const selectedOption = questionElement.querySelector('.option.selected');
+                if (!selectedOption) {
+                    isAllAnswered = false;
+                } else {
+                    const selectedAnswer = selectedOption.dataset.answer;
+                    if (selectedAnswer === questionData.correctAnswer) {
+                        totalScore += 1;
+                    }
+                }
+            } else if (questionData.type === 'fill-verb') {
+                const lines = questionElement.querySelectorAll('.option');
                 let answeredLines = 0;
                 let correctCount = 0;
                 
-                linesInQ3.forEach((line, lineIndex) => {
+                lines.forEach((line, lineIndex) => {
                     const selectedVerb = line.querySelector('.verb-option.selected');
-                    
                     if (selectedVerb) {
                         answeredLines++;
-                        if (selectedVerb.textContent.trim() === correctAnswersQ3[lineIndex]) {
+                        const selectedText = selectedVerb.textContent.trim();
+                        if (selectedText === questionData.correctAnswer[lineIndex]) {
                             correctCount++;
                         }
                     }
                 });
                 
-                // Calcula a pontuação
-                totalScore += correctCount * 0.2; 
-                
-                if (answeredLines < 5) isAllAnswered = false;
-                
-            } else { // Questões de múltipla escolha (1 ponto)
-                const selectedOption = question.querySelector('.option.selected');
-                
-                if (!selectedOption) {
-                    isAllAnswered = false;
-                } else {
-                    const selectedAnswer = selectedOption.dataset.answer;
-                    if (otherCorrectAnswers[originalIndex] && selectedAnswer === otherCorrectAnswers[originalIndex]) {
-                        totalScore += 1;
-                    }
-                }
+                if (answeredLines < lines.length) isAllAnswered = false;
+                totalScore += correctCount * (1.0 / lines.length); 
             }
         });
 
@@ -149,26 +210,24 @@ function initializeTestPage() {
         this.style.opacity = 0.6;
         this.style.cursor = 'not-allowed';
     });
+}
 
-
-    // --- PARTE 4: LÓGICA DO MODAL DE VÍDEO (Sem alterações) ---
-
+// --- FUNÇÃO 5: LÓGICA DO MODAL ---
+function attachModalLogic() {
     const modal = document.getElementById('video-modal');
     const closeBtn = document.querySelector('.close-btn');
-    const helpButtons = document.querySelectorAll('.help-btn-question');
+    const helpButtons = document.querySelectorAll('.help-btn-question'); 
     const videoContainer = document.getElementById('video-container');
+
+    if (!modal || !closeBtn) return; // Segurança
 
     helpButtons.forEach(button => {
         button.addEventListener('click', () => {
             const videoURL = button.dataset.videoUrl;
-            
-            if (!videoURL) {
-                console.error("Botão de ajuda não possui o atributo 'data-video-url'.");
-                return;
-            }
+            if (!videoURL) return;
             
             const iframe = document.createElement('iframe');
-            iframe.setAttribute('src', videoURL); 
+            iframe.setAttribute('src', videoURL);
             iframe.setAttribute('frameborder', '0');
             iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
             iframe.setAttribute('allowfullscreen', '');
@@ -176,24 +235,47 @@ function initializeTestPage() {
 
             videoContainer.innerHTML = '';
             videoContainer.appendChild(iframe);
-
             modal.style.display = 'block';
         });
     });
 
     function closeModal() {
         modal.style.display = 'none';
-        videoContainer.innerHTML = '';
+        videoContainer.innerHTML = ''; 
     }
 
     closeBtn.addEventListener('click', closeModal);
-
     window.addEventListener('click', (event) => {
         if (event.target == modal) {
             closeModal();
         }
     });
-
 }
 
-document.addEventListener('DOMContentLoaded', initializeTestPage);
+
+// --- INICIALIZAÇÃO ---
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const main = document.getElementById('main');
+    const submitContainer = document.querySelector('.submit-container');
+
+    if (!main || !submitContainer) {
+        console.error("Elemento '#main' ou '.submit-container' não encontrado. Abortando.");
+        return;
+    }
+    
+    // 1. Cria o cabeçalho
+    createHeader(main);
+    
+    // 2. Constrói as questões
+    buildTest(main, submitContainer);
+    
+    // 3. Adiciona cliques
+    attachOptionListeners();
+    
+    // 4. Adiciona lógica do submit
+    attachSubmitLogic();
+    
+    // 5. Adiciona lógica do modal
+    attachModalLogic();
+});

@@ -1,0 +1,109 @@
+<h1>JavaScript Review Exercise Example Solutions</h1>
+<p><a href="https://byui-cse.github.io/wdd231-ww-course/week01/prepare-applied-javascript.html">WDD 231 Learning Activity</a></p>
+<aside></aside>
+<main>
+	<div id="today1" class="step-reset step"></div>
+	<div id="today2" class="step"></div>
+	<div class="step"><label><strong>Quantity</strong>: <input type="text" id="q" size="3" value="44"></label></div>
+	<div class="step">Output to the first aside.</div>
+	<div class="step"><label><strong>Temperature</strong>: <input type="text" id="temp" readonly></label></div>
+	<div id="divs" class="step"></div>
+	<div id="c-names" class="step"></div>
+</main>
+<aside>Hello JS 🌍!</aside>
+
+* {
+	box-sizing:border-box;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	font-family: Roboto, Helvetica, sans-serif;
+}
+
+h2 {
+	margin-bottom: .5rem;
+}
+main {
+	border: 1px solid rgb(0 0 0 / .1);
+	padding: 1rem;
+	background-color: #ffc328;
+	box-shadow: 0 0 20px #aaa;
+}
+
+div {
+	margin: 1rem;
+	border:1px solid rgb(0 0 0 / .1);
+	padding: .5rem;
+	background-color:#eee;
+	font-size: smaller;
+}
+
+.step-reset {
+  counter-reset: step;
+}
+.step {
+  counter-increment: step;
+}
+.step::before {
+  content: '#' counter(step) ':  ';
+  color: green;
+}
+
+input {padding: .5rem;}
+
+aside{
+	margin: 1rem;
+	border: 1px solid rgb(0 0 0 / .1);
+	padding: .5rem;
+	background-color: #ffeebb;
+	color: #000;
+}
+
+
+// Select the HTML element to manipulate
+const today1 = document.querySelector('#today1');
+const today2 = document.querySelector('#today2');
+const message = document.querySelector('aside');
+
+// Varibles for activity use
+let citynames = ["New York","Sacramento","Cleveland","South Bend","Tampa Bay","Corpus Christi"];
+let volume = 409;
+
+function getCelsius(fahrenheit) {
+	return (fahrenheit - 32) * (5/9);
+}
+
+// Set up the Date format object parameter for toLocaleDateString method.
+const options = {
+	  month: "short",
+		day: "numeric",
+		year: "numeric"
+	};
+
+// Question #1 
+today1.innerHTML = new Date().toLocaleDateString("en-US", options);
+
+// Question #2 
+today2.innerHTML = `<strong>Volume</strong>: ${volume} liters`;
+
+// Question #3
+let quantity = document.querySelector('#q').value;
+
+// Question #4
+document.querySelector('aside').innerHTML = 'Welcome to <mark>our</mark> neighborhood!';
+
+// Question #5
+document.querySelector('#temp').value = `${getCelsius(33).toFixed(1)} °C`;
+
+// Question #6
+const divs = document.querySelectorAll('div');
+document.querySelector('#divs').textContent = `${divs.length} divs in document.`;
+
+// Question #7
+let filterC = citynames.filter(city => city.charAt(0) === 'C');
+document.querySelector('#c-names').textContent = filterC;
+
