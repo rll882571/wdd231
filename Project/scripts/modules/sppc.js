@@ -84,19 +84,19 @@ const questionBank = [
         id: "q5",
         type: "mc",
         questionText: `
-            <img src="images/question.png" alt="Comic" loading="lazy">
+            <img src="images/rg.jpg" alt="Comic" loading="lazy" style="width: 280px; height: 180px;">
             <br><br>
-            In the comic, the boy says: “I was walking to school when I saw a cat.”  
-            What does the use of Past Continuous + Simple Past show?
+            In the comic, the the drive says: “I wasnt texting while driving.”  
+            What does the use of Past Continuous show?
         `,
         options: [
             { letter: "A", text: "(A) A completed action that happened before another." },
             { letter: "B", text: "(B) One action in progress interrupted by another." },
             { letter: "C", text: "(C) Two actions happening exactly at the same time in the present." },
             { letter: "D", text: "(D) A plan for the future." },
-            { letter: "E", text: "(E) A routine that happens every day." }
+            { letter: "E", text: "(E) Two actions happening exactly at the same time in the past." }
         ],
-        correctAnswer: "B",
+        correctAnswer: "E",
         videoUrl: ""
     },
 
@@ -322,6 +322,26 @@ const questionBank = [
         ],
         correctAnswer: "B",
         videoUrl: ""
-    }
+    },
+    // Pergunta 20
+    {
+        id: "q20",
+        type: "mc",
+        questionText: `
+            <img src="images/rg.jpg" alt="Comic" loading="lazy" style="width: 280px; height: 180px;">
+            <br><br>
+            In the comic, what is the main tense used in the driver's statement: “I wasnt texting while driving.”  
+           
+        `,
+        options: [
+            { letter: "A", text: "(A) Simple past." },
+            { letter: "B", text: "(B) Present perfect." },
+            { letter: "C", text: "(C) Future." },
+            { letter: "D", text: "(D) To be continous in the past." },
+            { letter: "E", text: "(E) To be in the present." }
+        ],
+        correctAnswer: "D",
+        videoUrl: ""
+    },
     
 ];
