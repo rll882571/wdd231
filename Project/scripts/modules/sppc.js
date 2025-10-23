@@ -180,7 +180,7 @@ const questionBank = [
             { letter: "D", text: "(D) was studying / made" },
             { letter: "E", text: "(E) study / makes" }
         ],
-        correctAnswer: "D",
+        correctAnswer: "C",
         videoUrl: ""
     },
     {
