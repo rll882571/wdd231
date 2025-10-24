@@ -24,7 +24,7 @@ const questionBank = [
         videoUrl: ""
     },
 
-    // Pergunta 2 (Opção B corrigida)
+    
     {
         id: "q2",
         type: "mc",
