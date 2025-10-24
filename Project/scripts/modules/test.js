@@ -12,8 +12,8 @@ let currentTestQuestions = [];
 function createHeader(mainElement) {
     const headerHTML = `
         <div class="titulo">
-            <h1>AVALIAÇÃO CONTINUA 1 - 7º - AVANÇADO</h1>
-            <h3>INGLÊS - 3ª ETAPA - DATA: 04/06/2025</h3>
+            <h1>Prova de Inglês</h1>
+            <h3>Prova Final - DATA:2025</h3>
         </div>
         <hr class="first">
         <div class="aluno">

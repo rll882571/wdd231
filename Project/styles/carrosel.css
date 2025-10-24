@@ -1,72 +1,96 @@
 /* =================================== */
 /* ==== ESTILOS DO CARROSSEL DE DICAS ==== */
+/* ==== (Estilo Folha de Caderno) ==== */
 /* =================================== */
 
 #tips-carousel-container {
     position: fixed; /* Fica fixo na tela */
     left: 20px; /* Um pequeno espaço da borda esquerda */
     top: 150px; /* Abaixo do seu header (ajuste conforme necessário) */
-    width: 260px; /* Largura do carrossel */
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 10px;
-    z-index: 900; /* Abaixo do modal (z-index: 1000), mas acima do resto */
-    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+    width: 280px; /* Aumentei um pouco para a margem */
+    
+    /* === EFEITO DE PAPEL === */
+    font-family: 'Gochi Hand', cursive; /* Fonte de "escrita à mão" */
+    color: #003366; /* Cor de "caneta" azul escura */
+    background-color: #fefdf5; /* Cor de papel creme/off-white */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Bordas menos arredondadas */
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    padding: 15px 15px 15px 45px; /* Padding: Top, Right, Bottom, Left (para dar espaço para a margem) */
+    z-index: 900; 
+    box-sizing: border-box; 
+
+    /* === MÁGICA: As linhas do caderno === */
+    background-image: 
+        /* 1. Margem Vermelha (vertical) */
+        linear-gradient(to right, transparent 34px, #ffaaaa 34px, #ffaaaa 36px, transparent 36px),
+        /* 2. Linhas Azuis (horizontais) */
+        repeating-linear-gradient(#fefdf5, #fefdf5 23px, #d4e7ff 23px, #d4e7ff 24px);
+
+    background-size: 
+        100% 100%, /* Tamanho da margem vermelha */
+        100% 24px; /* Tamanho (altura) de cada linha azul */
 }
 
 #tips-carousel-container h2 {
-    font-size: 1.2em;
+    font-size: 1.5em; /* Fonte maior para o título */
     text-align: center;
     margin-top: 0;
-    margin-bottom: 15px;
-    color: #333;
-    border-bottom: 2px solid #1133da; /* Cor do seu botão */
-    padding-bottom: 15px;
+    margin-bottom: 20px;
+    color: #003366; /* Cor de caneta */
+    border-bottom: 2px solid #ffaaaa; /* Linha vermelha combinando com a margem */
+    padding-bottom: 10px;
+    line-height: 1.2; /* Título não precisa sentar na linha */
 }
 
 #tips-carousel .tip-slide {
-    display: none; /* Todas as dicas começam escondidas */
+    display: none; 
 }
 
 #tips-carousel .tip-slide.active {
-    display: block; /* A dica ativa é mostrada */
-    animation: fadeIn 0.5s ease-in-out; /* Efeito de transição */
+    display: block; 
+    animation: fadeIn 0.5s ease-in-out; 
 }
 
 /* Estilos para o conteúdo das dicas */
 .tip-slide h4 {
-    font-size: 1em;
-    color: #0b1f8f; /* Cor escura do seu botão */
+    font-size: 1.2em;
+    color: #003366;
     margin-bottom: 10px;
+    line-height: 1.2; /* Título da dica não precisa sentar na linha */
 }
 
 .tip-slide p {
-    font-size: 0.95em;
-    line-height: 1.4;
-    margin-bottom: 10px;
+    font-size: 1.1em; /* Tamanho da fonte "escrita" */
+    line-height: 24px; /* IMPORTANTE: Alinha o texto com as linhas azuis (mesmo valor do repeating-linear-gradient) */
+    margin-bottom: 0; /* Remove espaço extra para manter o alinhamento */
+    min-height: 24px; /* Garante que mesmo uma linha curta mantenha o espaço */
 }
 
 .tip-slide code {
     display: block;
-    background-color: #eef2ff; /* Cor clara do seu .verb-option.selected */
+    background-color: rgba(238, 242, 255, 0.7); /* Fundo semi-transparente para ver as linhas */
     padding: 10px;
     border-radius: 5px;
-    font-family: monospace;
-    white-space: pre-wrap; /* Garante a quebra de linha */
-    font-size: 0.9em;
+    font-family: 'Gochi Hand', cursive; /* Mesma fonte */
+    white-space: pre-wrap; 
+    font-size: 1.05em; /* Um pouco maior */
     border: 1px solid #d0d9ff;
+    color: #0b1f8f; /* Cor mais escura para o código */
+    line-height: 24px; /* IMPORTANTE: Alinha o texto com as linhas azuis */
+    margin-top: 12px; /* Metade da altura da linha, para pular uma linha */
+    margin-bottom: 12px;
 }
 
 .tip-slide .exemplo-certo {
-    color: #006400; /* Verde escuro */
+    color: #006400; /* Verde escuro (caneta verde) */
     font-weight: bold;
 }
 
 .tip-slide .exemplo-errado {
-    color: #8B0000; /* Vermelho escuro */
-    text-decoration: line-through;
+    color: #990000; /* Vermelho escuro (caneta vermelha) */
+    text-decoration: line-through; /* Riscado */
+    background-color: rgba(255, 200, 200, 0.4); /* Leve marca-texto vermelho */
 }
 
 @keyframes fadeIn {
@@ -74,11 +98,8 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Para evitar que o carrossel fique por cima do seu 
-   conteúdo principal em telas menores, vamos escondê-lo.
-*/
 @media (max-width: 1200px) {
     #tips-carousel-container {
-        display: none; /* Esconde o carrossel em telas menores */
+        display: none; 
     }
 }

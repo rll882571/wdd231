@@ -1,0 +1,105 @@
+/* =================================== */
+/* ==== ESTILOS DO CARROSSEL DE DICAS ==== */
+/* ==== (Estilo Folha de Caderno) ==== */
+/* =================================== */
+
+#tips-carousel-container {
+    position: fixed; 
+    left: 20px; 
+    top: 150px; 
+    width: 260px; 
+    
+    /* === EFEITO DE PAPEL === */
+    font-family: 'Gochi Hand', cursive; 
+    color: #003366; 
+    background-color: #fefdf5; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    padding: 15px 15px 15px 45px; 
+    z-index: 900; 
+    box-sizing: border-box; 
+
+    /* === MÁGICA: As linhas do caderno (AJUSTADAS) === */
+    background-image: 
+        /* 1. Margem Vermelha (vertical) */
+        linear-gradient(to right, transparent 34px, #ffaaaa 34px, #ffaaaa 36px, transparent 36px),
+        /* 2. Linhas Azuis (horizontais) - Altura reduzida */
+        repeating-linear-gradient(#fefdf5, #fefdf5 21px, #d4e7ff 21px, #d4e7ff 22px);
+
+    background-size: 
+        100% 100%, 
+        100% 22px; /* Tamanho (altura) de cada linha azul (REDUZIDO) */
+}
+
+#tips-carousel-container h2 {
+    font-size: 1.3em; /* REDUZIDO */
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #003366; 
+    border-bottom: 2px solid #ffaaaa; 
+    padding-bottom: 10px;
+    line-height: 1.2; 
+}
+
+#tips-carousel .tip-slide {
+    display: none; 
+}
+
+#tips-carousel .tip-slide.active {
+    display: block; 
+    animation: fadeIn 0.5s ease-in-out; 
+}
+
+/* Estilos para o conteúdo das dicas */
+.tip-slide h4 {
+    font-size: 1.1em; /* REDUZIDO */
+    color: #003366;
+    margin-bottom: 10px;
+    line-height: 1.2; 
+}
+
+.tip-slide p {
+    font-size: 1.0em; /* REDUZIDO */
+    line-height: 22px; /* IMPORTANTE: Alinhado com as linhas azuis (REDUZIDO) */
+    margin-bottom: 0; 
+    min-height: 22px; /* REDUZIDO */
+}
+
+.tip-slide code {
+    display: block;
+    background-color: rgba(238, 242, 255, 0.7); 
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Gochi Hand', cursive; 
+    white-space: pre-wrap; 
+    font-size: 0.95em; /* REDUZIDO */
+    border: 1px solid #d0d9ff;
+    color: #0b1f8f; 
+    line-height: 22px; /* IMPORTANTE: Alinhado com as linhas azuis (REDUZIDO) */
+    margin-top: 11px; /* Metade da altura da linha (REDUZIDO) */
+    margin-bottom: 11px; /* REDUZIDO */
+}
+
+.tip-slide .exemplo-certo {
+    color: #006400; 
+    font-weight: bold;
+}
+
+.tip-slide .exemplo-errado {
+    color: #990000; 
+    text-decoration: line-through; 
+    background-color: rgba(255, 200, 200, 0.4); 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1200px) {
+    #tips-carousel-container {
+        display: none; 
+    }
+}
