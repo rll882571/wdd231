@@ -1,11 +1,4 @@
-// ==========================
-// ARQUIVO: scripts/main.js
-// ==========================
-//
-// Este arquivo contém APENAS a lógica do quiz.
-// Ele DEPENDE que o 'questoes.js' seja carregado primeiro no HTML.
 
-// Guarda as 10 perguntas sorteadas para este teste
 let currentTestQuestions = [];
 
 // --- FUNÇÃO 1: CRIAR O CABEÇALHO ---
