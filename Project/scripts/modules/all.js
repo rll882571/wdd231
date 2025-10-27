@@ -4,8 +4,8 @@ let currentTestQuestions = [];
 function createHeader(mainElement) {
     const headerHTML = `
         <div class="titulo">
-            <h1>Prova de Inglês</h1>
-            <h3>Prova Final - DATA:2025</h3>
+            <h1>Simulado prepartório para a prova de Inglês</h1>
+            <h3>Prova Final - 2025</h3>
         </div>
         <hr class="first">
         <div class="aluno">
