@@ -21,10 +21,15 @@ const questionBank = [
             { letter: "E", text: "(E) All of them are correct." }
         ],
         correctAnswer: "A",
-        videoUrl: ""
+        videoUrl: "",
+        hints: [ 
+            "Dica 1 (Q1): Quando o 'when' está no meio da frase, o que vem antes do 'when' o verbo é com ING e o que vem depois é Simple Past (ED).", // Corrigido: está, ING
+            "Dica 2 (Q1): Depois de 'was' e 'were' o verbo precisa estar com ING.", // Corrigido: estar, ING
+            "Dica 3 (Q1): 'Was' significa 'estava', é usado no singular. 'Were' também é 'estava', mas é usado no plural." // Corrigido: também, singular
+        ]
     },
 
-    // Pergunta 2
+    // Pergunta 2 (Dicas originais mantidas)
     {
         id: "q2",
         type: "mc",
@@ -37,10 +42,15 @@ const questionBank = [
             { letter: "E", text: "(E) They was play soccer all afternoon." }
         ],
         correctAnswer: "B",
-        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0"
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [ 
+            "Dica 1 (Q2): Lorem ipsum dolor sit amet.",
+            "Dica 2 (Q2): Consectetur adipiscing elit.",
+            "Dica 3 (Q2): Sed do eiusmod tempor incididunt."
+        ]
     },
 
-    // Pergunta 3 (especial — escolha de verbos)
+    // Pergunta 3 (Dicas originais mantidas)
     {
         id: "q3_special",
         type: "fill-verb",
@@ -53,7 +63,12 @@ const questionBank = [
             { text: "(E) We ... (walk) to school when it started to rain.", verbs: ["walked", "were walking"] }
         ],
         correctAnswer: ["was watching", "played", "was sleeping", "saw", "were walking"],
-        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0"
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [ 
+            "Dica 1 (Q3): Ut labore et dolore magna aliqua.",
+            "Dica 2 (Q3): Ut enim ad minim veniam.",
+            "Dica 3 (Q3): Quis nostrud exercitation ullamco laboris."
+        ]
     },
 
     // Pergunta 4
@@ -76,7 +91,12 @@ const questionBank = [
             { letter: "D", text: "(D) Only IV is correct." }
         ],
         correctAnswer: "A",
-        videoUrl: ""
+        videoUrl: "",
+        hints: [ 
+            "Dica 1 (Q4): O Past Continuous é usado para descrever ações que estavam acontecendo. Ex: I was playing (eu estava jogando).", // Corrigido: Past Continuous, acontecendo
+            "Dica 2 (Q4): O Past Continuous pode ser usado para descrever duas ações que estavam acontecendo ao mesmo tempo, lembre de usar o 'while' (enquanto).", // Corrigido: Past Continuous, acontecendo
+            "Dica 3 (Q4): Cuidado com a palavra 'always' (sempre), geralmente a opção não vai estar certa." // Corrigido: estar
+        ]
     },
 
     // Pergunta 5
@@ -97,7 +117,12 @@ const questionBank = [
             { letter: "E", text: "(E) Two actions happening exactly at the same time in the past." }
         ],
         correctAnswer: "E",
-        videoUrl: ""
+        videoUrl: "",
+        hints: [ 
+            "Dica 1 (Q5): O Past Continuous não é usado para ações futuras.", // Corrigido: Past Continuous
+            "Dica 2 (Q5): O Past Continuous é usado para falar sobre ações no passado e não no presente.", // Corrigido: Past Continuous
+            "Dica 3 (Q5): Use o 'while' para falar que duas coisas estavam acontecendo ao mesmo tempo."
+        ]
     },
 
     // Pergunta 6
@@ -115,7 +140,12 @@ const questionBank = [
             { letter: "E", text: "(E) None of the above." }
         ],
         correctAnswer: "C",
-        videoUrl: "https://www.youtube.com/embed/mW4INGFLBhA"
+        videoUrl: "https://www.youtube.com/embed/mW4INGFLBhA",
+        hints: [ 
+            "Dica 1 (Q6): 'While' significa 'enquanto' e 'when' significa 'quando'.", // Corrigido: 'enquanto'
+            "Dica 2 (Q6): 'When' é usado para interromper uma ação.",
+            "Dica 3 (Q6): 'While' é usado quando uma ação estava em progresso."
+        ]
     },
 
     // Pergunta 7
@@ -131,7 +161,12 @@ const questionBank = [
             { letter: "E", text: "(E) We played soccer yesterday." }
         ],
         correctAnswer: "A",
-        videoUrl: ""
+        videoUrl: "",
+        hints: [ 
+            "Dica 1 (Q7): Quando você quer indicar que duas ações estavam acontecendo ao mesmo tempo, use o 'while'.", // Corrigido: você
+            "Dica 2 (Q7): Siga a primeira dica.",
+            "Dica 3 (Q7): Sem mais dicas."
+        ]
     },
 
     // Pergunta 8
@@ -149,7 +184,12 @@ const questionBank = [
             { letter: "E", text: "(E) She has studying when her mom got home." }
         ],
         correctAnswer: "B",
-        videoUrl: "https://www.youtube.com/embed/MgYPm9kjQSw"
+        videoUrl: "https://www.youtube.com/embed/MgYPm9kjQSw",
+        hints: [ 
+            "Dica 1 (Q8): Depois de 'was' e 'were' o verbo tem que ter ING. Ex: I was playing (Eu estava jogando).", // Corrigido: Depois, ING, jogando
+            "Dica 2 (Q8): I/he/she/it se usa com 'was'. We/they/you se usa com 'were'.", // Corrigido
+            "Dica 3 (Q8): Quando o 'when' está no meio da frase, o que vem antes dele deve estar com ING no verbo e o que vem depois é o Simple Past (ed)." // Corrigido: está, ING, Simple Past
+        ]
     },
 
     // Pergunta 9
@@ -165,7 +205,12 @@ const questionBank = [
             { letter: "E", text: "(E) since" }
         ],
         correctAnswer: "B",
-        videoUrl: ""
+        videoUrl: "",
+        hints: [ 
+            "Dica 1 (Q9): 'While' não se usa no Simple Past, só no Past Continuous Progressive.", // Corrigido: Simple Past, Past Continuous Progressive
+            "Dica 2 (Q9): 'Always' geralmente não será usado no passado dessa forma.", // Corrigido
+            "Dica 3 (Q9): 'Since' (desde) não é usado no Simple Past, mas sim no Present Perfect." // Corrigido: Simple Past
+        ]
     },
 
     // Pergunta 10
@@ -181,7 +226,12 @@ const questionBank = [
             { letter: "E", text: "(E) study / makes" }
         ],
         correctAnswer: "C",
-        videoUrl: ""
+        videoUrl: "",
+        hints: [ 
+            "Dica 1 (Q10): Quando você usa o 'while' (enquanto), use: sujeito + was/were + verbo com ING.", // Corrigido: você, ING
+            "Dica 2 (Q10): 'While' é usado para informar que duas ações estavam acontecendo ao mesmo tempo.", // Corrigido: informar
+            "Dica 3 (Q10): Não se usa 'while' com verbos no Simple Past." // Corrigido: Simple Past
+        ]
     },
     {
         id: "q11",
@@ -195,7 +245,12 @@ const questionBank = [
             { letter: "E", text: "(E) Does" }
         ],
         correctAnswer: "C",
-        videoUrl: ""
+        videoUrl: "",
+        hints: [ 
+            "Dica 1 (Q11): 'Was/were' significa 'estava'. O verbo depois deles precisa de ING. Se não tiver, está errado.", // Corrigido: está, ING
+            "Dica 2 (Q11): 'Do/does' são usados para perguntas no presente.",
+            "Dica 3 (Q11): 'Did' é usado para perguntas no Simple Past. Ele vem antes do sujeito e não é usado com verbos com ING." // Corrigido: Simple Past, ING
+        ]
     },
     {
         id: "q12",
@@ -209,7 +264,12 @@ const questionBank = [
             { letter: "E", text: "(E) are" }
         ],
         correctAnswer: "B",
-        videoUrl: ""
+        videoUrl: "",
+        hints: [ 
+            "Dica 1 (Q12): 'Were' (estava) é usado com 'you', 'we', 'they' ou nomes no plural.",
+            "Dica 2 (Q12): 'Do' é usado no presente.",
+            "Dica 3 (Q12): 'Are' (está) é usado no presente." // Corrigido: está
+        ]
     },
      {
         id: "q13",
@@ -223,7 +283,12 @@ const questionBank = [
             { letter: "E", text: "(E) are" }
         ],
         correctAnswer: "C",
-        videoUrl: ""
+        videoUrl: "",
+        hints: [ 
+            "Dica 1 (Q13): O 'did' é usado para perguntas que não têm ING no verbo principal.", // Corrigido: ING
+            "Dica 2 (Q13): 'Is/are' significa 'é' ou 'está', e vêm no início da pergunta no presente.", // Corrigido: significa, está
+            "Dica 3 (Q13): O 'were' ou 'was' vem antes do sujeito quando é uma pergunta no Past Continuous Progressive." // Corrigido: Past Continuous Progressive
+        ]
     },
      {
         id: "q14",
@@ -237,7 +302,12 @@ const questionBank = [
             { letter: "E", text: "(E) Do you were at home yesterday?" }
         ],
         correctAnswer: "B",
-        videoUrl: ""
+        videoUrl: "",
+        hints: [ 
+            "Dica 1 (Q14): 'Did' e 'was/were' na mesma pergunta não combinam.",
+            "Dica 2 (Q14): 'Do' é usado em perguntas no presente.", // Corrigido: perguntas
+            "Dica 3 (Q14): Sem mais dicas."
+        ]
     },
     {
         id: "q15",
@@ -251,7 +321,12 @@ const questionBank = [
             { letter: "E", text: "(E) did / hurted" }
         ],
         correctAnswer: "A",
-        videoUrl: ""
+        videoUrl: "",
+        hints: [ 
+            "Dica 1 (Q15): O que vem antes do 'when' (quando) precisa ter ING no verbo e o que vem depois, Simple Past. Alguns verbos no Simple Past são irregulares e não têm ED.", // Corrigido: when, ING, Simple Past
+            "Dica 2 (Q15): 'Did' e 'was/were' não combinam juntos.", // Corrigido: combinam
+            "Dica 3 (Q15): 'Hurted' não existe. O passado é 'hurt'."
+        ]
     },
     {
         id: "q16",
@@ -265,7 +340,12 @@ const questionBank = [
             { letter: "E", text: "(E) Were you gone to the party?" }
         ],
         correctAnswer: "B",
-        videoUrl: ""
+        videoUrl: "",
+        hints: [ 
+            "Dica 1 (Q16): Você precisa usar o mesmo padrão na resposta e na pergunta. Se a resposta não tem ING no verbo, então na pergunta não vai ter.", // Corrigido: Você, ING
+            "Dica 2 (Q16): Quando usar o 'did', o verbo principal fica normal (no infinitivo, sem 'to').", // Corrigido
+            "Dica 3 (Q16): Go (ir), Went (fui/foi)."
+        ]
     },
     {
         id: "q17",
@@ -279,7 +359,12 @@ const questionBank = [
             { letter: "E", text: "(E) did were" }
         ],
         correctAnswer: "B",
-        videoUrl: ""
+        videoUrl: "",
+        hints: [ 
+            "Dica 1 (Q17): Verbos com ING precisam do 'was' ou 'were'.", // Corrigido: ING
+            "Dica 2 (Q17): Não esqueça! Se for I/he/she/it ou um nome singular (Maria, Roberto), usar o 'was'.",
+            "Dica 3 (Q17): Não esqueça! Se for you/we/they ou um nome plural (Maria and João, children), usar o 'were'." // Corrigido: children
+        ]
     },
     {
         id: "q18",
@@ -293,7 +378,12 @@ const questionBank = [
             { letter: "E", text: "(E) Does" }
         ],
         correctAnswer: "B",
-        videoUrl: ""
+        videoUrl: "",
+        hints: [ 
+            "Dica 1 (Q18): Se não tiver ING no verbo, não use 'was' nem 'were'.", // Corrigido: ING
+            "Dica 2 (Q18): 'Do/does' é para o presente.",
+            "Dica 3 (Q18): Use 'was' quando o sujeito for I/he/she/it ou um nome singular."
+        ]
     },
     {
         id: "q19",
@@ -307,7 +397,12 @@ const questionBank = [
             { letter: "E", text: "(E) did / goes" }
         ],
         correctAnswer: "B",
-        videoUrl: ""
+        videoUrl: "",
+        hints: [ 
+            "Dica 1 (Q19): 'Did' e verbo com ING não combinam.", // Corrigido: ING
+            "Dica 2 (Q19): Use 'were' quando o sujeito for 'you', 'we', 'they' ou no plural.",
+            "Dica 3 (Q19): O passado de 'go' é 'went'."
+        ]
     },
     {
         id: "q20",
@@ -321,27 +416,37 @@ const questionBank = [
             { letter: "E", text: "(E) Does" }
         ],
         correctAnswer: "B",
-        videoUrl: ""
+        videoUrl: "",
+        hints: [ 
+            "Dica 1 (Q20): 'Did' e verbo com ING não combinam.", // Corrigido: ING
+            "Dica 2 (Q20): 'Does/do' são para o presente.",
+            "Dica 3 (Q20): 'Was' é usado com I/he/she/it ou nome singular, tipo 'cachorro' (the dog was)."
+        ]
     },
-    // Pergunta 20
+    // Pergunta 21 (ID duplicado corrigido)
     {
-        id: "q20",
+        id: "q21", 
         type: "mc",
         questionText: `
             <img src="images/rg.jpg" alt="Comic" loading="lazy" style="width: 280px; height: 180px;">
             <br><br>
             In the comic, what is the main tense used in the driver's statement: “I wasnt texting while driving.”  
-           
+            
         `,
         options: [
             { letter: "A", text: "(A) Simple past." },
             { letter: "B", text: "(B) Present perfect." },
             { letter: "C", text: "(C) Future." },
-            { letter: "D", text: "(D) To be continous in the past." },
-            { letter: "E", text: "(E) To be in the present." }
+            { letter: "D", text: "(D) To be continous in the past." }, // (D) Past Continuous
+            { letter: "E", text: "(E) To be in the present." } // (E) Present Continuous
         ],
         correctAnswer: "D",
-        videoUrl: ""
+        videoUrl: "",
+        hints: [ 
+            "Dica 1 (Q21): Não estamos estudando o futuro.",
+            "Dica 2 (Q21): Não estamos estudando o presente.",
+            "Dica 3 (Q21): O Simple Past não tem ING." // Corrigido: Simple Past, ING
+        ]
     },
     
 ];

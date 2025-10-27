@@ -9,8 +9,31 @@
     padding: 2cm;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    margin-top: 2cm;
+    /* O margin-top foi removido daqui para evitar 
+      conflito com o novo botão sticky.
+      O espaçamento agora é controlado pelo <main>
+    */
 }
+
+/* ========================================================= */
+/* --- NOVO: Container do Botão Fixo --- */
+.sticky-bar-container {
+    position: sticky;
+    top: 0; /* Fixa no topo da tela após a rolagem */
+    background-color: #f4f4f4; /* Um fundo para destacar a barra */
+    width: 100%; /* Ocupa a largura toda da tela */
+    z-index: 900; /* Garante que fique acima do conteúdo, abaixo do modal */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+    
+    /* Usa flex para centralizar o botão dentro da barra, 
+      fazendo ele ter a mesma largura do #main
+    */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0; /* Espaçamento interno da barra */
+}
+/* ========================================================= */
+
 
 .main-container {
     display: flex;
@@ -29,16 +52,16 @@
   border: 1px solid #000;
   border-radius: 8px;
   display: flex;
-  flex-direction: column; /* empilha os elementos verticalmente */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
-  padding: 5px; /* espaço interno para melhor visualização */
+  padding: 5px; 
 }
 
 .grade-box p {
   font-weight: bold;
   font-size: 0.6em;
-  margin: 2px 0; /* espaço entre os textos */
+  margin: 2px 0; 
 }
 
 .grade-box .resultado {
@@ -171,9 +194,26 @@ header hr {
     text-align: justify;
 }
 
-.question{
+/* --- MUDANÇA: .question-header agora é flex --- */
+.question-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;     
+    width: 100%;
     margin-top: 55px;
 }
+
+/* O container do texto da questão */
+.question-header .question {
+    flex-grow: 1; 
+    margin-right: 15px; 
+    margin-top: 0; 
+}
+.question-header .question p {
+    margin-top: 0;
+}
+
+
 .options{
     margin-top: 55px;
 }
@@ -211,11 +251,17 @@ header hr {
     transform: rotate(-45deg);
 }
 
-/* O NOVO BOTÃO DE ENVIAR */
+/* ========================================================= */
+/* --- MODIFICADO: .submit-container agora só tem 1 botão --- */
 .submit-container {
-    text-align: center;
+    /* Removemos o display:flex e justify-content:space-between */
+    text-align: right; /* Alinha o botão "ENVIAR" à direita */
     margin-top: 40px;
 }
+/* ========================================================= */
+
+
+/* Botão ENVIAR (lado direito) */
 #submit-btn {
     background-color: #1133da;
     color: #fff;
@@ -230,101 +276,115 @@ header hr {
     background-color: #0b1f8f;
 }
 
+/* --- NOVO: Botão AULA COMPLETA (agora na barra sticky) --- */
+#full-class-btn {
+    background-color: #28a745; /* Verde */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    /* --- NOVAS REGRAS DE ALINHAMENTO --- */
+    max-width: 21cm; /* Mesma largura do #main */
+    width: 90%;      /* Mesma largura do #main */
+    margin: 0;
+    text-align: left; /* Alinha o texto do botão à esquerda */
+}
+#full-class-btn:hover {
+    background-color: #218838;
+}
+
+
 /* O ESTILO DE 'CANETA' PARA A NOTA FINAL */
 .final-score {
     color: #0055ff; /* Cor de caneta azul */
     font-weight: bold;
     font-size: 1.2em;
-    /* font-family: 'Comic Sans MS', cursive; Opcional, se quiser uma fonte mais manuscrita */
 }
 
 
 .resultado {
-  color: red;         /* Cor do texto */
+  color: red;       /* Cor do texto */
   font-size: 2.9em;   /* Tamanho da fonte maior que o padrão */
   font-weight: bold;
-  font-family: 'Segoe Script', cursive; /* Opcional: deixa o texto em negrito */
+  font-family: 'Segoe Script', cursive; 
 }
 
 
 
 /* --- ESTILOS PARA A NOVA LÓGICA DA QUESTÃO 3 --- */
 
-/* Estilo para todas as opções de verbo (antes de serem clicadas) */
 .verb-option {
-    font-weight: bold;          /* Deixa o texto em negrito, como você queria */
-    padding: 4px 8px;           /* Cria um espaço interno para o círculo não ficar colado no texto */
-    border-radius: 15px;        /* Deixa as bordas bem arredondadas, essencial para o círculo */
-    cursor: pointer;            /* Mostra a "mãozinha" ao passar o mouse, indicando que é clicável */
-    transition: all 0.2s ease;  /* Adiciona uma transição suave para os efeitos */
-    border: 2px solid transparent; /* Uma borda invisível para evitar que o layout "pule" quando a azul aparecer */
+    font-weight: bold;         
+    padding: 4px 8px;           
+    border-radius: 15px;        
+    cursor: pointer;            
+    transition: all 0.2s ease;  
+    border: 2px solid transparent; 
 }
 
-/* Efeito simples quando o mouse passa por cima */
 .verb-option:hover {
-    background-color: #f0f0f0; /* Um fundo cinza bem claro para indicar a seleção */
+    background-color: #f0f0f0; 
 }
 
-/* Estilo do verbo DEPOIS de ser clicado (o círculo azul) */
 .verb-option.selected {
-    border-color: #1133da;      /* A borda agora fica azul (usei a cor do seu botão ENVIAR) */
-    background-color: #eef2ff;  /* Adiciona um fundo azul bem clarinho para destacar mais */
+    border-color: #1133da;     
+    background-color: #eef2ff;  
 }
 
-/* --- ESTILOS PARA O BOTÃO DE AJUDA AO LADO DE CADA QUESTÃO --- */
 
-/* Torna o container da pergunta flexível para alinhar os itens */
-
-
-
-
-
-/* Formata o botão de ajuda */
-.help-btn-question {
-    background-color: #5c677d; /* Cor cinza-azulado */
+/* --- NOVO: Estilo do .hint-btn (Botão Dica) --- */
+.hint-btn {
+    background-color: #f0ad4e; 
     color: white;
-    padding: 5px 12px; /* Botão menor e mais delicado */
+    padding: 5px 12px;
+    border: none;
     border-radius: 5px;
-    font-size: 0.8em; /* Fonte pequena */
+    font-size: 0.8em;
     font-weight: bold;
-    text-align: left;
+    cursor: pointer;
+    text-align: center;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    margin-left: 600px;
+    
+    flex-shrink: 0; 
+    height: fit-content; 
+    margin-left: auto; /* FORÇA o botão para a direita */
 }
 
-.help-btn-question:hover {
-    background-color: #4a5468;
+.hint-btn:hover {
+    background-color: #ec9b3b;
 }
 
-/* --- ESTILOS PARA O MODAL DE VÍDEO --- */
 
-/* O fundo escuro que cobre a página inteira */
+/* --- ESTILOS PARA O MODAL DE VÍDEO (Já existia) --- */
+
 .modal {
-    display: none; /* Começa escondido */
-    position: fixed; /* Fica fixo na tela mesmo com rolagem */
-    z-index: 1000; /* Garante que fique na frente de tudo */
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo preto semi-transparente */
+    background-color: rgba(0, 0, 0, 0.7); 
 }
 
-/* A caixa branca onde o vídeo ficará */
 .modal-content {
     background-color: #fefefe;
-    margin: 10% auto; /* Centraliza verticalmente e horizontalmente */
+    margin: 10% auto; 
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 720px; /* Largura máxima para o vídeo */
+    max-width: 720px; 
     position: relative;
     border-radius: 8px;
 }
 
-/* O botão de fechar (o "X") */
 .close-btn {
     color: #aaa;
     position: absolute;
@@ -340,10 +400,74 @@ header hr {
     color: black;
 }
 
-/* Garante que o vídeo ocupe o espaço corretamente */
 #video-container iframe {
     width: 100%;
-    aspect-ratio: 16 / 9; /* Proporção de vídeo widescreen */
+    aspect-ratio: 16 / 9; 
 }
 
+/* --- NOVO: Estilos para o <dialog> de Dicas --- */
+#hint-dialog {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
+#hint-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#hint-dialog h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.hint-content {
+    min-height: 80px; 
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.hint-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.hint-nav-btn {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 50%; 
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.hint-nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#hint-counter {
+    font-size: 0.9em;
+    color: #555;
+}
+
+#close-hint-dialog {
+    background-color: #5c677d;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block; 
+    width: 100%;
+}
+#close-hint-dialog:hover {
+    background-color: #4a5468;
+}

@@ -1,4 +1,3 @@
-
 let currentTestQuestions = [];
 
 // --- FUNÇÃO 1: CRIAR O CABEÇALHO ---
@@ -54,16 +53,15 @@ function buildTest(mainElement, submitContainer) {
         
         questionHTML += `<div class="test-paper" data-question-id="${questionData.id}">`;
         
-        // Cabeçalho da questão (Original, sem o feedback-icon)
+        // O cabeçalho da questão com o botão "Dica" à direita
         questionHTML += `
             <div class="question-header">
                 <div class="question">
                     <p>${questionData.questionText.replace('1.', `${index + 1}.`).replace(/^\d+/, `${index + 1}`)}</p>
                 </div>
-                ${questionData.videoUrl ? 
-                `<button class="help-btn-question" data-video-url="${questionData.videoUrl}">
-                    help?
-                 </button>` : ''}
+                <button class="hint-btn" data-question-id="${questionData.id}">
+                    Dica
+                </button>
             </div>
         `;
 
@@ -82,7 +80,6 @@ function buildTest(mainElement, submitContainer) {
             questionHTML += '<div class="options-fill-verb">';
             questionData.lines.forEach(line => {
                 questionHTML += `<div class="option">`; 
-                // .innerHTML para o texto da linha
                 questionHTML += `<p class="line-text">${line.text}</p>`;
                 questionHTML += `<div class="verb-choices">`;
                 line.verbs.forEach(verb => {
@@ -99,9 +96,8 @@ function buildTest(mainElement, submitContainer) {
         mainElement.insertBefore(document.createRange().createContextualFragment(questionHTML), submitContainer);
     });
 
-    // Renumera as perguntas (Ajuste fino para garantir que o número 1. 2. etc. esteja correto)
+    // Renumera as perguntas
     document.querySelectorAll('.test-paper .question p').forEach((p, index) => {
-        // Remove qualquer número antigo e poe o novo
         p.innerHTML = p.innerHTML.trim().replace(/^\d+\.\s*/, '');
         p.innerHTML = `${index + 1}. ${p.innerHTML}`;
     });
@@ -145,16 +141,15 @@ function attachSubmitLogic() {
     const scoreDisplay = document.querySelector('.score-display');
     const gradeDisplay = document.querySelector('.grade-box .resultado');
 
+    if (!submitBtn) return; // Segurança
+
     submitBtn.addEventListener('click', function() {
         let totalScore = 0;
         let isAllAnswered = true;
-        
-        // --- POP-UP: Array para guardar os números das questões erradas ---
         let incorrectQuestions = [];
-        
         const allQuestionElements = document.querySelectorAll('.test-paper');
         
-        allQuestionElements.forEach((questionElement, index) => { // --- POP-UP: Adicionado 'index' ---
+        allQuestionElements.forEach((questionElement, index) => { 
             const questionId = questionElement.dataset.questionId;
             const questionData = currentTestQuestions.find(q => q.id === questionId);
             if (!questionData) return;
@@ -168,7 +163,6 @@ function attachSubmitLogic() {
                     if (selectedAnswer === questionData.correctAnswer) {
                         totalScore += 1;
                     } else {
-                        // --- POP-UP: Adiciona o número da questão à lista de erradas ---
                         incorrectQuestions.push(index + 1);
                     }
                 }
@@ -188,7 +182,6 @@ function attachSubmitLogic() {
                     }
                 });
                 
-                // --- POP-UP: Verifica se a questão não foi totalmente acertada ---
                 if (correctCount !== lines.length) {
                     incorrectQuestions.push(index + 1);
                 }
@@ -210,18 +203,14 @@ function attachSubmitLogic() {
         gradeDisplay.classList.add('final-score');
         document.querySelector('h1').scrollIntoView({ behavior: 'smooth' });
         
-        // --- POP-UP: Lógica para mostrar o alerta ---
         if (incorrectQuestions.length > 0) {
-            // Cria a mensagem, ex: "Você errou a(s) questão(ões): 2, 5, 8"
             const message = "Você errou a(s) questão(ões): " + incorrectQuestions.join(', ');
-            // Usamos setTimeout para garantir que a nota apareça primeiro, e o alerta depois
             setTimeout(() => {
                 alert(message);
             }, 100);
         } else {
-             // Mensagem de parabéns se acertar tudo
              setTimeout(() => {
-                alert("Parabéns! Você acertou todas as 10 questões!");
+                 alert("Parabéns! Você acertou todas as 10 questões!");
              }, 100);
         }
 
@@ -229,38 +218,35 @@ function attachSubmitLogic() {
         this.style.opacity = 0.6;
         this.style.cursor = 'not-allowed';
 
-        // --- ADICIONADO: Desativa cliques nas opções após enviar ---
         document.querySelectorAll('.option, .verb-option').forEach(el => {
             el.style.pointerEvents = 'none';
         });
     });
 }
 
-// --- FUNÇÃO 5: LÓGICA DO MODAL ---
+// --- FUNÇÃO 5: LÓGICA DO MODAL (AULA COMPLETA) ---
 function attachModalLogic() {
     const modal = document.getElementById('video-modal');
     const closeBtn = document.querySelector('.close-btn');
-    const helpButtons = document.querySelectorAll('.help-btn-question'); 
     const videoContainer = document.getElementById('video-container');
+    const helpButton = document.getElementById('full-class-btn'); 
 
-    if (!modal || !closeBtn) return; // Segurança
+    if (!modal || !closeBtn || !videoContainer || !helpButton) return; 
 
-    helpButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const videoURL = button.dataset.videoUrl;
-            if (!videoURL) return;
-            
-            const iframe = document.createElement('iframe');
-            iframe.setAttribute('src', videoURL);
-            iframe.setAttribute('frameborder', '0');
-            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
-            iframe.setAttribute('allowfullscreen', '');
-            iframe.classList.add('youtube-iframe');
+    helpButton.addEventListener('click', () => {
+        const videoURL = helpButton.dataset.videoUrl;
+        if (!videoURL) return;
+        
+        const iframe = document.createElement('iframe');
+        iframe.setAttribute('src', videoURL);
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.classList.add('youtube-iframe');
 
-            videoContainer.innerHTML = '';
-            videoContainer.appendChild(iframe);
-            modal.style.display = 'block';
-        });
+        videoContainer.innerHTML = '';
+        videoContainer.appendChild(iframe);
+        modal.style.display = 'block';
     });
 
     function closeModal() {
@@ -272,6 +258,99 @@ function attachModalLogic() {
     window.addEventListener('click', (event) => {
         if (event.target == modal) {
             closeModal();
+        }
+    });
+}
+
+// =========================================================
+// --- FUNÇÃO 6: LÓGICA DO DIÁLOGO DE DICAS (CORRIGIDA) ---
+// =========================================================
+function attachHintLogic() {
+    const hintDialog = document.getElementById('hint-dialog');
+    const closeHintBtn = document.getElementById('close-hint-dialog');
+    const allHintBtns = document.querySelectorAll('.hint-btn'); 
+    
+    const hintText = document.getElementById('hint-text');
+    const hintCounter = document.getElementById('hint-counter');
+    const prevHintBtn = document.getElementById('prev-hint');
+    const nextHintBtn = document.getElementById('next-hint');
+
+    if (!hintDialog || !closeHintBtn || !allHintBtns.length || !hintText || !hintCounter || !prevHintBtn || !nextHintBtn) {
+        console.error("Elementos do diálogo de dicas não encontrados.");
+        return;
+    }
+
+    // --- MUDANÇA PRINCIPAL ---
+    // Removemos o 'const hints' fixo daqui.
+    // Estas variáveis agora guardam o estado ATUAL do diálogo
+    let activeHints = [];
+    let currentHintIndex = 0;
+
+    // Função para atualizar o conteúdo do diálogo
+    // Ela vai usar as variáveis 'activeHints' e 'currentHintIndex'
+    function showHint(index) {
+        if (!activeHints[index]) return; // Segurança
+
+        hintText.textContent = activeHints[index];
+        hintCounter.textContent = `${index + 1} / ${activeHints.length}`;
+        
+        // Desabilita/Habilita botões de navegação
+        prevHintBtn.disabled = (index === 0);
+        nextHintBtn.disabled = (index === activeHints.length - 1);
+    }
+
+    // Adiciona listener para CADA botão "Dica"
+    allHintBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // 1. Pega o ID da questão direto do botão
+            const questionId = btn.dataset.questionId; 
+            
+            // 2. Acha a questão correspondente no array de questões da prova
+            const questionData = currentTestQuestions.find(q => q.id === questionId);
+
+            // 3. Verifica se a questão e as dicas existem
+            if (!questionData || !questionData.hints || questionData.hints.length === 0) {
+                console.error(`Nenhuma dica encontrada para a questão ${questionId}`);
+                // Mostra uma dica padrão se falhar
+                activeHints = ["Nenhuma dica disponível para esta questão."];
+            } else {
+                // 4. DEFINE as dicas ativas para serem as dicas DESSA questão
+                activeHints = questionData.hints;
+            }
+            
+            // 5. Reseta o contador e mostra a primeira dica
+            currentHintIndex = 0;
+            showHint(currentHintIndex);
+            hintDialog.showModal(); // Abre o <dialog>
+        });
+    });
+
+    // Botão "Fechar" dentro do diálogo
+    closeHintBtn.addEventListener('click', () => {
+        hintDialog.close(); 
+    });
+
+    // Navegação "Anterior"
+    prevHintBtn.addEventListener('click', () => {
+        if (currentHintIndex > 0) {
+            currentHintIndex--;
+            showHint(currentHintIndex);
+        }
+    });
+
+    // Navegação "Próxima"
+    nextHintBtn.addEventListener('click', () => {
+        // Usa activeHints.length para saber o limite
+        if (currentHintIndex < activeHints.length - 1) { 
+            currentHintIndex++;
+            showHint(currentHintIndex);
+        }
+    });
+
+    // Opcional: fechar ao clicar fora da caixa
+    hintDialog.addEventListener('click', (event) => {
+        if (event.target === hintDialog) {
+            hintDialog.close();
         }
     });
 }
@@ -291,7 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Cria o cabeçalho
     createHeader(main);
     
-    // 2. Constrói as questões
+    // 2. Constrói as questões (agora insere antes do submitContainer)
     buildTest(main, submitContainer);
     
     // 3. Adiciona cliques
@@ -300,6 +379,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Adiciona lógica do submit
     attachSubmitLogic();
     
-    // 5. Adiciona lógica do modal
+    // 5. Adiciona lógica do modal de vídeo (botão único)
     attachModalLogic();
+
+    // 6. Adiciona lógica do novo modal de dicas (AGORA CORRIGIDA)
+    attachHintLogic();
 });
