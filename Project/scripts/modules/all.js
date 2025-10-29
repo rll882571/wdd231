@@ -4,7 +4,7 @@ let currentTestQuestions = [];
 function createHeader(mainElement) {
     const headerHTML = `
         <div class="titulo">
-            <h1>Simulado prepartório para a prova de Inglês</h1>
+            <h1>Simulado preparatório para a prova de Inglês</h1>
             <h3>Prova Final - 2025</h3>
         </div>
         <hr class="first">
@@ -40,20 +40,13 @@ function createHeader(mainElement) {
 
 // --- FUNÇÃO 2: SORTEAR E CONSTRUIR AS QUESTÕES ---
 function buildTest(mainElement, submitContainer) {
-    
-    // 1. Embaralha o 'questionBank' (que veio do questoes.js)
     const shuffledBank = [...questionBank].sort(() => Math.random() - 0.5);
-    
-    // 2. Pega as 10 primeiras
     currentTestQuestions = shuffledBank.slice(0, 10);
-    
-    // 3. Construir o HTML para cada questão
+
     currentTestQuestions.forEach((questionData, index) => {
         let questionHTML = '';
-        
+
         questionHTML += `<div class="test-paper" data-question-id="${questionData.id}">`;
-        
-        // O cabeçalho da questão com o botão "Dica" à direita
         questionHTML += `
             <div class="question-header">
                 <div class="question">
@@ -75,7 +68,6 @@ function buildTest(mainElement, submitContainer) {
                 `;
             });
             questionHTML += '</div>';
-        
         } else if (questionData.type === 'fill-verb') {
             questionHTML += '<div class="options-fill-verb">';
             questionData.lines.forEach(line => {
@@ -85,18 +77,15 @@ function buildTest(mainElement, submitContainer) {
                 line.verbs.forEach(verb => {
                     questionHTML += `<span class="verb-option">${verb}</span>`;
                 });
-                questionHTML += `</div>`; 
-                questionHTML += `</div>`;
+                questionHTML += `</div></div>`;
             });
             questionHTML += '</div>';
         }
-        
-        questionHTML += '</div>'; // fecha .test-paper
-        
+
+        questionHTML += '</div>';
         mainElement.insertBefore(document.createRange().createContextualFragment(questionHTML), submitContainer);
     });
 
-    // Renumera as perguntas
     document.querySelectorAll('.test-paper .question p').forEach((p, index) => {
         p.innerHTML = p.innerHTML.trim().replace(/^\d+\.\s*/, '');
         p.innerHTML = `${index + 1}. ${p.innerHTML}`;
@@ -135,15 +124,27 @@ function attachOptionListeners() {
     });
 }
 
-// --- FUNÇÃO 4: ADICIONAR LÓGICA DE CORREÇÃO (SUBMIT) ---
+// --- FUNÇÃO 4: LÓGICA DE CORREÇÃO ---
 function attachSubmitLogic() {
     const submitBtn = document.getElementById('submit-btn');
     const scoreDisplay = document.querySelector('.score-display');
     const gradeDisplay = document.querySelector('.grade-box .resultado');
 
-    if (!submitBtn) return; // Segurança
+    if (!submitBtn) return;
 
     submitBtn.addEventListener('click', function() {
+        const studentName = prompt("Por favor, digite seu nome completo para registrar a nota:");
+        if (!studentName || studentName.trim() === "") {
+            alert("O nome é obrigatório para enviar. Tente enviar novamente.");
+            return;
+        }
+
+        const testName = prompt("Qual o nome desta prova? (Ex: Will vs Going To, Prova Final)");
+        if (!testName || testName.trim() === "") {
+            alert("O nome da prova é obrigatório. Tente enviar novamente.");
+            return;
+        }
+
         let totalScore = 0;
         let isAllAnswered = true;
         let incorrectQuestions = [];
@@ -196,6 +197,12 @@ function attachSubmitLogic() {
             return;
         }
 
+        this.disabled = true;
+        this.style.opacity = 0.6;
+        this.style.cursor = 'not-allowed';
+        const originalButtonText = this.textContent;
+        this.textContent = "ENVIANDO NOTA...";
+
         const finalScore = parseFloat(totalScore.toFixed(1));
         scoreDisplay.textContent = `TOTAL SCORES: ${finalScore}/10`;
         gradeDisplay.textContent = finalScore;
@@ -203,20 +210,46 @@ function attachSubmitLogic() {
         gradeDisplay.classList.add('final-score');
         document.querySelector('h1').scrollIntoView({ behavior: 'smooth' });
         
-        if (incorrectQuestions.length > 0) {
-            const message = "Você errou a(s) questão(ões): " + incorrectQuestions.join(', ');
-            setTimeout(() => {
-                alert(message);
-            }, 100);
-        } else {
-             setTimeout(() => {
-                 alert("Parabéns! Você acertou todas as 10 questões!");
-             }, 100);
-        }
+        const incorrectQuestionsString = incorrectQuestions.length > 0 ? incorrectQuestions.join(', ') : "Nenhum erro";
 
-        this.disabled = true;
-        this.style.opacity = 0.6;
-        this.style.cursor = 'not-allowed';
+        const formspreeUrl = 'https://formspree.io/f/xwpwbojk';
+
+        fetch(formspreeUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                nome: studentName,
+                nomeProva: testName,
+                nota: finalScore,
+                questoesErradas: incorrectQuestionsString,
+                data: new Date().toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" })
+            })
+        })
+        .then(response => {
+            if (response.ok) return response.json();
+            return response.json().then(data => {
+                console.error("O Formspree retornou um erro:", data.errors || data);
+                throw new Error('Falha no envio para o Formspree');
+            });
+        })
+        .then(data => console.log("Nota enviada com sucesso para o Formspree!", data))
+        .catch(error => {
+            console.error("Erro de rede ao enviar para o Formspree:", error);
+            alert("Houve um erro de rede ao tentar salvar sua nota. Sua nota é " + finalScore);
+        })
+        .finally(() => {
+            this.textContent = originalButtonText;
+
+            if (incorrectQuestions.length > 0) {
+                const message = "Você errou a(s) questão(ões): " + incorrectQuestions.join(', ');
+                setTimeout(() => alert(message), 100);
+            } else {
+                setTimeout(() => alert("Parabéns! Você acertou todas as 10 questões!"), 100);
+            }
+        });
 
         document.querySelectorAll('.option, .verb-option').forEach(el => {
             el.style.pointerEvents = 'none';
@@ -256,20 +289,15 @@ function attachModalLogic() {
 
     closeBtn.addEventListener('click', closeModal);
     window.addEventListener('click', (event) => {
-        if (event.target == modal) {
-            closeModal();
-        }
+        if (event.target == modal) closeModal();
     });
 }
 
-// =========================================================
-// --- FUNÇÃO 6: LÓGICA DO DIÁLOGO DE DICAS (CORRIGIDA) ---
-// =========================================================
+// --- FUNÇÃO 6: LÓGICA DO DIÁLOGO DE DICAS ---
 function attachHintLogic() {
     const hintDialog = document.getElementById('hint-dialog');
     const closeHintBtn = document.getElementById('close-hint-dialog');
     const allHintBtns = document.querySelectorAll('.hint-btn'); 
-    
     const hintText = document.getElementById('hint-text');
     const hintCounter = document.getElementById('hint-counter');
     const prevHintBtn = document.getElementById('prev-hint');
@@ -280,57 +308,36 @@ function attachHintLogic() {
         return;
     }
 
-    // --- MUDANÇA PRINCIPAL ---
-    // Removemos o 'const hints' fixo daqui.
-    // Estas variáveis agora guardam o estado ATUAL do diálogo
     let activeHints = [];
     let currentHintIndex = 0;
 
-    // Função para atualizar o conteúdo do diálogo
-    // Ela vai usar as variáveis 'activeHints' e 'currentHintIndex'
     function showHint(index) {
-        if (!activeHints[index]) return; // Segurança
-
+        if (!activeHints[index]) return;
         hintText.textContent = activeHints[index];
         hintCounter.textContent = `${index + 1} / ${activeHints.length}`;
-        
-        // Desabilita/Habilita botões de navegação
         prevHintBtn.disabled = (index === 0);
         nextHintBtn.disabled = (index === activeHints.length - 1);
     }
 
-    // Adiciona listener para CADA botão "Dica"
     allHintBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // 1. Pega o ID da questão direto do botão
             const questionId = btn.dataset.questionId; 
-            
-            // 2. Acha a questão correspondente no array de questões da prova
             const questionData = currentTestQuestions.find(q => q.id === questionId);
 
-            // 3. Verifica se a questão e as dicas existem
             if (!questionData || !questionData.hints || questionData.hints.length === 0) {
-                console.error(`Nenhuma dica encontrada para a questão ${questionId}`);
-                // Mostra uma dica padrão se falhar
                 activeHints = ["Nenhuma dica disponível para esta questão."];
             } else {
-                // 4. DEFINE as dicas ativas para serem as dicas DESSA questão
                 activeHints = questionData.hints;
             }
             
-            // 5. Reseta o contador e mostra a primeira dica
             currentHintIndex = 0;
             showHint(currentHintIndex);
-            hintDialog.showModal(); // Abre o <dialog>
+            hintDialog.showModal();
         });
     });
 
-    // Botão "Fechar" dentro do diálogo
-    closeHintBtn.addEventListener('click', () => {
-        hintDialog.close(); 
-    });
+    closeHintBtn.addEventListener('click', () => hintDialog.close());
 
-    // Navegação "Anterior"
     prevHintBtn.addEventListener('click', () => {
         if (currentHintIndex > 0) {
             currentHintIndex--;
@@ -338,27 +345,20 @@ function attachHintLogic() {
         }
     });
 
-    // Navegação "Próxima"
     nextHintBtn.addEventListener('click', () => {
-        // Usa activeHints.length para saber o limite
         if (currentHintIndex < activeHints.length - 1) { 
             currentHintIndex++;
             showHint(currentHintIndex);
         }
     });
 
-    // Opcional: fechar ao clicar fora da caixa
     hintDialog.addEventListener('click', (event) => {
-        if (event.target === hintDialog) {
-            hintDialog.close();
-        }
+        if (event.target === hintDialog) hintDialog.close();
     });
 }
 
-
 // --- INICIALIZAÇÃO ---
 document.addEventListener('DOMContentLoaded', () => {
-    
     const main = document.getElementById('main');
     const submitContainer = document.querySelector('.submit-container');
 
@@ -367,21 +367,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
     
-    // 1. Cria o cabeçalho
     createHeader(main);
-    
-    // 2. Constrói as questões (agora insere antes do submitContainer)
     buildTest(main, submitContainer);
-    
-    // 3. Adiciona cliques
     attachOptionListeners();
-    
-    // 4. Adiciona lógica do submit
     attachSubmitLogic();
-    
-    // 5. Adiciona lógica do modal de vídeo (botão único)
     attachModalLogic();
-
-    // 6. Adiciona lógica do novo modal de dicas (AGORA CORRIGIDA)
     attachHintLogic();
 });
