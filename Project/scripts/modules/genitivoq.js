@@ -1,3 +1,5 @@
+// Adicione esta linha no topo do gengitivoq.js
+const TEST_SUBJECT_NAME = "Prova: Genitive Case";
 const questionBank = [
 
     // Pergunta 1: Uso Correto do Genitive Case

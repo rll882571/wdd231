@@ -1,6 +1,45 @@
+// ADICIONADO: Variável global para guardar o nome do aluno logado
+let currentStudentName = null;
+
+// ADICIONADO: "Banco de dados" simples de alunos
+// Adicione seus alunos aqui (login, nome completo, senha)
+const studentDatabase = {
+    // 👇 ALUNOS CADASTRADOS (login / nome / senha) 👇
+    
+    "yanne": { name: "Yanne", password: "123" },
+    "luiz": { name: "Luiz", password: "456" },
+    "sophia": { name: "Sophia", password: "789" } 
+    
+    // 👆 Fim da lista de alunos 👆
+    // (Lembre-se: o último aluno não tem vírgula no final)
+};
+
+// ADICIONADO: Função de Login
+function handleLogin() {
+    let username = prompt("Digite seu usuário:");
+    // Se o usuário cancelar, o loop continua
+    if (username === null) return false; 
+    
+    let password = prompt("Digite sua senha:");
+    // Se o usuário cancelar, o loop continua
+    if (password === null) return false; 
+
+    if (studentDatabase[username] && studentDatabase[username].password === password) {
+        currentStudentName = studentDatabase[username].name; // Armazena o nome globalmente
+        alert(`Bem-vindo(a), ${currentStudentName}!`); // Popup de boas-vindas
+        return true;
+    } else {
+        alert("Usuário ou senha incorretos. Tente novamente.");
+        return false;
+    }
+}
+
+
+// --- Início das suas funções originais ---
+
 let currentTestQuestions = [];
 
-// --- FUNÇÃO 1: CRIAR O CABEÇALHO ---
+// --- FUNÇÃO 1: CRIAR O CABEÇALHO --- (Sem alterações)
 function createHeader(mainElement) {
     const headerHTML = `
         <div class="titulo">
@@ -38,7 +77,7 @@ function createHeader(mainElement) {
     mainElement.insertAdjacentHTML('afterbegin', headerHTML);
 }
 
-// --- FUNÇÃO 2: SORTEAR E CONSTRUIR AS QUESTÕES ---
+// --- FUNÇÃO 2: SORTEAR E CONSTRUIR AS QUESTÕES --- (Sem alterações)
 function buildTest(mainElement, submitContainer) {
     const shuffledBank = [...questionBank].sort(() => Math.random() - 0.5);
     currentTestQuestions = shuffledBank.slice(0, 10);
@@ -92,7 +131,7 @@ function buildTest(mainElement, submitContainer) {
     });
 }
 
-// --- FUNÇÃO 3: ADICIONAR LÓGICA DE CLIQUE NAS OPÇÕES ---
+// --- FUNÇÃO 3: ADICIONAR LÓGICA DE CLIQUE NAS OPÇÕES --- (Sem alterações)
 function attachOptionListeners() {
     const allQuestions = document.querySelectorAll('.test-paper');
     
@@ -124,7 +163,7 @@ function attachOptionListeners() {
     });
 }
 
-// --- FUNÇÃO 4: LÓGICA DE CORREÇÃO ---
+// --- FUNÇÃO 4: LÓGICA DE CORREÇÃO (MODIFICADA) ---
 function attachSubmitLogic() {
     const submitBtn = document.getElementById('submit-btn');
     const scoreDisplay = document.querySelector('.score-display');
@@ -133,21 +172,25 @@ function attachSubmitLogic() {
     if (!submitBtn) return;
 
     submitBtn.addEventListener('click', function() {
-        const studentName = prompt("Por favor, digite seu nome completo para registrar a nota:");
-        if (!studentName || studentName.trim() === "") {
-            alert("O nome é obrigatório para enviar. Tente enviar novamente.");
+        
+        // ADICIONADO: Pega o nome automático da variável global (definida no login)
+        if (!currentStudentName) {
+            alert("Erro: Aluno não logado. Atualize a página e faça o login novamente.");
             return;
         }
+        const studentName = currentStudentName;
 
-        const testName = prompt("Qual o nome desta prova? (Ex: Will vs Going To, Prova Final)");
-        if (!testName || testName.trim() === "") {
-            alert("O nome da prova é obrigatório. Tente enviar novamente.");
-            return;
-        }
+
+        // ADICIONADO: Pega o nome da prova automaticamente da variável TEST_SUBJECT_NAME
+        // (que foi definida no gengitivoq.js)
+        const testName = (typeof TEST_SUBJECT_NAME !== 'undefined') ? TEST_SUBJECT_NAME : document.querySelector('.titulo h1').textContent;
+
+        
+        // O resto da função de correção continua igual...
 
         let totalScore = 0;
         let isAllAnswered = true;
-        let incorrectQuestions = [];
+        let incorrectQuestions = []; // Esta array agora vai guardar os IDs (q1, q2...)
         const allQuestionElements = document.querySelectorAll('.test-paper');
         
         allQuestionElements.forEach((questionElement, index) => { 
@@ -164,7 +207,7 @@ function attachSubmitLogic() {
                     if (selectedAnswer === questionData.correctAnswer) {
                         totalScore += 1;
                     } else {
-                        incorrectQuestions.push(index + 1);
+                        incorrectQuestions.push(questionData.id); // <--- MODIFICADO (agora usa o ID)
                     }
                 }
             } else if (questionData.type === 'fill-verb') {
@@ -184,7 +227,7 @@ function attachSubmitLogic() {
                 });
                 
                 if (correctCount !== lines.length) {
-                    incorrectQuestions.push(index + 1);
+                    incorrectQuestions.push(questionData.id); // <--- MODIFICADO (agora usa o ID)
                 }
 
                 if (answeredLines < lines.length) isAllAnswered = false;
@@ -210,6 +253,7 @@ function attachSubmitLogic() {
         gradeDisplay.classList.add('final-score');
         document.querySelector('h1').scrollIntoView({ behavior: 'smooth' });
         
+        // Agora esta string será "q1, q3_special, q7"
         const incorrectQuestionsString = incorrectQuestions.length > 0 ? incorrectQuestions.join(', ') : "Nenhum erro";
 
         const formspreeUrl = 'https://formspree.io/f/xwpwbojk';
@@ -220,6 +264,8 @@ function attachSubmitLogic() {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
+            // Os campos 'nome' e 'nomeProva' são automáticos
+            // 'questoesErradas' agora envia os IDs
             body: JSON.stringify({
                 nome: studentName,
                 nomeProva: testName,
@@ -242,9 +288,23 @@ function attachSubmitLogic() {
         })
         .finally(() => {
             this.textContent = originalButtonText;
+            
+            // ATENÇÃO: A mensagem de ALERTA para o aluno ainda usa o NÚMERO DA ORDEM (index + 1)
+            // Isso é o ideal, pois o aluno vê a prova como "Questão 1, 2, 3...", e não "q1, q7".
+            // Para fazer isso, precisamos recriar a lista de erros visuais (apenas para o alerta).
+            
+            let incorrectQuestionNumbers = [];
+            allQuestionElements.forEach((questionElement, index) => {
+                const questionId = questionElement.dataset.questionId;
+                // Verifica se o ID desta questão está na lista de IDs errados
+                if (incorrectQuestions.includes(questionId)) {
+                    incorrectQuestionNumbers.push(index + 1); // Adiciona o número da ordem (1, 2, 3...)
+                }
+            });
 
-            if (incorrectQuestions.length > 0) {
-                const message = "Você errou a(s) questão(ões): " + incorrectQuestions.join(', ');
+            if (incorrectQuestionNumbers.length > 0) {
+                // O alerta para o aluno usa os números 1, 2, 3...
+                const message = "Você errou a(s) questão(ões): " + incorrectQuestionNumbers.join(', ');
                 setTimeout(() => alert(message), 100);
             } else {
                 setTimeout(() => alert("Parabéns! Você acertou todas as 10 questões!"), 100);
@@ -257,7 +317,7 @@ function attachSubmitLogic() {
     });
 }
 
-// --- FUNÇÃO 5: LÓGICA DO MODAL (AULA COMPLETA) ---
+// --- FUNÇÃO 5: LÓGICA DO MODAL (AULA COMPLETA) --- (Sem alterações)
 function attachModalLogic() {
     const modal = document.getElementById('video-modal');
     const closeBtn = document.querySelector('.close-btn');
@@ -293,7 +353,7 @@ function attachModalLogic() {
     });
 }
 
-// --- FUNÇÃO 6: LÓGICA DO DIÁLOGO DE DICAS ---
+// --- FUNÇÃO 6: LÓGICA DO DIÁLOGO DE DICAS --- (Sem alterações)
 function attachHintLogic() {
     const hintDialog = document.getElementById('hint-dialog');
     const closeHintBtn = document.getElementById('close-hint-dialog');
@@ -357,8 +417,21 @@ function attachHintLogic() {
     });
 }
 
-// --- INICIALIZAÇÃO ---
+// --- INICIALIZAÇÃO (MODIFICADO) ---
 document.addEventListener('DOMContentLoaded', () => {
+
+    // ADICIONADO: 1. Força o login antes de carregar a prova
+    let loggedIn = false;
+    while (!loggedIn) {
+        // A função handleLogin() mostra os prompts e valida
+        if (handleLogin()) {
+            loggedIn = true;
+        }
+        // Se o login falhar (usuário/senha errada ou cancelou), 
+        // o loop continua pedindo o login.
+    }
+    
+    // 2. Se o login foi feito (loggedIn = true), continue carregando a prova
     const main = document.getElementById('main');
     const submitContainer = document.querySelector('.submit-container');
 
@@ -367,10 +440,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
     
+    // 3. Carrega o resto do script
     createHeader(main);
     buildTest(main, submitContainer);
     attachOptionListeners();
-    attachSubmitLogic();
+    attachSubmitLogic(); // Usa a lógica de submit modificada
     attachModalLogic();
     attachHintLogic();
 });

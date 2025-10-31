@@ -413,7 +413,7 @@ const questionBank = [
 
     // Pergunta 19 (Placeholder - Imagem)
      {
-        id: "q19_placeholder_img2", 
+        id: "q19", 
         type: "mc",
         questionText: `
             (PLACEHOLDER - EDITE DEPOIS)
