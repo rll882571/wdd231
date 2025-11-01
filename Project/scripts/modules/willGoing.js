@@ -55,22 +55,22 @@ const questionBank = [
         id: "q3",
         type: "mc",
         questionText: `
-            A: I can't hear the TV! <br>
-            B: OK, I ______ it up.
+            What is the best way to complete the sentence? <br>
+            I ______ for my exames tomorrow.
         `,
         options: [
-            { letter: "A", text: "(A) am going to turn" },
-            { letter: "B", text: "(B) am turning" },
-            { letter: "C", text: "(C) turned" },
-            { letter: "D", text: "(D) will turn" },
-            { letter: "E", text: "(E) will turning" }
+            { letter: "A", text: "(A) am going to study" },
+            { letter: "B", text: "(B) is going to study" },
+            { letter: "C", text: "(C) are going to study" },
+            { letter: "D", text: "(D) am going study" },
+            { letter: "E", text: "(E) am go to study" }
         ],
         correctAnswer: "D",
         videoUrl: "",
         hints: [ 
-            "Dica 1: A pessoa está reagindo a um problema ('I can't hear!').",
-            "Dica 2: Use 'Will' para decisões rápidas tomadas no momento da fala.",
-            "Dica 3: Isso não foi um plano; foi uma reação."
+            "Dica 1: Cada sujeito tem um to be",
+            "Dica 2: is é para o sujeito he, she ou it",
+            "Dica 3: Você consegue!"
         ]
     },
 
@@ -127,22 +127,22 @@ const questionBank = [
         id: "q6",
         type: "mc",
         questionText: `
-            A: ______ they going to do it by themselves? <br>
-            B: No, they ______.
+            What is the best way to complete the sentence? <br>
+            They ______ their grandparents next month.
         `,
         options: [
-            { letter: "A", text: "(A) Are / aren't" },
-            { letter: "B", text: "(B) Will / won't" },
-            { letter: "C", text: "(C) Are / won't" },
-            { letter: "D", text: "(D) Will / aren't" },
-            { letter: "E", text: "(E) Do / don't" }
+             { letter: "A", text: "(A) am going to visit" },
+            { letter: "B", text: "(B) is going to visit" },
+            { letter: "C", text: "(C) are going to visit" },
+            { letter: "D", text: "(D) am going visit" },
+            { letter: "E", text: "(E) will to visit" }
         ],
         correctAnswer: "A",
         videoUrl: "",
         hints: [ 
-            "Dica 1: A pergunta usa 'going to'.",
-            "Dica 2: Perguntas com 'be going to' usam o verbo 'to be' (am, is, are) como auxiliar.",
-            "Dica 3: A resposta curta deve usar o mesmo auxiliar da pergunta (Are...? / ...aren't)."
+            "Dica 1: Presta atenção no sujeito",
+            "Dica 2: 'They' pede o verbo 'to be' na forma 'are'",
+            "Dica 3: is é para o sujeito he, she ou it"
         ]
     },
 
@@ -151,15 +151,14 @@ const questionBank = [
         id: "q7",
         type: "mc",
         questionText: `
-            A: ______ he go alone? <br>
-            B: Yes, he ______.
+            What is the correct sntence?
         `,
         options: [
-            { letter: "A", text: "(A) Is / is" },
-            { letter: "B", text: "(B) Will / will" },
-            { letter: "C", text: "(C) Is / will" },
-            { letter: "D", text: "(D) Will / is" },
-            { letter: "E", text: "(E) Does / does" }
+            { letter: "A", text: "(A) She will visiting her mother" }, 
+            { letter: "B", text: "(B) I am going  travel next month" },
+            { letter: "C", text: "(C) I think I am going to help you" },
+            { letter: "D", text: "(D) You will played soccer" },
+            { letter: "E", text: "(E) Neymar will probably go to USA" }
         ],
         correctAnswer: "B",
         videoUrl: "",
