@@ -8,7 +8,8 @@ const studentDatabase = {
     
     "yanne": { name: "Yanne", password: "123" },
     "luiz": { name: "Luiz", password: "456" },
-    "sophia": { name: "Sophia", password: "789" } 
+    "sophia": { name: "Sophia", password: "789" }
+    "david": { name: "David", password: "2025" }
     
     // 👆 Fim da lista de alunos 👆
     // (Lembre-se: o último aluno não tem vírgula no final)
