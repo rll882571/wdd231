@@ -1,356 +1,482 @@
 const questionBank = [
 
-    // Pergunta 1: Definição de 'Wildfire'
+    // --- BLOCO 1: QUESTÕES DE SIGNIFICADO (RENOMEADAS E RE-ORDENADAS) ---
+
+    // Palavra 1: KEEP
     {
-        id: "q1",
+        id: "q1-vocabulario",
         type: "mc",
-        questionText: "Based on the vocabulary list, what is the correct meaning of <b>'Wildfire'</b>?",
+        questionText: `Qual é o significado principal da palavra "KEEP" em inglês?`,
         options: [
-            { letter: "A", text: "(A) To take air into your lungs and let it out again." },
-            { letter: "B", text: "(B) A large fire that spreads quickly through forests or grasslands." },
-            { letter: "C", text: "(C) The bright, hot part of a fire that you can see." },
-            { letter: "D", text: "(D) To get away from a dangerous place or situation." },
-            { letter: "E", text: "(E) A very strong storm with powerful winds that moves in a circle." }
+            { letter: "A", text: "(A) Andar" },
+            { letter: "B", text: "(B) Comer" },
+            { letter: "C", text: "(C) Guardar, Manter" },
+            { letter: "D", text: "(D) Falar" },
+            { letter: "E", text: "(E) Ler" }
         ],
-        correctAnswer: "B", 
-        videoUrl: ""
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: ["Dica 1: Pense na frase 'Keep the change'."]
     },
 
-    
-    // Pergunta 2: Definição de 'Cyclone'
+    // Palavra 2: TRACK
     {
-        id: "q2",
+        id: "q2-vocabulario",
         type: "mc",
-        questionText: "Which definition matches the word <b>'Cyclone'</b>?",
+        questionText: `Qual o significado de "TRACK" no contexto de "keep on track"?`,
         options: [
-            { letter: "A", text: "(A) Something that happens suddenly or without warning." },
-            { letter: "B", text: "(B) To stop something from happening." },
-            { letter: "C", text: "(C) A very strong storm with powerful winds that moves in a circle." },
-            { letter: "D", text: "(D) A large fire that spreads quickly through forests." },
-            { letter: "E", text: "(E) The bright, hot part of a fire." }
+            { letter: "A", text: "(A) Música" },
+            { letter: "B", text: "(B) Cor, Rastro, Caminho" },
+            { letter: "C", text: "(C) Brilho" },
+            { letter: "D", text: "(D) Canto" },
+            { letter: "E", "text": "(E) Jogo" }
         ],
-        correctAnswer: "C", 
-        videoUrl: "" 
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: ["Dica 1: Pense em 'pista de corrida'."]
     },
 
-    // Pergunta 3: Definição de 'Breathe'
+    // Palavra 3: FULFILL
     {
-        id: "q3",
-        type: "mc", 
-        questionText: "What is the meaning of the verb <b>'Breathe'</b>?",
+        id: "q3-vocabulario",
+        type: "mc",
+        questionText: `O verbo "FULFILL" significa:`,
         options: [
-            { letter: "A", text: "(A) To get away from a dangerous place." },
-            { letter: "B", text: "(B) To focus on something carefully." },
-            { letter: "C", text: "(C) To say what you think will happen in the future." },
-            { letter: "D", text: "(D) To take air into your lungs and let it out again." },
-            { letter: "E", text: "(E) To stop something from happening." }
+            { letter: "A", text: "(A) Cair" },
+            { letter: "B", text: "(B) Prometer" },
+            { letter: "C", text: "(C) Desistir" },
+            { letter: "D", text: "(D) Realizar, Cumprir" },
+            { letter: "E", "text": "(E) Adiar" }
         ],
-        correctAnswer: "D", 
-        videoUrl: "" 
+        correctAnswer: "D",
+        videoUrl: "",
+        hints: ["Dica 1: Relacionado à 'realização de um sonho'."]
     },
 
-    // Pergunta 4: Definição de 'To predict'
+    // Palavra 4: DREAM
     {
-        id: "q4",
+        id: "q4-vocabulario",
         type: "mc",
-        questionText: "The action <b>'To predict'</b> means:",
+        questionText: `A palavra "DREAM" se refere a qual conceito?`,
         options: [
-            { letter: "A", text: "(A) To focus on something carefully or notice it." },
-            { letter: "B", text: "(B) To get away from a dangerous situation." },
-            { letter: "C", text: "(C) To stop something from happening." },
-            { letter: "D", text: "(D) To say what you think will happen in the future." },
-            { letter: "E", text: "(E) To happen suddenly without warning." }
+            { letter: "A", text: "(A) Pesadelo" },
+            { letter: "B", text: "(B) Sono" },
+            { letter: "C", text: "(C) Lanche" },
+            { letter: "D", text: "(D) Sonho" },
+            { letter: "E", "text": "(E) Desejo" }
         ],
-        correctAnswer: "D", 
-        videoUrl: ""
+        correctAnswer: "D",
+        videoUrl: "",
+        hints: ["Dica 1: É o que você tem quando dorme ou o que você almeja."]
     },
 
-    // Pergunta 5: Definição de 'Flames'
+    // Palavra 5: UNFOLDED
     {
-        id: "q5",
+        id: "q5-vocabulario",
         type: "mc",
-        questionText: "What are <b>'Flames'</b>?",
+        questionText: `O passado de "unfold", "UNFOLDED", significa:`,
         options: [
-            { letter: "A", text: "(A) A large fire in a forest." },
-            { letter: "B", text: "(B) A strong storm with winds in a circle." },
-            { letter: "C", text: "(C) The bright, hot part of a fire that you can see." },
-            { letter: "D", text: "(D) People who survive a disaster." },
-            { letter: "E", text: "(E) A sudden shaking of the ground." }
+            { letter: "A", text: "(A) Fechado" },
+            { letter: "B", text: "(B) Escondido" },
+            { letter: "C", text: "(C) Desdobrado, Revelado" },
+            { letter: "D", text: "(D) Dobrado" },
+            { letter: "E", "text": "(E) Empurrado" }
         ],
-        correctAnswer: "C", 
-        videoUrl: "" 
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: ["Dica 1: O prefixo 'un-' tem sentido de negação ou inversão (como em 'undo')."]
     },
 
-    // Pergunta 6: Definição de 'To prevent'
+    // Palavra 6: REACH
     {
-        id: "q6",
+        id: "q6-vocabulario",
         type: "mc",
-        questionText: "What does the verb <b>'To prevent'</b> mean?",
+        questionText: `O verbo "REACH" significa:`,
         options: [
-            { letter: "A", text: "(A) To tell everyone what will happen." },
-            { letter: "B", text: "(B) To stop something from happening." },
-            { letter: "C", text: "(C) To look at something carefully." },
-            { letter: "D", text: "(D) To get away from danger." },
-            { letter: "E", text: "(E) To destroy many buildings." }
+            { letter: "A", text: "(A) Caiu" },
+            { letter: "B", text: "(B) Olhar" },
+            { letter: "C", text: "(C) Chamar" },
+            { letter: "D", text: "(D) Alcançar, Chegar a" },
+            { letter: "E", "text": "(E) Voltar" }
         ],
-        correctAnswer: "B", 
-        videoUrl: "" 
+        correctAnswer: "D",
+        videoUrl: "",
+        hints: ["Dica 1: Pense em 'reach the goal' (alcançar o objetivo)."]
     },
 
-    // Pergunta 7: Definição de 'To pay attention to'
+    // Palavra 7: GOALS
     {
-        id: "q7",
+        id: "q7-vocabulario",
         type: "mc",
-        questionText: "If you <b>'To pay attention to'</b> something, you...",
+        questionText: `Qual é o significado de "GOALS"?`,
         options: [
-            { letter: "A", text: "(A) ...stop it from happening." },
-            { letter: "B", text: "(B) ...say it will happen in the future." },
-            { letter: "C", text: "(C) ...focus on it carefully or notice it." },
-            { letter: "D", text: "(D) ...get away from it quickly." },
-            { letter: "E", text: "(E) ...survive it." }
+            { letter: "A", text: "(A) Jogos" },
+            { letter: "B", text: "(B) Viagens" },
+            { letter: "C", text: "(C) Regras" },
+            { letter: "D", text: "(D) Metas, Objetivos" },
+            { letter: "E", "text": "(E) Chutes" }
         ],
-        correctAnswer: "C", 
-        videoUrl: ""
+        correctAnswer: "D",
+        videoUrl: "",
+        hints: ["Dica 1: No futebol, é o mesmo que gol; em inglês, é usado para objetivos de vida."]
     },
 
-    // Pergunta 8: Definição de 'Escape'
+    // Palavra 8: SKIP
     {
-        id: "q8",
+        id: "q8-vocabulario",
         type: "mc",
-        questionText: "What is the meaning of <b>'Escape'</b>?",
+        questionText: `O verbo "SKIP" significa:`,
         options: [
-            { letter: "A", text: "(A) To take air into your lungs." },
-            { letter: "B", text: "(B) To do something with attention and caution." },
-            { letter: "C", text: "(C) To be destroyed by a disaster." },
-            { letter: "D", text: "(D) To get away from a dangerous place or situation." },
-            { letter: "E", text: "(E) The bright, hot part of a fire." }
+            { letter: "A", text: "(A) Estudar" },
+            { letter: "B", text: "(B) Sentar" },
+            { letter: "C", text: "(C) Pular, Omitir, Pular uma etapa" },
+            { letter: "D", text: "(D) Correr" },
+            { letter: "E", "text": "(E) Ficar" }
         ],
-        correctAnswer: "D", 
-        videoUrl: ""
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: ["Dica 1: Pense em 'pular a propaganda' (skip ad)."]
     },
 
-    // Pergunta 9: Definição de 'Unexpected'
+    // Palavra 9: SCHOOL
     {
-        id: "q9", 
+        id: "q9-vocabulario",
         type: "mc",
-        questionText: "Which definition matches the word <b>'Unexpected'</b>?",
+        questionText: `A palavra "SCHOOL" (escola) significa:`,
         options: [
-            { letter: "A", text: "(A) Something that happens suddenly or without warning." },
-            { letter: "B", text: "(B) Something that is very strong and powerful." },
-            { letter: "C", text: "(C) Something that destroys many buildings." },
-            { letter: "D", text: "(D) Something that you do with caution." },
-            { letter: "E", text: "(E) Something that you can predict." }
+            { letter: "A", text: "(A) Faculdade" },
+            { letter: "B", text: "(B) Livro" },
+            { letter: "C", text: "(C) Sala" },
+            { letter: "D", text: "(D) Escola" },
+            { letter: "E", "text": "(E) Trabalho" }
         ],
-        correctAnswer: "A", 
-        videoUrl: "" 
+        correctAnswer: "D",
+        videoUrl: "",
+        hints: ["Dica 1: É o lugar onde se estuda, especialmente o ensino fundamental e médio."]
     },
 
-    // Pergunta 10: Definição de 'Carefully'
+    // Palavra 10: FOTOS (Photos)
     {
-        id: "q10",
+        id: "q10-vocabulario",
         type: "mc",
-        questionText: "If you do something <b>'Carefully'</b>, you do it...",
+        questionText: `Qual é a palavra em inglês que tem o mesmo significado de "FOTOS" em português?`,
         options: [
-            { letter: "A", text: "(A) ...suddenly and without warning." },
-            { letter: "B", text: "(B) ...in a way that moves in a circle." },
-            { letter: "C", text: "(C) ...in a way that spreads quickly." },
-            { letter: "D", text: "(D) ...in a way that shows attention and caution." },
-            { letter: "E", text: "(E) ...in a way that destroys buildings." }
+            { letter: "A", text: "(A) Frames" },
+            { letter: "B", text: "(B) Pictures, Photos" },
+            { letter: "C", text: "(C) Videos" },
+            { letter: "D", text: "(D) Drawings" },
+            { letter: "E", "text": "(E) Stories" }
         ],
-        correctAnswer: "D", 
-        videoUrl: ""
-    },
-    
-    // Pergunta 11: Fill-in-the-blank (Earthquake)
-    {
-        id: "q11",
-        type: "mc",
-        questionText: "Complete the sentence: The ---------- happened early in the morning, when most people were still asleep.",
-        options: [
-            { letter: "A", text: "(A) Cyclone" },
-            { letter: "B", text: "(B) Wildfire" },
-            { letter: "C", text: "(C) Earthquake" },
-            { letter: "D", text: "(D) Collapse" },
-            { letter: "E", text: "(E) Survivors" }
-        ],
-        correctAnswer: "C", 
-        videoUrl: ""
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: ["Dica 1: O termo é uma abreviação de 'photographs'."]
     },
 
-    // Pergunta 12: Fill-in-the-blank (Terrible)
+    // Palavra 11: SNAP
     {
-        id: "q12",
+        id: "q11-vocabulario",
         type: "mc",
-        questionText: "Complete the sentence: It was a <b>'...'</b> disaster that destroyed many buildings.",
+        questionText: `O substantivo "SNAP" pode significar:`,
         options: [
-            { letter: "A", text: "(A) shaking" },
-            { letter: "B", text: "(B) unexpected" },
-            { letter: "C", text: "(C) terrible" },
-            { letter: "D", text: "(D) carefully" },
-            { letter: "E", text: "(E) breathing" }
+            { letter: "A", text: "(A) Olhar rapidamente" },
+            { letter: "B", text: "(B) Estalo, Encaixe, Foto instantânea" },
+            { letter: "C", text: "(C) Escorregar" },
+            { letter: "D", text: "(D) Ligar" },
+            { letter: "E", "text": "(E) Desenhar" }
         ],
-        correctAnswer: "C", 
-        videoUrl: ""
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: ["Dica 1: Relacionado a algo rápido, como 'snap a photo'."]
     },
 
-    // Pergunta 13: Fill-in-the-blank (Shaking)
+    // Palavra 12: DRAW
     {
-        id: "q13",
+        id: "q12-vocabulario",
         type: "mc",
-        questionText: "Complete the sentence: The ground started <b>'...'</b> violently, and people ran outside in fear.",
+        questionText: `Qual é o significado principal do verbo "DRAW"?`,
         options: [
-            { letter: "A", text: "(A) collapsing" },
-            { letter: "B", text: "(B) striking" },
-            { letter: "C", text: "(C) warning" },
-            { letter: "D", text: "(D) shaking" },
-            { letter: "E", text: "(E) escaping" }
+            { letter: "A", text: "(A) Andar" },
+            { letter: "B", text: "(B) Puxar, Desenhar" },
+            { letter: "C", text: "(C) Vender" },
+            { letter: "D", text: "(D) Correr" },
+            { letter: "E", "text": "(E) Escrever" }
         ],
-        correctAnswer: "D", 
-        videoUrl: ""
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: ["Dica 1: Na expressão 'draw attention', significa 'puxar/atrair a atenção'."]
     },
 
-    // Pergunta 14: Fill-in-the-blank (Collapse)
+    // Palavra 13: ATTENTION
     {
-        id: "q14",
+        id: "q13-vocabulario",
         type: "mc",
-        questionText: "Complete the sentence: Some houses began to <b>'...'</b> because they were not strong enough.",
+        questionText: `A palavra "ATTENTION" (atenção) significa:`,
         options: [
-            { letter: "A", text: "(A) collapse" },
-            { letter: "B", text: "(B) predict" },
-            { letter: "C", text: "(C) breathe" },
-            { letter: "D", text: "(D) escape" },
-            { letter: "E", text: "(E) strike" }
+            { letter: "A", text: "(A) Opinião" },
+            { letter: "B", text: "(B) Respeito" },
+            { letter: "C", text: "(C) Atenção" },
+            { letter: "D", text: "(D) Ajuda" },
+            { letter: "E", "text": "(E) Serviço" }
         ],
-        correctAnswer: "A", 
-        videoUrl: ""
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: ["Dica 1: É o ato de focar a mente em algo."]
     },
 
-    // Pergunta 15: Fill-in-the-blank (Warnings)
+    // Questão Extra (14ª de Significado - sobre a expressão)
     {
-        id: "q15",
+        id: "q14-vocabulario",
         type: "mc",
-        questionText: "Complete the sentence: The government sent <b>'...'</b> on TV and radio to alert everyone.",
+        questionText: `Qual palavra está mais relacionada ao ato de "focar em um objetivo"?`,
         options: [
-            { letter: "A", text: "(A) survivors" },
-            { letter: "B", text: "(B) flames" },
-            { letter: "C", text: "(C) warnings" },
-            { letter: "D", text: "(D) cyclones" },
-            { letter: "E", text: "(E) earthquakes" }
+            { letter: "A", text: "(A) Skip" },
+            { letter: "B", text: "(B) Snap" },
+            { letter: "C", text: "(C) Keep on track" },
+            { letter: "D", text: "(D) Unfolded" },
+            { letter: "E", "text": "(E) Fotos" }
         ],
-        correctAnswer: "C", 
-        videoUrl: ""
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: ["Dica 1: Pense em 'manter o rumo'."]
     },
 
-    // Pergunta 16: Fill-in-the-blank (Struck)
+    // --- BLOCO 2: QUESTÕES DE CONTEXTO (RENOMEADAS E RE-ORDENADAS) ---
+
+    // Palavra 15: KEEP
     {
-        id: "q16",
+        id: "q15-vocabulario",
         type: "mc",
-        questionText: "Complete the sentence: The city was <b>'...'</b> by a powerful natural disaster last night.",
+        questionText: `Qual palavra melhor completa a frase: "You need to ______ your promises to build trust." (Você precisa ______ suas promessas para construir confiança.)`,
         options: [
-            { letter: "A", text: "(A) struck" },
-            { letter: "B", text: "(B) prevented" },
-            { letter: "C", text: "(C) breathed" },
-            { letter: "D", text: "(D) collapsed" },
-            { letter: "E", text: "(E) paid attention to" }
+            { letter: "A", text: "(A) fulfill" },
+            { letter: "B", text: "(B) skip" },
+            { letter: "C", text: "(C) dream" },
+            { letter: "D", text: "(D) keep" }, 
+            { letter: "E", text: "(E) snap" }
         ],
-        correctAnswer: "A", 
-        videoUrl: ""
+        correctAnswer: "D",
+        videoUrl: "",
+        hints: ["Dica 1: O verbo é usado no sentido de 'manter' ou 'cumprir' promessas."]
     },
 
-    // Pergunta 17: Fill-in-the-blank (Unexpected)
+    // Palavra 16: ON
     {
-        id: "q17",
+        id: "q16-vocabulario",
         type: "mc",
-        questionText: "Complete the sentence: Many people said the event was completely <b>'...'</b> – no one saw it coming.",
+        questionText: `Qual palavra melhor completa a frase: "Please leave the package ______ the table." (Por favor, deixe o pacote ______ a mesa.)`,
         options: [
-            { letter: "A", text: "(A) terrible" },
-            { letter: "B", text: "(B) carefully" },
-            { letter: "C", text: "(C) unexpected" },
-            { letter: "D", text: "(D) shaking" },
-            { letter: "E", text: "(E) predicted" }
+            { letter: "A", text: "(A) draw" },
+            { letter: "B", text: "(B) reach" },
+            { letter: "C", text: "(C) goals" },
+            { letter: "D", text: "(D) on" }, 
+            { letter: "E", text: "(E) track" }
         ],
-        correctAnswer: "C", 
-        videoUrl: ""
+        correctAnswer: "D",
+        videoUrl: "",
+        hints: ["Dica 1: É uma preposição usada para indicar que algo está 'sobre' uma superfície."]
     },
 
-    // Pergunta 18: Fill-in-the-blank (Survivors)
+    // Palavra 17: TRACK
     {
-        id: "q18",
+        id: "q17-vocabulario",
         type: "mc",
-        questionText: "Complete the sentence: The <b>'...'</b> were rescued by emergency teams hours after the disaster.",
+        questionText: `Qual palavra melhor completa a frase: "We are finally back on ______ after a difficult week." (Nós finalmente voltamos ao ______ depois de uma semana difícil.)`,
         options: [
-            { letter: "A", text: "(A) flames" },
-            { letter: "B", text: "(B) survivors" },
-            { letter: "C", text: "(C) warnings" },
-            { letter: "D", text: "(D) cyclones" },
-            { letter: "E", text: "(E) earthquakes" }
+            { letter: "A", text: "(A) goals" },
+            { letter: "B", text: "(B) keep" },
+            { letter: "C", text: "(C) fulfill" },
+            { letter: "D", text: "(D) snap" },
+            { letter: "E", text: "(E) track" } 
         ],
-        correctAnswer: "B", 
-        videoUrl: ""
+        correctAnswer: "E",
+        videoUrl: "",
+        hints: ["Dica 1: A expressão 'back on track' significa 'voltar ao caminho/curso normal'."]
     },
 
-    // Pergunta 19: Criativa (Conceitual - Causa e Efeito)
+    // Palavra 18: FULFILL
     {
-        id: "q19",
+        id: "q18-vocabulario",
         type: "mc",
-        questionText: "Which two actions are opposites? (Qual ação é o oposto da outra?)",
+        questionText: `Qual palavra melhor completa a frase: "She worked hard to ______ her potential and dreams." (Ela trabalhou duro para ______ seu potencial e sonhos.)`,
         options: [
-            { letter: "A", text: "(A) To predict vs. To warn" },
-            { letter: "B", text: "(B) To escape vs. To survive" },
-            { letter: "C", text: "(C) To collapse vs. To shake" },
-            { letter: "D", text: "(D) To prevent (impedir) vs. To strike (atacar/atingir)" },
-            { letter: "E", text: "(E) To breathe vs. To pay attention" }
+            { letter: "A", text: "(A) draw" },
+            { letter: "B", text: "(B) photos" },
+            { letter: "C", text: "(C) keep" },
+            { letter: "D", text: "(D) fulfill" }, 
+            { letter: "E", text: "(E) reach" }
         ],
-        correctAnswer: "D", // Prevenir é tentar parar algo, 'strike' é o evento acontecendo.
-        videoUrl: ""
+        correctAnswer: "D",
+        videoUrl: "",
+        hints: ["Dica 1: O verbo significa 'realizar' ou 'cumprir'."]
     },
 
-    // Pergunta 20: Criativa (Conceitual - Relação)
+    // Palavra 19: DREAM
     {
-        id: "q20",
+        id: "q19-vocabulario",
         type: "mc",
-        questionText: "If a meteorologist helps <b>'predict'</b> a cyclone, the government can issue <b>'warnings'</b> to help people <b>'escape'</b> and <b>'prevent'</b> a...",
+        questionText: `Qual palavra melhor completa a frase: "It was always her ______ to travel around the world." (Sempre foi o seu ______ viajar ao redor do mundo.)`,
         options: [
-            { letter: "A", text: "(A) ...terrible disaster." },
-            { letter: "B", text: "(B) ...shaking ground." },
-            { letter: "C", text: "(C) ...wildfire." },
-            { letter: "D", text: "(D) ...collapse." },
-            { letter: "E", text: "(E) ...flame." }
+            { letter: "A", text: "(A) school" },
+            { letter: "B", text: "(B) track" },
+            { letter: "C", text: "(C) goals" },
+            { letter: "D", text: "(D) skip" },
+            { letter: "E", text: "(E) dream" } 
         ],
-        correctAnswer: "A", // O objetivo de tudo isso é prevenir um 'desastre terrível'.
-        videoUrl: ""
-    },
-    
-    // Pergunta 21: Criativa (Identificação de Categoria)
-    {
-        id: "q21",
-        type: "mc",
-        questionText: "Which word from the list is an <b>Adjective</b> used to describe a very bad event?",
-        options: [
-            { letter: "A", text: "(A) Survivors" },
-            { letter: "B", text: "(B) Collapse" },
-            { letter: "C", text: "(C) Terrible" },
-            { letter: "D", text: "(D) Earthquake" },
-            { letter: "E", text: "(E) Carefully" } // Carefully é advérbio
-        ],
-        correctAnswer: "C", 
-        videoUrl: ""
+        correctAnswer: "E",
+        videoUrl: "",
+        hints: ["Dica 1: A palavra se refere a uma grande aspiração ou desejo."]
     },
 
-    // Pergunta 22: Criativa (Relação entre palavras)
+    // Palavra 20: UNFOLDED
     {
-        id: "q22",
+        id: "q20-vocabulario",
         type: "mc",
-        questionText: "<b>'Wildfire'</b>, <b>'Cyclone'</b>, and <b>'Earthquake'</b> are all examples of:",
+        questionText: `Qual palavra melhor completa a frase: "The mystery slowly ______ as the detective found more clues." (O mistério lentamente ______ à medida que o detetive encontrava mais pistas.)`,
         options: [
-            { letter: "A", text: "(A) Ways to breathe." },
-            { letter: "B", text: "(B) People who were rescued." },
-            { letter: "C", text: "(C) Things that are unexpected." }, // Podem ser, mas não é a definição principal
-            { letter: "D", text: "(D) Natural Disasters." },
-            { letter: "E", text: "(E) Actions you take to escape." }
+            { letter: "A", text: "(A) attention" },
+            { letter: "B", text: "(B) keep" },
+            { letter: "C", text: "(C) unfolded" }, 
+            { letter: "D", text: "(D) reach" },
+            { letter: "E", text: "(E) fulfill" }
         ],
-        correctAnswer: "D", 
-        videoUrl: ""
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: ["Dica 1: O verbo significa que o mistério foi 'revelado' ou 'desdobrado' com o tempo."]
+    },
+
+    // Palavra 21: REACH
+    {
+        id: "q21-vocabulario",
+        type: "mc",
+        questionText: `Qual palavra melhor completa a frase: "How long will it take to ______ the top of the mountain?" (Quanto tempo levará para ______ o topo da montanha?)`,
+        options: [
+            { letter: "A", text: "(A) school" },
+            { letter: "B", text: "(B) photos" },
+            { letter: "C", text: "(C) draw" },
+            { letter: "D", text: "(D) dream" },
+            { letter: "E", text: "(E) reach" } 
+        ],
+        correctAnswer: "E",
+        videoUrl: "",
+        hints: ["Dica 1: O verbo é usado no sentido de 'chegar a' ou 'alcançar'."]
+    },
+
+    // Palavra 22: GOALS
+    {
+        id: "q22-vocabulario",
+        type: "mc",
+        questionText: `Qual palavra melhor completa a frase: "Setting realistic ______ is the first step to success." (Definir ______ realistas é o primeiro passo para o sucesso.)`,
+        options: [
+            { letter: "A", text: "(A) skip" },
+            { letter: "B", text: "(B) on" },
+            { letter: "C", text: "(C) goals" }, 
+            { letter: "D", text: "(D) track" },
+            { letter: "E", text: "(E) reach" }
+        ],
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: ["Dica 1: A palavra se refere às 'metas' que você deseja atingir."]
+    },
+
+    // Palavra 23: SKIP
+    {
+        id: "q23-vocabulario",
+        type: "mc",
+        questionText: `Qual palavra melhor completa a frase: "I usually ______ breakfast when I'm running late." (Eu geralmente ______ o café da manhã quando estou atrasado.)`,
+        options: [
+            { letter: "A", text: "(A) attention" },
+            { letter: "B", text: "(B) draw" },
+            { letter: "C", text: "(C) fulfill" },
+            { letter: "D", text: "(D) keep" },
+            { letter: "E", text: "(E) skip" } 
+        ],
+        correctAnswer: "E",
+        videoUrl: "",
+        hints: ["Dica 1: O verbo significa 'pular' ou 'omitir'."]
+    },
+
+    // Palavra 24: SCHOOL
+    {
+        id: "q24-vocabulario",
+        type: "mc",
+        questionText: `Qual palavra melhor completa a frase: "Students must attend ______ to learn the basics." (Os estudantes devem frequentar a ______ para aprender o básico.)`,
+        options: [
+            { letter: "A", text: "(A) dream" },
+            { letter: "B", text: "(B) on" },
+            { letter: "C", text: "(C) snap" },
+            { letter: "D", text: "(D) unfolded" },
+            { letter: "E", text: "(E) school" } 
+        ],
+        correctAnswer: "E",
+        videoUrl: "",
+        hints: ["Dica 1: É o local de ensino."]
+    },
+
+    // Palavra 25: FOTOS (Photos)
+    {
+        id: "q25-vocabulario",
+        type: "mc",
+        questionText: `Qual palavra melhor completa a frase: "Can you show me the ______ you took on vacation?" (Você pode me mostrar as ______ que tirou nas férias?)`,
+        options: [
+            { letter: "A", text: "(A) keep" },
+            { letter: "B", text: "(B) draw" },
+            { letter: "C", text: "(C) track" },
+            { letter: "D", text: "(D) attention" },
+            { letter: "E", text: "(E) photos (fotos)" } 
+        ],
+        correctAnswer: "E",
+        videoUrl: "",
+        hints: ["Dica 1: A palavra se refere a imagens capturadas por uma câmera."]
+    },
+
+    // Palavra 26: SNAP
+    {
+        id: "q26-vocabulario",
+        type: "mc",
+        questionText: `Qual palavra melhor completa a frase: "The twig made a loud ______ when I stepped on it." (O galho fez um barulho alto de ______ quando eu pisei nele.)`,
+        options: [
+            { letter: "A", text: "(A) unfolded" },
+            { letter: "B", text: "(B) goals" },
+            { letter: "C", text: "(C) reach" },
+            { letter: "D", text: "(D) skip" },
+            { letter: "E", text: "(E) snap" } 
+        ],
+        correctAnswer: "E",
+        videoUrl: "",
+        hints: ["Dica 1: A palavra pode se referir a um 'estalo' ou a um som de quebra seca."]
+    },
+
+    // Palavra 27: DRAW
+    {
+        id: "q27-vocabulario",
+        type: "mc",
+        questionText: `Qual palavra melhor completa a frase: "He used bright colors to ______ everyone's attention." (Ele usou cores brilhantes para ______ a atenção de todos.)`,
+        options: [
+            { letter: "A", text: "(A) school" },
+            { letter: "B", text: "(B) on" },
+            { letter: "C", text: "(C) fulfill" },
+            { letter: "D", text: "(D) dream" },
+            { letter: "E", text: "(E) draw" } 
+        ],
+        correctAnswer: "E",
+        videoUrl: "",
+        hints: ["Dica 1: No contexto de 'draw attention', o verbo significa 'atrair' ou 'chamar'."]
+    },
+
+    // Palavra 28: ATTENTION
+    {
+        id: "q28-vocabulario",
+        type: "mc",
+        questionText: `Qual palavra melhor completa a frase: "The speaker paused to get the audience's ______." (O palestrante parou para conseguir a ______ da plateia.)`,
+        options: [
+            { letter: "A", text: "(A) photos" },
+            { letter: "B", text: "(B) keep" },
+            { letter: "C", text: "(C) track" },
+            { letter: "D", text: "(D) attention" }, 
+            { letter: "E", text: "(E) reach" }
+        ],
+        correctAnswer: "D",
+        videoUrl: "",
+        hints: ["Dica 1: A palavra se refere ao foco ou interesse de alguém."]
     }
-    
 ];
