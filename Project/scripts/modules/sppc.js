@@ -1,452 +1,395 @@
 const questionBank = [
-
-    // Pergunta 1
+    // --- THE EVOLUTION OF SOCIAL MEDIA ---
     {
         id: "q1",
         type: "mc",
-        questionText: `
-            Read the sentences below and choose the option that shows only correct uses of the Simple Past and Past Continuous tenses.
-            <br><br>
-            I. I was watching TV when the phone rang.<br>
-            II. She cooked dinner when her friends were arriving.<br>
-            III. They were playing soccer when it started to rain.<br>
-            IV. He was reading a book when I called him.<br>
-            V. We were went to the park yesterday.
-        `,
+        questionText: "What is one major issue caused by social media mentioned in the text?",
         options: [
-            { letter: "A", text: "(A) Only I, III and IV are correct." },
-            { letter: "B", text: "(B) Only II and IV are correct." },
-            { letter: "C", text: "(C) Only I, II and III are correct." },
-            { letter: "D", text: "(D) Only I, II, III and IV are correct." },
-            { letter: "E", text: "(E) All of them are correct." }
+            { letter: "A", text: "(A) Air pollution" },
+            { letter: "B", text: "(B) Cyberbullying" },
+            { letter: "C", text: "(C) Water shortage" },
+            { letter: "D", text: "(D) Overpopulation" },
+            { letter: "E", text: "(E) Traffic accidents" }
         ],
-        correctAnswer: "A",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1 (Q1): Quando o 'when' está no meio da frase, o que vem antes do 'when' o verbo é com ING e o que vem depois é Simple Past (ED).", // Corrigido: está, ING
-            "Dica 2 (Q1): Depois de 'was' e 'were' o verbo precisa estar com ING.", // Corrigido: estar, ING
-            "Dica 3 (Q1): 'Was' significa 'estava', é usado no singular. 'Were' também é 'estava', mas é usado no plural." // Corrigido: também, singular
+        correctAnswer: "B",
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q1): O texto fala sobre os problemas sociais trazidos pelas redes.",
+            "Dica 2 (Q1): Pensa em comportamentos agressivos online.",
+            "Dica 3 (Q1): Está relacionado a 'harassment'."
         ]
     },
-
-    // Pergunta 2 (Dicas originais mantidas)
     {
         id: "q2",
         type: "mc",
-        questionText: "Which sentence uses the Past Continuous correctly?",
+        questionText: "According to the text, what may happen if fake news keeps spreading?",
         options: [
-            { letter: "A", text: "(A) She was cook dinner when I arrived." },
-            { letter: "B", text: "(B) He was sleeping when the alarm went off." },
-            { letter: "C", text: "(C) We was studying for the test last night." },
-            { letter: "D", text: "(D) I were going to the gym yesterday." },
-            { letter: "E", text: "(E) They was play soccer all afternoon." }
+            { letter: "A", text: "(A) People will become more united." },
+            { letter: "B", text: "(B) Society may lose the ability to debate properly." },
+            { letter: "C", text: "(C) It will improve people's understanding of the world." },
+            { letter: "D", text: "(D) The government will stop using social media." },
+            { letter: "E", text: "(E) Social media will disappear." }
         ],
         correctAnswer: "B",
         videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
-        hints: [ 
-            "Dica 1 (Q2): Lorem ipsum dolor sit amet.",
-            "Dica 2 (Q2): Consectetur adipiscing elit.",
-            "Dica 3 (Q2): Sed do eiusmod tempor incididunt."
+        hints: [
+            "Dica 1 (Q2): A questão fala sobre as consequências das fake news.",
+            "Dica 2 (Q2): Está ligada à maneira como as pessoas veem o mundo.",
+            "Dica 3 (Q2): Pensa em 'civilised society and debate'."
         ]
     },
-
-    // Pergunta 3 (Dicas originais mantidas)
     {
-        id: "q3_special",
-        type: "fill-verb",
-        questionText: "Read and choose the correct verb form (Simple Past or Past Continuous).",
-        lines: [
-            { text: "(A) I ... (watch) a movie when my mom called.", verbs: ["watched", "was watching"] },
-            { text: "(B) They ... (play) basketball all afternoon yesterday.", verbs: ["played", "were playing"] },
-            { text: "(C) She ... (sleep) when the dog barked.", verbs: ["slept", "was sleeping"] },
-            { text: "(D) He ... (see) an accident on his way to work.", verbs: ["was seeing", "saw"] },
-            { text: "(E) We ... (walk) to school when it started to rain.", verbs: ["walked", "were walking"] }
+        id: "q3",
+        type: "mc",
+        questionText: "What tone does the author use when talking about social media’s future?",
+        options: [
+            { letter: "A", text: "(A) Completely pessimistic" },
+            { letter: "B", text: "(B) Neutral and analytical" },
+            { letter: "C", text: "(C) Completely optimistic" },
+            { letter: "D", text: "(D) Angry and emotional" },
+            { letter: "E", text: "(E) Uninterested" }
         ],
-        correctAnswer: ["was watching", "played", "was sleeping", "saw", "were walking"],
+        correctAnswer: "B",
         videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
-        hints: [ 
-            "Dica 1 (Q3): Ut labore et dolore magna aliqua.",
-            "Dica 2 (Q3): Ut enim ad minim veniam.",
-            "Dica 3 (Q3): Quis nostrud exercitation ullamco laboris."
+        hints: [
+            "Dica 1 (Q3): O autor mostra preocupações, mas também esperança.",
+            "Dica 2 (Q3): Ele analisa o problema sem exagerar.",
+            "Dica 3 (Q3): Pensa em um tom equilibrado."
         ]
     },
 
-    // Pergunta 4
+    // --- NEW GEOPOLITICAL TENSIONS ---
     {
         id: "q4",
         type: "mc",
-        questionText: `
-            About the use of the Past Continuous, it is correct to say that:
-            <br><br>
-            I. It is used to describe an action that was in progress at a specific moment in the past.<br>
-            II. It can describe two actions happening at the same time in the past.<br>
-            III. It is used for completed actions in the past with no focus on duration.<br>
-            IV. It is formed with the verb “to be” (was/were) + verb + ing.<br>
-            V. It is always used with time expressions like “yesterday” and “last week”.
-        `,
+        questionText: "What does the text suggest about global politics in recent years?",
         options: [
-            { letter: "A", text: "(A) I, II and IV are correct." },
-            { letter: "B", text: "(B) I, III and V are correct." },
-            { letter: "C", text: "(C) II, IV and V are correct." },
-            { letter: "D", text: "(D) Only IV is correct." }
+            { letter: "A", text: "(A) It has become more stable." },
+            { letter: "B", text: "(B) It is facing serious instability." },
+            { letter: "C", text: "(C) Countries are cooperating more." },
+            { letter: "D", text: "(D) There are no major global issues." },
+            { letter: "E", text: "(E) Technology has solved conflicts." }
         ],
-        correctAnswer: "A",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1 (Q4): O Past Continuous é usado para descrever ações que estavam acontecendo. Ex: I was playing (eu estava jogando).", // Corrigido: Past Continuous, acontecendo
-            "Dica 2 (Q4): O Past Continuous pode ser usado para descrever duas ações que estavam acontecendo ao mesmo tempo, lembre de usar o 'while' (enquanto).", // Corrigido: Past Continuous, acontecendo
-            "Dica 3 (Q4): Cuidado com a palavra 'always' (sempre), geralmente a opção não vai estar certa." // Corrigido: estar
+        correctAnswer: "B",
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q4): Pensa nas tensões entre países.",
+            "Dica 2 (Q4): O texto menciona 'geopolitical minefield'.",
+            "Dica 3 (Q4): A palavra 'instability' é uma pista."
         ]
     },
-
-    // Pergunta 5
     {
         id: "q5",
         type: "mc",
-        questionText: `
-            <img src="images/rg.jpg" alt="Comic" loading="lazy" style="width: 280px; height: 180px;">
-            <br><br>
-            In the comic, the the drive says: “I wasnt texting while driving.”  
-            What does the use of Past Continuous show?
-        `,
+        questionText: "Which of the following is NOT mentioned as a global issue in the text?",
         options: [
-            { letter: "A", text: "(A) A completed action that happened before another." },
-            { letter: "B", text: "(B) One action in progress interrupted by another." },
-            { letter: "C", text: "(C) Two actions happening exactly at the same time in the present." },
-            { letter: "D", text: "(D) A plan for the future." },
-            { letter: "E", text: "(E) Two actions happening exactly at the same time in the past." }
+            { letter: "A", text: "(A) Refugees" },
+            { letter: "B", text: "(B) Hacking" },
+            { letter: "C", text: "(C) Economic inequality" },
+            { letter: "D", text: "(D) Nationalism" },
+            { letter: "E", text: "(E) Nuclear missiles" }
         ],
-        correctAnswer: "E",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1 (Q5): O Past Continuous não é usado para ações futuras.", // Corrigido: Past Continuous
-            "Dica 2 (Q5): O Past Continuous é usado para falar sobre ações no passado e não no presente.", // Corrigido: Past Continuous
-            "Dica 3 (Q5): Use o 'while' para falar que duas coisas estavam acontecendo ao mesmo tempo."
+        correctAnswer: "C",
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q5): Pense nos exemplos de crises mencionadas.",
+            "Dica 2 (Q5): Está relacionado à política, não à economia.",
+            "Dica 3 (Q5): 'Economic inequality' não aparece no texto."
         ]
     },
-
-    // Pergunta 6
     {
         id: "q6",
         type: "mc",
-        questionText: `
-            When we use the Past Continuous with “while” and “when”, what is usually true?
-        `,
+        questionText: "Why is basic diplomacy important according to the text?",
         options: [
-            { letter: "A", text: "(A) 'While' introduces the shorter action, and 'when' the longer one." },
-            { letter: "B", text: "(B) 'When' introduces the longer action, and 'while' the shorter one." },
-            { letter: "C", text: "(C) 'While' usually introduces the action in progress, and 'when' introduces the action that interrupted it." },
-            { letter: "D", text: "(D) Both words can be used interchangeably without changing meaning." },
-            { letter: "E", text: "(E) None of the above." }
+            { letter: "A", text: "(A) Because it prevents hacking." },
+            { letter: "B", text: "(B) Because it helps manage dangerous technology and conflicts." },
+            { letter: "C", text: "(C) Because it increases nationalism." },
+            { letter: "D", text: "(D) Because it avoids elections." },
+            { letter: "E", text: "(E) Because it reduces migration." }
         ],
-        correctAnswer: "C",
-        videoUrl: "https://www.youtube.com/embed/mW4INGFLBhA",
-        hints: [ 
-            "Dica 1 (Q6): 'While' significa 'enquanto' e 'when' significa 'quando'.", // Corrigido: 'enquanto'
-            "Dica 2 (Q6): 'When' é usado para interromper uma ação.",
-            "Dica 3 (Q6): 'While' é usado quando uma ação estava em progresso."
+        correctAnswer: "B",
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q6): Diplomacia ajuda a manter a paz.",
+            "Dica 2 (Q6): Pense em 'nuclear missiles' e 'hacking'.",
+            "Dica 3 (Q6): Está ligada a evitar conflitos."
         ]
     },
 
-    // Pergunta 7
+    // --- SAFE CAR TRAVEL ---
     {
         id: "q7",
         type: "mc",
-        questionText: "Which sentence shows two simultaneous actions in the past?",
+        questionText: "What technology is rapidly changing the way we drive?",
         options: [
-            { letter: "A", text: "(A) I was reading while he was cooking." },
-            { letter: "B", text: "(B) I read a book when he cooked dinner." },
-            { letter: "C", text: "(C) I watched TV after he arrived." },
-            { letter: "D", text: "(D) He was sleeping when I called him." },
-            { letter: "E", text: "(E) We played soccer yesterday." }
+            { letter: "A", text: "(A) Flying cars" },
+            { letter: "B", text: "(B) Driverless cars" },
+            { letter: "C", text: "(C) Electric scooters" },
+            { letter: "D", text: "(D) Magnetic roads" },
+            { letter: "E", text: "(E) Bullet trains" }
         ],
-        correctAnswer: "A",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1 (Q7): Quando você quer indicar que duas ações estavam acontecendo ao mesmo tempo, use o 'while'.", // Corrigido: você
-            "Dica 2 (Q7): Siga a primeira dica.",
-            "Dica 3 (Q7): Sem mais dicas."
+        correctAnswer: "B",
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q7): É uma tecnologia sem motorista.",
+            "Dica 2 (Q7): Grandes empresas estão investindo nisso.",
+            "Dica 3 (Q7): O texto menciona 'human-free vehicles'."
         ]
     },
-
-    // Pergunta 8
     {
         id: "q8",
         type: "mc",
-        questionText: `
-            Choose the correct sentence:
-        `,
+        questionText: "What is one challenge mentioned about the growing number of cars?",
         options: [
-            { letter: "A", text: "(A) She was study when her mom got home." },
-            { letter: "B", text: "(B) She was studying when her mom got home." },
-            { letter: "C", text: "(C) She studied when her mom was getting home." },
-            { letter: "D", text: "(D) She studies when her mom gets home." },
-            { letter: "E", text: "(E) She has studying when her mom got home." }
+            { letter: "A", text: "(A) Space tourism" },
+            { letter: "B", text: "(B) Pollution and safety" },
+            { letter: "C", text: "(C) Lack of interest in cars" },
+            { letter: "D", text: "(D) Decline in technology" },
+            { letter: "E", text: "(E) Decrease in population" }
         ],
         correctAnswer: "B",
-        videoUrl: "https://www.youtube.com/embed/MgYPm9kjQSw",
-        hints: [ 
-            "Dica 1 (Q8): Depois de 'was' e 'were' o verbo tem que ter ING. Ex: I was playing (Eu estava jogando).", // Corrigido: Depois, ING, jogando
-            "Dica 2 (Q8): I/he/she/it se usa com 'was'. We/they/you se usa com 'were'.", // Corrigido
-            "Dica 3 (Q8): Quando o 'when' está no meio da frase, o que vem antes dele deve estar com ING no verbo e o que vem depois é o Simple Past (ed)." // Corrigido: está, ING, Simple Past
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q8): O texto fala de desafios ambientais e de segurança.",
+            "Dica 2 (Q8): Está ligado ao aumento do número de carros.",
+            "Dica 3 (Q8): Pense em 'fight pollution and ensure safety'."
         ]
     },
 
-    // Pergunta 9
+    // --- SETTLING OTHER WORLDS ---
     {
         id: "q9",
         type: "mc",
-        questionText: "Which time expression is commonly used with the Simple Past?",
+        questionText: "What is one of the main goals mentioned about space exploration?",
         options: [
-            { letter: "A", text: "(A) while" },
-            { letter: "B", text: "(B) yesterday" },
-            { letter: "C", text: "(C) when" },
-            { letter: "D", text: "(D) always" },
-            { letter: "E", text: "(E) since" }
+            { letter: "A", text: "(A) Mining asteroids for gold" },
+            { letter: "B", text: "(B) Sending humans to Mars" },
+            { letter: "C", text: "(C) Building cities on the Moon" },
+            { letter: "D", text: "(D) Creating alien contact" },
+            { letter: "E", text: "(E) Filming new space movies" }
         ],
         correctAnswer: "B",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1 (Q9): 'While' não se usa no Simple Past, só no Past Continuous Progressive.", // Corrigido: Simple Past, Past Continuous Progressive
-            "Dica 2 (Q9): 'Always' geralmente não será usado no passado dessa forma.", // Corrigido
-            "Dica 3 (Q9): 'Since' (desde) não é usado no Simple Past, mas sim no Present Perfect." // Corrigido: Simple Past
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q9): O texto menciona um planeta específico.",
+            "Dica 2 (Q9): Stephen Hawking é citado.",
+            "Dica 3 (Q9): Está relacionado a habitar outro mundo."
         ]
     },
-
-    // Pergunta 10
     {
         id: "q10",
         type: "mc",
-        questionText: "Choose the correct option: While I ______, my brother ______ a sandwich.",
+        questionText: "What is one concern as space travel becomes more common?",
         options: [
-            { letter: "A", text: "(A) was studied / made" },
-            { letter: "B", text: "(B) studied / was making" },
-            { letter: "C", text: "(C) was studying / was making" },
-            { letter: "D", text: "(D) was studying / made" },
-            { letter: "E", text: "(E) study / makes" }
+            { letter: "A", text: "(A) Lack of interest from billionaires" },
+            { letter: "B", text: "(B) Safety and regulation" },
+            { letter: "C", text: "(C) The disappearance of NASA" },
+            { letter: "D", text: "(D) Cheaper flight tickets" },
+            { letter: "E", text: "(E) Shorter trips" }
         ],
-        correctAnswer: "C",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1 (Q10): Quando você usa o 'while' (enquanto), use: sujeito + was/were + verbo com ING.", // Corrigido: você, ING
-            "Dica 2 (Q10): 'While' é usado para informar que duas ações estavam acontecendo ao mesmo tempo.", // Corrigido: informar
-            "Dica 3 (Q10): Não se usa 'while' com verbos no Simple Past." // Corrigido: Simple Past
+        correctAnswer: "B",
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q10): O texto fala sobre garantir segurança.",
+            "Dica 2 (Q10): Está ligado a regulamentar o turismo espacial.",
+            "Dica 3 (Q10): Pense em 'safety and diplomacy'."
         ]
     },
+
+    // --- AI CAN FORECAST YOUR FUTURE HEALTH ---
     {
         id: "q11",
         type: "mc",
-        questionText: "Complete: ______ you study for the test yesterday?",
+        questionText: "What can the AI model Delphi-2M predict?",
         options: [
-            { letter: "A", text: "(A) Was" },
-            { letter: "B", text: "(B) Were" },
-            { letter: "C", text: "(C) Did" },
-            { letter: "D", text: "(D) Do" },
-            { letter: "E", text: "(E) Does" }
+            { letter: "A", text: "(A) Exact dates of future diseases" },
+            { letter: "B", text: "(B) Probability of developing diseases" },
+            { letter: "C", text: "(C) Weather changes" },
+            { letter: "D", text: "(D) Political events" },
+            { letter: "E", text: "(E) Financial investments" }
         ],
-        correctAnswer: "C",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1 (Q11): 'Was/were' significa 'estava'. O verbo depois deles precisa de ING. Se não tiver, está errado.", // Corrigido: está, ING
-            "Dica 2 (Q11): 'Do/does' são usados para perguntas no presente.",
-            "Dica 3 (Q11): 'Did' é usado para perguntas no Simple Past. Ele vem antes do sujeito e não é usado com verbos com ING." // Corrigido: Simple Past, ING
+        correctAnswer: "B",
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q11): O modelo faz previsões de saúde, não certezas.",
+            "Dica 2 (Q11): É comparado a uma previsão do tempo.",
+            "Dica 3 (Q11): Está relacionado a 'likelihood'."
         ]
     },
     {
         id: "q12",
         type: "mc",
-        questionText: "Choose the correct option: Where ______ you last night?",
+        questionText: "Where was the Delphi-2M model first developed?",
         options: [
-            { letter: "A", text: "(A) did" },
-            { letter: "B", text: "(B) were" },
-            { letter: "C", text: "(C) was" },
-            { letter: "D", text: "(D) do" },
-            { letter: "E", text: "(E) are" }
-        ],
-        correctAnswer: "B",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1 (Q12): 'Were' (estava) é usado com 'you', 'we', 'they' ou nomes no plural.",
-            "Dica 2 (Q12): 'Do' é usado no presente.",
-            "Dica 3 (Q12): 'Are' (está) é usado no presente." // Corrigido: está
-        ]
-    },
-     {
-        id: "q13",
-        type: "mc",
-        questionText: "Complete the question: What ______ she doing when you called her?",
-        options: [
-            { letter: "A", text: "(A) did" },
-            { letter: "B", text: "(B) were" },
-            { letter: "C", text: "(C) was" },
-            { letter: "D", text: "(D) is" },
-            { letter: "E", text: "(E) are" }
+            { letter: "A", text: "(A) United States" },
+            { letter: "B", text: "(B) Germany" },
+            { letter: "C", text: "(C) United Kingdom" },
+            { letter: "D", text: "(D) Japan" },
+            { letter: "E", text: "(E) France" }
         ],
         correctAnswer: "C",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1 (Q13): O 'did' é usado para perguntas que não têm ING no verbo principal.", // Corrigido: ING
-            "Dica 2 (Q13): 'Is/are' significa 'é' ou 'está', e vêm no início da pergunta no presente.", // Corrigido: significa, está
-            "Dica 3 (Q13): O 'were' ou 'was' vem antes do sujeito quando é uma pergunta no Past Continuous Progressive." // Corrigido: Past Continuous Progressive
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q12): O texto fala sobre dados do UK Biobank.",
+            "Dica 2 (Q12): 'UK' é uma pista clara.",
+            "Dica 3 (Q12): Reino Unido em inglês é 'United Kingdom'."
         ]
     },
-     {
-        id: "q14",
+    {
+        id: "q13",
         type: "mc",
-        questionText: "Choose the correct sentence:",
+        questionText: "What is one possible use of this AI model in the future?",
         options: [
-            { letter: "A", text: "(A) Did you was at home yesterday?" },
-            { letter: "B", text: "(B) Were you at home yesterday?" },
-            { letter: "C", text: "(C) Did you were at home yesterday?" },
-            { letter: "D", text: "(D) Was you at home yesterday?" },
-            { letter: "E", text: "(E) Do you were at home yesterday?" }
+            { letter: "A", text: "(A) Predicting earthquakes" },
+            { letter: "B", text: "(B) Identifying high-risk patients to prevent diseases" },
+            { letter: "C", text: "(C) Calculating taxes" },
+            { letter: "D", text: "(D) Forecasting stock markets" },
+            { letter: "E", text: "(E) Translating languages" }
         ],
         correctAnswer: "B",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1 (Q14): 'Did' e 'was/were' na mesma pergunta não combinam.",
-            "Dica 2 (Q14): 'Do' é usado em perguntas no presente.", // Corrigido: perguntas
-            "Dica 3 (Q14): Sem mais dicas."
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q13): O texto menciona prevenção de doenças.",
+            "Dica 2 (Q13): Está ligado a pacientes de alto risco.",
+            "Dica 3 (Q13): O foco é saúde, não finanças."
+        ]
+    },
+
+    // --- FUTURE OF ENERGY ---
+    {
+        id: "q14",
+        type: "mc",
+        questionText: "What is the main challenge in the transition to renewable energy?",
+        options: [
+            { letter: "A", text: "(A) Lack of sunlight" },
+            { letter: "B", text: "(B) Dependence on fossil fuels" },
+            { letter: "C", text: "(C) Abundance of resources" },
+            { letter: "D", text: "(D) Decline of global warming" },
+            { letter: "E", text: "(E) Excess of renewable plants" }
+        ],
+        correctAnswer: "B",
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q14): O texto fala sobre transição energética.",
+            "Dica 2 (Q14): Ainda dependemos de algo não renovável.",
+            "Dica 3 (Q14): Pense em 'fossil fuels'."
         ]
     },
     {
         id: "q15",
         type: "mc",
-        questionText: "Complete: He ______ playing soccer when he ______ his ankle.",
+        questionText: "What energy sources are mentioned as part of the solution?",
         options: [
-            { letter: "A", text: "(A) was / hurt" },
-            { letter: "B", text: "(B) did / hurts" },
-            { letter: "C", text: "(C) were / hurting" },
-            { letter: "D", text: "(D) was / hurts" },
-            { letter: "E", text: "(E) did / hurted" }
+            { letter: "A", text: "(A) Coal and oil" },
+            { letter: "B", text: "(B) Solar and wind power" },
+            { letter: "C", text: "(C) Gasoline and diesel" },
+            { letter: "D", text: "(D) Plastic energy" },
+            { letter: "E", text: "(E) Nuclear waste" }
         ],
-        correctAnswer: "A",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1 (Q15): O que vem antes do 'when' (quando) precisa ter ING no verbo e o que vem depois, Simple Past. Alguns verbos no Simple Past são irregulares e não têm ED.", // Corrigido: when, ING, Simple Past
-            "Dica 2 (Q15): 'Did' e 'was/were' não combinam juntos.", // Corrigido: combinam
-            "Dica 3 (Q15): 'Hurted' não existe. O passado é 'hurt'."
+        correctAnswer: "B",
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q15): O texto fala de fontes limpas.",
+            "Dica 2 (Q15): Pensa em energia do sol e do vento.",
+            "Dica 3 (Q15): São alternativas sustentáveis."
         ]
     },
+
+    // --- EXTRAS TO COMPLETE 20 ---
     {
         id: "q16",
         type: "mc",
-        questionText: "Choose the correct question for the answer: 'Yes, I went to the party.'",
+        questionText: "According to the social media text, what has social media replaced for many people?",
         options: [
-            { letter: "A", text: "(A) Were you go to the party?" },
-            { letter: "B", text: "(B) Did you go to the party?" },
-            { letter: "C", text: "(C) Was you going to the party?" },
-            { letter: "D", text: "(D) Did you went to the party?" },
-            { letter: "E", text: "(E) Were you gone to the party?" }
+            { letter: "A", text: "(A) Television" },
+            { letter: "B", text: "(B) Newspapers as a source of news" },
+            { letter: "C", text: "(C) Schools" },
+            { letter: "D", text: "(D) Email" },
+            { letter: "E", text: "(E) Sports events" }
         ],
         correctAnswer: "B",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1 (Q16): Você precisa usar o mesmo padrão na resposta e na pergunta. Se a resposta não tem ING no verbo, então na pergunta não vai ter.", // Corrigido: Você, ING
-            "Dica 2 (Q16): Quando usar o 'did', o verbo principal fica normal (no infinitivo, sem 'to').", // Corrigido
-            "Dica 3 (Q16): Go (ir), Went (fui/foi)."
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q16): Pense no que as pessoas usam para se informar hoje.",
+            "Dica 2 (Q16): Está no início do texto.",
+            "Dica 3 (Q16): Fala sobre receber notícias."
         ]
     },
     {
         id: "q17",
         type: "mc",
-        questionText: "Complete: What ______ you doing at 9 p.m. yesterday?",
+        questionText: "In the geopolitical tensions text, what does 'geopolitical minefield' suggest?",
         options: [
-            { letter: "A", text: "(A) did" },
-            { letter: "B", text: "(B) were" },
-            { letter: "C", text: "(C) was" },
-            { letter: "D", text: "(D) are" },
-            { letter: "E", text: "(E) did were" }
+            { letter: "A", text: "(A) A dangerous and unstable situation" },
+            { letter: "B", text: "(B) A peaceful cooperation" },
+            { letter: "C", text: "(C) A simple misunderstanding" },
+            { letter: "D", text: "(D) A military parade" },
+            { letter: "E", text: "(E) A natural disaster" }
         ],
-        correctAnswer: "B",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1 (Q17): Verbos com ING precisam do 'was' ou 'were'.", // Corrigido: ING
-            "Dica 2 (Q17): Não esqueça! Se for I/he/she/it ou um nome singular (Maria, Roberto), usar o 'was'.",
-            "Dica 3 (Q17): Não esqueça! Se for you/we/they ou um nome plural (Maria and João, children), usar o 'were'." // Corrigido: children
+        correctAnswer: "A",
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q17): 'Minefield' é algo perigoso.",
+            "Dica 2 (Q17): Está ligado à instabilidade global.",
+            "Dica 3 (Q17): Pense em uma metáfora para conflito."
         ]
     },
     {
         id: "q18",
         type: "mc",
-        questionText: "Choose the correct question: ______ you watch the movie last weekend?",
+        questionText: "According to the AI text, what diseases can Delphi-2M predict best?",
         options: [
-            { letter: "A", text: "(A) Were" },
-            { letter: "B", text: "(B) Did" },
-            { letter: "C", text: "(C) Was" },
-            { letter: "D", text: "(D) Do" },
-            { letter: "E", text: "(E) Does" }
+            { letter: "A", text: "(A) Random infections" },
+            { letter: "B", text: "(B) Diseases with clear progression like diabetes" },
+            { letter: "C", text: "(C) Genetic disorders" },
+            { letter: "D", text: "(D) Colds and flu" },
+            { letter: "E", text: "(E) Allergies" }
         ],
         correctAnswer: "B",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1 (Q18): Se não tiver ING no verbo, não use 'was' nem 'were'.", // Corrigido: ING
-            "Dica 2 (Q18): 'Do/does' é para o presente.",
-            "Dica 3 (Q18): Use 'was' quando o sujeito for I/he/she/it ou um nome singular."
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q18): O texto fala em doenças previsíveis.",
+            "Dica 2 (Q18): Diabetes é um exemplo.",
+            "Dica 3 (Q18): Pensa em algo com progressão clara."
         ]
     },
     {
         id: "q19",
         type: "mc",
-        questionText: "Complete: We ______ having dinner when the lights ______ out.",
+        questionText: "In the safe car travel text, which country is mentioned as a challenge due to its growing middle class leading to a massive increase in car ownership?",
         options: [
-            { letter: "A", text: "(A) did / go" },
-            { letter: "B", text: "(B) were / went" },
-            { letter: "C", text: "(C) was / gone" },
-            { letter: "D", text: "(D) were / go" },
-            { letter: "E", text: "(E) did / goes" }
+            { letter: "A", text: "(A) Brazil" },
+            { letter: "B", text: "(B) Russia" },
+            { letter: "C", text: "(C) China" },
+            { letter: "D", text: "(D) South Africa" },
+            { letter: "E", text: "(E) Canada" }
         ],
-        correctAnswer: "B",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1 (Q19): 'Did' e verbo com ING não combinam.", // Corrigido: ING
-            "Dica 2 (Q19): Use 'were' quando o sujeito for 'you', 'we', 'they' ou no plural.",
-            "Dica 3 (Q19): O passado de 'go' é 'went'."
+        correctAnswer: "C",
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q19): O texto menciona uma potência econômica asiática.",
+            "Dica 2 (Q19): Pensa no país com a maior população e crescimento de classe média.",
+            "Dica 3 (Q19): Está relacionado ao 'big increase in car ownership'."
         ]
     },
     {
         id: "q20",
         type: "mc",
-        questionText: "Choose the correct option: ______ you sleeping when I called?",
+        questionText: "What is the key takeaway message regarding the 'Future of Energy' in the text?",
         options: [
-            { letter: "A", text: "(A) Was" },
-            { letter: "B", text: "(B) Were" },
-            { letter: "C", text: "(C) Did" },
-            { letter: "D", text: "(D) Do" },
-            { letter: "E", text: "(E) Does" }
+            { letter: "A", text: "(A) Renewable energy is too expensive to be viable." },
+            { letter: "B", text: "(B) The transition will be immediate, with no challenges." },
+            { letter: "C", text: "(C) Continued innovation and investment are vital for a clean energy future." },
+            { letter: "D", text: "(D) Fossil fuels will remain the primary energy source indefinitely." },
+            { letter: "E", text: "(E) Only one type of renewable energy is needed globally." }
         ],
-        correctAnswer: "B",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1 (Q20): 'Did' e verbo com ING não combinam.", // Corrigido: ING
-            "Dica 2 (Q20): 'Does/do' são para o presente.",
-            "Dica 3 (Q20): 'Was' é usado com I/he/she/it ou nome singular, tipo 'cachorro' (the dog was)."
+        correctAnswer: "C",
+        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0",
+        hints: [
+            "Dica 1 (Q20): O texto sempre aponta para a necessidade de mais esforço.",
+            "Dica 2 (Q20): Pensa no que é preciso além do sol e vento.",
+            "Dica 3 (Q20): A mensagem é de otimismo cauteloso e ação."
         ]
-    },
-    // Pergunta 21 (ID duplicado corrigido)
-    {
-        id: "q21", 
-        type: "mc",
-        questionText: `
-            <img src="images/rg.jpg" alt="Comic" loading="lazy" style="width: 280px; height: 180px;">
-            <br><br>
-            In the comic, what is the main tense used in the driver's statement: “I wasnt texting while driving.”  
-            
-        `,
-        options: [
-            { letter: "A", text: "(A) Simple past." },
-            { letter: "B", text: "(B) Present perfect." },
-            { letter: "C", text: "(C) Future." },
-            { letter: "D", text: "(D) To be continous in the past." }, // (D) Past Continuous
-            { letter: "E", text: "(E) To be in the present." } // (E) Present Continuous
-        ],
-        correctAnswer: "D",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1 (Q21): Não estamos estudando o futuro.",
-            "Dica 2 (Q21): Não estamos estudando o presente.",
-            "Dica 3 (Q21): O Simple Past não tem ING." // Corrigido: Simple Past, ING
-        ]
-    },
-    
+    }
 ];
