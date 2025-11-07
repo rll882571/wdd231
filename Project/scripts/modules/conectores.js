@@ -333,11 +333,11 @@ const questionBank = [
             Qual pavavra expressa contraste?
         `,
         options: [
-            { letter: "A", text: "(A) Opção A" },
-            { letter: "B", text: "(B) Opção B" },
-            { letter: "C", text: "(C) Opção C" },
-            { letter: "D", text: "(D) Opção D" },
-            { letter: "E", text: "(E) Opção E" }
+            { letter: "A", text: "(A) so" },
+            { letter: "B", text: "(B) because" },
+            { letter: "C", text: "(C) and" },
+            { letter: "D", text: "(D) but" },
+            { letter: "E", text: "(E) whether" }
         ],
         correctAnswer: "A", // Mude a resposta correta
         videoUrl: "",
@@ -350,7 +350,7 @@ const questionBank = [
     
     // Pergunta 17 (Placeholder - Fill-verb)
     {
-        id: "q17_fill_verb",
+        id: "q17",
         type: "fill-verb",
         questionText: "Read and choose the correct connector.",
         lines: [
@@ -373,16 +373,16 @@ const questionBank = [
         type: "mc",
         questionText: `
             
-            <img src="images/rg.jpg" alt="Comic" loading="lazy" style="width: 280px; height: 180px;">
+            <img src="images/oi.png" alt="Comic" loading="lazy" style="width: 280px; height: 180px;">
             <br><br>
-            [Edite o texto da pergunta da imagem aqui]
+            what connector best fits?
         `,
         options: [
-            { letter: "A", text: "(A) Opção A" },
-            { letter: "B", text: "(B) Opção B" },
-            { letter: "C", text: "(C) Opção C" },
-            { letter: "D", text: "(D) Opção D" },
-            { letter: "E", text: "(E) Opção E" }
+            { letter: "A", text: "(A) whether" },
+            { letter: "B", text: "(B) and" },
+            { letter: "C", text: "(C) but" },
+            { letter: "D", text: "(D) so" },
+            { letter: "E", text: "(E) thought" }
         ],
         correctAnswer: "D", // Mude a resposta correta
         videoUrl: "",
@@ -395,43 +395,134 @@ const questionBank = [
 
     // Pergunta 19 (Placeholder - MC Simples)
     {
-        id: "q19_placeholder_mc",
+        id: "q19", 
         type: "mc",
-        questionText: "(PLACEHOLDER - EDITE DEPOIS) [Edite o texto da pergunta aqui]",
+        questionText: `
+            
+            <img src="images/ge.png" alt="Comic" loading="lazy" style="width: 280px; height: 180px;">
+            <br><br>
+            In the final panel of the comic strip, both characters use the word 'so' to connect two ideas:\n1. 'I studied all night, so I passed!'\n2. 'I played games, so I... didn't pass.'\n\nIn this context, what is the main job or function of the word 'so'?
+        `,
         options: [
-            { letter: "A", text: "(A) Opção A" },
-            { letter: "B", text: "(B) Opção B" },
-            { letter: "C", text: "(C) Opção C" },
-            { letter: "D", text: "(D) Opção D" },
-            { letter: "E", text: "(E) Opção E" }
+            { letter: "A", text: "(A) It is used to show a contrast or an unexpected change, like 'but'." },
+            { letter: "B", text: "(B) It is used to introduce the result or consequence of the action mentioned first." },
+            { letter: "C", text: "(C) It is used to express doubt or uncertainty, like 'whether'." },
+            { letter: "D", text: "(D) It is used to add more information or a similar idea, like 'and'." },
+            { letter: "E", text: "(E) none" }
         ],
-        correctAnswer: "B", // Mude a resposta correta
+        correctAnswer: "D", // Mude a resposta correta
         videoUrl: "",
         hints: [ 
             "Dica 1: Esta é uma questão placeholder.",
             "Dica 2: Lembre-se de editar esta questão.",
-            "Dica 3: Troque pelo novo conteúdo."
+            "Dica 3: Você pode trocar a imagem e o texto."
         ]
     },
 
     // Pergunta 20 (Placeholder - MC Simples)
     {
-        id: "q20_placeholder_mc2",
+        id: "q20",
         type: "mc",
-        questionText: "(PLACEHOLDER - EDITE DEPOIS) [Edite o texto da pergunta aqui]",
+        questionText: `Qual dessas sentenças esta errada?`,
         options: [
-            { letter: "A", text: "(A) Opção A" },
-            { letter: "B", text: "(B) Opção B" },
-            { letter: "C", text: "(C) Opção C" },
-            { letter: "D", text: "(D) Opção D" },
-            { letter: "E", text: "(E) Opção E" }
+            { letter: "A", text: "(A) He studied hard for the test, because he got the highest grade." },
+            { letter: "B", text: "(B) She was tired so she worked all day" },
+            { letter: "C", text: "(C) He didn't study for the test, and he failed" },
+            { letter: "D", text: "(D) She couldn't decide weather to buy the red shirt or the blue one." },
+            { letter: "E", text: "(E) All " } // 'but' e 'though' são similares aqui.
         ],
-        correctAnswer: "B", // Mude a resposta correta
+        correctAnswer: "E", // Aceitaria "E" também, mas "though" está no capítulo.
         videoUrl: "",
         hints: [ 
-            "Dica 1: Esta é uma questão placeholder.",
-            "Dica 2: Lembre-se de editar esta questão.",
-            "Dica 3: Troque pelo novo conteúdo."
+            "Dica 1: '?He studied hard for the test, because he got the highest grade.' - está correta.",
+            "Dica 2: '?.",
+            "Dica 3: As ideias são contrastantes. Use 'though' (embora) ou 'but' (mas)."
         ]
-    }
+    },
+    {
+  id: "q21",
+  type: "mc",
+  questionText: "Qual destas sentenças está logicamente **correta**?",
+  options: [
+    { letter: "A", text: "(A) The traffic was heavy, though I was late." },
+    { letter: "B", text: "(B) Whether you study, you will pass the test." },
+    { letter: "C", text: "(C) She was tired because she worked all day." },
+    { letter: "D", text: "(D) I need to check the whether before I go sailing." }
+  ],
+  correctAnswer: "C",
+  hints: [
+    "Dica 1: A opção (A) mostra um resultado esperado, não um contraste (though).",
+    "Dica 2: A opção (B) mostra uma condição (if), não uma escolha (whether).",
+    "Dica 3: A opção (C) usa 'because' (porque) para explicar a causa do cansaço. A lógica está correta?"
+  ]
+},
+  {
+  id: "q22",
+  type: "mc",
+  questionText: "Escolha o conectivo correto: 'He studied very hard, ___ he failed the exam.'",
+  options: [
+    { letter: "A", text: "(A) so" },
+    { letter: "B", text: "(B) because" },
+    { letter: "C", text: "(C) though" },
+    { letter: "D", text: "(D) and" }
+  ],
+  correctAnswer: "C",
+  hints: [
+    "Dica 1: O resultado (failed the exam) é o esperado depois de estudar muito (studied very hard)?",
+    "Dica 2: 'So' (por isso) indica um resultado esperado.",
+    "Dica 3: Use um conectivo que mostre surpresa ou contraste."
+  ]
+},
+{
+  id: "q23",
+  type: "mc",
+  questionText: "Escolha a palavra correta: 'I don't know ___ I should stay or go.'",
+  options: [
+    { letter: "A", text: "(A) weather" },
+    { letter: "B", text: "(B) if" },
+    { letter: "C", text: "(C) whether" },
+    { letter: "D", text: "(D) so" }
+  ],
+  correctAnswer: "C",
+  hints: [
+    "Dica 1: A frase está falando sobre o clima?",
+    "Dica 2: A frase está apresentando duas alternativas claras ('stay' ou 'go').",
+    "Dica 3: 'If' é usado para condições, mas 'whether' é preferido para escolhas/alternativas diretas (X ou Y)."
+  ]
+},
+{
+  id: "q24",
+  type: "mc",
+  questionText: "Qual é o erro na frase: 'He failed the test, so he didn't study.'?",
+  options: [
+    { letter: "A", text: "(A) A lógica está invertida. Deveria usar 'because'." },
+    { letter: "B", text: "(B) 'so' está escrito errado, deveria ser 'sow'." },
+    { letter: "C", text: "(C) Deveria usar 'and' para adicionar informação." },
+    { letter: "D", text: "(D) A frase está correta." }
+  ],
+  correctAnswer: "A",
+  hints: [
+    "Dica 1: 'So' (por isso) introduz um resultado.",
+    "Dica 2: A frase diz que o resultado de falhar na prova foi não estudar.",
+    "Dica 3: O 'não estudar' foi a causa ou o resultado de falhar?"
+  ]
+},
+{
+  id: "q25",
+  type: "mc",
+  questionText: "Qual dessas sentenças contém um erro de lógica ou de uso de conectivo?",
+  options: [
+    { letter: "A", text: "(A) He studied hard for the test, because he got the highest grade." },
+    { letter: "B", text: "(B) She was tired so she worked all day." },
+    { letter: "C", text: "(C) He didn't study for the test, and he failed." },
+    { letter: "D", text: "(D) She couldn't decide weather to buy the red shirt or the blue one." },
+    { letter: "E", text: "(E) Todas as alternativas acima." }
+  ],
+  correctAnswer: "E",
+  hints: [
+    "Dica 1: Em (A) e (B), a relação de causa (because) e resultado (so) parece estar invertida.",
+    "Dica 2: Em (D), a palavra 'weather' (clima) está sendo usada corretamente para falar de uma escolha?",
+    "Dica 3: Em (C), 'and' (e) apenas adiciona ideias. Existe um conectivo melhor para mostrar o *resultado* de não estudar?"
+  ]
+}
 ];
