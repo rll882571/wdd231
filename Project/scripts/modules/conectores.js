@@ -324,13 +324,13 @@ const questionBank = [
 
     // Pergunta 16 (Placeholder - Imagem)
     {
-        id: "q16_placeholder_img",
+        id: "q16",
         type: "mc",
         questionText: `
-            (PLACEHOLDER - EDITE DEPOIS)
-            <img src="images/rg.jpg" alt="Comic" loading="lazy" style="width: 280px; height: 180px;">
+            
+            <img src="images/conec.png" alt="Comic" loading="lazy" style="width: 280px; height: 180px;">
             <br><br>
-            [Edite o texto da pergunta da imagem aqui]
+            Qual pavavra expressa contraste?
         `,
         options: [
             { letter: "A", text: "(A) Opção A" },
@@ -369,10 +369,10 @@ const questionBank = [
 
     // Pergunta 18 (Placeholder - Imagem)
      {
-        id: "q18_placeholder_img2", 
+        id: "q18", 
         type: "mc",
         questionText: `
-            (PLACEHOLDER - EDITE DEPOIS)
+            
             <img src="images/rg.jpg" alt="Comic" loading="lazy" style="width: 280px; height: 180px;">
             <br><br>
             [Edite o texto da pergunta da imagem aqui]
