@@ -391,5 +391,63 @@ const questionBank = [
             "Dica 2 (Q20): Pensa no que é preciso além do sol e vento.",
             "Dica 3 (Q20): A mensagem é de otimismo cauteloso e ação."
         ]
+    },
+    {
+        id: "q21_image", // Você pode mudar o ID se precisar
+        type: "mc",
+        questionText: `
+            <img src="images/present3.png" alt="Charlie Brown Comic" loading="lazy" style="width: 280px;">
+            <br><br>
+            Na tirinha, a pergunta "<b>Have you ever known...</b>" usa o Present Perfect para:
+        `,
+        options: [
+            { letter: "A", text: "(A) Perguntar sobre uma experiência de vida (em qualquer ponto até agora)." },
+            { letter: "B", text: "(B) Perguntar sobre uma ação que acabou de acontecer." },
+            { letter: "C", text: "(C) Perguntar sobre uma ação que começou no passado e continua." },
+            { letter: "D", text: "(D) Perguntar sobre um evento específico que aconteceu ontem." },
+            { letter: "E", text: "(E) Perguntar sobre um resultado visível no presente." }
+        ],
+        correctAnswer: "A", // A resposta correta é 'A'
+        videoUrl: ""
+    },
+    {
+        id: "q22_image", // Você pode mudar o ID se precisar
+        type: "mc",
+        questionText: `
+            <img src="images/present5.jpg" alt="London Comic" loading="lazy" style="width: 300px;">
+            <br><br>
+            Analise a imagem. A mulher diz que está em Londres "<b>Since Monday</b>" (Desde Segunda). A placa na torre do relógio indica que hoje é "<b>FRIDAY</b>" (Sexta-feira).
+            <br><br>
+            Qual frase também está correta?
+        `,
+        options: [
+            { letter: "A", text: "(A) She has been in London for five days." }, // Correta (Seg, Ter, Qua, Qui, Sex)
+            { letter: "B", text: "(B) She has been in London since five days." },
+            { letter: "C", text: "(C) She has been in London for Monday." },
+            { letter: "D", text: "(D) She arrived in London for Friday." },
+            { letter: "E", text: "(E) She has been in London since Friday." }
+        ],
+        correctAnswer: "A", // A resposta correta é 'A'
+        videoUrl: ""
+    },
+    {
+        id: "q23_image", // Você pode mudar o ID se precisar
+        type: "mc",
+        questionText: `
+            <img src="images/present1.png" alt="Earl Comic" loading="lazy" style="width: 400px;">
+            <br><br>
+            Na tirinha, a mulher pergunta "<b>Where've you been, Earl?</b>" (Onde você esteve?).
+            <br><br>
+            Ela usa o Present Perfect ("have been") porque:
+        `,
+        options: [
+            { letter: "A", text: "(A) Ela quer saber sobre uma ação que ele fez ontem." },
+            { letter: "B", text: "(B) Ela quer saber sobre uma ação passada recente, pois ele acabou de voltar." },
+            { letter: "C", text: "(C) Ela quer saber sobre uma experiência de vida geral dele." },
+            { letter: "D", text: "(D) Ela quer saber o que ele está fazendo agora." },
+            { letter: "E", text: "(E) Ela quer saber sobre uma ação que ainda não terminou." }
+        ],
+        correctAnswer: "B", // A resposta correta é 'B'
+        videoUrl: ""
     }
 ];
