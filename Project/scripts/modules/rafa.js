@@ -372,7 +372,67 @@ const questionBank = [
     ],
     hint: "Para adjetivos curtos, usamos '-est' no final, como 'tallest'.",
     correctAnswer: "A"
+},
+// ----------------------------------------------------------------------
+// QUESTÕES ADICIONAIS - MAY x MIGHT (diferença e uso)
+// ----------------------------------------------------------------------
+
+{
+    id: "q21-maymight",
+    type: "mc",
+    questionText: "Qual das frases expressa uma possibilidade mais forte?",
+    options: [
+        { letter: "A", text: "(A) It might rain later." },
+        { letter: "B", text: "(B) It may rain later." },
+        { letter: "C", text: "(C) It must rain later." },
+        { letter: "D", text: "(D) It should rain later." }
+    ],
+    hint: "'May' indica uma possibilidade mais provável do que 'might'.",
+    correctAnswer: "B"
+},
+
+{
+    id: "q22-maymight",
+    type: "mc",
+    questionText: "Em qual das frases o 'may' é usado para pedir permissão?",
+    options: [
+        { letter: "A", text: "(A) She may go to the party." },
+        { letter: "B", text: "(B) May I open the window?" },
+        { letter: "C", text: "(C) You may study now." },
+        { letter: "D", text: "(D) It may rain tomorrow." }
+    ],
+    hint: "'May I...?' é a estrutura usada para pedir permissão de forma educada.",
+    correctAnswer: "B"
+},
+
+{
+    id: "q23-maymight",
+    type: "mc",
+    questionText: "O que a frase 'They might visit us next month' expressa?",
+    options: [
+        { letter: "A", text: "(A) Uma certeza de que eles virão." },
+        { letter: "B", text: "(B) Uma possibilidade incerta de visita." },
+        { letter: "C", text: "(C) Uma obrigação de visitar." },
+        { letter: "D", text: "(D) Uma proibição de visita." }
+    ],
+    hint: "'Might' expressa uma possibilidade mais fraca, com dúvida.",
+    correctAnswer: "B"
+},
+
+{
+    id: "q24-maymight",
+    type: "mc",
+    questionText: "Em qual das opções 'might' está sendo usado de forma formal e polida?",
+    options: [
+        { letter: "A", text: "(A) Might I borrow your phone for a minute?" },
+        { letter: "B", text: "(B) I might watch TV later." },
+        { letter: "C", text: "(C) He might be late to class." },
+        { letter: "D", text: "(D) It might rain tomorrow." }
+    ],
+    hint: "Quando usado em perguntas para pedir algo educadamente, 'might' soa muito formal.",
+    correctAnswer: "A"
 }
+
 
 
 ];
