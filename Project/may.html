@@ -24,15 +24,10 @@
     
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/reflexivos.css">
     
-        <script src="scripts/modules/all.js"></script>
-        <script src="scripts/modules/rafa.js"></script>
-        
-
-
-    <script src="scripts/modules/common.mjs"></script>
-    
+    <script src="scripts/modules/may.js"></script> 
+    <script src="scripts/modules/all.js" defer></script> 
+    <script src="scripts/modules/common.mjs" type="module"></script> 
     
     
 </head>
@@ -53,11 +48,10 @@
         </ul>
     </nav>
 </header> 
-    <aside id="tips-carousel-container">
-        
-        <div id="tips-carousel"></div>
-            
-    </aside>
+
+<div class="sticky-bar-container">
+    <button id="full-class-btn" data-video-url="https://www.youtube.com/embed/ENZ0-KRAcp0">ASSISTIR AULA COMPLETA</button>
+</div>
 <main id="main">
     
     <div class="submit-container">
@@ -70,25 +64,39 @@
             <div id="video-container"></div>
         </div>
     </div>
-</main>
- <footer>
-        <div class="footer-grid">
-            <div class="company-address">
-                <p>A+ Test Simulator</p>
-                <p><a href="https://www.youtube.com/watch?v=GLl0g6zPZxk" target="_blank">reflection video</a></p>
 
-            </div>
-            <div class="social">
-                <a href="#" target="_blank"><img src="images/whatsapp.svg" alt="whatsapp" width="25" height="25" loading="lazy"></a>
-                <a href="#" target="_blank"><img src="images/instagram.svg" alt="instagram" width="25" height="25" loading="lazy"></a>
-                <a href="#" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="25" height="25" loading="lazy"></a>
-            </div>
-            <div class="company-info">
-                <p>English Test Preparation Platform</p>
-                <p>&copy; <span id="currentyear"></span> Rodrigo - Brazil</p>
-                <p id="lastModified"></p>
-            </div>
+    <dialog id="hint-dialog">
+        <h3>Dicas da Questão</h3>
+        <div class="hint-content">
+            <p id="hint-text">Lorem ipsum dolor sit amet.</p>
         </div>
-    </footer>
+        <div class="hint-navigation">
+            <button class="hint-nav-btn" id="prev-hint" aria-label="Dica anterior">&lt;</button>
+            <span id="hint-counter">1 / 3</span>
+            <button class="hint-nav-btn" id="next-hint" aria-label="Próxima dica">&gt;</button>
+        </div>
+        <button id="close-hint-dialog">Fechar</button>
+    </dialog>
+
+</main>
+<footer>
+    <div class="footer-grid">
+        <div class="company-address">
+            <p>A+ Test Simulator</p>
+            <p><a href="https://www.youtube.com/watch?v=GLl0g6zPZxk" target="_blank">reflection video</a></p>
+
+        </div>
+        <div class="social">
+            <a href="#" target="_blank"><img src="images/whatsapp.svg" alt="whatsapp" width="25" height="25" loading="lazy"></a>
+            <a href="#" target="_blank"><img src="images/instagram.svg" alt="instagram" width="25" height="25" loading="lazy"></a>
+            <a href="#" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="25" height="25" loading="lazy"></a>
+        </div>
+        <div class="company-info">
+            <p>English Test Preparation Platform</p>
+            <p>&copy; <span id="currentyear"></span> Rodrigo - Brazil</p>
+            <p id="lastModified"></p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
