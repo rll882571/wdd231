@@ -56,14 +56,14 @@ const questionBank = [
         type: "mc",
         questionText: `
             What is the best way to complete the sentence? <br>
-            I ______ for my exames tomorrow.
+            We ______ going to study for my exames tomorrow.
         `,
         options: [
-            { letter: "A", text: "(A) am going to study" },
-            { letter: "B", text: "(B) is going to study" },
-            { letter: "C", text: "(C) are going to study" },
-            { letter: "D", text: "(D) am going study" },
-            { letter: "E", text: "(E) am go to study" }
+            { letter: "A", text: "(A) am " },
+            { letter: "B", text: "(B) is " },
+            { letter: "C", text: "(C) are" },
+            { letter: "D", text: "(D) will" },
+            { letter: "E", text: "(E) none" }
         ],
         correctAnswer: "A",
         videoUrl: "",
@@ -623,5 +623,97 @@ const questionBank = [
         "Hint 2: 'Will' is the auxiliary used for predictions based on what someone thinks or believes.",
         "Hint 3: 'Going to' is typically used for fixed plans and predictions based on evidence."
     ]
+},
+{
+    id: "q33",
+    type: "mc",
+    questionText: `
+        What is the best way to complete the sentence? <br>
+        She ______ going to travel to London next month.
+    `,
+    options: [
+        { letter: "A", text: "(A) am" },
+        { letter: "B", text: "(B) is" },
+        { letter: "C", text: "(C) are" },
+        { letter: "D", text: "(D) will" },
+        { letter: "E", text: "(E) be" }
+    ],
+    correctAnswer: "B",
+    videoUrl: "",
+    hints: [
+        "Dica 1: She usa o verbo to be no singular.",
+        "Dica 2: Lembre-se: he, she, it → IS.",
+        "Dica 3: Está indo muito bem!"
+    ]
+},
+
+{
+    id: "q34",
+    type: "mc",
+    questionText: `
+        What is the best way to complete the sentence? <br>
+        They ______ going to watch a movie tonight.
+    `,
+    options: [
+        { letter: "A", text: "(A) am" },
+        { letter: "B", text: "(B) is" },
+        { letter: "C", text: "(C) are" },
+        { letter: "D", text: "(D) be" },
+        { letter: "E", text: "(E) none" }
+    ],
+    correctAnswer: "C",
+    videoUrl: "",
+    hints: [
+        "Dica 1: O sujeito 'they' é plural.",
+        "Dica 2: Para sujeitos plurais, use 'are'.",
+        "Dica 3: Você está quase lá!"
+    ]
+},
+
+{
+    id: "q34",
+    type: "mc",
+    questionText: `
+        What is the best way to complete the sentence? <br>
+        I think it ______ rain tomorrow.
+    `,
+    options: [
+        { letter: "A", text: "(A) will" },
+        { letter: "B", text: "(B) am" },
+        { letter: "C", text: "(C) are" },
+        { letter: "D", text: "(D) is" },
+        { letter: "E", text: "(E) going" }
+    ],
+    correctAnswer: "A",
+    videoUrl: "",
+    hints: [
+        "Dica 1: Use 'will' para previsões sem evidência.",
+        "Dica 2: Não há verbo to be antes de 'will'.",
+        "Dica 3: Boa sorte!"
+    ]
+},
+
+{
+    id: "q35",
+    type: "mc",
+    questionText: `
+        What is the best way to complete the sentence? <br>
+        We ______ probably visit grandma this weekend.
+    `,
+    options: [
+        { letter: "A", text: "(A) will" },
+        { letter: "B", text: "(B) is" },
+        { letter: "C", text: "(C) are" },
+        { letter: "D", text: "(D) am" },
+        { letter: "E", text: "(E) none" }
+    ],
+    correctAnswer: "A",
+    videoUrl: "",
+    hints: [
+        "Dica 1: O advérbio 'probably' combina bem com 'will'.",
+        "Dica 2: 'Will' indica uma decisão ou suposição.",
+        "Dica 3: Você está arrasando!"
+    ]
 }
+
 ];
