@@ -392,7 +392,4 @@ const questionBank = [
     hints: ["Dica: Exception! 'I am' → 'aren’t I?'"]
 }
 
-
-
-
 ];
