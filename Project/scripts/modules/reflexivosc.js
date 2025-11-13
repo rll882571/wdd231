@@ -42,7 +42,7 @@ const questionBank = [
 
     // Pergunta 3 
     {
-        id: "q3_special",
+        id: "q3",
         type: "fill-verb", 
         questionText: "Read and choose the correct reflexive pronoun to complete the sentence.",
         lines: [

@@ -1,8 +1,6 @@
 const questionBank = [
 
-    // --- Perguntas Originais Mantidas (Adaptadas) ---
-
-    // Pergunta 1 (Original q1)
+    
     {
         id: "q1",
         type: "mc",
@@ -349,7 +347,7 @@ Choose the alternative that presents a possible correct interrogative form of th
         videoUrl: ""
     },
 
-    // Pergunta 19 (NOVA - Past Participle)
+    
     {
         id: "q19",
         type: "mc",
