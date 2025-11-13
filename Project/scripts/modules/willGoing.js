@@ -65,7 +65,7 @@ const questionBank = [
             { letter: "D", text: "(D) am going study" },
             { letter: "E", text: "(E) am go to study" }
         ],
-        correctAnswer: "D",
+        correctAnswer: "A",
         videoUrl: "",
         hints: [ 
             "Dica 1: Cada sujeito tem um to be",
@@ -137,7 +137,7 @@ const questionBank = [
             { letter: "D", text: "(D) am going visit" },
             { letter: "E", text: "(E) will to visit" }
         ],
-        correctAnswer: "A",
+        correctAnswer: "C",
         videoUrl: "",
         hints: [ 
             "Dica 1: Presta atenção no sujeito",
@@ -156,9 +156,9 @@ const questionBank = [
         options: [
             { letter: "A", text: "(A) She will visiting her mother" }, 
             { letter: "B", text: "(B) I am going  travel next month" },
-            { letter: "C", text: "(C) I think I am going to help you" },
+            { letter: "C", text: "(C) I think I go to help you" },
             { letter: "D", text: "(D) You will played soccer" },
-            { letter: "E", text: "(E) Neymar will probably go to USA" }
+            { letter: "E", text: "(E) Neymar will probably go to the USA" }
         ],
         correctAnswer: "B",
         videoUrl: "",
@@ -362,36 +362,6 @@ const questionBank = [
     },
 
 
-    // --- BLOCO 2: PLACEHOLDERS (COM QUESTÃO 18 CORRIGIDA) ---
-
-    // Pergunta 17 (Placeholder - Imagem)
-    {
-        id: "q17_placeholder_img",
-        type: "mc",
-        questionText: `
-            (PLACEHOLDER - EDITE DEPOIS)
-            <img src="images/rg.jpg" alt="Comic" loading="lazy" style="width: 280px; height: 180px;">
-            <br><br>
-            [Edite o texto da pergunta da imagem aqui]
-        `,
-        options: [
-            { letter: "A", text: "(A) Opção A" },
-            { letter: "B", text: "(B) Opção B" },
-            { letter: "C", text: "(C) Opção C" },
-            { letter: "D", text: "(D) Opção D" },
-            { letter: "E", text: "(E) Opção E" }
-        ],
-        correctAnswer: "A", // Mude a resposta correta
-        videoUrl: "",
-        hints: [ 
-            "Dica 1: Esta é uma questão placeholder.",
-            "Dica 2: Lembre-se de editar esta questão.",
-            "Dica 3: Você pode trocar a imagem e o texto."
-        ]
-    },
-    
-    // --- MUDANÇA AQUI ---
-    // Pergunta 18 (Adaptada para o formato "fill-verb" com a nova gramática)
     {
         id: "q18_fill_verb_will",
         type: "fill-verb",
@@ -410,33 +380,6 @@ const questionBank = [
         ]
     },
 
-    // Pergunta 19 (Placeholder - Imagem)
-     {
-        id: "q19", 
-        type: "mc",
-        questionText: `
-            (PLACEHOLDER - EDITE DEPOIS)
-            <img src="images/rg.jpg" alt="Comic" loading="lazy" style="width: 280px; height: 180px;">
-            <br><br>
-            [Edite o texto da pergunta da imagem aqui]
-        `,
-        options: [
-            { letter: "A", text: "(A) Opção A" },
-            { letter: "B", text: "(B) Opção B" },
-            { letter: "C", text: "(C) Opção C" },
-            { letter: "D", text: "(D) Opção D" },
-            { letter: "E", text: "(E) Opção E" }
-        ],
-        correctAnswer: "D", // Mude a resposta correta
-        videoUrl: "",
-        hints: [ 
-            "Dica 1: Esta é uma questão placeholder.",
-            "Dica 2: Lembre-se de editar esta questão.",
-            "Dica 3: Você pode trocar a imagem e o texto."
-        ]
-    },
-
-    // Pergunta 20 (Placeholder - MC Simples)
     {
     id: "q20",
     type: "mc",
