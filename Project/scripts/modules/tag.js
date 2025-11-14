@@ -28,7 +28,7 @@ const questionBank = [
     id: "q2",
     type: "mc",
     questionText: `
-        Questão 2:
+        
         <br>
         Analise as sentenças e identifique quais estão com as question tags corretas:
         <br><br>
