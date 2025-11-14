@@ -819,7 +819,7 @@ const questionBank = [
     id: "q38",
     type: "mc",
     questionText: `
-        <img src="images/papa.jpg" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
+        <img src="images/papa.png" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
         <br><br>
         In the sentence “I’ll be sleepy later”, which type of future should be used and why?
     `,
@@ -863,13 +863,12 @@ const questionBank = [
   id: "q26",
   type: "mc",
   questionText: `
-      Questão 26:
       <br>
       A tirinha ilustra duas visões contraditórias sobre o futuro: "The future will be great!" e "The future will be awful!". O auxiliar modal "Will", destacado nas frases, é essencial para formar o futuro em inglês.
       <br><br>
       Considerando o uso gramatical do "Will", analise as afirmações abaixo e assinale a opção que contém apenas a(s) afirmativa(s) correta(s):
       <br><br>
-      <img src="images/dada.jpg" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
+      <img src="images/dada.png" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
       <br>
       <br>
       I. É usado para expressar predições gerais sobre o futuro, geralmente baseadas em opiniões, crenças ou no que se pensa, como nas frases da tirinha.<br>
@@ -878,10 +877,12 @@ const questionBank = [
       IV. É a forma utilizada para fazer promessas ou oferecer ajuda.
   `,
   options: [
-      { letter: "A", text: "Apenas as afirmações I, III e IV estão corretas.", isCorrect: true, rationale: "O 'Will' é usado para predições/opiniões (I), decisões espontâneas (III) e promessas/ofertas (IV). A afirmação II é incorreta, pois planos pré-determinados usam 'Going to'." },
-      { letter: "B", text: "Apenas as afirmações I, II e IV estão corretas.", isCorrect: false, rationale: "A afirmação II é incorreta. Planos e intenções pré-determinadas usam 'Going to' ou Present Continuous." },
-      { letter: "C", text: "Apenas as afirmações I e III estão corretas.", isCorrect: false, rationale: "A afirmação IV também está correta." },
-      { letter: "D", text: "Apenas a afirmação IV está correta.", isCorrect: false, rationale: "As afirmações I e III também estão corretas." }
+      { letter: "A", text: "(A)Apenas as afirmações I, III e IV estão corretas.", isCorrect: true, rationale: "O 'Will' é usado para predições/opiniões (I), decisões espontâneas (III) e promessas/ofertas (IV). A afirmação II é incorreta, pois planos pré-determinados usam 'Going to'." },
+      { letter: "B", text: "(B)Apenas as afirmações I, II e IV estão corretas.", isCorrect: false, rationale: "A afirmação II é incorreta. Planos e intenções pré-determinadas usam 'Going to' ou Present Continuous." },
+      { letter: "C", text: "(C)Apenas as afirmações I e III estão corretas.", isCorrect: false, rationale: "A afirmação IV também está correta." },
+      { letter: "D", text: "(D)Apenas a afirmação IV está correta.", isCorrect: false, rationale: "As afirmações I e III também estão corretas." },
+      { letter: "E", text: "(E) Todas estão falsas" }
+      
   ],
   correctAnswer: "A",
   videoUrl: "",
@@ -890,7 +891,7 @@ const questionBank = [
   ]
 },
 {
-  id: "q27_will_going_to_creative",
+  id: "q27",
   type: "mc",
   questionText: `
       Questão 27:
@@ -899,7 +900,7 @@ const questionBank = [
       <br><br>
       Considerando o contexto da tirinha e a nuances dos auxiliares de futuro "Will" e "Going to", qual das alternativas abaixo melhor descreve a intenção dos personagens e a gramática correta em situações similares?
       <br><br>
-      <img src="images/dada.jpg" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
+      <img src="images/dada.png" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
       <br>
       <br>
       I. A pergunta de Patty ("Will you buy...?") usa "Will" corretamente para fazer um pedido espontâneo, pois ela não havia planejado essa solicitação antes.<br>
@@ -917,6 +918,33 @@ const questionBank = [
   videoUrl: "",
   hints: [
       "Dica 1 (Q27): Pense na 'espontaneidade' versus 'planejamento prévio' para distinguir 'Will' de 'Going to'."
+  ]
+},
+{
+  id: "q2",
+  type: "mc",
+  questionText: `
+     
+      <br>
+      Na tirinha, o personagem em luto declara: "I'll never forget his last words." (Eu nunca esquecerei suas últimas palavras).
+      <br><br>
+      O uso do auxiliar modal "Will" na forma contraída "I'll" (I + Will) não se restringe à simples formação do futuro, mas veicula um sentido específico, essencial para a comunicação expressa.
+      <br><br>
+      Neste contexto, a escolha do "Will", em detrimento de "Going to", justifica-se pela sua função de:
+      <br><br>
+      <img src="images/fefe.png" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
+  `,
+  options: [
+      { letter: "A", text: "(A) Expressar uma predição feita no momento da fala, baseada em evidências visíveis no presente, como o choro e a cena do cemitério.", isCorrect: false, rationale: "Predições baseadas em evidências visíveis geralmente usam 'Going to'. A lembrança é subjetiva." },
+      { letter: "B", text: "(B)Indicar uma intenção ou plano rigorosamente estabelecido e agendado pelo falante antes da morte do amigo.", isCorrect: false, rationale: "Planos pré-estabelecidos usam 'Going to' ou Present Continuous." },
+      { letter: "C", text: "(C)Assinalar uma promessa, ligada à opinião ou crença do falante sobre um estado futuro.", isCorrect: true, rationale: "O 'Will' é o auxiliar correto para promessas e intenções subjetivas, como um compromisso emocional de nunca esquecer." },
+      { letter: "D", text: "(D)Descrever um fato futuro que ocorrerá inevitavelmente, independentemente da vontade ou emoção do personagem.", isCorrect: false, rationale: "Embora 'Will' possa indicar fatos, a intenção de NUNCA esquecer é totalmente dependente da vontade e emoção do personagem, não uma fatalidade externa." },
+      { letter: "E", text: "(E)Reportar uma decisão espontânea tomada por um dos personagens, indicando uma ação imediata a ser realizada.", isCorrect: false, rationale: "Embora 'Will' seja usado para decisões espontâneas, a frase é uma promessa de estado mental futuro ('never forget'), não uma ação imediata." }
+  ],
+  correctAnswer: "C",
+  videoUrl: "",
+  hints: [
+      "Dica 1 (Q29): Nas provas de inglês do ENEM, foque na função comunicativa do modal (promessa, predição, plano) e não apenas na regra isolada."
   ]
 }
 
