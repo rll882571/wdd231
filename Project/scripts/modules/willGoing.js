@@ -7,317 +7,326 @@ const questionBank = [
         id: "q1",
         type: "mc",
         questionText: `
-            A: Why are you buying sugar, eggs, and butter? <br>
-            B: Because I ______ a cake.
+            Complete the sentence:
+            I ______ going to travel next week.
         `,
         options: [
-            { letter: "A", text: "(A) will bake" },
-            { letter: "B", text: "(B) am going to bake" },
-            { letter: "C", text: "(C) am baking" }, 
-            { letter: "D", text: "(D) will be bake" },
-            { letter: "E", text: "(E) baked" }
+            { letter: "A", text: "(A) are" },
+            { letter: "B", text: "(B) is" },
+            { letter: "C", text: "(C) am" }, 
+            { letter: "D", text: "(D) do" },
+            { letter: "E", text: "(E) does" }
         ],
-        correctAnswer: "B",
-        videoUrl: "", 
-        hints: [ 
-            "Dica 1: 'Will' é para decisões tomadas no momento da fala.",
-            "Dica 2: 'Be going to' é para planos feitos ANTES do momento da fala.",
-            "Dica 3: Comprar ingredientes mostra que isso foi um plano, não uma decisão do momento."
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: [
+            "Dica 1: O sujeito 'I' sempre usa 'am'.",
+            "Dica 2: 'Be going to' fala de planos já feitos.",
+            "Dica 3: Quando o plano já existe, usamos 'am/is/are + going to'."
         ]
     },
 
-    // Pergunta 2
     {
         id: "q2",
         type: "mc",
         questionText: `
-            A: I'm so sleepy and I still have some work to do. <br>
-            B: Don't worry, I ______ you a cup of coffee.
+            Complete the sentence:
+            You ______ going to start a new project today.
         `,
         options: [
-            { letter: "A", text: "(A) will get" },
-            { letter: "B", text: "(B) am going to get" },
-            { letter: "C", text: "(C) am getting" },
-            { letter: "D", text: "(D) getting" },
-            { letter: "E", text: "(E) will be get" }
+            { letter: "A", text: "(A) am" },
+            { letter: "B", text: "(B) is" },
+            { letter: "C", text: "(C) are" }, 
+            { letter: "D", text: "(D) do" },
+            { letter: "E", text: "(E) does" }
         ],
-        correctAnswer: "A",
+        correctAnswer: "C",
         videoUrl: "",
-        hints: [ 
-            "Dica 1: 'Be going to' é para planos (você não sabia que a pessoa estava com sono).",
-            "Dica 2: 'Will' é usado para uma oferta ou decisão feita no momento, como uma reação.",
-            "Dica 3: Oferecer café é uma reação/decisão do momento."
+        hints: [
+            "Dica 1: 'You' sempre combina com 'are'.",
+            "Dica 2: 'Going to' indica algo planejado.",
+            "Dica 3: 'Do/does' não são usados para formar futuro."
         ]
     },
 
-    // Pergunta 3
     {
         id: "q3",
         type: "mc",
         questionText: `
-            What is the best way to complete the sentence? <br>
-            We ______ going to study for my exames tomorrow.
+            Complete the sentence:
+            Neymar ______ going to play tomorrow.
         `,
         options: [
-            { letter: "A", text: "(A) am " },
-            { letter: "B", text: "(B) is " },
-            { letter: "C", text: "(C) are" },
-            { letter: "D", text: "(D) will" },
-            { letter: "E", text: "(E) none" }
+            { letter: "A", text: "(A) are" },
+            { letter: "B", text: "(B) is" },
+            { letter: "C", text: "(C) am" }, 
+            { letter: "D", text: "(D) do" },
+            { letter: "E", text: "(E) does" }
         ],
-        correctAnswer: "A",
+        correctAnswer: "B",
         videoUrl: "",
-        hints: [ 
-            "Dica 1: Cada sujeito tem um to be",
-            "Dica 2: is é para o sujeito he, she ou it",
-            "Dica 3: Você consegue!"
+        hints: [
+            "Dica 1: Neymar = 'he'.",
+            "Dica 2: 'He' sempre usa 'is'.",
+            "Dica 3: 'Is going to' mostra um plano já definido."
         ]
     },
 
-    
     {
         id: "q4",
         type: "mc",
         questionText: `
-            A: Are you looking forward to your next trip to South America? <br>
-            B: Yes, I am! It's all set! I ______ Chile, Uruguay, and Argentina.
+            Complete the sentence:
+            Maria ______ going to visit her family next month.
         `,
         options: [
-            { letter: "A", text: "(A) will visit" },
-            { letter: "B", text: "(B) visit" },
-            { letter: "C", text: "(C) visited" },
-            { letter: "D", text: "(D) am going to visit" },
-            { letter: "E", text: "(E) will visiting" }
+            { letter: "A", text: "(A) am" },
+            { letter: "B", text: "(B) is" },
+            { letter: "C", text: "(C) are" }, 
+            { letter: "D", text: "(D) do" },
+            { letter: "E", text: "(E) does" }
         ],
-        correctAnswer: "D",
+        correctAnswer: "B",
         videoUrl: "",
-        hints: [ 
-            "Dica 1: A expressão 'It's all set!' (Está tudo certo/combinado!) é a chave.",
-            "Dica 2: Use 'Be going to' para planos que já foram elaborados ou decididos.",
-            "Dica 3: Como já está 'tudo certo', é um plano, não uma decisão do momento."
+        hints: [
+            "Dica 1: Maria = 'she'.",
+            "Dica 2: 'She' sempre usa 'is'.",
+            "Dica 3: A expressão 'going to' indica um plano futuro."
         ]
     },
 
-    // Pergunta 5
     {
         id: "q5",
         type: "mc",
         questionText: `
-            A: What are your plans after graduation? <br> 
-            B: After I graduate, I ______ Medical School and become a doctor.
+            Complete the sentence:
+            Neymar and Maria ______ going to watch a movie tonight.
         `,
         options: [
-            { letter: "A", text: "(A) will attend" },
-            { letter: "B", text: "(B) am going to attend" },
-            { letter: "C", text: "(C) attending" },
-            { letter: "D", text: "(D) attend" },
-            { letter: "E", text: "(E) will be attend" }
+            { letter: "A", text: "(A) am" },
+            { letter: "B", text: "(B) is" },
+            { letter: "C", text: "(C) are" }, 
+            { letter: "D", text: "(D) do" },
+            { letter: "E", text: "(E) does" }
         ],
-        correctAnswer: "B",
+        correctAnswer: "C",
         videoUrl: "",
-        hints: [ 
-            "Dica 1: A pergunta é sobre 'plans' (planos).",
-            "Dica 2: Use 'Be going to' para falar sobre planos futuros e intenções.",
-            "Dica 3: 'Will' seria usado para uma opinião (I think I'll...) ou uma decisão do momento."
+        hints: [
+            "Dica 1: Dois nomes = sujeito plural.",
+            "Dica 2: Sujeitos plurais usam 'are'.",
+            "Dica 3: 'Are going to' indica plano conjunto."
         ]
     },
-    
-    // Pergunta 6
+
     {
         id: "q6",
         type: "mc",
         questionText: `
-            What is the best way to complete the sentence? <br>
-            They ______ their grandparents next month.
+            Complete the sentence:
+            The children ______ going to sleep early today.
         `,
         options: [
-             { letter: "A", text: "(A) am going to visit" },
-            { letter: "B", text: "(B) is going to visit" },
-            { letter: "C", text: "(C) are going to visit" },
-            { letter: "D", text: "(D) am going visit" },
-            { letter: "E", text: "(E) will to visit" }
+            { letter: "A", text: "(A) is" },
+            { letter: "B", text: "(B) am" },
+            { letter: "C", text: "(C) are" }, 
+            { letter: "D", text: "(D) does" },
+            { letter: "E", text: "(E) do" }
         ],
         correctAnswer: "C",
         videoUrl: "",
-        hints: [ 
-            "Dica 1: Presta atenção no sujeito",
-            "Dica 2: 'They' pede o verbo 'to be' na forma 'are'",
-            "Dica 3: is é para o sujeito he, she ou it"
+        hints: [
+            "Dica 1: 'Children' é plural.",
+            "Dica 2: Palavras plurais sempre usam 'are'.",
+            "Dica 3: 'Going to' mostra intenção futura."
         ]
     },
 
-    // Pergunta 7
     {
         id: "q7",
         type: "mc",
         questionText: `
-            What is the correct sntence?
+            Complete the sentence:
+            The computer ______ going to update automatically.
         `,
         options: [
-            { letter: "A", text: "(A) She will visiting her mother" }, 
-            { letter: "B", text: "(B) I am going  travel next month" },
-            { letter: "C", text: "(C) I think I go to help you" },
-            { letter: "D", text: "(D) You will played soccer" },
-            { letter: "E", text: "(E) Neymar will probably go to the USA" }
+            { letter: "A", text: "(A) are" },
+            { letter: "B", text: "(B) am" },
+            { letter: "C", text: "(C) is" }, 
+            { letter: "D", text: "(D) do" },
+            { letter: "E", text: "(E) does" }
         ],
-        correctAnswer: "B",
+        correctAnswer: "C",
         videoUrl: "",
-        hints: [ 
-            "Dica 1: A resposta é '...he will'.",
-            "Dica 2: A resposta curta (Yes, he will) mostra qual auxiliar foi usado na pergunta.",
-            "Dica 3: 'Is' seria usado com 'going to' (Is he going to...?)."
+        hints: [
+            "Dica 1: 'The computer' = 'it'.",
+            "Dica 2: 'It' sempre usa 'is'.",
+            "Dica 3: A forma correta é 'is going to'."
         ]
     },
 
-    // Pergunta 8
     {
         id: "q8",
         type: "mc",
         questionText: `
-            A: ______ you going to travel with Sam? <br>
-            B: Yes, I ______.
+            Complete the sentence:
+            The book ______ going to fall off the table.
         `,
         options: [
-            { letter: "A", text: "(A) Will / will" },
-            { letter: "B", text: "(B) Are / will" },
-            { letter: "C", text: "(C) Do / do" },
-            { letter: "D", text: "(D) Are / am" },
-            { letter: "E", text: "(E) Will / am" }
+            { letter: "A", text: "(A) am" },
+            { letter: "B", text: "(B) are" },
+            { letter: "C", text: "(C) is" }, 
+            { letter: "D", text: "(D) do" },
+            { letter: "E", text: "(E) does" }
         ],
-        correctAnswer: "D",
+        correctAnswer: "C",
         videoUrl: "",
-        hints: [ 
-            "Dica 1: A pergunta usa 'going to'. O verbo 'to be' para 'you' é 'are'.",
-            "Dica 2: A resposta curta para 'Are you...?' é 'Yes, I am' ou 'No, I'm not'.",
-            "Dica 3: A pergunta e a resposta devem usar a mesma estrutura (nesse caso, 'be going to')."
+        hints: [
+            "Dica 1: 'The book' também é 'it'.",
+            "Dica 2: Objetos singulares usam 'is'.",
+            "Dica 3: 'Is going to' mostra previsão do que vai acontecer."
         ]
     },
-    
-    // Pergunta 9
+
     {
         id: "q9",
         type: "mc",
-        questionText: `Look at those dark clouds! It ______ soon.`,
+        questionText: `
+            Complete the sentence:
+            We ______ going to paint the house tomorrow.
+        `,
         options: [
-            { letter: "A", text: "(A) will rain" },
-            { letter: "B", text: "(B) rains" },
-            { letter: "C", text: "(C) is raining" },
-            { letter: "D", text: "(D) rained" },
-            { letter: "E", text: "(E) is going to rain" }
+            { letter: "A", text: "(A) am" },
+            { letter: "B", text: "(B) is" },
+            { letter: "C", text: "(C) are" }, 
+            { letter: "D", text: "(D) do" },
+            { letter: "E", text: "(E) does" }
         ],
-        correctAnswer: "E",
+        correctAnswer: "C",
         videoUrl: "",
-        hints: [ 
-            "Dica 1: A pessoa está vendo 'dark clouds' (nuvens escuras). Isso é uma evidência.",
-            "Dica 2: Use 'Be going to' para previsões baseadas em evidências/dados concretos.",
-            "Dica 3: 'Will rain' seria uma opinião (ex: I think it will rain)."
+        hints: [
+            "Dica 1: 'We' é pronome plural — usa 'are'.",
+            "Dica 2: 'Be going to' indica um plano futuro combinado.",
+            "Dica 3: 'Do/does' não formam futuro com 'going to'."
         ]
     },
 
-    // Pergunta 10
     {
         id: "q10",
         type: "mc",
-        questionText: `Don't worry, in 20 years, technology ______ even more advanced.`,
+        questionText: `
+            Complete the sentence:
+            Ana and you ______ going to join the class tonight.
+        `,
         options: [
-            { letter: "A", text: "(A) is going to be" },
+            { letter: "A", text: "(A) am" },
             { letter: "B", text: "(B) is" },
-            { letter: "C", text: "(C) will be" },
-            { letter: "D", text: "(D) was" },
-            { letter: "E", text: "(E) going to be" }
+            { letter: "C", text: "(C) are" }, 
+            { letter: "D", text: "(D) do" },
+            { letter: "E", text: "(E) does" }
         ],
         correctAnswer: "C",
         videoUrl: "",
-        hints: [ 
-            "Dica 1: Isso é uma previsão geral sobre o futuro, um fato esperado.",
-            "Dica 2: Use 'Will' para falar sobre fatos conhecidos ou gerais sobre o futuro.",
-            "Dica 3: 'Is going to be' implicaria uma evidência presente, mas isso é uma previsão distante."
+        hints: [
+            "Dica 1: Dois sujeitos ligados por 'and' formam um sujeito plural.",
+            "Dica 2: Sujeitos plurais exigem 'are' com 'going to'.",
+            "Dica 3: 'Ana and you' = 'you both' (plural)."
         ]
     },
 
-    // Pergunta 11
     {
         id: "q11",
         type: "mc",
-        questionText: `I promise! I ______ your secret to anyone.`,
+        questionText: `
+            Complete the sentence:
+            It ______ going to rain this afternoon.
+        `,
         options: [
-            { letter: "A", text: "(A) am not going to tell" },
-            { letter: "B", text: "(B) won't tell" },
-            { letter: "C", text: "(C) don't tell" },
-            { letter: "D", text: "(D) didn't tell" },
-            { letter: "E", text: "(E) am not telling" }
-        ],
-        correctAnswer: "B",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1: A frase começa com 'I promise...' (Eu prometo...).",
-            "Dica 2: Use 'Will' (ou a negativa 'won't') para fazer promessas.",
-            "Dica 3: 'Am not going to tell' é usado para um plano/intenção, não uma promessa."
-        ]
-    },
-
-    // Pergunta 12
-    {
-        id: "q12",
-        type: "mc",
-        questionText: `I think our team ______ the championship this year.`,
-        options: [
-            { letter: "A", text: "(A) is winning" },
-            { letter: "B", text: "(B) wins" },
-            { letter: "C", text: "(C) won" },
-            { letter: "D", text: "(D) is going to win" },
-            { letter: "E", text: "(E) will win" }
-        ],
-        correctAnswer: "E",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1: A frase começa com 'I think...' (Eu acho...).",
-            "Dica 2: Use 'Will' para previsões baseadas em opinião pessoal.",
-            "Dica 3: 'Is going to win' implicaria uma evidência forte (ex: 'They are playing perfectly!')."
-        ]
-    },
-    
-    // Pergunta 13
-    {
-        id: "q13",
-        type: "mc",
-        questionText: `He saved money all year. He ______ a new car next month.`,
-        options: [
-            { letter: "A", text: "(A) will buy" },
-            { letter: "B", text: "(B) buys" },
-            { letter: "C", text: "(C) is going to buy" },
-            { letter: "D", text: "(D) bought" },
-            { letter: "E", text: "(E) will buying" }
+            { letter: "A", text: "(A) are" },
+            { letter: "B", text: "(B) am" },
+            { letter: "C", text: "(C) is" }, 
+            { letter: "D", text: "(D) do" },
+            { letter: "E", text: "(E) does" }
         ],
         correctAnswer: "C",
         videoUrl: "",
-        hints: [ 
-            "Dica 1: A frase 'He saved money all year' (Ele economizou o ano todo) mostra preparação.",
-            "Dica 2: Use 'Be going to' para planos elaborados antes do momento da fala.",
-            "Dica 3: 'Will buy' seria uma decisão repentina."
+        hints: [
+            "Dica 1: 'It' (clima/it neutro) usa 'is'.",
+            "Dica 2: Previsões meteorológicas frequentemente usam 'is going to'.",
+            "Dica 3: Lembre-se: 'am' só com 'I', 'is' com he/she/it, 'are' com we/you/they."
         ]
     },
 
+    
+    {
+    id: "q12",
+    type: "mc",
+    questionText: `
+        Complete the sentence:
+        ________ you going to study for the test tonight?
+    `,
+    options: [
+        { letter: "A", text: "(A) is" },
+        { letter: "B", text: "(B) am" },
+        { letter: "C", text: "(C) are" },
+        { letter: "D", text: "(D) do" },
+        { letter: "E", text: "(E) does" }
+    ],
+    correctAnswer: "C",
+    videoUrl: "",
+    hints: [
+        "Dica 1: Em perguntas com 'you', usamos 'are' no começo.",
+        "Dica 2: A ordem da frase interrogativa é 'Are + sujeito + going to...?'",
+        "Dica 3: 'Do/does' não formam futuro com 'going to'."
+    ]
+    } ,
+    
+    // Pergunta 13
+    {
+    id: "q13",
+    type: "mc",
+    questionText: `
+        Complete the sentence:
+        ________ Maria going to cook dinner today?
+    `,
+    options: [
+        { letter: "A", text: "(A) are" },
+        { letter: "B", text: "(B) am" },
+        { letter: "C", text: "(C) is" },
+        { letter: "D", text: "(D) do" },
+        { letter: "E", text: "(E) does" }
+    ],
+    correctAnswer: "C",
+    videoUrl: "",
+    hints: [
+        "Dica 1: Maria = she, então usamos 'is'.",
+        "Dica 2: A estrutura correta é 'Is + Maria + going to...?'.",
+        "Dica 3: 'Are' é usado somente com sujeitos plurais ou 'you'."
+    ]
+  },
+
     // Pergunta 14
     {
-        id: "q14",
-        type: "mc",
-        questionText: `A: The phone is ringing! B: I ______ it!`,
-        options: [
-            { letter: "A", text: "(A) am getting" },
-            { letter: "B", text: "(B) am going to get" },
-            { letter: "C", text: "(C) got" },
-            { letter: "D", text: "(D) will get" },
-            { letter: "E", text: "(E) get" }
-        ],
-        correctAnswer: "D",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1: A pessoa (B) está reagindo ao fato do telefone estar tocando.",
-            "Dica 2: Use 'Will' para decisões tomadas no momento da fala (decisões rápidas).",
-            "Dica 3: 'Am going to get' implicaria que a pessoa já sabia que ia atender (um plano)."
-        ]
-    },
+    id: "q14",
+    type: "mc",
+    questionText: `
+        Complete the sentence:
+        ________ Neymar and Lucas going to travel next month?
+    `,
+    options: [
+        { letter: "A", text: "(A) am" },
+        { letter: "B", text: "(B) is" },
+        { letter: "C", text: "(C) are" },
+        { letter: "D", text: "(D) do" },
+        { letter: "E", text: "(E) does" }
+    ],
+    correctAnswer: "C",
+    videoUrl: "",
+    hints: [
+        "Dica 1: Dois nomes formam um sujeito plural.",
+        "Dica 2: Perguntas no plural começam com 'are'.",
+        "Dica 3: 'Is' só é usado para he/she/it (singular)."
+    ]
+   },
 
     // Pergunta 15
     {
@@ -344,376 +353,573 @@ const questionBank = [
     {
         id: "q16",
         type: "mc",
-        questionText: `A: It's hot in here. B: You're right. I ______ the window.`,
+        questionText: `
+            Look at those dark clouds! It ___ rain in a few minutes.
+        `,
         options: [
-            { letter: "A", text: "(A) am opening" },
-            { letter: "B", text: "(B) am going to open" },
-            { letter: "C", text: "(C) will open" },
-            { letter: "D", text: "(D) open" },
-            { letter: "E", text: "(E) opened" }
+            { letter: "A", text: "(A) will" },
+            { letter: "B", text: "(B) is going to" },
+            { letter: "C", text: "(C) might" },
+            { letter: "D", text: "(D) will be" }
         ],
-        correctAnswer: "C",
+        correctAnswer: "B",
         videoUrl: "",
-        hints: [ 
-            "Dica 1: A pessoa está reagindo a um fato ('It's hot').",
-            "Dica 2: Use 'Will' para decisões rápidas e voluntárias feitas no momento.",
-            "Dica 3: 'Am going to open' significaria que ela já tinha o plano de abrir a janela."
-        ]
-    },
-
-
-    {
-        id: "q18_fill_verb_will",
-        type: "fill-verb",
-        questionText: "Read the situations and choose the correct future form (Will or Be Going To).",
-        lines: [
-            { text: "(A) I've already bought the tickets. I ... (travel) to Japan next month.", verbs: ["will travel", "am going to travel"] },
-            { text: "(B) Oh no, I spilled the milk! I ... (clean) it up right now.", verbs: ["will clean", "am going to clean"] },
-            { text: "(C) Look at those dark clouds! It ... (rain) very soon.", verbs: ["will rain", "is going to rain"] }
-        ],
-        correctAnswer: ["am going to travel", "will clean", "is going to rain"],
-        videoUrl: "",
-        hints: [ 
-            "Dica 1: Use 'Be Going To' para planos feitos com antecedência (A) ou previsões com evidência (C).",
-            "Dica 2: Use 'Will' para decisões rápidas e espontâneas (B).",
-            "Dica 3: 'I've bought the tickets' é um plano. 'I spilled the milk' é uma surpresa. 'Dark clouds' é uma evidência."
+        hints: [
+            "Dica 1: Use 'going to' quando há evidências no presente.",
+            "Dica 2: Nuvens escuras indicam previsão baseada em evidência.",
+            "Dica 3: 'Will' seria usado para opinião, não evidência."
         ]
     },
 
     {
-    id: "q20",
-    type: "mc",
-    questionText: `
-        Questão 25:
-        <br>
-        Sobre o uso do auxiliar modal "Will" para formar o futuro em inglês, analise as afirmações abaixo e assinale a opção que contém apenas a(s) afirmativa(s) correta(s):
-        <br><br>
-        I. é usado para falar sobre planos<br>
-        II. usado para falar sobre predições baseadas em evidecias<br>
-        III. uma decisão feita antes do momento da fala<br>
-        IV. para falar sobre o passado<br>
-        V. fazer promessas
-    `,
-    options: [
-        { letter: "A", text: "(A) Apenas as afirmações I, II e III estão corretas.", isCorrect: false, rationale: "As afirmações I, II e III são incorretas. Essas ações geralmente usam 'going to', não 'will'." },
-        { letter: "B", text: "(B) Apenas a afirmação V está correta.", isCorrect: true, rationale: "O 'Will' é a forma correta de expressar promessas e ofertas." },
-        { letter: "C", text: "(C) Apenas as afirmações I e V estão corretas.", isCorrect: false, rationale: "A afirmação I ('falar sobre planos') é incorreta, pois planos e intenções pré-determinadas usam 'going to'." },
-        { letter: "D", text: "(D) Apenas as afirmações IV e V estão corretas.", isCorrect: false, rationale: "A afirmação IV ('falar sobre o passado') está incorreta. 'Will' é um auxiliar do futuro." }
-    ],
-    correctAnswer: "B",
-    videoUrl: "",
-    hints: [
-        "Dica 1 (Q25): Lembre-se que o uso do 'Will' é ideal para o que é espontâneo (decisões no momento da fala) ou incerto, e para fazer promessas, em contraste com o 'Going To' que é para planos e evidências."
-    ]
-   },
+        id: "q17",
+        type: "mc",
+        questionText: `
+            The phone is ringing. I ___ answer it.
+        `,
+        options: [
+            { letter: "A", text: "(A) am going to" },
+            { letter: "B", text: "(B) will" },
+            { letter: "C", text: "(C) am about to" },
+            { letter: "D", text: "(D) will be" }
+        ],
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: [
+            "Dica 1: Use 'will' para decisões feitas no momento da fala.",
+            "Dica 2: O telefone tocar é algo inesperado.",
+            "Dica 3: 'Going to' exige plano prévio, que não existe aqui."
+        ]
+    },
 
-    // Pergunta 21 (Placeholder - MC Simples)
     {
-    id: "q21_goingto_garfield",
-    type: "mc",
-    questionText: `
-        Question 21:
-        <br>
-        Observe the Garfield comic strip. In the first speech bubble, Jon says: "I'm going kite flying!".
-        <br><br>
-        Which of the options below BEST describes the use of the structure "be going to" in this sentence, according to the context of the comic strip?
-        <br><br>
-        <div style="text-align: center;">
-        <img src="images/garff.jpg" alt="Garfield kite flying comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
-        </div>
-    `,
-    options: [
-        { letter: "A", text: "(A) A prediction about the future based on Jon's opinion." },
-        { letter: "B", text: "(B) A plan or intention that Jon had prior to the moment of speaking." },
-        { letter: "C", text: "(C) A spontaneous decision that Jon made at the moment of speaking." },
-        { letter: "D", text: "(D) A promise that Jon is making to Garfield." },
-        { letter: "E", text: "(E) A known fact about the weather or the day." }
-    ],
-    correctAnswer: "B", 
-    videoUrl: "",
-    hints: [ 
-        "Hint 1: Observe Jon's attitude in the first panel. He is already holding the kite, indicating he had this idea beforehand.",
-        "Hint 2: The structure 'be going to' is often used to express actions that have already been planned.",
-        "Hint 3: Compare this with the uses of 'will', which are usually for on-the-spot decisions or promises."
-    ]
+        id: "q18",
+        type: "mc",
+        questionText: `
+            Carla bought tickets yesterday; she ___ fly to Lisbon next Friday.
+        `,
+        options: [
+            { letter: "A", text: "(A) will fly" },
+            { letter: "B", text: "(B) is going to fly" },
+            { letter: "C", text: "(C) flies" },
+            { letter: "D", text: "(D) is about to fly" }
+        ],
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: [
+            "Dica 1: 'Bought tickets' = plano já decidido antes.",
+            "Dica 2: 'Going to' é usado para planos organizados.",
+            "Dica 3: 'Will' seria usado para previsão ou decisão instantânea."
+        ]
+    },
+
+    {
+        id: "q19",
+        type: "mc",
+        questionText: `
+            You look exhausted. I ___ carry your suitcase.
+        `,
+        options: [
+            { letter: "A", text: "(A) will" },
+            { letter: "B", text: "(B) am" },
+            { letter: "C", text: "(C) am going to" },
+            { letter: "D", text: "(D) will be" }
+        ],
+        correctAnswer: "A",
+        videoUrl: "",
+        hints: [
+            "Dica 1: 'Will' é usado para ofertas espontâneas.",
+            "Dica 2: O falante acabou de decidir ajudar.",
+            "Dica 3: Não havia plano prévio, então não usamos 'going to'."
+        ]
+    },
+
+    {
+        id: "q20",
+        type: "mc",
+        questionText: `
+            Watch out! The glass ___ fall off the edge any second now.
+        `,
+        options: [
+            { letter: "A", text: "(A) will" },
+            { letter: "B", text: "(B) is going to" },
+            { letter: "C", text: "(C) might" },
+            { letter: "D", text: "(D) was about to" }
+        ],
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: [
+            "Dica 1: O copo já está prestes a cair — evidência clara.",
+            "Dica 2: 'Going to' é usado quando algo parece prestes a acontecer.",
+            "Dica 3: 'Will' não é usado quando há evidência física presente."
+        ]
+    },
+
+    {
+        id: "q21",
+        type: "mc",
+        questionText: `
+            I don’t think they ___ win the match tonight.
+        `,
+        options: [
+            { letter: "A", text: "(A) are going to" },
+            { letter: "B", text: "(B) will" },
+            { letter: "C", text: "(C) might" },
+            { letter: "D", text: "(D) are about to" }
+        ],
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: [
+            "Dica 1: Quando expressamos opinião, usamos 'will'.",
+            "Dica 2: Não há plano ou evidência — é só uma previsão pessoal.",
+            "Dica 3: 'Going to' seria para algo baseado em evidências presentes."
+        ]
+    },
+
+    {
+        id: "q22",
+        type: "mc",
+        questionText: `
+            We’ve decided: we ___ paint the living room this weekend.
+        `,
+        options: [
+            { letter: "A", text: "(A) are going to" },
+            { letter: "B", text: "(B) will" },
+            { letter: "C", text: "(C) will be" },
+            { letter: "D", text: "(D) will have" }
+        ],
+        correctAnswer: "A",
+        videoUrl: "",
+        hints: [
+            "Dica 1: A decisão já foi tomada antes da fala.",
+            "Dica 2: 'Going to' = planos ou intenções já decididos.",
+            "Dica 3: 'Will' é para decisões no momento."
+        ]
+    },
+
+    {
+        id: "q23",
+        type: "mc",
+        questionText: `
+            It’s very hot in here. I ___ open the window.
+        `,
+        options: [
+            { letter: "A", text: "(A) will" },
+            { letter: "B", text: "(B) will be" },
+            { letter: "C", text: "(C) am" },
+            { letter: "D", text: "(D) was going to" }
+        ],
+        correctAnswer: "A",
+        videoUrl: "",
+        hints: [
+            "Dica 1: 'Will' é usado para ações decididas espontaneamente.",
+            "Dica 2: Abrir a janela é uma reação imediata ao calor.",
+            "Dica 3: 'Going to' exigiria um plano prévio."
+        ]
+    },
+
+    {
+        id: "q24",
+        type: "mc",
+        questionText: `
+            Diego has packed his bags; he ___ leave at dawn.
+        `,
+        options: [
+            { letter: "A", text: "(A) will" },
+            { letter: "B", text: "(B) is going to" },
+            { letter: "C", text: "(C) leaves" },
+            { letter: "D", text: "(D) will be" }
+        ],
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: [
+            "Dica 1: Ele já fez as malas — evidência concreta.",
+            "Dica 2: 'Going to' indica plano prévio.",
+            "Dica 3: 'Will' seria apenas previsão."
+        ]
+    },
+
+    {
+        id: "q25",
+        type: "mc",
+        questionText: `
+            Don’t worry, I ___ help you with your homework later.
+        `,
+        options: [
+            { letter: "A", text: "(A) will" },
+            { letter: "B", text: "(B) am going to" },
+            { letter: "C", text: "(C) will be helping" },
+            { letter: "D", text: "(D) am helping" }
+        ],
+        correctAnswer: "A",
+        videoUrl: "",
+        hints: [
+            "Dica 1: Ofertas usam 'will'.",
+            "Dica 2: A decisão é tomada no momento.",
+            "Dica 3: 'Going to' exige planejamento anterior."
+        ]
+    },
+
+    {
+        id: "q26",
+        type: "mc",
+        questionText: `
+            According to the official forecast, it ___ snow tomorrow morning.
+        `,
+        options: [
+            { letter: "A", text: "(A) might" },
+            { letter: "B", text: "(B) will" },
+            { letter: "C", text: "(C) is about to" },
+            { letter: "D", text: "(D) could" }
+        ],
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: [
+            "Dica 1: Previsões oficiais usam 'will'.",
+            "Dica 2: Indica certeza futura baseada em dados.",
+            "Dica 3: 'Going to' não é usado sem evidência visual."
+        ]
+    },
+
+    {
+        id: "q27",
+        type: "mc",
+        questionText: `
+            Maria and João ___ get married in September; the invitations are out.
+        `,
+        options: [
+            { letter: "A", text: "(A) will" },
+            { letter: "B", text: "(B) are going to" },
+            { letter: "C", text: "(C) will be getting" },
+            { letter: "D", text: "(D) were going to" }
+        ],
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: [
+            "Dica 1: Convites enviados = plano concreto.",
+            "Dica 2: 'Going to' expressa planos definidos.",
+            "Dica 3: 'Will' é previsão, não plano real."
+        ]
+    },
+
+    {
+        id: "q28",
+        type: "mc",
+        questionText: `
+            I’m sure you ___ love this movie.
+        `,
+        options: [
+            { letter: "A", text: "(A) will" },
+            { letter: "B", text: "(B) might" },
+            { letter: "C", text: "(C) could" },
+            { letter: "D", text: "(D) are about to" }
+        ],
+        correctAnswer: "A",
+        videoUrl: "",
+        hints: [
+            "Dica 1: Previsões baseadas em certeza usam 'will'.",
+            "Dica 2: O falante está confiante.",
+            "Dica 3: 'Going to' não combina com opinião pessoal forte."
+        ]
+    },
+
+    {
+        id: "q29",
+        type: "mc",
+        questionText: `
+            Paulo hasn’t studied at all; he ___ fail the exam.
+        `,
+        options: [
+            { letter: "A", text: "(A) is going to" },
+            { letter: "B", text: "(B) will" },
+            { letter: "C", text: "(C) might" },
+            { letter: "D", text: "(D) is" }
+        ],
+        correctAnswer: "A",
+        videoUrl: "",
+        hints: [
+            "Dica 1: Falta de estudo = evidência.",
+            "Dica 2: Evidências usam 'going to'.",
+            "Dica 3: 'Will' seria opinião sem base."
+        ]
+    },
+
+    {
+        id: "q30",
+        type: "mc",
+        questionText: `
+            I forgot my wallet. I guess I ___ borrow some money from you.
+        `,
+        options: [
+            { letter: "A", text: "(A) am going to" },
+            { letter: "B", text: "(B) will borrow" },
+            { letter: "C", text: "(C) will be" },
+            { letter: "D", text: "(D) am" }
+        ],
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: [
+            "Dica 1: Decisão tomada na hora usa 'will'.",
+            "Dica 2: Nada foi planejado antes.",
+            "Dica 3: 'Going to' exigiria intenção prévia."
+        ]
+    },
+
+    {
+        id: "q31",
+        type: "mc",
+        questionText: `
+            They’ve booked the hall; the conference ___ start at 9 a.m. sharp.
+        `,
+        options: [
+            { letter: "A", text: "(A) will start" },
+            { letter: "B", text: "(B) is going to start" },
+            { letter: "C", text: "(C) starts" },
+            { letter: "D", text: "(D) is starting" }
+        ],
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: [
+            "Dica 1: Evento programado = 'going to'.",
+            "Dica 2: Já está tudo organizado.",
+            "Dica 3: 'Will' seria previsão, não plano concreto."
+        ]
+    },
+
+    {
+        id: "q32",
+        type: "mc",
+        questionText: `
+            “Do you want tea or coffee?” – “I think I ___ have tea, please.”
+        `,
+        options: [
+            { letter: "A", text: "(A) will" },
+            { letter: "B", text: "(B) am going to" },
+            { letter: "C", text: "(C) will be" },
+            { letter: "D", text: "(D) am" }
+        ],
+        correctAnswer: "A",
+        videoUrl: "",
+        hints: [
+            "Dica 1: Escolhas feitas na hora usam 'will'.",
+            "Dica 2: Não houve planejamento prévio.",
+            "Dica 3: 'Going to' seria uma decisão antecipada."
+        ]
+    },
+
+    {
+        id: "q33",
+        type: "mc",
+        questionText: `
+            That car is speeding! It ___ crash into the barrier.
+        `,
+        options: [
+            { letter: "A", text: "(A) will" },
+            { letter: "B", text: "(B) is going to" },
+            { letter: "C", text: "(C) might" },
+            { letter: "D", text: "(D) was about to" }
+        ],
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: [
+            "Dica 1: A situação mostra evidência clara.",
+            "Dica 2: 'Going to' é para eventos prestes a acontecer.",
+            "Dica 3: 'Will' não é usado com evidência presente."
+        ]
+    },
+
+    {
+        id: "q34",
+        type: "mc",
+        questionText: `
+            My parents just called; they ___ arrive at 8 p.m. on the dot.
+        `,
+        options: [
+            { letter: "A", text: "(A) will arrive" },
+            { letter: "B", text: "(B) are going to arrive" },
+            { letter: "C", text: "(C) arrive" },
+            { letter: "D", text: "(D) will be arriving" }
+        ],
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: [
+            "Dica 1: Eles já informaram o horário.",
+            "Dica 2: 'Going to' = plano confirmado.",
+            "Dica 3: 'Will' seria previsão sem confirmação."
+        ]
+    },
+
+    {
+        id: "q35",
+        type: "mc",
+        questionText: `
+            I’ve already made a resolution: next year I ___ learn Japanese.
+        `,
+        options: [
+            { letter: "A", text: "(A) am going to" },
+            { letter: "B", text: "(B) will" },
+            { letter: "C", text: "(C) will be" },
+            { letter: "D", text: "(D) am" }
+        ],
+        correctAnswer: "A",
+        videoUrl: "",
+        hints: [
+            "Dica 1: Resoluções = decisões prévias.",
+            "Dica 2: 'Going to' expressa intenção planejada.",
+            "Dica 3: 'Will' seria para decisão no momento."
+        ]
     },
     {
-    id: "q26",
+    id: "q36",
     type: "mc",
     questionText: `
-        Questão 25:
-        <br>
-        Sobre o uso do auxiliar modal "Will" para formar o futuro em inglês, analise as afirmações abaixo e assinale a opção que contém apenas a(s) afirmativa(s) correta(s):
+        <img src="images/fafa.jpg" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
         <br><br>
-        I. é usado para falar sobre planos<br>
-        II. usado para falar sobre predições baseadas em evidecias<br>
-        III. uma decisão feita no momento da fala<br>
-        IV. para falar sobre o passado<br>
-        V. fazer promessas
+        Based on the comic strip, Jon tells Garfield he is going out with Liz. 
+        Jon's use of the future expresses that he:
     `,
     options: [
-        { letter: "A", text: "(A) Apenas a afirmação V está correta.", isCorrect: false, rationale: "A afirmação III ('decisão feita no momento da fala') também está correta para o uso de 'Will'." },
-        { letter: "B", text: "(B) Apenas as afirmações III e V estão corretas.", isCorrect: true, rationale: "As afirmações III ('decisão feita no momento da fala') e V ('fazer promessas') são os usos corretos do 'Will' dentre as opções listadas. As demais se referem a 'going to' ou a outros tempos verbais." },
-        { letter: "C", text: "(C) Apenas as afirmações I, III e V estão corretas.", isCorrect: false, rationale: "A afirmação I ('falar sobre planos') é incorreta, pois planos e intenções pré-determinadas usam 'going to'." },
-        { letter: "D", text: "(D) Apenas as afirmações II, III e V estão corretas.", isCorrect: false, rationale: "A afirmação II ('predições baseadas em evidecias') é incorreta, pois predições baseadas em evidências claras usam 'going to'." }
+        { letter: "A", text: "(A) made a spontaneous decision about going out." },
+        { letter: "B", text: "(B) had already planned his date before talking to Garfield." },
+        { letter: "C", text: "(C) is asking Garfield for permission to leave." },
+        { letter: "D", text: "(D) wants Garfield to join him on the date." }
     ],
     correctAnswer: "B",
     videoUrl: "",
     hints: [
-        "Dica 1 (Q25): Lembre-se que o uso do 'Will' é ideal para o que é espontâneo (decisões no momento da fala - III) e para fazer promessas (V)."
+        "Dica 1: Jon já está arrumado, indicando um plano feito antes da fala.",
+        "Dica 2: O futuro planejado normalmente usa 'going to' ou sinais de preparação prévia.",
+        "Dica 3: 'Will' é usado para decisões espontâneas, o que não acontece na tirinha."
     ]
 },
 {
-    id: "q27",
+    id: "q37",
     type: "mc",
     questionText: `
-        Questão 25:
-        <br>
-        Sobre o uso do auxiliar modal "Will" para formar o futuro em inglês, analise as afirmações abaixo e assinale a opção que contém apenas a(s) afirmativa(s) correta(s):
+        <img src="images/fafa.jpg" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
         <br><br>
-        I. é usado para falar sobre planos<br>
-        II. usado para falar sobre predições baseadas em opniões<br>
-        III. uma decisão feita no momento da fala<br>
-        IV. para falar sobre o passado<br>
-        V. fazer promessas
+        In the last panel, Jon leaves and Garfield happily stays with the food.
+        This suggests that:
     `,
     options: [
-        { letter: "A", text: "(A) Apenas as afirmações III e V estão corretas.", isCorrect: false, rationale: "A afirmação II ('predições baseadas em opiniões') também está correta para o uso de 'Will'." },
-        { letter: "B", text: "(B) Apenas as afirmações I, III e V estão corretas.", isCorrect: false, rationale: "A afirmação I ('falar sobre planos') é incorreta, pois planos e intenções pré-determinadas usam 'going to'." },
-        { letter: "C", text: "(C) Apenas as afirmações II, III e V estão corretas.", isCorrect: true, rationale: "As afirmações II ('predições baseadas em opiniões'), III ('decisão feita no momento da fala') e V ('fazer promessas') são os usos corretos e principais do 'Will'." },
-        { letter: "D", text: "(D) Apenas as afirmações III, IV e V estão corretas.", isCorrect: false, rationale: "A afirmação IV ('para falar sobre o passado') é incorreta. 'Will' é um auxiliar do futuro." }
-    ],
-    correctAnswer: "C",
-    videoUrl: "",
-    hints: [
-        "Dica 1 (Q25): Os três usos principais do 'Will' são: Promessas, Decisões Espontâneas (no momento da fala) e Predições baseadas em Opiniões/Palpites."
-    ]
-},
-{
-    id: "q28",
-    type: "mc",
-    questionText: `
-        Questão 25:
-        <br>
-        Sobre o uso do auxiliar modal "Will" para formar o futuro em inglês, analise as afirmações abaixo. Assinale a opção que inclui todas as afirmativas corretas:
-        <br><br>
-        I. é usado para falar sobre fatos que são considerados certos ou inevitáveis no futuro.<br>
-        II. usado para falar sobre predições baseadas em opniões<br>
-        III. uma decisão feita no momento da fala<br>
-        IV. usado para fazer ofertas de ajuda ou convites.<br>
-        V. fazer promessas<br>
-        VI. Um fato conhecido.
-    `,
-    options: [
-        { letter: "A", text: "(A) Apenas as afirmações I, III e V estão corretas.", isCorrect: false, rationale: "As afirmações II, IV e VI também representam usos válidos do 'Will' no futuro." },
-        { letter: "B", text: "(B) Apenas as afirmações II, III, V e VI estão corretas.", isCorrect: false, rationale: "As afirmações I ('fatos certos') e IV ('ofertas') também são usos corretos e válidos do auxiliar 'Will'." },
-        { letter: "C", text: "(C) Apenas as afirmações I, II, III e IV estão corretas.", isCorrect: false, rationale: "As afirmações V ('promessas') e VI ('fato conhecido') também são usos válidos e importantes do 'Will'." },
-        { letter: "D", text: "(D) Todas as afirmações (I, II, III, IV, V e VI) estão corretas.", isCorrect: true, rationale: "Todas as afirmações listadas são consideradas usos gramaticalmente corretos do 'Will' no futuro, incluindo promessas, decisões espontâneas e previsões/fatos." }
-    ],
-    correctAnswer: "D",
-    videoUrl: "",
-    hints: [
-        "Dica 1 (Q25): Lembre-se dos seis principais papéis do 'Will': Promessa, Decisão Espontânea, Oferta, Pedido, Previsão (opinião) e Fato Certo."
-    ]
-},
-{
-    id: "q29",
-    type: "mc",
-    questionText: `
-        Question 25:
-        <br>
-        Regarding the use of the modal auxiliary "Will" to form the future tense in English, analyze the statements below and choose the option that contains only the correct statement(s):
-        <br><br>
-        I. it is used to talk about plans<br>
-        II. used to talk about predictions based on evidence<br>
-        III. a decision made at the moment of speaking<br>
-        IV. to talk about the past<br>
-        V. to make promises
-    `,
-    options: [
-        { letter: "A", text: "(A) Only statement V is correct.", isCorrect: false, rationale: "Statement III ('a decision made at the moment of speaking') is also correct for the use of 'Will'." },
-        { letter: "B", text: "(B) Only statements III and V are correct.", isCorrect: true, rationale: "Statements III ('a decision made at the moment of speaking') and V ('to make promises') are the correct uses of 'Will' among the listed options. The others refer to 'going to' or other verb tenses." },
-        { letter: "C", text: "(C) Only statements I, III, and V are correct.", isCorrect: false, rationale: "Statement I ('to talk about plans') is incorrect, as predetermined plans and intentions use 'going to'." },
-        { letter: "D", text: "(D) Only statements II, III, and V are correct.", isCorrect: false, rationale: "Statement II ('predictions based on evidence') is incorrect, as predictions based on clear evidence use 'going to'." }
+        { letter: "A", text: "(A) Jon will go to the party alone because Garfield isn’t interested." },
+        { letter: "B", text: "(B) Garfield is going to enjoy staying home more than going out." },
+        { letter: "C", text: "(C) Jon has many friends to meet later." },
+        { letter: "D", text: "(D) Garfield will help Jon prepare for the evening." }
     ],
     correctAnswer: "B",
     videoUrl: "",
     hints: [
-        "Hint 1 (Q25): Remember that the use of 'Will' is ideal for what is spontaneous (decisions at the moment of speaking - III) and for making promises (V)."
+        "Dica 1: Garfield abraça a comida e demonstra felicidade em ficar em casa.",
+        "Dica 2: 'Going to' indica previsão baseada em evidência visível.",
+        "Dica 3: Garfield claramente prefere ficar em casa em vez de acompanhar Jon."
     ]
 },
 {
-    id: "q30",
+    id: "q38",
     type: "mc",
     questionText: `
-        Question 25:
-        <br>
-        Regarding the use of the modal auxiliary "Will" to form the future tense in English, analyze the statements below. Choose the option that includes ALL the correct statements:
+        <img src="images/papa.jpg" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
         <br><br>
-        I. it is used to talk about facts considered certain or inevitable in the future.<br>
-        II. used to talk about predictions based on opinions<br>
-        III. a decision made at the moment of speaking<br>
-        IV. used to make offers of help or invitations.<br>
-        V. to make promises<br>
-        VI. A known fact.
+        In the sentence “I’ll be sleepy later”, which type of future should be used and why?
     `,
     options: [
-        { letter: "A", text: "(A) Only statements I, III, and V are correct.", isCorrect: false, rationale: "Statements II, IV, and VI are also valid uses of 'Will'." },
-        { letter: "B", text: "(B) Only statements II, III, V, and VI are correct.", isCorrect: false, rationale: "Statements I ('certain facts') and IV ('offers') are also correct and valid uses of the auxiliary 'Will'." },
-        { letter: "C", text: "(C) Only statements I, II, III, and IV are correct.", isCorrect: false, rationale: "Statements V ('promises') and VI ('known fact') are also valid and important uses of 'Will'." },
-        { letter: "D", text: "(D) All statements (I, II, III, IV, V, and VI) are correct.", isCorrect: true, rationale: "All listed statements are considered grammatically correct uses of 'Will' for the future, including promises, spontaneous decisions, offers, predictions based on opinion, and certain facts in the future." }
-    ],
-    correctAnswer: "D",
-    videoUrl: "",
-    hints: [
-        "Hint 1 (Q25): Remember the six main roles of 'Will': Promise, Spontaneous Decision, Offer, Invitation/Request, Prediction (opinion), and Certain Fact."
-    ]
-},
-{
-    id: "q31",
-    type: "mc",
-    questionText: `
-        Questão 26:
-        <br>
-        Sobre o uso da estrutura "be going to" para formar o futuro em inglês, analise as afirmações abaixo e assinale a opção que contém apenas a(s) afirmativa(s) correta(s):
-        <br><br>
-        I. é usado para falar sobre planos ou intenções previamente definidos.<br>
-        II. usado para falar sobre predições baseadas em evidências visíveis.<br>
-        III. uma decisão feita no momento da fala.<br>
-        IV. usado para fazer promessas.<br>
-        V. é usado para descrever rotinas no presente.
-    `,
-    options: [
-        { letter: "A", text: "(A) Apenas a afirmação I está correta.", isCorrect: false, rationale: "A afirmação II ('predições baseadas em evidências') também é um uso correto da estrutura 'be going to'." },
-        { letter: "B", text: "(B) Apenas as afirmações I e II estão corretas.", isCorrect: true, rationale: "As afirmações I (Planos/Intenções) e II (Predições baseadas em evidências) são os dois principais e corretos usos da estrutura 'be going to'. As demais se referem a outros auxiliares ou tempos verbais." },
-        { letter: "C", text: "(C) Apenas as afirmações I, III e IV estão corretas.", isCorrect: false, rationale: "As afirmações III ('decisão na hora') e IV ('promessas') são usos incorretos para 'be going to', sendo típicas do auxiliar 'Will'." },
-        { letter: "D", text: "(D) Todas as afirmações estão corretas.", isCorrect: false, rationale: "As afirmações III, IV e V são incorretas para o uso da estrutura 'be going to'." }
-    ],
-    correctAnswer: "B",
-    videoUrl: "",
-    hints: [
-        "Dica 1 (Q26): O 'Going to' foca em um futuro que já está decidido, planejado ou que você tem evidência clara de que vai acontecer."
-    ]
-},
-{
-    id: "q32",
-    type: "mc",
-    questionText: `
-        Question 22:
-        <br>
-        Analyze the speech bubble from the comic strip where Calvin says: "I don't think I'll go to school today."
-        <br><br>
-        The main function of the auxiliary verb "Will" in this specific sentence is to express:
-        <br><br>
-        <div style="text-align: center;">
-        <img src="images/marvin.jpg" alt="Calvin and Hobbes comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
-        </div>
-    `,
-    options: [
-        { letter: "A", text: "(A) A spontaneous decision made at the moment of speaking." },
-        { letter: "B", text: "(B) A predetermined future plan or intention." },
-        { letter: "C", text: "(C) A prediction based on the speaker's personal opinion." },
-        { letter: "D", text: "(D) An offer of help or an invitation." },
-        { letter: "E", "text": "(E) A strong promise about a future action." }
-    ],
-    correctAnswer: "C", 
-    videoUrl: "",
-    hints: [ 
-        "Hint 1: The phrase 'I don't think...' often signals that the speaker is expressing a belief or a guess, not a fixed plan or a sudden decision.",
-        "Hint 2: 'Will' is the auxiliary used for predictions based on what someone thinks or believes.",
-        "Hint 3: 'Going to' is typically used for fixed plans and predictions based on evidence."
-    ]
-},
-{
-    id: "q33",
-    type: "mc",
-    questionText: `
-        What is the best way to complete the sentence? <br>
-        She ______ going to travel to London next month.
-    `,
-    options: [
-        { letter: "A", text: "(A) am" },
-        { letter: "B", text: "(B) is" },
-        { letter: "C", text: "(C) are" },
-        { letter: "D", text: "(D) will" },
-        { letter: "E", text: "(E) be" }
-    ],
-    correctAnswer: "B",
-    videoUrl: "",
-    hints: [
-        "Dica 1: She usa o verbo to be no singular.",
-        "Dica 2: Lembre-se: he, she, it → IS.",
-        "Dica 3: Está indo muito bem!"
-    ]
-},
-
-{
-    id: "q34",
-    type: "mc",
-    questionText: `
-        What is the best way to complete the sentence? <br>
-        They ______ going to watch a movie tonight.
-    `,
-    options: [
-        { letter: "A", text: "(A) am" },
-        { letter: "B", text: "(B) is" },
-        { letter: "C", text: "(C) are" },
-        { letter: "D", text: "(D) be" },
-        { letter: "E", text: "(E) none" }
-    ],
-    correctAnswer: "C",
-    videoUrl: "",
-    hints: [
-        "Dica 1: O sujeito 'they' é plural.",
-        "Dica 2: Para sujeitos plurais, use 'are'.",
-        "Dica 3: Você está quase lá!"
-    ]
-},
-
-{
-    id: "q34",
-    type: "mc",
-    questionText: `
-        What is the best way to complete the sentence? <br>
-        I think it ______ rain tomorrow.
-    `,
-    options: [
-        { letter: "A", text: "(A) will" },
-        { letter: "B", text: "(B) am" },
-        { letter: "C", text: "(C) are" },
-        { letter: "D", text: "(D) is" },
-        { letter: "E", text: "(E) going" }
+        { letter: "A", text: "(A) 'Will', because Jon is making a spontaneous prediction about the future." },
+        { letter: "B", text: "(B) 'Going to', because Jon planned his nap a long time ago." },
+        { letter: "C", text: "(C) Present continuous, because the future action is a fixed arrangement." },
+        { letter: "D", text: "(D) 'Will', because the action is happening right now." }
     ],
     correctAnswer: "A",
     videoUrl: "",
     hints: [
-        "Dica 1: Use 'will' para previsões sem evidência.",
-        "Dica 2: Não há verbo to be antes de 'will'.",
-        "Dica 3: Boa sorte!"
+        "Dica 1: 'Will' é usado para previsões feitas no momento da fala.",
+        "Dica 2: Jon percebe que ficará com sono mais tarde e faz uma previsão espontânea.",
+        "Dica 3: 'Going to' seria usado se houvesse um plano prévio — mas não há."
     ]
 },
-
 {
-    id: "q35",
+    id: "39",
     type: "mc",
     questionText: `
-        What is the best way to complete the sentence? <br>
-        We ______ probably visit grandma this weekend.
+        <img src="images/papa.jpg" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
+        <br><br>
+        According to the comic strip, Jon decides to take a nap because:
     `,
     options: [
-        { letter: "A", text: "(A) will" },
-        { letter: "B", text: "(B) is" },
-        { letter: "C", text: "(C) are" },
-        { letter: "D", text: "(D) am" },
-        { letter: "E", text: "(E) none" }
+        { letter: "A", text: "(A) Garfield told him to sleep." },
+        { letter: "B", text: "(B) he thinks he is going to feel sleepy soon." },
+        { letter: "C", text: "(C) he already slept during the morning." },
+        { letter: "D", text: "(D) his computer recommended a nap." }
     ],
-    correctAnswer: "A",
+    correctAnswer: "B",
     videoUrl: "",
     hints: [
-        "Dica 1: O advérbio 'probably' combina bem com 'will'.",
-        "Dica 2: 'Will' indica uma decisão ou suposição.",
-        "Dica 3: Você está arrasando!"
+        "Dica 1: Jon diz 'I’d better take a preemptive nap'.",
+        "Dica 2: 'Preemptive' significa fazer algo antes que aconteça.",
+        "Dica 3: Ele acha que VAI ficar com sono em breve, então se prepara."
     ]
+},
+{
+  id: "q26",
+  type: "mc",
+  questionText: `
+      Questão 26:
+      <br>
+      A tirinha ilustra duas visões contraditórias sobre o futuro: "The future will be great!" e "The future will be awful!". O auxiliar modal "Will", destacado nas frases, é essencial para formar o futuro em inglês.
+      <br><br>
+      Considerando o uso gramatical do "Will", analise as afirmações abaixo e assinale a opção que contém apenas a(s) afirmativa(s) correta(s):
+      <br><br>
+      <img src="images/dada.jpg" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
+      <br>
+      <br>
+      I. É usado para expressar predições gerais sobre o futuro, geralmente baseadas em opiniões, crenças ou no que se pensa, como nas frases da tirinha.<br>
+      II. É a forma correta para falar sobre planos e intenções pré-determinadas (por exemplo, planos de viagem já agendados).<br>
+      III. É o auxiliar modal utilizado para expressar uma decisão feita no momento da fala (decisão espontânea).<br>
+      IV. É a forma utilizada para fazer promessas ou oferecer ajuda.
+  `,
+  options: [
+      { letter: "A", text: "Apenas as afirmações I, III e IV estão corretas.", isCorrect: true, rationale: "O 'Will' é usado para predições/opiniões (I), decisões espontâneas (III) e promessas/ofertas (IV). A afirmação II é incorreta, pois planos pré-determinados usam 'Going to'." },
+      { letter: "B", text: "Apenas as afirmações I, II e IV estão corretas.", isCorrect: false, rationale: "A afirmação II é incorreta. Planos e intenções pré-determinadas usam 'Going to' ou Present Continuous." },
+      { letter: "C", text: "Apenas as afirmações I e III estão corretas.", isCorrect: false, rationale: "A afirmação IV também está correta." },
+      { letter: "D", text: "Apenas a afirmação IV está correta.", isCorrect: false, rationale: "As afirmações I e III também estão corretas." }
+  ],
+  correctAnswer: "A",
+  videoUrl: "",
+  hints: [
+      "Dica 1 (Q26): O uso de 'Will' é ideal para o que é espontâneo ou baseado em opinião. Planos já decididos e predições com evidência usam 'Going to'."
+  ]
+},
+{
+  id: "q27_will_going_to_creative",
+  type: "mc",
+  questionText: `
+      Questão 27:
+      <br>
+      Na tirinha, Patty Pimentinha expressa um desejo imediato: "Will you buy me a balloon, Chuck?". Charlie Brown, por sua vez, age de forma espontânea. Se, antes de irem à feira, Charlie Brown já tivesse decidido que compraria balões para todos os seus amigos, a forma de expressar essa intenção seria diferente.
+      <br><br>
+      Considerando o contexto da tirinha e a nuances dos auxiliares de futuro "Will" e "Going to", qual das alternativas abaixo melhor descreve a intenção dos personagens e a gramática correta em situações similares?
+      <br><br>
+      <img src="images/dada.jpg" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
+      <br>
+      <br>
+      I. A pergunta de Patty ("Will you buy...?") usa "Will" corretamente para fazer um pedido espontâneo, pois ela não havia planejado essa solicitação antes.<br>
+      II. A ação de Charlie Brown de entregar o balão logo em seguida é um exemplo de decisão tomada no momento da fala, perfeitamente expressa com "Will" se ele tivesse dito: "I will buy you a balloon."<br>
+      III. Se Charlie Brown tivesse um plano pré-existente de comprar balões, ele usaria "Going to", por exemplo: "I'm going to buy balloons for my friends today." (Estou indo comprar balões para meus amigos hoje).<br>
+      IV. A frase "We're having fun, aren't we, Chuck?" (Estamos nos divertindo, não estamos, Chuck?) mostra o uso de "Will" para descrever um evento futuro.
+  `,
+  options: [
+      { letter: "A", text: "Apenas I, II e III estão corretas.", isCorrect: true, rationale: "As afirmações I (pedido espontâneo com Will), II (decisão no momento com Will) e III (planos pré-existentes com Going to) estão corretas. A IV está errada pois usa Present Continuous, não Will." },
+      { letter: "B", text: "Apenas I e II estão corretas.", isCorrect: false, rationale: "A afirmação III também está correta ao explicar o uso de 'Going to' para planos." },
+      { letter: "C", text: "Apenas II, III e IV estão corretas.", isCorrect: false, rationale: "A afirmação IV está incorreta. 'We're having fun' é Present Continuous, não futuro com 'Will'." },
+      { letter: "D", text: "Apenas I, III e IV estão corretas.", isCorrect: false, rationale: "A afirmação IV está incorreta. 'We're having fun' é Present Continuous, não futuro com 'Will'." }
+  ],
+  correctAnswer: "A",
+  videoUrl: "",
+  hints: [
+      "Dica 1 (Q27): Pense na 'espontaneidade' versus 'planejamento prévio' para distinguir 'Will' de 'Going to'."
+  ]
 }
+
+
 
 ];
