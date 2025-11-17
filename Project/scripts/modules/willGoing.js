@@ -4,7 +4,7 @@ const questionBank = [
 
     // Pergunta 1 
     {
-        id: "q1",
+        id: "q1-willGoing",
         type: "mc",
         questionText: `
             Complete the sentence:
@@ -27,7 +27,7 @@ const questionBank = [
     },
 
     {
-        id: "q2",
+        id: "q2-willGoing",
         type: "mc",
         questionText: `
             Complete the sentence:
@@ -50,7 +50,7 @@ const questionBank = [
     },
 
     {
-        id: "q3",
+        id: "q3-willGoing",
         type: "mc",
         questionText: `
             Complete the sentence:
@@ -73,7 +73,7 @@ const questionBank = [
     },
 
     {
-        id: "q4",
+        id: "q4-willGoing",
         type: "mc",
         questionText: `
             Complete the sentence:
@@ -96,7 +96,7 @@ const questionBank = [
     },
 
     {
-        id: "q5",
+        id: "q5-willGoing",
         type: "mc",
         questionText: `
             Complete the sentence:
@@ -119,7 +119,7 @@ const questionBank = [
     },
 
     {
-        id: "q6",
+        id: "q6-willGoing",
         type: "mc",
         questionText: `
             Complete the sentence:
@@ -142,7 +142,7 @@ const questionBank = [
     },
 
     {
-        id: "q7",
+        id: "q7-willGoing",
         type: "mc",
         questionText: `
             Complete the sentence:
@@ -165,7 +165,7 @@ const questionBank = [
     },
 
     {
-        id: "q8",
+        id: "q8-willGoing",
         type: "mc",
         questionText: `
             Complete the sentence:
@@ -188,7 +188,7 @@ const questionBank = [
     },
 
     {
-        id: "q9",
+        id: "q9-willGoing",
         type: "mc",
         questionText: `
             Complete the sentence:
@@ -211,7 +211,7 @@ const questionBank = [
     },
 
     {
-        id: "q10",
+        id: "q10-willGoing",
         type: "mc",
         questionText: `
             Complete the sentence:
@@ -234,7 +234,7 @@ const questionBank = [
     },
 
     {
-        id: "q11",
+        id: "q11-willGoing",
         type: "mc",
         questionText: `
             Complete the sentence:
@@ -258,7 +258,7 @@ const questionBank = [
 
     
     {
-    id: "q12",
+    id: "q12-willGoing",
     type: "mc",
     questionText: `
         Complete the sentence:
@@ -282,7 +282,7 @@ const questionBank = [
     
     // Pergunta 13
     {
-    id: "q13",
+    id: "q13-willGoing",
     type: "mc",
     questionText: `
         Complete the sentence:
@@ -306,7 +306,7 @@ const questionBank = [
 
     // Pergunta 14
     {
-    id: "q14",
+    id: "q14-willGoing",
     type: "mc",
     questionText: `
         Complete the sentence:
@@ -330,7 +330,7 @@ const questionBank = [
 
     // Pergunta 15
     {
-        id: "q15",
+        id: "q15-willGoing",
         type: "mc",
         questionText: `Which sentence expresses a plan or intention (not a promise)?`,
         options: [
@@ -351,7 +351,7 @@ const questionBank = [
 
     // Pergunta 16
     {
-        id: "q16",
+        id: "q16-willGoing",
         type: "mc",
         questionText: `
             Look at those dark clouds! It ___ rain in a few minutes.
@@ -372,7 +372,7 @@ const questionBank = [
     },
 
     {
-        id: "q17",
+        id: "q17-willGoing",
         type: "mc",
         questionText: `
             The phone is ringing. I ___ answer it.
@@ -393,7 +393,7 @@ const questionBank = [
     },
 
     {
-        id: "q18",
+        id: "q18-willGoing",
         type: "mc",
         questionText: `
             Carla bought tickets yesterday; she ___ fly to Lisbon next Friday.
@@ -414,7 +414,7 @@ const questionBank = [
     },
 
     {
-        id: "q19",
+        id: "q19-willGoing",
         type: "mc",
         questionText: `
             You look exhausted. I ___ carry your suitcase.
@@ -435,7 +435,7 @@ const questionBank = [
     },
 
     {
-        id: "q20",
+        id: "q20-willGoing",
         type: "mc",
         questionText: `
             Watch out! The glass ___ fall off the edge any second now.
@@ -456,7 +456,7 @@ const questionBank = [
     },
 
     {
-        id: "q21",
+        id: "q21-willGoing",
         type: "mc",
         questionText: `
             I don’t think they ___ win the match tonight.
@@ -477,7 +477,7 @@ const questionBank = [
     },
 
     {
-        id: "q22",
+        id: "q22-willGoing",
         type: "mc",
         questionText: `
             We’ve decided: we ___ paint the living room this weekend.
@@ -498,7 +498,7 @@ const questionBank = [
     },
 
     {
-        id: "q23",
+        id: "q23-willGoing",
         type: "mc",
         questionText: `
             It’s very hot in here. I ___ open the window.
@@ -519,7 +519,7 @@ const questionBank = [
     },
 
     {
-        id: "q24",
+        id: "q24-willGoing",
         type: "mc",
         questionText: `
             Diego has packed his bags; he ___ leave at dawn.
@@ -540,7 +540,7 @@ const questionBank = [
     },
 
     {
-        id: "q25",
+        id: "q25-willGoing",
         type: "mc",
         questionText: `
             Don’t worry, I ___ help you with your homework later.
@@ -561,7 +561,7 @@ const questionBank = [
     },
 
     {
-        id: "q26",
+        id: "q26-willGoing",
         type: "mc",
         questionText: `
             According to the official forecast, it ___ snow tomorrow morning.
@@ -582,7 +582,7 @@ const questionBank = [
     },
 
     {
-        id: "q27",
+        id: "q27-willGoing",
         type: "mc",
         questionText: `
             Maria and João ___ get married in September; the invitations are out.
@@ -603,7 +603,7 @@ const questionBank = [
     },
 
     {
-        id: "q28",
+        id: "q28-willGoing",
         type: "mc",
         questionText: `
             I’m sure you ___ love this movie.
@@ -624,7 +624,7 @@ const questionBank = [
     },
 
     {
-        id: "q29",
+        id: "q29-willGoing",
         type: "mc",
         questionText: `
             Paulo hasn’t studied at all; he ___ fail the exam.
@@ -645,7 +645,7 @@ const questionBank = [
     },
 
     {
-        id: "q30",
+        id: "q30-willGoing",
         type: "mc",
         questionText: `
             I forgot my wallet. I guess I ___ borrow some money from you.
@@ -666,7 +666,7 @@ const questionBank = [
     },
 
     {
-        id: "q31",
+        id: "q31-willGoing",
         type: "mc",
         questionText: `
             They’ve booked the hall; the conference ___ start at 9 a.m. sharp.
@@ -687,7 +687,7 @@ const questionBank = [
     },
 
     {
-        id: "q32",
+        id: "q32-willGoing",
         type: "mc",
         questionText: `
             “Do you want tea or coffee?” – “I think I ___ have tea, please.”
@@ -708,7 +708,7 @@ const questionBank = [
     },
 
     {
-        id: "q33",
+        id: "q33-willGoing",
         type: "mc",
         questionText: `
             That car is speeding! It ___ crash into the barrier.
@@ -729,7 +729,7 @@ const questionBank = [
     },
 
     {
-        id: "q34",
+        id: "q34-willGoing",
         type: "mc",
         questionText: `
             My parents just called; they ___ arrive at 8 p.m. on the dot.
@@ -750,7 +750,7 @@ const questionBank = [
     },
 
     {
-        id: "q35",
+        id: "q35-willGoing",
         type: "mc",
         questionText: `
             I’ve already made a resolution: next year I ___ learn Japanese.
@@ -770,7 +770,7 @@ const questionBank = [
         ]
     },
     {
-    id: "q36",
+    id: "q36-willGoing",
     type: "mc",
     questionText: `
         <img src="images/fafa.jpg" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
@@ -793,7 +793,7 @@ const questionBank = [
     ]
 },
 {
-    id: "q37",
+    id: "q37-willGoing",
     type: "mc",
     questionText: `
         <img src="images/fafa.jpg" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
@@ -816,7 +816,7 @@ const questionBank = [
     ]
 },
 {
-    id: "q38",
+    id: "q38-willGoing",
     type: "mc",
     questionText: `
         <img src="images/papa.png" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
@@ -838,7 +838,7 @@ const questionBank = [
     ]
 },
 {
-    id: "39",
+    id: "39-willGoing",
     type: "mc",
     questionText: `
         <img src="images/papa.jpg" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
@@ -860,7 +860,7 @@ const questionBank = [
     ]
 },
 {
-  id: "q26",
+  id: "q26-willGoing",
   type: "mc",
   questionText: `
       <br>
@@ -891,7 +891,7 @@ const questionBank = [
   ]
 },
 {
-  id: "q27",
+  id: "q27-willGoing",
   type: "mc",
   questionText: `
       Questão 27:
@@ -921,7 +921,7 @@ const questionBank = [
   ]
 },
 {
-  id: "q2",
+  id: "q2-willGoing",
   type: "mc",
   questionText: `
      
