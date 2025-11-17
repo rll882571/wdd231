@@ -1,5 +1,8 @@
-const questionBankBlock1 = [
-    // --- TEXTO BASE 1 (LATIN AMERICA) ---
+const questionBank = [
+
+    // --- BLOCO 1: QUESTÕES ADAPTADAS (AGORA COM 5 OPÇÕES) ---
+
+    // Pergunta 1 
     {
         id: "q1",
         type: "mc",
@@ -823,4 +826,5 @@ const questionBankBlock1 = [
             "Hint 1: Considere qual porcentagem ou número absoluto é grande o suficiente para um dos países com maior população indígena (Peru ou México)."
         ]
     }
+
 ];
