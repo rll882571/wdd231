@@ -766,5 +766,212 @@ const questionBank = [
         hints: [
             "Hint 1: Considere qual porcentagem ou número absoluto é grande o suficiente para um dos países com maior população indígena (Peru ou México)."
         ]
+    },
+    {
+        id: "q21",
+        type: "mc",
+        questionText: `
+            Text 1: Latin America
+            <br><br>
+            Latin America is a region that includes countries in the Americas where people mainly speak Spanish and Portuguese. The region has many natural resources, such as oil, gas, and minerals. Many Latin American countries depend on selling these products to other parts of the world.
+            <br><br>
+            Question: What is a major economic challenge Latin American countries face, according to the text?
+        `,
+        options: [
+            { letter: "A", text: "(A) Lack of natural resources." },
+            { letter: "B", text: "(B) Oversupply of workers." },
+            { letter: "C", text: "(C) Problems like inequality and low productivity." },
+            { letter: "D", text: "(D) Too much focus on education and innovation." },
+            { letter: "E", text: "(E) Strong global political isolation." }
+        ],
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: [
+            "Hint 1: O texto menciona problemas internos enfrentados pela região."
+        ]
+    },
+    {
+        id: "q22",
+        type: "mc",
+        questionText: `
+            Text: Latin America Oil Production
+            <br><br>
+            Venezuela has the largest proven oil reserves in the world, over 303 billion barrels. Brazil produces 2.9 million barrels per day, mostly from offshore oil fields. Argentina produces 820,000 barrels per day, with a large shale deposit called Vaca Muerta.
+            <br><br>
+            Question: What distinguishes Brazil's oil production, according to the text?
+        `,
+        options: [
+            { letter: "A", text: "(A) It has the largest proven oil reserves." },
+            { letter: "B", text: "(B) Its production is rapidly declining." },
+            { letter: "C", text: "(C) It is controlled by Ecopetrol S.A." },
+            { letter: "D", text: "(D) It produces 2.9 million barrels per day, mostly from offshore fields." },
+            { letter: "E", text: "(E) It has the Vaca Muerta shale deposit." }
+        ],
+        correctAnswer: "D",
+        videoUrl: "",
+        hints: [
+            "Hint 1: Procure a informação específica ligada ao Brasil."
+        ]
+    },
+    {
+        id: "q23",
+        type: "mc",
+        questionText: `
+            Question: What is the main characteristic of a Commodity (Comodity)?
+        `,
+        options: [
+            { letter: "A", text: "(A) A final product ready to be sold in retail stores." },
+            { letter: "B", text: "(B) A highly unique good, like a famous piece of art." },
+            { letter: "C", text: "(C) A raw material or primary agricultural product (like oil or gold) that can be traded globally." },
+            { letter: "D", text: "(D) A financial service provided by large banks." },
+            { letter: "E", text: "(E) A political alliance between countries for resource sharing." }
+        ],
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: [
+            "Hint 1: Pense em bens básicos e primários (matéria-prima)."
+        ]
+    },
+    {
+        id: "q24",
+        type: "mc",
+        questionText: `
+            Question: What is the most accurate definition of Monoculture (Monocultura)?
+        `,
+        options: [
+            { letter: "A", text: "(A) The practice of mixing many types of crops on a farm." },
+            { letter: "B", text: "(B) The cultivation of a single crop or livestock type exclusively on a large area of land." },
+            { letter: "C", text: "(C) The reliance on imports for agricultural products." },
+            { letter: "D", text: "(D) The system of growing crops only for family consumption." },
+            { letter: "E", text: "(E) The use of advanced robotic machinery in farming." }
+        ],
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: [
+            "Hint 1: O termo se refere à exclusividade de um tipo de plantio."
+        ]
+    },
+    {
+        id: "q25",
+        type: "mc",
+        questionText: `
+            Question: What does the term River Dam (Barragem de Rio) primarily describe?
+        `,
+        options: [
+            { letter: "A", text: "(A) The natural erosion process of a river bank." },
+            { letter: "B", text: "(B) The point where a river flows into a lake or ocean." },
+            { letter: "C", text: "(C) A man-made barrier built across a river to retain water, control flow, or generate power." },
+            { letter: "D", text: "(D) A system of channels used to irrigate crops far from the river." },
+            { letter: "E", text: "(E) A type of natural stone found only in riverbeds." }
+        ],
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: [
+            "Hint 1: O termo 'barragem' implica uma estrutura de contenção construída."
+        ]
+    },
+    {
+        id: "q26",
+        type: "mc",
+        questionText: `
+            Question: What is the core concept of a Drainage Basin (Bacia de Drenagem)?
+        `,
+        options: [
+            { letter: "A", text: "(A) A large reservoir used for water storage." },
+            { letter: "B", text: "(B) A river that flows directly into the sea." },
+            { letter: "C", text: "(C) The area of land where all surface water converges and drains into a single body of water (river, lake, etc.)." },
+            { letter: "D", text: "(D) An area protected from flooding by river banks." },
+            { letter: "E", text: "(E) The network of pipes used for public water supply." }
+        ],
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: [
+            "Hint 1: Pense na área que alimenta um rio principal e seus afluentes."
+        ]
+    },
+    {
+        id: "q27",
+        type: "mc",
+        questionText: `
+            Question: What is Irrigation (Irrigação)?
+        `,
+        options: [
+            { letter: "A", text: "(A) The natural rainfall that waters crops." },
+            { letter: "B", text: "(B) The process of purifying contaminated water." },
+            { letter: "C", text: "(C) The artificial supply of water to agricultural land or crops." },
+            { letter: "D", text: "(D) The technique of planting seeds in dry soil." },
+            { letter: "E", text: "(E) The system of building roads near rivers." }
+        ],
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: [
+            "Hint 1: O termo descreve a ação humana de fornecer água para o crescimento de plantas."
+        ]
+    },
+    {
+        id: "q28",
+        type: "mc",
+        questionText: `
+            Question: What describes Water Contamination (Contaminação da Água)?
+        `,
+        options: [
+            { letter: "A", text: "(A) The normal presence of minerals in river water." },
+            { letter: "B", text: "(B) The introduction of harmful chemicals, waste, or microorganisms into water sources." },
+            { letter: "C", text: "(C) The process of desalination (removing salt from water)." },
+            { letter: "D", text: "(D) The movement of water through the hydrological cycle." },
+            { letter: "E", text: "(E) The measurement of water temperature in lakes." }
+        ],
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: [
+            "Hint 1: O termo se refere à degradação da qualidade da água por elementos externos."
+        ]
+    },
+    {
+        id: "q29",
+        type: "mc",
+        questionText: `
+            Text: Indigenous Population in Latin America (Incomplete Data)
+            <br><br>
+            Data Snippets: 12.2% of the population is indigenous. 2.4% of the population, and 955,000 people. 24% of the population, around 7 million people. 0.3% of the population, around 900,000 people.
+            <br><br>
+            Question: Based on the highest percentage provided in the data snippets (24% of the population), which country is often cited as having a very high proportion of its citizens being Indigenous, matching this data?
+        `,
+        options: [
+            { letter: "A", text: "(A) Argentina (historically low indigenous population percentage)." },
+            { letter: "B", text: "(B) Brazil (historically low indigenous population percentage)." },
+            { letter: "C", text: "(C) Colombia (medium indigenous population percentage)." },
+            { letter: "D", text: "(D) Bolivia (known for having a large majority or high percentage of indigenous people)." },
+            { letter: "E", text: "(E) Peru (large absolute number, but not the highest percentage listed)." }
+        ],
+        correctAnswer: "D",
+        videoUrl: "",
+        hints: [
+            "Hint 1: Bolívia e Guatemala estão entre os países com maior percentual de população indígena na América Latina."
+        ]
+    },
+    {
+        id: "q30",
+        type: "mc",
+        questionText: `
+            Text: Latin America Oil Production
+            <br><br>
+            Venezuela has the largest proven oil reserves in the world, over 303 billion barrels. Brazil produces 2.9 million barrels per day, mostly from offshore oil fields. Argentina produces 820,000 barrels per day, with a large shale deposit called Vaca Muerta. Colombia produces just under 770,000 barrels per day, controlled by Ecopetrol S.A.
+            <br><br>
+            Question: What major natural resource, besides oil and gas, does the general text mention that Latin American countries depend on selling?
+        `,
+        options: [
+            { letter: "A", text: "(A) Automobiles." },
+            { letter: "B", text: "(B) High-tech software." },
+            { letter: "C", text: "(C) Minerals." },
+            { letter: "D", text: "(D) Pharmaceutical drugs." },
+            { letter: "E", text: "(E) Weapons technology." }
+        ],
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: [
+            "Hint 1: O Texto Base 1 lista três recursos naturais dos quais a região depende."
+        ]
     }
+    
 ];
