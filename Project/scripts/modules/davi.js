@@ -492,12 +492,7 @@ const questionBankBlock1 = [
         hints: [
             "Hint 1: Procure a preposição usada para estações do ano."
         ]
-    }
-];
-Bloco 3 (q21 a q30)
-JavaScript
-
-const questionBankBlock3 = [
+    },
     {
         id: "q21",
         type: "mc",
