@@ -440,5 +440,223 @@ const questionBank = [
         hints: [
             "Dica 1: Lembre-se que pronomes possessivos (yours) são usados sozinhos."
         ]
+    },
+    {
+        id: "q21-master",
+        type: "mc",
+        questionText: `
+            <strong>Texto Base: Posse (Possession 2)</strong>
+            <br><br>
+            A seção "Possession with indefinite pronouns" da foto explica que se pode adicionar <strong>'s</strong> a pronomes indefinidos (como <strong>anybody, everyone, something</strong>) para indicar posse.
+            <br><br>
+            <strong>Pergunta:</strong> Como você corretamente transformaria o pronome indefinido <strong>'everyone'</strong> (todos/todo mundo) em sua forma possessiva?
+        `,
+        options: [
+            { letter: "A", text: "(A) everyone's" },
+            { letter: "B", text: "(B) everyones'" },
+            { letter: "C", text: "(C) everyone is" },
+            { letter: "D", text: "(D) everyone of" },
+            { letter: "E", text: "(E) everyones" }
+        ],
+        correctAnswer: "A",
+        videoUrl: "",
+        hints: [
+            "Dica 1: O possessivo é formado adicionando-se 's, assim como em nomes singulares."
+        ]
+    },
+    {
+        id: "q22-master",
+        type: "mc",
+        questionText: `
+            <strong>Regra:</strong> A foto dá o exemplo: "Is <strong>anybody's</strong> phone?" (O telefone é de alguém?).
+            <br><br>
+            <strong>Pergunta:</strong> Qual é a frase correta que indica que a responsabilidade pertence a **'nobody'** (ninguém)?
+        `,
+        options: [
+            { letter: "A", text: "(A) That is nobody responsibility." },
+            { letter: "B", text: "(B) That is nobody's responsibility." },
+            { letter: "C", text: "(C) That is nobodies' responsibility." },
+            { letter: "D", text: "(D) That is of nobody responsibility." },
+            { letter: "E", text: "(E) That is nobody is responsibility." }
+        ],
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: [
+            "Dica 1: O pronome indefinido comporta-se como um substantivo singular para formar o possessivo."
+        ]
+    },
+    {
+        id: "q23-master",
+        type: "mc",
+        questionText: `
+            <strong>Regra:</strong> Os pronomes indefinidos que podem levar **'s** para formar o possessivo geralmente terminam em **-body** ou **-one** (ex: somebody, no one).
+            <br><br>
+            <strong>Pergunta:</strong> Qual dos pronomes indefinidos listados abaixo não pode levar **'s** para indicar posse?
+        `,
+        options: [
+            { letter: "A", text: "(A) Somebody" },
+            { letter: "B", text: "(B) Anyone" },
+            { letter: "C", text: "(C) Nothing" },
+            { letter: "D", text: "(D) Everyone" },
+            { letter: "E", text: "(E) Nobody" }
+        ],
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: [
+            "Dica 1: O possessivo com 's é usado principalmente para pessoas ou grupos de pessoas."
+        ]
+    },
+
+    // --- POSSESSIVE WITH OF (q24 - q27) ---
+
+    {
+        id: "q24-master",
+        type: "mc",
+        questionText: `
+            <strong>Regra:</strong> A foto afirma: "When talking about <strong>non-living things</strong>, we tend to use <strong>of</strong> instead of 's to indicate a kind of 'possession'." (ex: <strong>the wheel of the car</strong>).
+            <br><br>
+            <strong>Pergunta:</strong> Qual frase usa a posse de forma mais natural e correta para descrever a porta do armário (non-living thing)?
+        `,
+        options: [
+            { letter: "A", text: "(A) the cabinet's door" },
+            { letter: "B", text: "(B) the door of the cabinet" },
+            { letter: "C", text: "(C) the cabinet's is door" },
+            { letter: "D", text: "(D) the doors of cabinet" },
+            { letter: "E", text: "(E) the door cabinet" }
+        ],
+        correctAnswer: "B",
+        videoUrl: "",
+        hints: [
+            "Dica 1: Para objetos inanimados ('cabinet' - armário), a preposição 'of' é preferida."
+        ]
+    },
+    {
+        id: "q25-master",
+        type: "mc",
+        questionText: `
+            <strong>Regra:</strong> Para **coisas vivas** (pessoas e animais), o possessivo <strong>'s</strong> OU <strong>of</strong> são possíveis (ex: Brazil's president OR the president of Brazil).
+            <br><br>
+            <strong>Pergunta:</strong> Qual opção mostra o possessivo com **'s** e o possessivo com **of** usados corretamente para a frase: "A cauda do cachorro" (The dog's tail)?
+        `,
+        options: [
+            { letter: "A", text: "(A) The tail of dog OR the tail's dog" },
+            { letter: "B", text: "(B) The dogs' tail OR The tail of dogs" },
+            { letter: "C", text: "(C) The dog's tail OR The tail of the dog" },
+            { letter: "D", text: "(D) The dogs's tail OR The dog's of tail" },
+            { letter: "E", text: "(E) The dog tail OR The tail the dog" }
+        ],
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: [
+            "Dica 1: O possessivo 's no singular é 'dog's'. O uso de 'of' precisa do artigo 'the'."
+        ]
+    },
+    {
+        id: "q26-master",
+        type: "mc",
+        questionText: `
+            <strong>Regra:</strong> O texto permite o uso de <strong>'s</strong> para **países e organizações** (como grupos de pessoas), dando o exemplo de **Microsoft's global headquarters**.
+            <br><br>
+            <strong>Pergunta:</strong> Qual frase NÃO usa a regra de posse com 's ou 'of' corretamente para **'China's capital'**?
+        `,
+        options: [
+            { letter: "A", text: "(A) China's capital is Beijing." },
+            { letter: "B", text: "(B) The capital of China is Beijing." },
+            { letter: "C", text: "(C) The capital of the China is Beijing." },
+            { letter: "D", text: "(D) Beijing is the capital of China." },
+            { letter: "E", text: "(E) The capital is China's." }
+        ],
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: [
+            "Dica 1: Nomes de países geralmente não levam o artigo 'the' quando usados com 'of'."
+        ]
+    },
+    {
+        id: "q27-master",
+        type: "mc",
+        questionText: `
+            <strong>Regra:</strong> A foto expressa que <strong>o possessivo 's é INCORRETO</strong> para objetos inanimados (non-living things).
+            <br><br>
+            <strong>Pergunta:</strong> De acordo com a regra do texto, qual das seguintes formas de posse está incorreta (marcada com 'x' no material)?
+        `,
+        options: [
+            { letter: "A", text: "(A) Brazil's president" },
+            { letter: "B", text: "(B) the president of Brazil" },
+            { letter: "C", text: "(C) the wheel of the car" },
+            { letter: "D", text: "(D) the car's wheel" },
+            { letter: "E", text: "(E) Microsoft's global headquarters" }
+        ],
+        correctAnswer: "D",
+        videoUrl: "",
+        hints: [
+            "Dica 1: Procure a posse entre dois objetos inanimados, onde o 's não deve ser usado."
+        ]
+    },
+
+    // --- POSSESSIVE PRONOUN AFTER OF (q28 - q30) ---
+
+    {
+        id: "q28-master",
+        type: "mc",
+        questionText: `
+            <strong>Regra:</strong> Podemos usar um pronome possessivo (ex: mine, yours) após uma *noun phrase* + <strong>of</strong>, especialmente para falar sobre relacionamentos (ex: <strong>He's a friend of mine</strong>).
+            <br><br>
+            <strong>Pergunta:</strong> Qual frase usa corretamente esta estrutura para indicar que ela é parente de **'nós'** (our family)?
+        `,
+        options: [
+            { letter: "A", text: "(A) She is a cousin of our." },
+            { letter: "B", text: "(B) She is a cousin ours." },
+            { letter: "C", text: "(C) She is a cousin of ours." },
+            { letter: "D", text: "(D) She is the cousin of us." },
+            { letter: "E", text: "(E) She is a cousin of we." }
+        ],
+        correctAnswer: "C",
+        videoUrl: "",
+        hints: [
+            "Dica 1: A forma correta exige o pronome possessivo 'ours' após 'of'."
+        ]
+    },
+    {
+        id: "q29-master",
+        type: "mc",
+        questionText: `
+            <strong>Regra:</strong> A estrutura *noun phrase* + <strong>of</strong> + <strong>possessive pronoun</strong> (ex: **a friend of mine**) é usada para indicar um membro de um grupo de pessoas ou coisas.
+            <br><br>
+            <strong>Pergunta:</strong> Como você diria corretamente "um dos seus problemas" (o problema pertence a 'you') usando essa estrutura?
+        `,
+        options: [
+            { letter: "A", text: "(A) one of your problems" },
+            { letter: "B", text: "(B) one of yours problems" },
+            { letter: "C", text: "(C) one problem of you" },
+            { letter: "D", text: "(D) one of yours" },
+            { letter: "E", text: "(E) one your problem" }
+        ],
+        correctAnswer: "D",
+        videoUrl: "",
+        hints: [
+            "Dica 1: O pronome possessivo deve estar no final, substituindo o substantivo ('problems'). A frase correta seria 'one of yours'."
+        ]
+    },
+    {
+        id: "q30-master",
+        type: "mc",
+        questionText: `
+            <strong>Contexto:</strong> O último exemplo da foto é: "Lara is the daughter of Fernando, the company's CEO."
+            <br><br>
+            <strong>Pergunta:</strong> Na frase, a posse de <strong>'company's CEO'</strong> usa <strong>'s</strong> porque a empresa (organização) é vista como um quê, conforme a regra da foto?
+        `,
+        options: [
+            { letter: "A", text: "(A) Um objeto inanimado." },
+            { letter: "B", text: "(B) Um nome clássico." },
+            { letter: "C", text: "(C) Um pronome indefinido." },
+            { letter: "D", text: "(D) Um grupo de pessoas." },
+            { letter: "E", text: "(E) Um nome plural irregular." }
+        ],
+        correctAnswer: "D",
+        videoUrl: "",
+        hints: [
+            "Dica 1: O texto diz que 'coisas vivas, incluindo organizações, podem ser vistas como...'"
+        ]
     }
 ];
