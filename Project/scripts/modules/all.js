@@ -10,7 +10,8 @@ const studentDatabase = {
     "luiz": { name: "Luiz", password: "456" },
     "sophia": { name: "Sophia", password: "789" },
     "davi": { name: "Davi", password: "2025" },
-    "aluno": { name: "Ester da TUF", password: "2025" }
+    "aluno": { name: "Ester da TUF", password: "2025" },
+    "master": { name: "Bora tirar 10! Luigi", password: "2025" }
     
     // 👆 Fim da lista de alunos 👆
     // (Lembre-se: o último aluno não tem vírgula no final)
