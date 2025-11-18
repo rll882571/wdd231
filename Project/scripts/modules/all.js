@@ -17,7 +17,7 @@ const studentDatabase = {
     // (Lembre-se: o último aluno não tem vírgula no final)
 };
 
-// ADICIONADO: Função de Login
+// ADICIONADO: Função de Logi
 function handleLogin() {
     let username = prompt("Digite seu usuário:");
     // Se o usuário cancelar, o loop continua
