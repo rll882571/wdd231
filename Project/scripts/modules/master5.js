@@ -12,7 +12,7 @@ const questionBank = [
             <br><br>
             Regras Chave para o Inglês:
             <ul>
-                <li>O Prefixo vem *antes* do radical e, tipicamente, altera o **significado**. Por exemplo, **un-** e **dis-** indicam o oposto (negativo), como em *unethical*. O prefixo **re-** indica **repetição**, como em *retake*.</li>
+                <li>O Prefixo vem antes do radical e, tipicamente, altera o **significado**. Por exemplo, **un-** e **dis-** indicam o oposto (negativo), como em *unethical*. O prefixo **re-** indica **repetição**, como em *retake*.</li>
                 <li>O Sufixo vem *depois* do radical e tem a função primária de mudar a **classe gramatical** (Part of Speech).</li>
             </ul>
 
@@ -21,7 +21,7 @@ const questionBank = [
                 <li>O sufixo <strong>-tion</strong> cria Substantivos (Noun), como em <strong>introduction</strong>.</li>
                 <li>Sufixos como -fy e -ize criam Verbos (Verb), como em simplify e emphasize.</li>
                 <li>Sufixos como -ous e -able** criam Adjetivos (Adjective), como em generous e comfortable.</li>
-                <li>O sufixo **-ly** cria **Advérbios** (Adverb), como em *normally*.</li>
+                <li>O sufixo -ly cria Advérbios (Adverb), como em normally.</li>
             </ul>
 
             <br><br>
@@ -44,7 +44,7 @@ const questionBank = [
         id: "q2-master",
         type: "mc",
         questionText: `
-            Pergunta: Qual é o significado do prefixo **mis-** quando adicionado a uma palavra, como em **misbehave**?
+            Pergunta: Qual é o significado do prefixo mis- quando adicionado a uma palavra, como em **misbehave**?
         `,
         options: [
             { letter: "A", text: "(A) Novamente (again)." },
@@ -63,7 +63,7 @@ const questionBank = [
         id: "q3-master",
         type: "mc",
         questionText: `
-            Pergunta: Se você quer expressar o oposto de 'ethical' (ético), qual prefixo de **negação** (negative) deve ser adicionado para formar 'unethical'?
+            Pergunta: Se você quer expressar o oposto de 'ethical' (ético), qual prefixo de negação  deve ser adicionado?
         `,
         options: [
             { letter: "A", text: "(A) re-" },
@@ -82,7 +82,7 @@ const questionBank = [
         id: "q4-master",
         type: "mc",
         questionText: `
-            Pergunta: Qual sufixo deve ser usado para formar o Verbo 'Simplify' a partir do adjetivo 'Simple'?
+            Pergunta: Qual sufixo deve ser usado para formar o Verbo 'Simplificar' a partir do adjetivo 'Simple'?
         `,
         options: [
             { letter: "A", text: "(A) -tion" },
@@ -101,14 +101,14 @@ const questionBank = [
         id: "q5-master",
         type: "mc",
         questionText: `
-            Pergunta: Qual é a classe gramatical (Part of Speech) da palavra 'normally', formada pelo sufixo -ly?
+            Pergunta: Qual é a classe gramatical da palavra 'normally', formada pelo sufixo -ly?
         `,
         options: [
-            { letter: "A", text: "(A) Adjetivo (Adjective)." },
-            { letter: "B", text: "(B) Advérbio (Adverb)." },
+            { letter: "A", text: "(A) Adjetivo ." },
+            { letter: "B", text: "(B) Advérbio ." },
             { letter: "C", text: "(C) Substantivo (Noun)." },
-            { letter: "D", text: "(D) Verbo (Verb)." },
-            { letter: "E", text: "(E) Preposição (Preposition)." }
+            { letter: "D", text: "(D) Verbo ." },
+            { letter: "E", text: "(E) Preposição ." }
         ],
         correctAnswer: "B",
         videoUrl: "",
@@ -125,7 +125,7 @@ const questionBank = [
         questionText: `
             Cenário: Você precisa dar nome ao ato de 'introduzir'. Você tem o verbo 'Introduce' e precisa transformá-lo em um Substantivo (Noun).
             <br><br>
-            Pergunta: Qual sufixo de substantivo é usado para formar a palavra 'Introduction'?
+            Pergunta: Qual sufixo de substantivo é usado para formar a palavra?
         `,
         options: [
             { letter: "A", text: "(A) -ly" },
@@ -167,7 +167,7 @@ const questionBank = [
         questionText: `
             Cenário: O professor atribui uma tarefa que você deve 'retake' (refazer).
             <br><br>
-            Pergunta: Qual o significado do prefixo **re-** em 'retake', conforme as regras?
+            Pergunta: Qual o significado do prefixo re- em 'retake', conforme as regras?
         `,
         options: [
             { letter: "A", text: "(A) Não ou oposto (Not or opposite)." },
@@ -186,9 +186,9 @@ const questionBank = [
         id: "q9-master",
         type: "mc",
         questionText: `
-            Cenário: Você precisa descrever uma pessoa com muita 'generosity' (generosidade), usando o adjetivo 'generous'.
+            Cenário: Você precisa descrever uma pessoa com muita 'generosity' (generosidade), usando o adjetivo?
             <br><br>
-            Pergunta: Qual sufixo é usado para criar o adjetivo 'generous'?
+            Pergunta: Qual sufixo é usado para criar o adjetivo?
         `,
         options: [
             { letter: "A", text: "(A) -ize" },
@@ -207,9 +207,9 @@ const questionBank = [
         id: "q10-master",
         type: "mc",
         questionText: `
-            Cenário: Você precisa descrever um objeto que **pode ser** confortado, usando o adjetivo 'comfortable'.
+            Cenário: Você precisa descrever um objeto que pode ser confortavel.
             <br><br>
-            Pergunta: Qual sufixo de adjetivo, com o sentido de 'capaz de' ou 'possível de', é usado para formar a palavra 'comfortable'?
+            Pergunta: Qual sufixo de adjetivo, com o sentido de 'capaz de' ou 'possível de', é usado para formar a palavra?
         `,
         options: [
             { letter: "A", text: "(A) -ize" },
@@ -274,9 +274,9 @@ const questionBank = [
         id: "q13-master",
         type: "mc",
         questionText: `
-            <strong>Regra:</strong> Para substantivos no plural que **já terminam em '-s'** (ex: students), utiliza-se apenas o apóstrofo (<strong>'</strong>) após o 's' para indicar posse.
+            <strong>Regra:</strong> Para substantivos no plural que já terminam em '-s' (ex: students), utiliza-se apenas o apóstrofo (<strong>'</strong>) após o 's' para indicar posse.
             <br><br>
-            <strong>Pergunta:</strong> Qual forma indica corretamente que os livros pertencem a **'three teachers'** (três professores)?
+            <strong>Pergunta:</strong> Qual forma indica corretamente que os livros pertencem a 'three teachers' (três professores)?
         `,
         options: [
             { letter: "A", text: "(A) three teachers's books" },
@@ -297,7 +297,7 @@ const questionBank = [
         questionText: `
             <strong>Regra:</strong> A foto indica que se usa um apóstrofo (<strong>'</strong>) após nomes clássicos ou literários que terminam em '-s', como em **Dickens' novels** ou **Achilles' adventures**.
             <br><br>
-            <strong>Pergunta:</strong> Como você indica corretamente que a obra pertence a **'Socrates'**?
+            <strong>Pergunta:</strong> Como você indica corretamente que a obra pertence a 'Socrates'?
         `,
         options: [
             { letter: "A", text: "(A) Socrates's work" },
