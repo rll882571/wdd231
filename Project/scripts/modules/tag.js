@@ -390,6 +390,22 @@ const questionBank = [
     ],
     correctAnswer: "B",
     hints: ["Dica: Exception! 'I am' → 'aren’t I?'"]
+},
+{
+    id: "q_strategy_tip",
+    type: "mc",
+    questionText: `
+        Uma boa prática na hora da prova para distinguir se você deve usar o Simple Future (Will) ou o Future Continuous (Will be + -ing)é olhar se...
+    `,
+    options: [
+        { letter: "A", text: "(A) ...a frase expressa uma promessa ou oferta (neste caso, usa-se sempre o Continuous).", isCorrect: false, rationale: "Incorreto. Promessas e ofertas pedem o Simple Future (Will)." },
+        { letter: "B", text: "(B) ...a frase menciona um <strong>horário ou momento específico</strong> (ex: 'At 8 PM', 'This time tomorrow') indicando que a ação estará em andamento.", isCorrect: true, rationale: "Perfeito! Essa é a chave. Se tem hora marcada para a ação estar 'rolando', é Future Continuous." },
+        { letter: "C", text: "(C) ...o verbo principal é irregular (verbos irregulares não aceitam o Simple Future).", isCorrect: false, rationale: "Mito. O tipo do verbo não define o tempo verbal." },
+        { letter: "D", text: "(D) ...a frase está na negativa (frases negativas preferem o Continuous).", isCorrect: false, rationale: "A negativa (won't) funciona igualmente para os dois tempos." }
+    ],
+    correctAnswer: "B",
+    videoUrl: "",
+    hints: ["Dica: Pergunte para a frase: 'Você é apenas um fato futuro ou um filme rodando numa hora exata?'"]
 }
 
 ];

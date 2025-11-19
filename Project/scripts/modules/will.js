@@ -33,7 +33,7 @@ const questionBank = [
     {
     id: "q2-futureCont",
     type: "mc",
-    questionText: `Qual frase descreve uma ação que estará <strong>em andamento</strong> (em progresso) em um momento específico no futuro?`,
+    questionText: `Qual frase descreve uma ação que estará em andamento em um momento específico no futuro?`,
     options: [
         { letter: "A", text: "(A) I will help you with your bags." },
         { letter: "B", text: "(B) Look at those clouds! It is going to rain." },
@@ -50,605 +50,544 @@ const questionBank = [
     ]
 },
 
-    // Pergunta 16
-    {
-        id: "q16-willGoing",
+   {
+        id: "q1",
         type: "mc",
-        questionText: `
-            Look at those dark clouds! It ___ rain in a few minutes.
-        `,
+        questionText: `Qual é a principal diferença de uso entre <strong>Simple Future (Will)</strong> e <strong>Future Continuous (Will be + ing)</strong>?`,
         options: [
-            { letter: "A", text: "(A) will" },
-            { letter: "B", text: "(B) is going to" },
-            { letter: "C", text: "(C) might" },
-            { letter: "D", text: "(D) will be" }
+            { letter: "A", text: "(A) Simple Future é para ações em progresso; Future Continuous é para promessas.", isCorrect: false, rationale: "Inverso. Continuous é para progresso." },
+            { letter: "B", text: "(B) Simple Future é para fatos/decisões; Future Continuous é para ações acontecendo em um momento específico.", isCorrect: true, rationale: "Exato! 'Will' é a foto, 'Will be -ing' é o filme rodando." },
+            { letter: "C", text: "(C) Não há diferença, podem ser usados sempre da mesma forma.", isCorrect: false, rationale: "Há diferença de sentido (aspecto) importante." },
+            { letter: "D", text: "(D) Future Continuous só é usado para o passado.", isCorrect: false, rationale: "O nome já diz: Future Continuous." }
         ],
         correctAnswer: "B",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Use 'going to' quando há evidências no presente.",
-            "Dica 2: Nuvens escuras indicam previsão baseada em evidência.",
-            "Dica 3: 'Will' seria usado para opinião, não evidência."
-        ]
+        hints: ["Dica: Lembre-se do exemplo do relógio: às 20h (ponto exato), a ação estará 'rolando'."]
     },
-
     {
-        id: "q17-willGoing",
+        id: "q2",
         type: "mc",
-        questionText: `
-            The phone is ringing. I ___ answer it.
-        `,
+        questionText: `Complete a frase: "Don't call me at 8 PM tonight. I ________ my favorite show."`,
         options: [
-            { letter: "A", text: "(A) am going to" },
-            { letter: "B", text: "(B) will" },
-            { letter: "C", text: "(C) am about to" },
-            { letter: "D", text: "(D) will be" }
+            { letter: "A", text: "(A) will watch", isCorrect: false, rationale: "Soa como uma decisão tomada agora, não justifica não poder atender." },
+            { letter: "B", text: "(B) will be watching", isCorrect: true, rationale: "Perfeito! A ação estará em andamento às 20h, por isso você não pode atender." },
+            { letter: "C", text: "(C) am watch", isCorrect: false, rationale: "Erro gramatical." },
+            { letter: "D", text: "(D) will be watch", isCorrect: false, rationale: "Faltou o -ING." }
         ],
         correctAnswer: "B",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Use 'will' para decisões feitas no momento da fala.",
-            "Dica 2: O telefone tocar é algo inesperado.",
-            "Dica 3: 'Going to' exige plano prévio, que não existe aqui."
-        ]
+        hints: ["Dica: Se você não pode atender o telefone, é porque estará 'no meio' da ação."]
     },
-
     {
-        id: "q18-willGoing",
+        id: "q3",
         type: "mc",
-        questionText: `
-            Carla bought tickets yesterday; she ___ fly to Lisbon next Friday.
-        `,
+        questionText: `Analise as frases abaixo e encontre a única que contém um <strong>ERRO</strong> gramatical:`,
         options: [
-            { letter: "A", text: "(A) will fly" },
-            { letter: "B", text: "(B) is going to fly" },
-            { letter: "C", text: "(C) flies" },
-            { letter: "D", text: "(D) is about to fly" }
+            { letter: "A", text: "(A) She will be working late.", isCorrect: false, rationale: "Correta." },
+            { letter: "B", text: "(B) They will be travel to Spain.", isCorrect: true, rationale: "Achou! Deveria ser 'traveling'. Depois de 'will be', o verbo precisa de -ING." },
+            { letter: "C", text: "(C) Will you be staying here?", isCorrect: false, rationale: "Correta." },
+            { letter: "D", text: "(D) I won't be sleeping when you arrive.", isCorrect: false, rationale: "Correta." }
         ],
         correctAnswer: "B",
-        videoUrl: "",
-        hints: [
-            "Dica 1: 'Bought tickets' = plano já decidido antes.",
-            "Dica 2: 'Going to' é usado para planos organizados.",
-            "Dica 3: 'Will' seria usado para previsão ou decisão instantânea."
-        ]
+        hints: ["Dica: A estrutura do Future Continuous exige três peças: Will + Be + Verbo com ING."]
     },
+    {
+        id: "q4",
+        type: "mc",
+        questionText: `Qual frase expressa melhor uma <strong>decisão tomada no momento da fala</strong> (sem planejamento)?`,
+        options: [
+            { letter: "A", text: "(A) I am going to buy a car next year.", isCorrect: false, rationale: "Plano longo prazo." },
+            { letter: "B", text: "(B) Look! It's raining. I'll close the window.", isCorrect: true, rationale: "Isso! Reação imediata ao fato de estar chovendo." },
+            { letter: "C", text: "(C) This time tomorrow I will be flying.", isCorrect: false, rationale: "Ação em progresso agendada." },
+            { letter: "D", text: "(D) The train leaves at 9 PM.", isCorrect: false, rationale: "Horário fixo (timetable)." }
+        ],
+        correctAnswer: "B",
+        hints: ["Dica: Procure uma reação rápida a algo que acabou de acontecer."]
+    },
+    {
+        id: "q5",
+        type: "mc",
+        questionText: `Complete: "This time next week, we ________ on the beach in Rio."`,
+        options: [
+            { letter: "A", text: "(A) will lie", isCorrect: false, rationale: "Will simples não captura a ideia de 'estar lá curtindo' naquele momento exato." },
+            { letter: "B", text: "(B) are lying", isCorrect: false, rationale: "Present Continuous não encaixa tão bem com 'This time next week'." },
+            { letter: "C", text: "(C) will be lying", isCorrect: true, rationale: "Exato! 'This time...' é o gatilho clássico para Future Continuous." },
+            { letter: "D", text: "(D) going to lie", isCorrect: false, rationale: "Faltou o verbo 'be' auxiliar." }
+        ],
+        correctAnswer: "C",
+        hints: ["Dica: A expressão 'This time next week' pede uma ação contínua/imaginada."]
+    },
+    {
+        id: "q6",
+        type: "mc",
+        questionText: `Analise a frase: "I promise I will be helpyou." O que está errado?`,
+        options: [
+            { letter: "A", text: "(A) Nada, a frase está certa.", isCorrect: false, rationale: "Está errada." },
+            { letter: "B", text: "(B) Deveria ser 'I will help' (Simple Future).", isCorrect: true, rationale: "Correto. Para promessas usamos 'Will' + verbo base. 'Will be help' não existe." },
+            { letter: "C", text: "(C) Deveria ser 'I am helping'.", isCorrect: false, rationale: "Não usamos Present Continuous para promessas." },
+            { letter: "D", text: "(D) Deveria ser 'I help'.", isCorrect: false, rationale: "Presente simples não é comum para promessas de futuro." }
+        ],
+        correctAnswer: "B",
+        hints: ["Dica: Promessas são diretas: Eu vou ajudar (I will help). Não precisa do 'be'."]
+    },
+    
 
     {
-        id: "q19-willGoing",
+        id: "q9",
         type: "mc",
-        questionText: `
-            You look exhausted. I ___ carry your suitcase.
-        `,
+        questionText: `Transforme a frase para a negativa: "He will be sleeping."`,
         options: [
-            { letter: "A", text: "(A) will" },
-            { letter: "B", text: "(B) am" },
-            { letter: "C", text: "(C) am going to" },
-            { letter: "D", text: "(D) will be" }
+            { letter: "A", text: "(A) He will be not sleeping.", isCorrect: false, rationale: "O 'not' vem logo após o primeiro auxiliar (will)." },
+            { letter: "B", text: "(B) He won't be sleeping.", isCorrect: true, rationale: "Isso! Won't é a contração de Will not." },
+            { letter: "C", text: "(C) He not will be sleeping.", isCorrect: false, rationale: "Ordem errada." },
+            { letter: "D", text: "(D) He doesn't will be sleeping.", isCorrect: false, rationale: "Não se usa doesn't com will." }
+        ],
+        correctAnswer: "B",
+        hints: ["Dica: O 'not' sempre ataca o 'Will'. Pode virar 'Will not' ou 'Won't'."]
+    },
+    
+    {
+        id: "q11",
+        type: "mc",
+        questionText: `Sobre a ortografia do verbo com -ING no Future Continuous, qual opção está correta?`,
+        options: [
+            { letter: "A", text: "(A) He will be runing.", isCorrect: false, rationale: "Run -> Running (dobra o N)." },
+            { letter: "B", text: "(B) She will be makeing.", isCorrect: false, rationale: "Make -> Making (tira o E)." },
+            { letter: "C", text: "(C) They will be studying.", isCorrect: true, rationale: "Correto! Study apenas ganha -ing." },
+            { letter: "D", text: "(D) We will be stoping.", isCorrect: false, rationale: "Stop -> Stopping (dobra o P)." }
+        ],
+        correctAnswer: "C",
+        hints: ["Dica: Verbos terminados em 'y' apenas ganham 'ing'. Verbos CVC dobram a consoante."]
+    },
+    
+    {
+        id: "q13",
+        type: "mc",
+        questionText: `Complete: "Tomorrow at midnight, the whole city ________."`,
+        options: [
+            { letter: "A", text: "(A) will be sleeping", isCorrect: true, rationale: "À meia-noite (horário específico), a ação de dormir estará em progresso." },
+            { letter: "B", text: "(B) will sleep", isCorrect: false, rationale: "Parece que a cidade inteira vai decidir dormir nesse segundo." },
+            { letter: "C", text: "(C) is sleeping", isCorrect: false, rationale: "Present Continuous não é ideal para previsão distante." },
+            { letter: "D", text: "(D) sleeps", isCorrect: false, rationale: "Rotina (Simple Present), possível, mas menos provável que a ideia de 'estar dormindo'." }
         ],
         correctAnswer: "A",
-        videoUrl: "",
-        hints: [
-            "Dica 1: 'Will' é usado para ofertas espontâneas.",
-            "Dica 2: O falante acabou de decidir ajudar.",
-            "Dica 3: Não havia plano prévio, então não usamos 'going to'."
-        ]
+        hints: ["Dica: Meia-noite é um ponto no tempo. O que estará acontecendo nesse ponto?"]
     },
-
     {
-        id: "q20-willGoing",
+        id: "q14",
         type: "mc",
-        questionText: `
-            Watch out! The glass ___ fall off the edge any second now.
-        `,
+        questionText: `Analise as 4 frases e identifique a que está <strong>ERRADA</strong>:`,
         options: [
-            { letter: "A", text: "(A) will" },
-            { letter: "B", text: "(B) is going to" },
-            { letter: "C", text: "(C) might" },
-            { letter: "D", text: "(D) was about to" }
+            { letter: "A", text: "(A) Will you come to the party?", isCorrect: false, rationale: "Correta (Convite/Pergunta)." },
+            { letter: "B", text: "(B) I will be wait for you.", isCorrect: true, rationale: "Erro! Deveria ser 'waiting'. Faltou o ING." },
+            { letter: "C", text: "(C) She won't be joining us.", isCorrect: false, rationale: "Correta." },
+            { letter: "D", text: "(D) I think it'll rain.", isCorrect: false, rationale: "Correta." }
         ],
         correctAnswer: "B",
-        videoUrl: "",
-        hints: [
-            "Dica 1: O copo já está prestes a cair — evidência clara.",
-            "Dica 2: 'Going to' é usado quando algo parece prestes a acontecer.",
-            "Dica 3: 'Will' não é usado quando há evidência física presente."
-        ]
+        hints: ["Dica: Will + Be + Verbo SEM ing = ERRO GRAVE."]
     },
-
     {
-        id: "q21-willGoing",
+        id: "q15",
         type: "mc",
-        questionText: `
-            I don’t think they ___ win the match tonight.
-        `,
+        questionText: `O que significa "Shall" em perguntas como "Shall we go?"`,
         options: [
-            { letter: "A", text: "(A) are going to" },
-            { letter: "B", text: "(B) will" },
-            { letter: "C", text: "(C) might" },
-            { letter: "D", text: "(D) are about to" }
+            { letter: "A", text: "(A) É uma gíria de rua.", isCorrect: false, rationale: "É formal." },
+            { letter: "B", text: "(B) Uma sugestão formal (equivalente a 'Let's go?').", isCorrect: true, rationale: "Exato. Usado com I e We." },
+            { letter: "C", text: "(C) Uma obrigação agressiva.", isCorrect: false, rationale: "Não." },
+            { letter: "D", text: "(D) Futuro do pretérito.", isCorrect: false, rationale: "Não." }
         ],
         correctAnswer: "B",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Quando expressamos opinião, usamos 'will'.",
-            "Dica 2: Não há plano ou evidência — é só uma previsão pessoal.",
-            "Dica 3: 'Going to' seria para algo baseado em evidências presentes."
-        ]
+        hints: ["Dica: É aquela palavra chique usada para convidar alguém para dançar ou sair."]
     },
-
     {
-        id: "q22-willGoing",
+        id: "q16",
         type: "mc",
-        questionText: `
-            We’ve decided: we ___ paint the living room this weekend.
-        `,
+        questionText: `Complete com a melhor opção: "I can't go out at 7 PM because I ________ my homework."`,
         options: [
-            { letter: "A", text: "(A) are going to" },
-            { letter: "B", text: "(B) will" },
-            { letter: "C", text: "(C) will be" },
-            { letter: "D", text: "(D) will have" }
-        ],
-        correctAnswer: "A",
-        videoUrl: "",
-        hints: [
-            "Dica 1: A decisão já foi tomada antes da fala.",
-            "Dica 2: 'Going to' = planos ou intenções já decididos.",
-            "Dica 3: 'Will' é para decisões no momento."
-        ]
-    },
-
-    {
-        id: "q23-willGoing",
-        type: "mc",
-        questionText: `
-            It’s very hot in here. I ___ open the window.
-        `,
-        options: [
-            { letter: "A", text: "(A) will" },
-            { letter: "B", text: "(B) will be" },
-            { letter: "C", text: "(C) am" },
-            { letter: "D", text: "(D) was going to" }
-        ],
-        correctAnswer: "A",
-        videoUrl: "",
-        hints: [
-            "Dica 1: 'Will' é usado para ações decididas espontaneamente.",
-            "Dica 2: Abrir a janela é uma reação imediata ao calor.",
-            "Dica 3: 'Going to' exigiria um plano prévio."
-        ]
-    },
-
-    {
-        id: "q24-willGoing",
-        type: "mc",
-        questionText: `
-            Diego has packed his bags; he ___ leave at dawn.
-        `,
-        options: [
-            { letter: "A", text: "(A) will" },
-            { letter: "B", text: "(B) is going to" },
-            { letter: "C", text: "(C) leaves" },
-            { letter: "D", text: "(D) will be" }
+            { letter: "A", text: "(A) will do", isCorrect: false, rationale: "Simple Future não justifica a impossibilidade tanto quanto o Continuous." },
+            { letter: "B", text: "(B) will be doing", isCorrect: true, rationale: "Perfeito. Estarei ocupado fazendo isso." },
+            { letter: "C", text: "(C) do", isCorrect: false, rationale: "Gramaticalmente fraco para futuro." },
+            { letter: "D", text: "(D) doing", isCorrect: false, rationale: "Falta auxiliar." }
         ],
         correctAnswer: "B",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Ele já fez as malas — evidência concreta.",
-            "Dica 2: 'Going to' indica plano prévio.",
-            "Dica 3: 'Will' seria apenas previsão."
-        ]
+        hints: ["Dica: Use o Continuous para dar 'desculpas' ou explicar por que estará ocupado."]
     },
-
     {
-        id: "q25-willGoing",
+        id: "q17",
         type: "mc",
-        questionText: `
-            Don’t worry, I ___ help you with your homework later.
-        `,
+        questionText: `Analise: "Next year I will be to study." Onde está o erro?`,
         options: [
-            { letter: "A", text: "(A) will" },
-            { letter: "B", text: "(B) am going to" },
-            { letter: "C", text: "(C) will be helping" },
-            { letter: "D", text: "(D) am helping" }
+            { letter: "A", text: "(A) No 'Next year'.", isCorrect: false, rationale: "Tempo ok." },
+            { letter: "B", text: "(B) No uso do 'will'.", isCorrect: false, rationale: "Will ok." },
+            { letter: "C", text: "(C) No 'to study'. Deveria ser 'studying'.", isCorrect: true, rationale: "Isso. Não se usa infinitivo com 'to' no Future Continuous." },
+            { letter: "D", text: "(D) Não tem erro.", isCorrect: false, rationale: "Tem erro sim." }
         ],
-        correctAnswer: "A",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Ofertas usam 'will'.",
-            "Dica 2: A decisão é tomada no momento.",
-            "Dica 3: 'Going to' exige planejamento anterior."
-        ]
+        correctAnswer: "C",
+        hints: ["Dica: Will be + TO + verbo não existe."]
     },
-
+    
     {
-        id: "q26-willGoing",
+        id: "q19",
         type: "mc",
-        questionText: `
-            According to the official forecast, it ___ snow tomorrow morning.
-        `,
+        questionText: `Complete: "By the time you get home, I ________ dinner." (Foco na ação terminada, Future Perfect - Bônus!)`,
         options: [
-            { letter: "A", text: "(A) might" },
-            { letter: "B", text: "(B) will" },
-            { letter: "C", text: "(C) is about to" },
-            { letter: "D", text: "(D) could" }
+            { letter: "A", text: "(A) will be cooking", isCorrect: false, rationale: "Isso significaria que você ainda estaria cozinhando." },
+            { letter: "B", text: "(B) will have cooked", isCorrect: true, rationale: "Bônus! 'By the time' pede Future Perfect (terei cozinhado/terminado)." },
+            { letter: "C", text: "(C) cooked", isCorrect: false, rationale: "Passado." },
+            { letter: "D", text: "(D) will cook", isCorrect: false, rationale: "Simples." }
         ],
         correctAnswer: "B",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Previsões oficiais usam 'will'.",
-            "Dica 2: Indica certeza futura baseada em dados.",
-            "Dica 3: 'Going to' não é usado sem evidência visual."
-        ]
+        hints: ["Dica: Se tem 'By the time' (quando chegar, já acabou), a estrutura muda para 'Will have...' (mas se não souber, chute a mais complexa!)."]
     },
-
     {
-        id: "q27-willGoing",
+        id: "q20",
+        type: "mc",
+        questionText: `Desafio final: Qual frase está 100% correta?`,
+        options: [
+            { letter: "A", text: "(A) At 10 PM I will sleeping.", isCorrect: false, rationale: "Faltou 'be'." },
+            { letter: "B", text: "(B) At 10 PM I will be sleep.", isCorrect: false, rationale: "Faltou 'ing'." },
+            { letter: "C", text: "(C) At 10 PM I will be sleeping.", isCorrect: true, rationale: "Correta!" },
+            { letter: "D", text: "(D) At 10 PM I am sleeping.", isCorrect: false, rationale: "Menos natural para previsão exata distante, embora possível no coloquial, C é a gramática padrão." }
+        ],
+        correctAnswer: "C",
+        hints: ["Dica: A fórmula completa: Sujeito + Will + Be + Verbo+ing."]
+    },
+    {
+        id: "q21",
         type: "mc",
         questionText: `
-            Maria and João ___ get married in September; the invitations are out.
+            De acordo com o discurso de Major, qual é a condição de vida dos animais?
         `,
         options: [
-            { letter: "A", text: "(A) will" },
-            { letter: "B", text: "(B) are going to" },
-            { letter: "C", text: "(C) will be getting" },
-            { letter: "D", text: "(D) were going to" }
+            { letter: "A", text: "(A) Vivem em conforto e trabalham pouco, morrendo de velhice.", isCorrect: false, rationale: "O texto afirma o oposto: 'vivemos na miséria, trabalhamos como condenados e morremos jovens'." },
+            { letter: "B", text: "(B) Recebem o suficiente para se manterem vivos e vivem como escravos.", isCorrect: true, rationale: "O texto diz que recebem 'apenas o suficiente para nos manter vivos' e que 'vivemos como escravos'." },
+            { letter: "C", text: "(C) Produzem muito e a maior parte é distribuída igualmente entre eles.", isCorrect: false, rationale: "A maior parte é roubada pelos humanos ('roubam quase todos os produtos do nosso trabalho')." },
+            { letter: "D", text: "(D) Morrem jovens por causa da falta de trabalho e excesso de comida.", isCorrect: false, rationale: "Morrem jovens devido à miséria e ao trabalho excessivo ('trabalhamos como condenados')." }
         ],
         correctAnswer: "B",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Convites enviados = plano concreto.",
-            "Dica 2: 'Going to' expressa planos definidos.",
-            "Dica 3: 'Will' é previsão, não plano real."
-        ]
+        hints: ["Dica: Procure pelas palavras 'miséria' e 'escravos' no primeiro parágrafo."]
     },
 
+    // Pergunta 22: O Inimigo Principal
     {
-        id: "q28-willGoing",
+        id: "q22",
         type: "mc",
         questionText: `
-            I’m sure you ___ love this movie.
+            Quem é identificado por Major como <strong>o único inimigo real</strong> dos animais?
         `,
         options: [
-            { letter: "A", text: "(A) will" },
-            { letter: "B", text: "(B) might" },
-            { letter: "C", text: "(C) could" },
-            { letter: "D", text: "(D) are about to" }
+            { letter: "A", text: "(A) O trabalho excessivo e a miséria.", isCorrect: false, rationale: "Esses são sintomas, não a causa principal." },
+            { letter: "B", text: "(B) As expressões de tempo vagas no futuro.", isCorrect: false, rationale: "Esta opção refere-se ao tema do bloco anterior de questões, não ao texto de Animal Farm." },
+            { letter: "C", text: "(C) O Homem.", isCorrect: true, rationale: "O texto afirma explicitamente: 'O Homem é o único inimigo real que temos'." },
+            { letter: "D", text: "(D) O porco que se queixa de sua idade.", isCorrect: false, rationale: "Major, o porco, está fazendo o discurso e diz que não se queixa." }
         ],
-        correctAnswer: "A",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Previsões baseadas em certeza usam 'will'.",
-            "Dica 2: O falante está confiante.",
-            "Dica 3: 'Going to' não combina com opinião pessoal forte."
-        ]
+        correctAnswer: "C",
+        hints: ["Dica: O inimigo é aquele que 'consome sem produzir'."]
     },
 
+    // Pergunta 23: O Motivo da Miséria
     {
-        id: "q29-willGoing",
+        id: "q23",
         type: "mc",
         questionText: `
-            Paulo hasn’t studied at all; he ___ fail the exam.
+            Qual é a causa direta, segundo o texto, da 'condição miserável' dos animais?
         `,
         options: [
-            { letter: "A", text: "(A) is going to" },
-            { letter: "B", text: "(B) will" },
-            { letter: "C", text: "(C) might" },
-            { letter: "D", text: "(D) is" }
+            { letter: "A", text: "(A) A inabilidade de apanhar coelhos.", isCorrect: false, rationale: "Esta é uma inabilidade do Homem, não a causa da miséria dos animais." },
+            { letter: "B", text: "(B) O fato de viverem sem força para se manterem de pé.", isCorrect: false, rationale: "Essa é uma consequência do trabalho, não a causa." },
+            { letter: "C", text: "(C) O roubo de quase todos os produtos do trabalho animal pelos humanos.", isCorrect: true, rationale: "O texto diz: 'Porque os seres humanos roubam quase todos os produtos do nosso trabalho'." },
+            { letter: "D", text: "(D) O uso incorreto do Future Continuous.", isCorrect: false, rationale: "Esta opção não tem relação com o texto de Animal Farm." }
         ],
-        correctAnswer: "A",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Falta de estudo = evidência.",
-            "Dica 2: Evidências usam 'going to'.",
-            "Dica 3: 'Will' seria opinião sem base."
-        ]
+        correctAnswer: "C",
+        hints: ["Dica: A resposta está na linha que começa com 'Por que estamos nesta condição miserável?'"]
     },
 
+    // Pergunta 24: Definição do Homem
     {
-        id: "q30-willGoing",
+        id: "q24",
         type: "mc",
         questionText: `
-            I forgot my wallet. I guess I ___ borrow some money from you.
+            Qual das seguintes descrições <strong>NÃO</strong> é usada para caracterizar o Homem no texto?
         `,
         options: [
-            { letter: "A", text: "(A) am going to" },
-            { letter: "B", text: "(B) will borrow" },
-            { letter: "C", text: "(C) will be" },
-            { letter: "D", text: "(D) am" }
+            { letter: "A", text: "(A) É a única criatura que consome sem produzir.", isCorrect: false, rationale: "Correto, essa descrição é usada." },
+            { letter: "B", text: "(B) É muito forte para lavrar por si próprio.", isCorrect: true, rationale: "Incorreto. O texto diz que ele é 'demasiado fraco para lavrar por si próprio'." },
+            { letter: "C", text: "(C) É o senhor de todos os animais.", isCorrect: false, rationale: "Correto, essa descrição é usada ('ele é o senhor de todos os animais')." },
+            { letter: "D", text: "(D) Não dá leite nem põe ovos.", isCorrect: false, rationale: "Correto, essa descrição é usada." }
         ],
         correctAnswer: "B",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Decisão tomada na hora usa 'will'.",
-            "Dica 2: Nada foi planejado antes.",
-            "Dica 3: 'Going to' exigiria intenção prévia."
-        ]
+        hints: ["Dica: Releia a seção que lista o que o Homem não consegue fazer, como dar leite ou lavrar."]
     },
 
+    // Pergunta 25: O que o Homem faz com o trabalho animal
     {
-        id: "q31-willGoing",
+        id: "q25",
         type: "mc",
         questionText: `
-            They’ve booked the hall; the conference ___ start at 9 a.m. sharp.
+            O que o Homem faz com o alimento produzido pelos animais, exceto o mínimo necessário?
         `,
         options: [
-            { letter: "A", text: "(A) will start" },
-            { letter: "B", text: "(B) is going to start" },
-            { letter: "C", text: "(C) starts" },
-            { letter: "D", text: "(D) is starting" }
+            { letter: "A", text: "(A) Distribui em excesso para criar uma reserva para o inverno.", isCorrect: false, rationale: "Ele não distribui em excesso." },
+            { letter: "B", text: "(B) Guarda o resto para si mesmo.", isCorrect: true, rationale: "O texto diz: 'O resto, ele guarda para si'." },
+            { letter: "C", text: "(C) Usa para pagar outros humanos por trabalho extra.", isCorrect: false, rationale: "Não há menção a isso." },
+            { letter: "D", text: "(D) Alimenta outros animais de estimação que não trabalham.", isCorrect: false, rationale: "Não há menção a isso." }
         ],
         correctAnswer: "B",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Evento programado = 'going to'.",
-            "Dica 2: Já está tudo organizado.",
-            "Dica 3: 'Will' seria previsão, não plano concreto."
-        ]
+        hints: ["Dica: O texto usa a palavra 'resto' no final para descrever o que acontece com a maior parte da produção."]
     },
 
+    // Pergunta 26: A Regra de Ouro (Aviso Final)
     {
-        id: "q32-willGoing",
+        id: "q26",
         type: "mc",
         questionText: `
-            “Do you want tea or coffee?” – “I think I ___ have tea, please.”
+            Qual é a regra de ouro final que Major deixa como aviso aos outros animais?
         `,
         options: [
-            { letter: "A", text: "(A) will" },
-            { letter: "B", text: "(B) am going to" },
-            { letter: "C", text: "(C) will be" },
-            { letter: "D", text: "(D) am" }
+            { letter: "A", text: "(A) Não reclamar da própria condição de vida.", isCorrect: false, rationale: "Major afirma que não reclama de *sua* condição, mas isso não é o aviso final." },
+            { letter: "B", text: "(B) Continuar trabalhando até não ter mais força para se manter de pé.", isCorrect: false, rationale: "Essa é a descrição da vida atual, não o aviso." },
+            { letter: "C", text: "(C) Tudo o que andar sobre quatro pernas ou tiver asas é inimigo.", isCorrect: false, rationale: "Essa parte é a definição de *amigo*." },
+            { letter: "D", text: "(D) Tudo o que andar sobre duas pernas é inimigo; o resto é amigo.", isCorrect: true, rationale: "O texto diz: 'tudo o que andar sobre duas pernas é vosso inimigo. Tudo o que andar sobre quatro pernas, ou tiver asas, é amigo'." }
         ],
-        correctAnswer: "A",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Escolhas feitas na hora usam 'will'.",
-            "Dica 2: Não houve planejamento prévio.",
-            "Dica 3: 'Going to' seria uma decisão antecipada."
-        ]
+        correctAnswer: "D",
+        hints: ["Dica: A regra se baseia no número de membros utilizados para a locomoção."]
     },
 
+    // Pergunta 27: Idade e Perspectiva de Major
     {
-        id: "q33-willGoing",
+        id: "q27",
         type: "mc",
         questionText: `
-            That car is speeding! It ___ crash into the barrier.
+            Qual é a idade de Major e qual a sua perspectiva de futuro imediato?
         `,
         options: [
-            { letter: "A", text: "(A) will" },
-            { letter: "B", text: "(B) is going to" },
-            { letter: "C", text: "(C) might" },
-            { letter: "D", text: "(D) was about to" }
+            { letter: "A", text: "(A) 10 anos e ele viverá por muito tempo.", isCorrect: false, rationale: "Ele tem 12 anos e diz que 'em breve morrerei'." },
+            { letter: "B", text: "(B) 12 anos e ele se queixa da longevidade.", isCorrect: false, rationale: "Ele tem 12 anos e diz que 'não grumble' (não se queixa)." },
+            { letter: "C", text: "(C) 12 anos e ele sabe que morrerá em breve.", isCorrect: true, rationale: "O texto diz: 'Eu sou um porco de 12 anos. Em breve morrerei'." },
+            { letter: "D", text: "(D) Não é mencionada, mas ele está pronto para a revolução.", isCorrect: false, rationale: "Sua idade é mencionada explicitamente." }
+        ],
+        correctAnswer: "C",
+        hints: ["Dica: O último parágrafo revela a sua idade e seu destino iminente."]
+    },
+
+    // Pergunta 28: Propósito do Discurso
+    {
+        id: "q28",
+        type: "mc",
+        questionText: `
+            Com base no tom e no conteúdo do excerto, qual é o principal objetivo do discurso de Major?
+        `,
+        options: [
+            { letter: "A", text: "(A) Descrever o uso do Future Continuous na fazenda.", isCorrect: false, rationale: "Não é sobre gramática." },
+            { letter: "B", text: "(B) Informar os animais sobre sua velhice e morte.", isCorrect: false, rationale: "A velhice é secundária; o principal é o chamado à ação." },
+            { letter: "C", text: "(C) Conscientizar os animais sobre sua opressão e incitá-los à ação contra o Homem.", isCorrect: true, rationale: "O discurso é uma chamada revolucionária (Camaradas, vivemos na miséria...). " },
+            { letter: "D", text: "(D) Justificar por que o Homem não consegue dar leite ou pôr ovos.", isCorrect: false, rationale: "Isso é apenas um detalhe na descrição da inutilidade do Homem." }
+        ],
+        correctAnswer: "C",
+        hints: ["Dica: O uso da palavra 'Camaradas' e a identificação do 'inimigo' indicam um propósito político."]
+    },
+
+    // Pergunta 29: Sinônimo de "Escravos"
+    {
+        id: "q29",
+        type: "mc",
+        questionText: `
+            A palavra <strong>'escravos'</strong>, usada para descrever os animais, indica que eles:
+        `,
+        options: [
+            { letter: "A", text: "(A) São donos de si mesmos e trabalham por escolha própria.", isCorrect: false, rationale: "Escravos não trabalham por escolha, mas sob coerção." },
+            { letter: "B", text: "(B) Estão em uma situação de servidão e exploração forçada.", isCorrect: true, rationale: "O conceito de escravidão implica trabalho forçado e falta de liberdade." },
+            { letter: "C", "text": "(C) São livres para viajar, desde que voltem antes da meia-noite.", isCorrect: false, rationale: "Não há menção à liberdade de viajar." },
+            { letter: "D", "text": "(D) Recebem um salário justo por todo o trabalho que produzem.", isCorrect: false, rationale: "O texto diz que a produção é roubada e recebem 'apenas o suficiente'." }
         ],
         correctAnswer: "B",
-        videoUrl: "",
-        hints: [
-            "Dica 1: A situação mostra evidência clara.",
-            "Dica 2: 'Going to' é para eventos prestes a acontecer.",
-            "Dica 3: 'Will' não é usado com evidência presente."
-        ]
+        hints: ["Dica: O que significa 'escravo' no contexto de trabalho e liberdade?"]
     },
 
+    // Pergunta 30: Ironia
     {
-        id: "q34-willGoing",
+        id: "q30",
         type: "mc",
         questionText: `
-            My parents just called; they ___ arrive at 8 p.m. on the dot.
+            Existe uma forte ironia na afirmação de Major sobre o Homem: "Ele é a única criatura que consome sem produzir". Por quê?
         `,
         options: [
-            { letter: "A", text: "(A) will arrive" },
-            { letter: "B", text: "(B) are going to arrive" },
-            { letter: "C", text: "(C) arrive" },
-            { letter: "D", text: "(D) will be arriving" }
+            { letter: "A", text: "(A) Porque os animais também consomem sem produzir o tempo todo.", isCorrect: false, rationale: "Os animais no texto estão constantemente produzindo com seu trabalho." },
+            { letter: "B", text: "(B) Porque o Homem se considera superior por ser o 'senhor' dos animais.", isCorrect: true, rationale: "A ironia é que a criatura que se coloca no topo (senhor) não tem as habilidades básicas de sobrevivência ou produção das quais ele se beneficia." },
+            { letter: "C", text: "(C) Porque a ironia é um tempo verbal do futuro contínuo.", isCorrect: false, rationale: "Sem relação com o texto." },
+            { letter: "D", text: "(D) Porque o Homem pode correr rápido o suficiente para apanhar coelhos.", isCorrect: false, rationale: "O texto diz que ele não consegue correr rápido o suficiente." }
         ],
         correctAnswer: "B",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Eles já informaram o horário.",
-            "Dica 2: 'Going to' = plano confirmado.",
-            "Dica 3: 'Will' seria previsão sem confirmação."
-        ]
+        hints: ["Dica: Considere a contradição entre o status de 'senhor' e sua incapacidade de se sustentar."]
     },
 
+    // Pergunta 31: O Uso da Expressão "Comrades"
     {
-        id: "q35-willGoing",
+        id: "q31",
         type: "mc",
         questionText: `
-            I’ve already made a resolution: next year I ___ learn Japanese.
+            No início, Major se dirige aos animais como <strong>"Camaradas"</strong>. Qual é a conotação desse termo no contexto de uma fábula política?
         `,
         options: [
-            { letter: "A", text: "(A) am going to" },
-            { letter: "B", text: "(B) will" },
-            { letter: "C", text: "(C) will be" },
-            { letter: "D", text: "(D) am" }
+            { letter: "A", text: "(A) Indica uma relação de negócios estritamente formal.", isCorrect: false, rationale: "É um termo de igualdade e luta política, não de negócios." },
+            { letter: "B", text: "(B) Sugere um chamado à revolução e à solidariedade entre iguais.", isCorrect: true, rationale: "Camarada (Comrade) é um termo associado ao comunismo/socialismo, simbolizando união e igualdade na luta." },
+            { letter: "C", text: "(C) É um sinônimo para 'escravos' ou 'trabalhadores forçados'.", isCorrect: false, rationale: "Tem conotação de luta, não de servidão." },
+            { letter: "D", text: "(D) Refere-se a animais que têm apenas duas pernas.", isCorrect: false, rationale: "O discurso é dirigido a todos os animais." }
         ],
-        correctAnswer: "A",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Resoluções = decisões prévias.",
-            "Dica 2: 'Going to' expressa intenção planejada.",
-            "Dica 3: 'Will' seria para decisão no momento."
-        ]
+        correctAnswer: "B",
+        hints: ["Dica: Pense no significado político de 'camarada' em movimentos sociais."]
     },
+
+    // Pergunta 32: Sentimento de Major sobre sua morte
     {
-    id: "q36-willGoing",
-    type: "mc",
-    questionText: `
-        <img src="images/fafa.jpg" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
-        <br><br>
-        Based on the comic strip, Jon tells Garfield he is going out with Liz. 
-        Jon's use of the future expresses that he:
-    `,
-    options: [
-        { letter: "A", text: "(A) made a spontaneous decision about going out." },
-        { letter: "B", text: "(B) had already planned his date before talking to Garfield." },
-        { letter: "C", text: "(C) is asking Garfield for permission to leave." },
-        { letter: "D", text: "(D) wants Garfield to join him on the date." }
-    ],
-    correctAnswer: "B",
-    videoUrl: "",
-    hints: [
-        "Dica 1: Jon já está arrumado, indicando um plano feito antes da fala.",
-        "Dica 2: O futuro planejado normalmente usa 'going to' ou sinais de preparação prévia.",
-        "Dica 3: 'Will' é usado para decisões espontâneas, o que não acontece na tirinha."
-    ]
-},
-{
-    id: "q37-willGoing",
-    type: "mc",
-    questionText: `
-        <img src="images/fafa.jpg" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
-        <br><br>
-        In the last panel, Jon leaves and Garfield happily stays with the food.
-        This suggests that:
-    `,
-    options: [
-        { letter: "A", text: "(A) Jon will go to the party alone because Garfield isn’t interested." },
-        { letter: "B", text: "(B) Garfield is going to enjoy staying home more than going out." },
-        { letter: "C", text: "(C) Jon has many friends to meet later." },
-        { letter: "D", text: "(D) Garfield will help Jon prepare for the evening." }
-    ],
-    correctAnswer: "B",
-    videoUrl: "",
-    hints: [
-        "Dica 1: Garfield abraça a comida e demonstra felicidade em ficar em casa.",
-        "Dica 2: 'Going to' indica previsão baseada em evidência visível.",
-        "Dica 3: Garfield claramente prefere ficar em casa em vez de acompanhar Jon."
-    ]
-},
-{
-    id: "q38-willGoing",
-    type: "mc",
-    questionText: `
-        <img src="images/papa.png" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
-        <br><br>
-        In the sentence “I’ll be sleepy later”, which type of future should be used and why?
-    `,
-    options: [
-        { letter: "A", text: "(A) 'Will', because Jon is making a spontaneous prediction about the future." },
-        { letter: "B", text: "(B) 'Going to', because Jon planned his nap a long time ago." },
-        { letter: "C", text: "(C) Present continuous, because the future action is a fixed arrangement." },
-        { letter: "D", text: "(D) 'Will', because the action is happening right now." }
-    ],
-    correctAnswer: "A",
-    videoUrl: "",
-    hints: [
-        "Dica 1: 'Will' é usado para previsões feitas no momento da fala.",
-        "Dica 2: Jon percebe que ficará com sono mais tarde e faz uma previsão espontânea.",
-        "Dica 3: 'Going to' seria usado se houvesse um plano prévio — mas não há."
-    ]
-},
-{
-    id: "39-willGoing",
-    type: "mc",
-    questionText: `
-        <img src="images/papa.jpg" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
-        <br><br>
-        According to the comic strip, Jon decides to take a nap because:
-    `,
-    options: [
-        { letter: "A", text: "(A) Garfield told him to sleep." },
-        { letter: "B", text: "(B) he thinks he is going to feel sleepy soon." },
-        { letter: "C", text: "(C) he already slept during the morning." },
-        { letter: "D", text: "(D) his computer recommended a nap." }
-    ],
-    correctAnswer: "B",
-    videoUrl: "",
-    hints: [
-        "Dica 1: Jon diz 'I’d better take a preemptive nap'.",
-        "Dica 2: 'Preemptive' significa fazer algo antes que aconteça.",
-        "Dica 3: Ele acha que VAI ficar com sono em breve, então se prepara."
-    ]
-},
-{
-  id: "q26-willGoing",
-  type: "mc",
-  questionText: `
-      <br>
-      A tirinha ilustra duas visões contraditórias sobre o futuro: "The future will be great!" e "The future will be awful!". O auxiliar modal "Will", destacado nas frases, é essencial para formar o futuro em inglês.
-      <br><br>
-      Considerando o uso gramatical do "Will", analise as afirmações abaixo e assinale a opção que contém apenas a(s) afirmativa(s) correta(s):
-      <br><br>
-      <img src="images/dada.png" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
-      <br>
-      <br>
-      I. É usado para expressar predições gerais sobre o futuro, geralmente baseadas em opiniões, crenças ou no que se pensa, como nas frases da tirinha.<br>
-      II. É a forma correta para falar sobre planos e intenções pré-determinadas (por exemplo, planos de viagem já agendados).<br>
-      III. É o auxiliar modal utilizado para expressar uma decisão feita no momento da fala (decisão espontânea).<br>
-      IV. É a forma utilizada para fazer promessas ou oferecer ajuda.
-  `,
-  options: [
-      { letter: "A", text: "(A)Apenas as afirmações I, III e IV estão corretas.", isCorrect: true, rationale: "O 'Will' é usado para predições/opiniões (I), decisões espontâneas (III) e promessas/ofertas (IV). A afirmação II é incorreta, pois planos pré-determinados usam 'Going to'." },
-      { letter: "B", text: "(B)Apenas as afirmações I, II e IV estão corretas.", isCorrect: false, rationale: "A afirmação II é incorreta. Planos e intenções pré-determinadas usam 'Going to' ou Present Continuous." },
-      { letter: "C", text: "(C)Apenas as afirmações I e III estão corretas.", isCorrect: false, rationale: "A afirmação IV também está correta." },
-      { letter: "D", text: "(D)Apenas a afirmação IV está correta.", isCorrect: false, rationale: "As afirmações I e III também estão corretas." },
-      { letter: "E", text: "(E) Todas estão falsas" }
-      
-  ],
-  correctAnswer: "A",
-  videoUrl: "",
-  hints: [
-      "Dica 1 (Q26): O uso de 'Will' é ideal para o que é espontâneo ou baseado em opinião. Planos já decididos e predições com evidência usam 'Going to'."
-  ]
-},
-{
-  id: "q27-willGoing",
-  type: "mc",
-  questionText: `
-      Questão 27:
-      <br>
-      Na tirinha, Patty Pimentinha expressa um desejo imediato: "Will you buy me a balloon, Chuck?". Charlie Brown, por sua vez, age de forma espontânea. Se, antes de irem à feira, Charlie Brown já tivesse decidido que compraria balões para todos os seus amigos, a forma de expressar essa intenção seria diferente.
-      <br><br>
-      Considerando o contexto da tirinha e a nuances dos auxiliares de futuro "Will" e "Going to", qual das alternativas abaixo melhor descreve a intenção dos personagens e a gramática correta em situações similares?
-      <br><br>
-      <img src="images/dada.png" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
-      <br>
-      <br>
-      I. A pergunta de Patty ("Will you buy...?") usa "Will" corretamente para fazer um pedido espontâneo, pois ela não havia planejado essa solicitação antes.<br>
-      II. A ação de Charlie Brown de entregar o balão logo em seguida é um exemplo de decisão tomada no momento da fala, perfeitamente expressa com "Will" se ele tivesse dito: "I will buy you a balloon."<br>
-      III. Se Charlie Brown tivesse um plano pré-existente de comprar balões, ele usaria "Going to", por exemplo: "I'm going to buy balloons for my friends today." (Estou indo comprar balões para meus amigos hoje).<br>
-      IV. A frase "We're having fun, aren't we, Chuck?" (Estamos nos divertindo, não estamos, Chuck?) mostra o uso de "Will" para descrever um evento futuro.
-  `,
-  options: [
-      { letter: "A", text: "Apenas I, II e III estão corretas.", isCorrect: true, rationale: "As afirmações I (pedido espontâneo com Will), II (decisão no momento com Will) e III (planos pré-existentes com Going to) estão corretas. A IV está errada pois usa Present Continuous, não Will." },
-      { letter: "B", text: "Apenas I e II estão corretas.", isCorrect: false, rationale: "A afirmação III também está correta ao explicar o uso de 'Going to' para planos." },
-      { letter: "C", text: "Apenas II, III e IV estão corretas.", isCorrect: false, rationale: "A afirmação IV está incorreta. 'We're having fun' é Present Continuous, não futuro com 'Will'." },
-      { letter: "D", text: "Apenas I, III e IV estão corretas.", isCorrect: false, rationale: "A afirmação IV está incorreta. 'We're having fun' é Present Continuous, não futuro com 'Will'." }
-  ],
-  correctAnswer: "A",
-  videoUrl: "",
-  hints: [
-      "Dica 1 (Q27): Pense na 'espontaneidade' versus 'planejamento prévio' para distinguir 'Will' de 'Going to'."
-  ]
-},
-{
-  id: "q2-willGoing",
-  type: "mc",
-  questionText: `
-     
-      <br>
-      Na tirinha, o personagem em luto declara: "I'll never forget his last words." (Eu nunca esquecerei suas últimas palavras).
-      <br><br>
-      O uso do auxiliar modal "Will" na forma contraída "I'll" (I + Will) não se restringe à simples formação do futuro, mas veicula um sentido específico, essencial para a comunicação expressa.
-      <br><br>
-      Neste contexto, a escolha do "Will", em detrimento de "Going to", justifica-se pela sua função de:
-      <br><br>
-      <img src="images/fefe.png" alt="Garfield comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
-  `,
-  options: [
-      { letter: "A", text: "(A) Expressar uma predição feita no momento da fala, baseada em evidências visíveis no presente, como o choro e a cena do cemitério.", isCorrect: false, rationale: "Predições baseadas em evidências visíveis geralmente usam 'Going to'. A lembrança é subjetiva." },
-      { letter: "B", text: "(B)Indicar uma intenção ou plano rigorosamente estabelecido e agendado pelo falante antes da morte do amigo.", isCorrect: false, rationale: "Planos pré-estabelecidos usam 'Going to' ou Present Continuous." },
-      { letter: "C", text: "(C)Assinalar uma promessa, ligada à opinião ou crença do falante sobre um estado futuro.", isCorrect: true, rationale: "O 'Will' é o auxiliar correto para promessas e intenções subjetivas, como um compromisso emocional de nunca esquecer." },
-      { letter: "D", text: "(D)Descrever um fato futuro que ocorrerá inevitavelmente, independentemente da vontade ou emoção do personagem.", isCorrect: false, rationale: "Embora 'Will' possa indicar fatos, a intenção de NUNCA esquecer é totalmente dependente da vontade e emoção do personagem, não uma fatalidade externa." },
-      { letter: "E", text: "(E)Reportar uma decisão espontânea tomada por um dos personagens, indicando uma ação imediata a ser realizada.", isCorrect: false, rationale: "Embora 'Will' seja usado para decisões espontâneas, a frase é uma promessa de estado mental futuro ('never forget'), não uma ação imediata." }
-  ],
-  correctAnswer: "C",
-  videoUrl: "",
-  hints: [
-      "Dica 1 (Q29): Nas provas de inglês do ENEM, foque na função comunicativa do modal (promessa, predição, plano) e não apenas na regra isolada."
-  ]
-}
+        id: "q32",
+        type: "mc",
+        questionText: `
+            Na frase "Pela minha parte, eu não me queixo. Eu sou um porco de 12 anos. Em breve morrerei", Major demonstra um sentimento de:
+        `,
+        options: [
+            { letter: "A", text: "(A) Desespero e raiva por sua morte iminente.", isCorrect: false, rationale: "Ele diz que 'não se queixa' ('do not grumble')." },
+            { letter: "B", text: "(B) Aceitação e urgência em transmitir sua mensagem.", isCorrect: true, rationale: "A aceitação ('não me queixo') é seguida pela urgência ('Mas eu vos aviso...')." },
+            { letter: "C", text: "(C) Alívio por estar escapando do trabalho forçado.", isCorrect: false, rationale: "Embora seja um alívio, a ênfase é na mensagem que ele deve passar." },
+            { letter: "D", text: "(D) Indiferença total sobre o futuro da fazenda.", isCorrect: false, rationale: "Ele dá um aviso crucial, mostrando grande interesse no futuro." }
+        ],
+        correctAnswer: "B",
+        hints: ["Dica: Analise a transição de 'não me queixo' para 'Mas eu vos aviso...'"]
+    },
 
+    // Pergunta 33: Função da Imagem do Moinho
+    {
+        id: "q33",
+        type: "mc",
+        questionText: `
+            (Observando a imagem anexa) Qual é o possível simbolismo da imagem de um moinho de vento (windmill) no contexto do livro "Animal Farm"?
+        `,
+        options: [
+            { letter: "A", text: "(A) Representa a liberdade e a simplicidade da vida no campo.", isCorrect: false, rationale: "No livro, o moinho se torna um símbolo de trabalho árduo e das promessas não cumpridas." },
+            { letter: "B", text: "(B) Simboliza o progresso, as promessas de futuro e o esforço constante dos animais.", isCorrect: true, rationale: "No livro, a construção do moinho (embora não esteja diretamente no trecho) é o foco do trabalho exaustivo, representando progresso prometido e sacrifício." },
+            { letter: "C", text: "(C) É o ponto onde os humanos e animais se reúnem em paz.", isCorrect: false, rationale: "O moinho é construído pelos animais para seu próprio benefício (energia)." },
+            { letter: "D", text: "(D) É a principal causa da miséria dos animais.", isCorrect: false, rationale: "O homem é a causa, não o moinho (que ainda não foi construído neste trecho)." }
+        ],
+        correctAnswer: "B",
+        hints: ["Dica: Pense nos grandes projetos de engenharia que prometem um futuro melhor, mas exigem sacrifício."]
+    },
 
+    // Pergunta 34: O Uso da Retórica
+    {
+        id: "q34",
+        type: "mc",
+        questionText: `
+            A pergunta de Major: "Por que estamos nesta condição miserável?" é um exemplo de:
+        `,
+        options: [
+            { letter: "A", text: "(A) Uma promessa de Simple Future.", isCorrect: false, rationale: "Não é gramatical." },
+            { letter: "B", text: "(B) Uma pergunta retórica, cuja resposta ele próprio já conhece.", isCorrect: true, rationale: "O orador faz a pergunta e imediatamente a responde ('Porque os seres humanos roubam...'), para focar a atenção na resposta." },
+            { letter: "C", text: "(C) Um sinal de que Major está confuso e busca ajuda.", isCorrect: false, rationale: "O discurso é claro e focado." },
+            { letter: "D", text: "(D) Um erro de concordância verbal na tradução.", isCorrect: false, rationale: "A tradução está correta." }
+        ],
+        correctAnswer: "B",
+        hints: ["Dica: Ele pergunta, mas já sabe a resposta. Qual o nome dessa técnica?"]
+    },
+
+    // Pergunta 35: Propósito de Devolver o "Mínimo"
+    {
+        id: "q35",
+        type: "mc",
+        questionText: `
+            O Homem 'devolve [aos animais] o bare minimum [mínimo] para prevenir a starvation [fome]'. Qual é o principal propósito disso?
+        `,
+        options: [
+            { letter: "A", text: "(A) Demonstrar a benevolência e caridade do Homem.", isCorrect: false, rationale: "O contexto é de exploração." },
+            { letter: "B", text: "(B) Garantir que os animais permaneçam vivos e capazes de trabalhar.", isCorrect: true, rationale: "Se morrerem de fome, não haverá mais quem produza. O mínimo garante a continuidade da exploração." },
+            { letter: "C", text: "(C) Seguir as regras de bem-estar animal impostas pela sociedade.", isCorrect: false, rationale: "O foco é na exploração, não na regra." },
+            { letter: "D", text: "(D) Proporcionar um nível de vida confortável e digno aos trabalhadores.", isCorrect: false, rationale: "O texto usa as palavras 'miséria' e 'escravos'." }
+        ],
+        correctAnswer: "B",
+        hints: ["Dica: O Homem precisa dos animais vivos para que continuem produzindo para ele."]
+    },
+
+    // Pergunta 36: Sentido de "Grumble"
+    {
+        id: "q36",
+        type: "mc",
+        questionText: `
+            No contexto: "For myself, I do not **grumble**." A melhor tradução para 'grumble' é:
+        `,
+        options: [
+            { letter: "A", text: "(A) Correr.", isCorrect: false, rationale: "Grinir, resmungar, queixar." },
+            { letter: "B", text: "(B) Cantar.", isCorrect: false, rationale: "Grinir, resmungar, queixar." },
+            { letter: "C", text: "(C) Queixar-se ou resmungar.", isCorrect: true, rationale: "Queixar-se/resmungar é o significado de 'grumble' no contexto de descontentamento." },
+            { letter: "D", text: "(D) Dormir.", isCorrect: false, rationale: "Grinir, resmungar, queixar." }
+        ],
+        correctAnswer: "C",
+        hints: ["Dica: A frase demonstra a atitude resignada, mas não passiva, de Major sobre sua situação pessoal."]
+    },
+
+    // Pergunta 37: Vocabulário - "Plow"
+    {
+        id: "q37",
+        type: "mc",
+        questionText: `
+            Na descrição da incapacidade do Homem: "ele é demasiado fraco para **plow** por si próprio". O termo 'plow' significa:
+        `,
+        options: [
+            { letter: "A", text: "(A) Ordenhar.", isCorrect: false, rationale: "Plow é lavrar/arar." },
+            { letter: "B", text: "(B) Lavrar ou arar a terra.", isCorrect: true, rationale: "Este é o significado do verbo 'plow'." },
+            { letter: "C", text: "(C) Construir.", isCorrect: false, rationale: "Plow é lavrar/arar." },
+            { letter: "D", text: "(D) Cozinhar.", isCorrect: false, rationale: "Plow é lavrar/arar." }
+        ],
+        correctAnswer: "B",
+        hints: ["Dica: É uma atividade rural fundamental, geralmente feita por bois ou cavalos, que demonstra a dependência do Homem em relação aos animais."]
+    },
+
+    // Pergunta 38: Tema da "Exploração"
+    {
+        id: "q38",
+        type: "mc",
+        questionText: `
+            O excerto trata o tema da exploração. Qual frase melhor encapsula essa exploração?
+        `,
+        options: [
+            { letter: "A", text: "(A) 'Tomorrow at 9 PM, I will sleep.'", isCorrect: false, rationale: "Frase gramatical sem relação com o tema." },
+            { letter: "B", text: "(B) 'O Homem é a única criatura que consome sem produzir.'", isCorrect: true, rationale: "Essa frase resume o sistema de exploração, onde uma parte se beneficia do trabalho da outra sem contribuir." },
+            { letter: "C", text: "(C) 'Eu sou um porco de 12 anos.'", isCorrect: false, rationale: "É apenas uma informação sobre Major." },
+            { letter: "D", text: "(D) 'Eles will be travel to Spain.'", isCorrect: false, rationale: "Frase gramatical sem relação com o tema." }
+        ],
+        correctAnswer: "B",
+        hints: ["Dica: Procure pela frase que define o Homem em relação ao seu consumo."]
+    },
+
+    // Pergunta 39: O Significado de "Friend" (Amigo)
+    {
+        id: "q39",
+        type: "mc",
+        questionText: `
+            No aviso final, "Tudo o que andar sobre quatro pernas, ou tiver asas, é **amigo**", Major está definindo como aliados:
+        `,
+        options: [
+            { letter: "A", text: "(A) Apenas os humanos que ajudam na colheita.", isCorrect: false, rationale: "Humanos têm duas pernas." },
+            { letter: "B", text: "(B) Todos os seres que não são exploradores, ou seja, os animais.", isCorrect: true, rationale: "O código é que seres de 4 pernas ou asas (animais) são os companheiros/aliados na luta contra o Homem (2 pernas)." },
+            { letter: "C", text: "(C) Os porcos e cavalos, excluindo as galinhas e coelhos.", isCorrect: false, rationale: "Galinhas (asas) e coelhos (4 pernas) também estão incluídos." },
+            { letter: "D", text: "(D) Apenas seres que vivem na miséria e morrem jovens.", isCorrect: false, rationale: "A definição é baseada na locomoção, não na condição." }
+        ],
+        correctAnswer: "B",
+        hints: ["Dica: O inimigo é o de duas pernas. O amigo é o restante."]
+    },
+
+    // Pergunta 40: A Conclusão Imediata do Discurso
+    {
+        id: "q40",
+        type: "mc",
+        questionText: `
+            Apesar de não se queixar da própria morte, por que Major se sente compelido a dar seu aviso ("But I warn you...")?
+        `,
+        options: [
+            { letter: "A", text: "(A) Para expressar sua raiva por ter sido um porco de 12 anos.", isCorrect: false, rationale: "Ele não se queixa." },
+            { letter: "B", text: "(B) Para garantir que o mal (o Homem) seja reconhecido e combatido por gerações futuras.", isCorrect: true, rationale: "O aviso é para que a luta continue após sua morte, focando no inimigo comum." },
+            { letter: "C", text: "(C) Para praticar seu inglês e o Future Continuous.", isCorrect: false, rationale: "Não é sobre gramática." },
+            { letter: "D", text: "(D) Para pedir uma ração de comida extra antes de morrer.", isCorrect: false, rationale: "O foco é ideológico." }
+        ],
+        correctAnswer: "B",
+        hints: ["Dica: A parte mais importante do discurso é o legado que ele deixa para a revolução."]
+    },
+    
 
 ];
