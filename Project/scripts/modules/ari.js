@@ -179,23 +179,6 @@ const questionBank = [
         hints: ["Dica: 'since' + ação contínua → Present Perfect Continuous."]
     },
     {
-        id: "q12",
-        type: "mc",
-        questionText: `
-            Question 12:<br>
-            Choose the correct sentence:<br>
-            (A) She has cleaned the kitchen.<br>
-            (B) She has been cleaning the kitchen.<br>
-            Which one focuses on the *result*?
-        `,
-        options: [
-            { letter: "A", text: "(A) A" },
-            { letter: "B", text: "(B) B" }
-        ],
-        correctAnswer: "A",
-        hints: ["Dica: Present Perfect → resultado; Continuous → duração/atividade."]
-    },
-    {
         id: "q13",
         type: "mc",
         questionText: `
