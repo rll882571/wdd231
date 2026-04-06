@@ -2,80 +2,78 @@ const questionBank = [
 
     // Pergunta 1
     {
-        id: "q1",
-        type: "mc",
-        questionText: `
-            Read the sentences below and choose the option that shows only correct uses of Reflexive Pronouns.
-            <br><br>
-            I. He taught herself to play the guitar.<br>
-            II. She looked at herself in the mirror.<br>
-            III. We enjoyed ourselves at the party.<br>
-            IV. They bought themselves some new shoes.<br>
-            V. Please, help myself to some cookies.
-        `,
-        options: [
-            { letter: "A", text: "(A) Only II, III and IV are correct." },
-            { letter: "B", text: "(B) Only I and V are correct." },
-            { letter: "C", text: "(C) Only I, II and III are correct." },
-            { letter: "D", text: "(D) Only I, II, III and IV are correct." },
-            { letter: "E", text: "(E) All of them are correct." }
-        ],
-        correctAnswer: "A",
-        videoUrl: ""
-    },
+    id: "q1",
+    type: "mc",
+    questionText: `
+        Read the sentences below and choose the option that shows only correct uses of the structure:
+        <br><br>
+        <b>Subject + modal + have + Past Participle</b>
+        <br><br>
+        I. She must have gone to school.<br>
+        II. They might have finish the homework.<br>
+        III. He could have seen that movie.<br>
+        IV. We should have studied more.<br>
+        V. She must had gone early.
+    `,
+    options: [
+        { letter: "A", text: "(A) Only I, III and IV are correct." },
+        { letter: "B", text: "(B) Only II and V are correct." },
+        { letter: "C", text: "(C) Only I, II and III are correct." },
+        { letter: "D", text: "(D) Only I, III, IV and V are correct." },
+        { letter: "E", text: "(E) All of them are correct." }
+    ],
+    correctAnswer: "A",
+    videoUrl: ""
+},
 
     
     {
-        id: "q2",
-        type: "mc",
-        questionText: "Which sentence uses the reflexive pronoun correctly?",
-        options: [
-            { letter: "A", text: "(A) She bought himself a new dress." },
-            { letter: "B", text: "(B) He cut himself while shaving." },
-            { letter: "C", text: "(C) They blame theirselves for the mistake." },
-            { letter: "D", text: "(D) I saw me in the reflection." },
-            { letter: "E", text: "(E) The cat washed it." }
-        ],
-        correctAnswer: "B",
-        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0" 
-    },
+    id: "q2",
+    type: "mc",
+    questionText: `
+        Sobre o uso de <b>"must have"</b>, qual explicação está correta?
+    `,
+    options: [
+        { letter: "A", text: "(A) Usado para indicar uma possibilidade incerta, sem evidências claras." },
+        { letter: "B", text: "(B) Usado para expressar uma habilidade no passado que não foi realizada." },
+        { letter: "C", text: "(C) Usado para indicar quase certeza (90-100%), baseado em evidências lógicas." },
+        { letter: "D", text: "(D) Usado para falar de planos futuros." },
+        { letter: "E", text: "(E) Usado para dar permissão no presente." }
+    ],
+    correctAnswer: "C",
+    videoUrl: ""
+},
 
     // Pergunta 3 
     {
-        id: "q3",
-        type: "fill-verb", 
-        questionText: "Read and choose the correct reflexive pronoun to complete the sentence.",
-        lines: [
-            { text: "(A) I taught ... to speak English.", verbs: ["myself", "me"] },
-            { text: "(B) The children behaved ... very well.", verbs: ["themselves", "theyselves"] },
-            { text: "(C) She accidentally hurt ... with the knife.", verbs: ["her", "herself"] },
-            { text: "(D) He built the house all by ... .", verbs: ["myself", "himself"] },
-            { text: "(E) We should be proud of ... for finishing the project.", verbs: ["we", "ourselves"] }
-        ],
-        correctAnswer: ["myself", "themselves", "herself", "himself", "ourselves"],
-        videoUrl: "https://www.youtube.com/embed/ENZ0-KRAcp0" 
-    },
-
+    id: "q3",
+    type: "fill-verb", 
+    questionText: "Complete the sentences with the correct option (must have / may have / might have / could have).",
+    lines: [
+        { text: "(A) Sarah is not answering her phone, and her car is not in the driveway. She ___ gone out.", verbs: ["must have", "might have"] },
+        { text: "(B) I can’t find my wallet anywhere. I ___ left it at the restaurant, but I’m not sure.", verbs: ["may have", "must have"] },
+        { text: "(C) He trained very hard for the competition. He ___ won if he had participated.", verbs: ["could have", "must have"] },
+        { text: "(D) The lights are off and the door is locked. They ___ gone to bed already.", verbs: ["must have", "might have"] },
+        { text: "(E) She didn’t come to class today. She ___ forgotten about the test, but we don’t know.", verbs: ["might have", "must have"] }
+    ],
+    correctAnswer: ["must have", "may have", "could have", "must have", "might have"],
+    videoUrl: ""
+},
     // Pergunta 4
     {
     id: "q4",
     type: "mc",
     questionText: `
-        Sobre o uso dos pronomes reflexivos, é correto afirmar que:
-        <br><br>
-        I. Eles são usados quando o sujeito e o objeto do verbo são a mesma pessoa ou coisa.<br>
-        II. Eles podem ser usados para adicionar ênfase ao sujeito.<br>
-        III. "Theirselves" e "hisself" são formas padrão corretas.<br>
-        IV. Eles são usados após preposições quando o objeto é o mesmo que o sujeito (ex: "He spoke to himself").<br>
-        V. Eles são sempre opcionais e podem ser removidos sem alterar o significado.
+        Sobre o uso de <b>"could have"</b>, qual explicação está correta?
     `,
     options: [
-        { letter: "A", text: "(A) I, II e IV estão corretas." },
-        { letter: "B", text: "(B) I, III e V estão corretas." },
-        { letter: "C", text: "(C) II, IV e V estão corretas." },
-        { letter: "D", text: "(D) Apenas a III está correta." }
+        { letter: "A", text: "(A) Usado para indicar uma certeza absoluta baseada em evidências." },
+        { letter: "B", text: "(B) Usado para indicar uma possibilidade ou algo que poderia ter acontecido, mas não sabemos se aconteceu." },
+        { letter: "C", text: "(C) Usado para indicar uma obrigação no passado." },
+        { letter: "D", text: "(D) Usado para falar de planos confirmados no futuro." },
+        { letter: "E", text: "(E) Usado para dar permissão no presente." }
     ],
-    correctAnswer: "A",
+    correctAnswer: "B",
     videoUrl: ""
 },
 
