@@ -65,7 +65,8 @@ const questionBank = [
     {
         id: "q5",
         type: "mc",
-        questionText: `In a comic, a character says the answer <strong>"must be"</strong> correct. What does this use express?`,
+        questionText: `In a comic, a character says the answer <strong>"must have"</strong> correct. What does this use express?`,
+        <img src="images/img1.png" alt="Charlie Brown Comic" loading="lazy" style="width: 280px;">
         options: [
             { letter: "A", text: "(A) A weak possibility.", isCorrect: false, rationale: "Must indica força." },
             { letter: "B", text: "(B) A strong logical conclusion based on evidence.", isCorrect: true, rationale: "Correto. O personagem usou raciocínio (evidência) para chegar à conclusão." },
@@ -79,6 +80,7 @@ const questionBank = [
         id: "q6",
         type: "mc",
         questionText: `In a comic, Garfield says: <strong>"I could have bought a pizza!"</strong>. What does this express?`,
+            <img src="images/img2.png" alt="Charlie Brown Comic" loading="lazy" style="width: 280px;">
         options: [
             { letter: "A", text: "(A) A certain action.", isCorrect: false, rationale: "Se fosse certo, ele diria 'I bought'." },
             { letter: "B", text: "(B) A strong logical conclusion.", isCorrect: false, rationale: "Isso seria 'must have'." },
