@@ -65,8 +65,8 @@ const questionBank = [
     {
         id: "q5",
         type: "mc",
-        questionText: `In a comic, a character says the answer <strong>"must have"</strong> correct. What does this use express?`,
-        <img src="images/img1.png" alt="Charlie Brown Comic" loading="lazy" style="width: 280px;">
+        questionText: `In a comic, a character says the answer <strong>"must have"</strong> correct. What does this use express?
+        <br><br><img src="images/img1.png" alt="Comic Image" loading="lazy" style="width: 280px;">`,
         options: [
             { letter: "A", text: "(A) A weak possibility.", isCorrect: false, rationale: "Must indica força." },
             { letter: "B", text: "(B) A strong logical conclusion based on evidence.", isCorrect: true, rationale: "Correto. O personagem usou raciocínio (evidência) para chegar à conclusão." },
@@ -79,8 +79,8 @@ const questionBank = [
     {
         id: "q6",
         type: "mc",
-        questionText: `In a comic, Garfield says: <strong>"I could have bought a pizza!"</strong>. What does this express?`,
-            <img src="images/img2.png" alt="Charlie Brown Comic" loading="lazy" style="width: 280px;">
+        questionText: `In a comic, Garfield says: <strong>"I could have bought a pizza!"</strong>. What does this express?
+        <br><br><img src="images/img2.png" alt="Garfield Comic" loading="lazy" style="width: 280px;">`,
         options: [
             { letter: "A", text: "(A) A certain action.", isCorrect: false, rationale: "Se fosse certo, ele diria 'I bought'." },
             { letter: "B", text: "(B) A strong logical conclusion.", isCorrect: false, rationale: "Isso seria 'must have'." },
@@ -218,6 +218,8 @@ const questionBank = [
         type: "mc",
         questionText: `This decision is ______ for the success of the project.`,
         options: [
+            { letter: "A", text: "(A) poisonous", isCorrect: false },
+            { letter: "B", text: "(B) slimy", isCorrect: false },
             { letter: "C", text: "(C) crucial", isCorrect: true }
         ],
         correctAnswer: "C",
@@ -228,7 +230,8 @@ const questionBank = [
         type: "mc",
         questionText: `The hurricane can ______ entire cities if it is strong enough.`,
         options: [
-            { letter: "A", text: "(A) destroy", isCorrect: true }
+            { letter: "A", text: "(A) destroy", isCorrect: true },
+            { letter: "B", text: "(B) protect", isCorrect: false }
         ],
         correctAnswer: "A",
         hints: ["Dica: Furacões causam destruição."]
@@ -238,6 +241,7 @@ const questionBank = [
         type: "mc",
         questionText: `The food smelled so bad that it was absolutely ______.`,
         options: [
+            { letter: "A", text: "(A) delicious", isCorrect: false },
             { letter: "B", text: "(B) disgusting", isCorrect: true }
         ],
         correctAnswer: "B",
@@ -248,6 +252,8 @@ const questionBank = [
         type: "mc",
         questionText: `Be careful! That bee can ______ you if you get too close.`,
         options: [
+            { letter: "A", text: "(A) eat", isCorrect: false },
+            { letter: "B", text: "(B) help", isCorrect: false },
             { letter: "C", text: "(C) sting", isCorrect: true }
         ],
         correctAnswer: "C",
@@ -258,6 +264,7 @@ const questionBank = [
         type: "mc",
         questionText: `The frog’s skin felt cold and ______.`,
         options: [
+            { letter: "A", text: "(A) dry", isCorrect: false },
             { letter: "B", text: "(B) slimy", isCorrect: true }
         ],
         correctAnswer: "B",
@@ -268,6 +275,8 @@ const questionBank = [
         type: "mc",
         questionText: `Some mushrooms are ______, so you should never eat them.`,
         options: [
+            { letter: "A", text: "(A) yummy", isCorrect: false },
+            { letter: "B", text: "(B) healthy", isCorrect: false },
             { letter: "C", text: "(C) poisonous", isCorrect: true }
         ],
         correctAnswer: "C",
@@ -278,7 +287,8 @@ const questionBank = [
         type: "mc",
         questionText: `Climate change can seriously affect the entire ______.`,
         options: [
-            { letter: "A", text: "(A) ecosystem", isCorrect: true }
+            { letter: "A", text: "(A) ecosystem", isCorrect: true },
+            { letter: "B", text: "(B) bedroom", isCorrect: false }
         ],
         correctAnswer: "A",
         hints: ["Dica: Mudanças climáticas afetam a natureza toda."]
@@ -291,6 +301,8 @@ const questionBank = [
         questionText: `Sobre os <strong>pronomes reflexivos</strong>, é correto afirmar que:
         <br>I. Nunca usados após preposições.<br>II. Verbos como 'relax' não costumam pedir reflexivo.<br>III. 'Theirselves' está correto.<br>IV. Usados em 'Behave yourself!'.`,
         options: [
+            { letter: "A", text: "(A) Todas estão corretas.", isCorrect: false },
+            { letter: "B", text: "(B) Apenas I e III.", isCorrect: false },
             { letter: "C", text: "(C) Apenas II e IV estão corretas.", isCorrect: true, rationale: "I é falsa (usa-se 'by myself'), III é falsa ('themselves' é o correto)." }
         ],
         correctAnswer: "C",
@@ -301,6 +313,7 @@ const questionBank = [
         type: "mc",
         questionText: `O uso do prefixo <strong>"un-"</strong> geralmente indica:`,
         options: [
+            { letter: "A", text: "(A) Repetição", isCorrect: false },
             { letter: "B", text: "(B) O oposto ou negação", isCorrect: true }
         ],
         correctAnswer: "B",
@@ -311,6 +324,8 @@ const questionBank = [
         type: "mc",
         questionText: `O uso do prefixo <strong>"mis-"</strong> geralmente indica:`,
         options: [
+            { letter: "A", text: "(A) Excesso", isCorrect: false },
+            { letter: "B", text: "(B) Antes de algo", isCorrect: false },
             { letter: "C", text: "(C) Algo feito de forma errada", isCorrect: true }
         ],
         correctAnswer: "C",
@@ -321,6 +336,8 @@ const questionBank = [
         type: "mc",
         questionText: `Diferença entre <strong>"un-"</strong> e <strong>"mis-"</strong>:`,
         options: [
+            { letter: "A", text: "(A) Não há diferença.", isCorrect: false },
+            { letter: "B", text: "(B) Mis é para negação e Un para erro.", isCorrect: false },
             { letter: "C", text: "(C) 'un-' indica negação/oposto e 'mis-' indica erro ou ação incorreta.", isCorrect: true }
         ],
         correctAnswer: "C",
@@ -333,7 +350,8 @@ const questionBank = [
         type: "mc",
         questionText: `You study abroad, ______?`,
         options: [
-            { letter: "A", text: "(A) don't you?", isCorrect: true }
+            { letter: "A", text: "(A) don't you?", isCorrect: true },
+            { letter: "B", text: "(B) do you?", isCorrect: false }
         ],
         correctAnswer: "A",
         hints: ["Dica: Frase positiva no Simple Present pede auxiliar negativo."]
@@ -343,6 +361,7 @@ const questionBank = [
         type: "mc",
         questionText: `She is your sister, ______?`,
         options: [
+            { letter: "A", text: "(A) is she?", isCorrect: false },
             { letter: "B", text: "(B) isn't she?", isCorrect: true }
         ],
         correctAnswer: "B",
@@ -353,7 +372,8 @@ const questionBank = [
         type: "mc",
         questionText: `They went to the party, ______?`,
         options: [
-            { letter: "A", text: "(A) didn't they?", isCorrect: true }
+            { letter: "A", text: "(A) didn't they?", isCorrect: true },
+            { letter: "B", text: "(B) don't they?", isCorrect: false }
         ],
         correctAnswer: "A",
         hints: ["Dica: 'Went' está no passado, use o auxiliar do passado."]
@@ -363,7 +383,8 @@ const questionBank = [
         type: "mc",
         questionText: `He can drive, ______?`,
         options: [
-            { letter: "A", text: "(A) can't he?", isCorrect: true }
+            { letter: "A", text: "(A) can't he?", isCorrect: true },
+            { letter: "B", text: "(B) can he?", isCorrect: false }
         ],
         correctAnswer: "A",
         hints: ["Dica: Repita o modal 'can' na forma negativa."]
@@ -373,6 +394,7 @@ const questionBank = [
         type: "mc",
         questionText: `You aren’t tired, ______?`,
         options: [
+            { letter: "A", text: "(A) aren't you?", isCorrect: false },
             { letter: "B", text: "(B) are you?", isCorrect: true }
         ],
         correctAnswer: "B",
@@ -383,7 +405,8 @@ const questionBank = [
         type: "mc",
         questionText: `She has finished her homework, ______?`,
         options: [
-            { letter: "A", text: "(A) hasn't she?", isCorrect: true }
+            { letter: "A", text: "(A) hasn't she?", isCorrect: true },
+            { letter: "B", text: "(B) doesn't she?", isCorrect: false }
         ],
         correctAnswer: "A",
         hints: ["Dica: Use o auxiliar 'has' do Present Perfect."]
@@ -393,7 +416,8 @@ const questionBank = [
         type: "mc",
         questionText: `We will travel tomorrow, ______?`,
         options: [
-            { letter: "A", text: "(A) won't we?", isCorrect: true }
+            { letter: "A", text: "(A) won't we?", isCorrect: true },
+            { letter: "B", text: "(B) will we?", isCorrect: false }
         ],
         correctAnswer: "A",
         hints: ["Dica: Will vira Won't."]
@@ -403,7 +427,8 @@ const questionBank = [
         type: "mc",
         questionText: `He doesn’t like coffee, ______?`,
         options: [
-            { letter: "A", text: "(A) does he?", isCorrect: true }
+            { letter: "A", text: "(A) does he?", isCorrect: true },
+            { letter: "B", text: "(B) doesn't he?", isCorrect: false }
         ],
         correctAnswer: "A",
         hints: ["Dica: doesn't -> does."]
@@ -413,7 +438,8 @@ const questionBank = [
         type: "mc",
         questionText: `I am late, ______?`,
         options: [
-            { letter: "A", text: "(A) aren't I?", isCorrect: true, rationale: "Exceção clássica do inglês. 'Am I not' é raro, usa-se 'aren't I'." }
+            { letter: "A", text: "(A) aren't I?", isCorrect: true, rationale: "Exceção clássica do inglês. 'Am I not' é raro, usa-se 'aren't I'." },
+            { letter: "B", text: "(B) am I?", isCorrect: false }
         ],
         correctAnswer: "A",
         hints: ["Dica: Cuidado com a pegadinha do 'I am'!"]
@@ -423,7 +449,8 @@ const questionBank = [
         type: "mc",
         questionText: `Let’s go to the park, ______?`,
         options: [
-            { letter: "A", text: "(A) shall we?", isCorrect: true, rationale: "Sugestões com 'Let's' usam sempre 'shall we?'." }
+            { letter: "A", text: "(A) shall we?", isCorrect: true, rationale: "Sugestões com 'Let's' usam sempre 'shall we?'." },
+            { letter: "B", text: "(B) won't we?", isCorrect: false }
         ],
         correctAnswer: "A",
         hints: ["Dica: Let's = Shall we."]
@@ -435,6 +462,8 @@ const questionBank = [
         type: "mc",
         questionText: `Which of the following words/expressions express <strong>contrast</strong>?`,
         options: [
+            { letter: "A", text: "(A) and / also", isCorrect: false },
+            { letter: "B", text: "(B) because / so", isCorrect: false },
             { letter: "C", text: "(C) although / but / on the other hand / unlike", isCorrect: true }
         ],
         correctAnswer: "C",
@@ -445,6 +474,8 @@ const questionBank = [
         type: "mc",
         questionText: `Which of the following express <strong>similarity or comparison</strong>?`,
         options: [
+            { letter: "A", text: "(A) but / however", isCorrect: false },
+            { letter: "B", text: "(B) first / then", isCorrect: false },
             { letter: "C", text: "(C) alike / both / in the same way / too", isCorrect: true }
         ],
         correctAnswer: "C",
@@ -455,6 +486,8 @@ const questionBank = [
         type: "mc",
         questionText: `"I like pizza, ______ I don’t like hamburgers."`,
         options: [
+            { letter: "A", text: "(A) and", isCorrect: false },
+            { letter: "B", text: "(B) so", isCorrect: false },
             { letter: "C", text: "(C) but", isCorrect: true }
         ],
         correctAnswer: "C",
@@ -465,6 +498,7 @@ const questionBank = [
         type: "mc",
         questionText: `"My brother and I are very ______. We have the same personality."`,
         options: [
+            { letter: "A", text: "(A) different", isCorrect: false },
             { letter: "B", text: "(B) alike", isCorrect: true }
         ],
         correctAnswer: "B",
@@ -475,6 +509,9 @@ const questionBank = [
         type: "mc",
         questionText: `"She is very organized. ______, her sister is messy."`,
         options: [
+            { letter: "A", text: "(A) Too", isCorrect: false },
+            { letter: "B", text: "(B) Alike", isCorrect: false },
+            { letter: "C", text: "(C) Also", isCorrect: false },
             { letter: "D", text: "(D) On the other hand", isCorrect: true }
         ],
         correctAnswer: "D",
@@ -487,9 +524,12 @@ const questionBank = [
         type: "mc",
         questionText: `Qual a melhor tradução para a palavra <strong>"destroy"</strong>?`,
         options: [
+            { letter: "A", text: "(A) criar", isCorrect: false },
+            { letter: "B", text: "(B) ajudar", isCorrect: false },
             { letter: "C", text: "(C) destruir", isCorrect: true }
         ],
         correctAnswer: "C",
         hints: ["Dica: Sinônimo de arruinar."]
     }
 ];
+
