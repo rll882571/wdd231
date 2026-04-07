@@ -1,822 +1,493 @@
-
-
 const questionBank = [
-
-    // Pergunta 1
+    // --- GRAMMAR: MODAL VERBS IN THE PAST (Questions 1-7) ---
     {
         id: "q1",
         type: "mc",
-        questionText: `
-            Read the sentences below and choose the option that shows only correct uses of the structure:
-            <br><br>
-            <b>Subject + modal + have + Past Participle</b>
-            <br><br>
-            I. She must have gone to school.<br>
-            II. They might have finish the homework.<br>
-            III. He could have seen that movie.<br>
-            IV. We should have studied more.<br>
-            V. She must had gone early.
-        `,
+        questionText: `Read the sentences below and choose the option that shows only correct uses of the structure: <strong>Subject + modal + have + Past Participle</strong>
+        <br><br>
+        I. She must have gone to school.<br>
+        II. They might have finish the homework.<br>
+        III. He could have seen that movie.<br>
+        IV. We should have studied more.<br>
+        V. She must had gone early.`,
         options: [
-            { letter: "A", text: "(A) Only I, III and IV are correct." },
-            { letter: "B", text: "(B) Only II and V are correct." },
-            { letter: "C", text: "(C) Only I, II and III are correct." },
-            { letter: "D", text: "(D) Only I, III, IV and V are correct." },
-            { letter: "E", text: "(E) All of them are correct." }
+            { letter: "A", text: "(A) Only I, III and IV are correct.", isCorrect: true, rationale: "Correct! II is wrong (should be 'finished') and V is wrong (should be 'have', not 'had')." },
+            { letter: "B", text: "(B) Only II and V are correct.", isCorrect: false, rationale: "Incorrect. 'Finish' lacks -ed and 'had' cannot be used after a modal." },
+            { letter: "C", text: "(C) Only I, II and III are correct.", isCorrect: false, rationale: "Incorrect. Sentence II has a grammar error in the main verb." },
+            { letter: "D", text: "(D) Only I, III, IV and V are correct.", isCorrect: false, rationale: "Incorrect. Sentence V uses 'had', which is never used directly after a modal." },
+            { letter: "E", text: "(E) All of them are correct.", isCorrect: false, rationale: "Incorrect. There are structural errors in II and V." }
         ],
         correctAnswer: "A",
-        videoUrl: ""
+        hints: ["Dica: O verbo principal deve estar no Particípio Passado (geralmente -ed ou irregular) e o auxiliar é SEMPRE 'have'."]
     },
-
-    // Pergunta 2
     {
         id: "q2",
         type: "mc",
-        questionText: `
-            Sobre o uso de <b>"must have"</b>, qual explicação está correta?
-        `,
+        questionText: `Sobre o uso de <strong>"must have"</strong>, qual explicação está correta?`,
         options: [
-            { letter: "A", text: "(A) Usado para indicar uma possibilidade incerta, sem evidências claras." },
-            { letter: "B", text: "(B) Usado para expressar uma habilidade no passado que não foi realizada." },
-            { letter: "C", text: "(C) Usado para indicar quase certeza (90-100%), baseado em evidências lógicas." },
-            { letter: "D", text: "(D) Usado para falar de planos futuros." },
-            { letter: "E", text: "(E) Usado para dar permissão no presente." }
+            { letter: "A", text: "(A) Usado para indicar uma possibilidade incerta.", isCorrect: false, rationale: "Para incerteza, usamos might ou may." },
+            { letter: "B", text: "(B) Usado para expressar uma habilidade no passado.", isCorrect: false, rationale: "Para habilidade usamos could." },
+            { letter: "C", text: "(C) Usado para indicar quase certeza (90-100%), baseado em evidências lógicas.", isCorrect: true, rationale: "Exato! 'Must have' é para conclusões lógicas fortes sobre o passado." },
+            { letter: "D", text: "(D) Usado para falar de planos futuros.", isCorrect: false, rationale: "Modais seguidos de 'have' focam no passado." },
+            { letter: "E", text: "(E) Usado para dar permissão no presente.", isCorrect: false, rationale: "Permissão usa can ou may." }
         ],
         correctAnswer: "C",
-        videoUrl: ""
+        hints: ["Dica: Se você vê o chão molhado e diz 'it must have rained', você tem quase certeza."]
     },
-
-    // Pergunta 3
     {
         id: "q3",
-        type: "fill-verb",
-        questionText: "Complete the sentences with the correct option (must have / may have / might have / could have).",
-        lines: [
-            { text: "(A) Sarah is not answering her phone, and her car is not in the driveway. She ___ gone out.", verbs: ["must have", "might have"] },
-            { text: "(B) I can’t find my wallet anywhere. I ___ left it at the restaurant, but I’m not sure.", verbs: ["may have", "must have"] },
-            { text: "(C) He trained very hard for the competition. He ___ won if he had participated.", verbs: ["could have", "must have"] },
-            { text: "(D) The lights are off and the door is locked. They ___ gone to bed already.", verbs: ["must have", "might have"] },
-            { text: "(E) She didn’t come to class today. She ___ forgotten about the test, but we don’t know.", verbs: ["might have", "must have"] }
+        type: "mc",
+        questionText: `Complete as lacunas com a melhor opção: <br>
+        (A) Sarah is not answering... She ___________ gone out. <br>
+        (B) I can’t find my wallet... I ___________ left it at the restaurant, but I’m not sure.`,
+        options: [
+            { letter: "A", text: "(A) must have / might have", isCorrect: true, rationale: "A primeira é uma conclusão lógica forte, a segunda é uma incerteza ('not sure')." },
+            { letter: "B", text: "(B) might have / must have", isCorrect: false, rationale: "Invertido." },
+            { letter: "C", text: "(C) could have / should have", isCorrect: false, rationale: "Não se encaixa no contexto de suposição." },
+            { letter: "D", text: "(D) should have / must have", isCorrect: false, rationale: "Should have indica arrependimento ou conselho passado." }
         ],
-        correctAnswer: ["must have", "may have", "could have", "must have", "might have"],
-        videoUrl: ""
+        correctAnswer: "A",
+        hints: ["Dica: 'Not sure' é o gatilho para May/Might."]
     },
-
-    // Pergunta 4
     {
         id: "q4",
         type: "mc",
-        questionText: `
-            Sobre o uso de <b>"could have"</b>, qual explicação está correta?
-        `,
+        questionText: `Sobre o uso de <strong>"could have"</strong>, qual explicação está correta?`,
         options: [
-            { letter: "A", text: "(A) Usado para indicar uma certeza absoluta baseada em evidências." },
-            { letter: "B", text: "(B) Usado para indicar uma possibilidade ou algo que poderia ter acontecido, mas não sabemos se aconteceu." },
-            { letter: "C", text: "(C) Usado para indicar uma obrigação no passado." },
-            { letter: "D", text: "(D) Usado para falar de planos confirmados no futuro." },
-            { letter: "E", text: "(E) Usado para dar permissão no presente." }
+            { letter: "A", text: "(A) Usado para indicar uma certeza absoluta.", isCorrect: false, rationale: "Certeza absoluta no passado usa 'must have'." },
+            { letter: "B", text: "(B) Usado para indicar uma possibilidade ou algo que poderia ter acontecido, mas não sabemos ou não ocorreu.", isCorrect: true, rationale: "Correto! Expressa potencial passado ou incerteza." },
+            { letter: "C", text: "(C) Usado para indicar uma obrigação no passado.", isCorrect: false, rationale: "Obrigação usa 'had to'." },
+            { letter: "D", text: "(D) Usado para falar de planos confirmados.", isCorrect: false, rationale: "Incorreto." }
         ],
         correctAnswer: "B",
-        videoUrl: ""
+        hints: ["Dica: 'Eu poderia ter ido' = I could have gone."]
     },
-
-    // Pergunta 5
     {
         id: "q5",
         type: "mc",
-        imageUrl: "images/img1.png",
-        questionText: `
-            In the comic, Calvin uses reasoning to solve a math problem and says the answer "must be" correct.
-            <br><br>
-            What does this use of "must" express?
-        `,
+        questionText: `In a comic, a character says the answer <strong>"must be"</strong> correct. What does this use express?`,
         options: [
-            { letter: "A", text: "(A) A weak possibility with no clear evidence." },
-            { letter: "B", text: "(B) A strong logical conclusion based on evidence." },
-            { letter: "C", text: "(C) A past ability that was not used." },
-            { letter: "D", text: "(D) A future plan or intention." },
-            { letter: "E", text: "(E) A permission in the present." }
+            { letter: "A", text: "(A) A weak possibility.", isCorrect: false, rationale: "Must indica força." },
+            { letter: "B", text: "(B) A strong logical conclusion based on evidence.", isCorrect: true, rationale: "Correto. O personagem usou raciocínio (evidência) para chegar à conclusão." },
+            { letter: "C", text: "(C) A past ability.", isCorrect: false, rationale: "Habilidade usa could." },
+            { letter: "D", text: "(D) A future plan.", isCorrect: false, rationale: "Must be é presente/conclusão." }
         ],
         correctAnswer: "B",
-        videoUrl: ""
+        hints: ["Dica: Se ele resolveu um problema, a conclusão dele é baseada em lógica."]
     },
-
-    // Pergunta 6
     {
         id: "q6",
         type: "mc",
-        imageUrl: "images/img2.png",
-        questionText: `
-            In the comic, Garfield says: "I could have bought a pizza!".
-            <br><br>
-            What does this use of "could have" express?
-        `,
+        questionText: `In a comic, Garfield says: <strong>"I could have bought a pizza!"</strong>. What does this express?`,
         options: [
-            { letter: "A", text: "(A) A certain action that already happened." },
-            { letter: "B", text: "(B) A strong logical conclusion based on evidence." },
-            { letter: "C", text: "(C) A possibility or alternative that did not happen." },
-            { letter: "D", text: "(D) A future plan." },
-            { letter: "E", text: "(E) A present obligation." }
+            { letter: "A", text: "(A) A certain action.", isCorrect: false, rationale: "Se fosse certo, ele diria 'I bought'." },
+            { letter: "B", text: "(B) A strong logical conclusion.", isCorrect: false, rationale: "Isso seria 'must have'." },
+            { letter: "C", text: "(C) A possibility or alternative that did not happen.", isCorrect: true, rationale: "Perfeito. Ele teve a chance, mas não comprou." },
+            { letter: "D", text: "(D) A future plan.", isCorrect: false, rationale: "Refere-se a algo que ele não fez no passado." }
         ],
         correctAnswer: "C",
-        videoUrl: ""
+        hints: ["Dica: Ele está lamentando uma oportunidade perdida."]
     },
-
-    // Pergunta 7
     {
         id: "q7",
         type: "mc",
-        questionText: `
-            Leia os contextos e escolha a alternativa que utiliza os modais de forma correta para cada situação:
-            <br><br>
-            I. Você vê que o chão está todo molhado e o céu está cinza (Conclusão lógica).<br>
-            II. Seu amigo não veio à aula e você não sabe o porquê (Suposição incerta).<br>
-            III. Você quase caiu da escada, mas se segurou (Algo que era possível, mas não ocorreu).<br>
-        `,
+        questionText: `Escolha a alternativa correta para os contextos: <br>
+        I. Chão molhado/Céu cinza. <br>
+        II. Amigo não veio (não sabe o porquê). <br>
+        III. Quase caiu, mas se segurou.`,
         options: [
-            { letter: "A", text: "(A) I- It must have rained; II- He might have forgotten; III- I could have fallen!" },
-            { letter: "B", text: "(B) I- It could have rained; II- He must have forgotten; III- I may have fallen!" },
-            { letter: "C", text: "(C) I- It must have rained; II- He might has forgotten; III- I could have fell!" },
-            { letter: "D", text: "(D) I- It might have rained; II- He could have forgotten; III- I must have fallen!" },
-            { letter: "E", text: "(E) I- It must have rain; II- He might have forgot; III- I could have fall!" }
+            { letter: "A", text: "(A) I- must have rained; II- might have forgotten; III- I could have fallen!", isCorrect: true, rationale: "I (Certeza lógica), II (Incerteza), III (Possibilidade que não ocorreu)." },
+            { letter: "B", text: "(B) I- could have rained; II- must have forgotten; III- I may have fallen!", isCorrect: false, rationale: "Incorreto. A primeira pede conclusão forte." },
+            { letter: "C", text: "(C) I- must have rained; II- might has forgotten; III- I could have fell!", isCorrect: false, rationale: "Erros gramaticais em 'has' e 'fell'." }
         ],
         correctAnswer: "A",
-        videoUrl: ""
+        hints: ["Dica: Atente-se ao particípio: Rain -> Rained, Forget -> Forgotten, Fall -> Fallen."]
     },
 
-    // Pergunta 8
+    // --- VOCABULARY: DEFINITIONS (Questions 8-15) ---
     {
         id: "q8",
         type: "mc",
-        questionText: `
-            Qual a melhor tradução para a palavra <b>"beneficial"</b>?
-        `,
+        questionText: `Qual a melhor tradução para: <strong>Beneficial</strong>?`,
         options: [
-            { letter: "A", text: "(A) prejudicial." },
-            { letter: "B", text: "(B) benéfico." },
-            { letter: "C", text: "(C) perigoso." },
-            { letter: "D", text: "(D) difícil." },
-            { letter: "E", text: "(E) caro." }
+            { letter: "A", text: "(A) prejudicial" },
+            { letter: "B", text: "(B) benéfico", isCorrect: true },
+            { letter: "C", text: "(C) perigoso" },
+            { letter: "D", text: "(D) difícil" }
         ],
         correctAnswer: "B",
-        videoUrl: "https://www.youtube.com/embed/MgYPm9kjQSw"
+        hints: ["Dica: Cognato muito parecido com o português."]
     },
-
-    // Pergunta 9
     {
         id: "q9",
         type: "mc",
-        questionText: `
-            Qual a melhor tradução para a palavra <b>"crucial"</b>?
-        `,
+        questionText: `Qual a melhor tradução para: <strong>Crucial</strong>?`,
         options: [
-            { letter: "A", text: "(A) opcional." },
-            { letter: "B", text: "(B) importante / essencial." },
-            { letter: "C", text: "(C) pequeno." },
-            { letter: "D", text: "(D) lento." },
-            { letter: "E", text: "(E) barato." }
+            { letter: "A", text: "(A) opcional" },
+            { letter: "B", text: "(B) importante/essencial", isCorrect: true },
+            { letter: "C", text: "(C) pequeno" },
+            { letter: "D", text: "(D) lento" }
         ],
         correctAnswer: "B",
-        videoUrl: ""
+        hints: ["Dica: Algo que decide o sucesso de algo."]
     },
-
-    // Pergunta 10
     {
         id: "q10",
         type: "mc",
-        questionText: `
-            Qual a melhor tradução para a palavra <b>"destroy"</b>?
-        `,
+        questionText: `Qual a melhor tradução para: <strong>Destroy</strong>?`,
         options: [
-            { letter: "A", text: "(A) construir." },
-            { letter: "B", text: "(B) proteger." },
-            { letter: "C", text: "(C) destruir." },
-            { letter: "D", text: "(D) limpar." },
-            { letter: "E", text: "(E) organizar." }
+            { letter: "A", text: "(A) construir" },
+            { letter: "B", text: "(B) proteger" },
+            { letter: "C", text: "(C) destruir", isCorrect: true },
+            { letter: "D", text: "(D) limpar" }
         ],
         correctAnswer: "C",
-        videoUrl: ""
+        hints: ["Dica: Causar dano total."]
     },
-
-    // Pergunta 11 (Note: This is identical to Question 10)
     {
         id: "q11",
         type: "mc",
-        questionText: `
-            Qual a melhor tradução para a palavra <b>"destroy"</b>?
-        `,
+        questionText: `Qual a melhor tradução para: <strong>Disgusting</strong>?`,
         options: [
-            { letter: "A", text: "(A) construir." },
-            { letter: "B", text: "(B) proteger." },
-            { letter: "C", text: "(C) destruir." },
-            { letter: "D", text: "(D) limpar." },
-            { letter: "E", text: "(E) organizar." }
+            { letter: "A", text: "(A) delicioso" },
+            { letter: "B", text: "(B) bonito" },
+            { letter: "C", text: "(C) agradável" },
+            { letter: "D", text: "(D) nojento", isCorrect: true }
         ],
-        correctAnswer: "C",
-        videoUrl: ""
+        correctAnswer: "D",
+        hints: ["Dica: Reação a algo com cheiro ou gosto horrível."]
     },
-
-    // Pergunta 12
     {
         id: "q12",
         type: "mc",
-        questionText: `
-            Qual a melhor tradução para a palavra <b>"disgusting"</b>?
-        `,
+        questionText: `Qual a melhor tradução para: <strong>Sting</strong>?`,
         options: [
-            { letter: "A", text: "(A) delicioso." },
-            { letter: "B", text: "(B) bonito." },
-            { letter: "C", text: "(C) agradável." },
-            { letter: "D", text: "(D) nojento." },
-            { letter: "E", text: "(E) limpo." }
+            { letter: "A", text: "(A) picar (inseto)", isCorrect: true },
+            { letter: "B", text: "(B) correr" },
+            { letter: "C", text: "(C) dormir" },
+            { letter: "D", text: "(D) comer" }
         ],
-        correctAnswer: "D",
-        videoUrl: ""
+        correctAnswer: "A",
+        hints: ["Dica: O que uma abelha ou escorpião faz."]
     },
-
-    // Pergunta 13
     {
         id: "q13",
         type: "mc",
-        questionText: `
-            Qual a melhor tradução para a palavra <b>"sting"</b>?
-        `,
+        questionText: `Qual a melhor tradução para: <strong>Slimy</strong>?`,
         options: [
-            { letter: "A", text: "(A) picar (como inseto)." },
-            { letter: "B", text: "(B) correr." },
-            { letter: "C", text: "(C) dormir." },
-            { letter: "D", text: "(D) comer." },
-            { letter: "E", text: "(E) cair." }
+            { letter: "A", text: "(A) seco" },
+            { letter: "B", text: "(B) áspero" },
+            { letter: "C", text: "(C) viscoso/gosmento", isCorrect: true },
+            { letter: "D", text: "(D) duro" }
         ],
-        correctAnswer: "A",
-        videoUrl: ""
+        correctAnswer: "C",
+        hints: ["Dica: Pense na pele de um sapo ou em uma lesma."]
     },
-
-    // Pergunta 14
     {
         id: "q14",
         type: "mc",
-        questionText: `
-            Qual a melhor tradução para a palavra <b>"slimy"</b>?
-        `,
+        questionText: `Qual a melhor tradução para: <strong>Poisonous</strong>?`,
         options: [
-            { letter: "A", text: "(A) seco." },
-            { letter: "B", text: "(B) áspero." },
-            { letter: "C", text: "(C) viscoso / gosmento." },
-            { letter: "D", text: "(D) duro." },
-            { letter: "E", text: "(E) leve." }
+            { letter: "A", text: "(A) saudável" },
+            { letter: "B", text: "(B) perigoso" },
+            { letter: "C", text: "(C) venenoso", isCorrect: true },
+            { letter: "D", text: "(D) doce" }
         ],
         correctAnswer: "C",
-        videoUrl: ""
+        hints: ["Dica: Se você comer, pode passar mal ou morrer."]
     },
-
-    // Pergunta 15
     {
         id: "q15",
         type: "mc",
-        questionText: `
-            Qual a melhor tradução para a palavra <b>"poisonous"</b>?
-        `,
+        questionText: `Qual a melhor tradução para: <strong>Ecosystem</strong>?`,
         options: [
-            { letter: "A", text: "(A) saudável." },
-            { letter: "B", text: "(B) perigoso." },
-            { letter: "C", text: "(C) venenoso." },
-            { letter: "D", text: "(D) doce." },
-            { letter: "E", text: "(E) limpo." }
+            { letter: "A", text: "(A) atmosfera" },
+            { letter: "B", text: "(B) ecossistema", isCorrect: true },
+            { letter: "C", text: "(C) floresta" },
+            { letter: "D", text: "(D) planeta" }
         ],
-        correctAnswer: "C",
-        videoUrl: ""
+        correctAnswer: "B",
+        hints: ["Dica: O conjunto de seres vivos e ambiente."]
     },
 
-    // Pergunta 16
+    // --- VOCABULARY: COMPLETION (Questions 16-22) ---
     {
         id: "q16",
         type: "mc",
-        questionText: `
-            Qual a melhor tradução para a palavra <b>"ecosystem"</b>?
-        `,
+        questionText: `This decision is ______ for the success of the project.`,
         options: [
-            { letter: "A", text: "(A) atmosfera." },
-            { letter: "B", text: "(B) ecossistema." },
-            { letter: "C", text: "(C) floresta." },
-            { letter: "D", text: "(D) planeta." },
-            { letter: "E", text: "(E) natureza." }
+            { letter: "C", text: "(C) crucial", isCorrect: true }
         ],
-        correctAnswer: "B",
-        videoUrl: ""
+        correctAnswer: "C",
+        hints: ["Dica: Essencial para o sucesso."]
     },
-
-    // Pergunta 17
     {
         id: "q17",
         type: "mc",
-        questionText: `
-            Choose the correct word to complete the sentence:
-            <br><br>
-            This decision is ______ for the success of the project.
-        `,
+        questionText: `The hurricane can ______ entire cities if it is strong enough.`,
         options: [
-            { letter: "A", text: "(A) slimy" },
-            { letter: "B", text: "(B) disgusting" },
-            { letter: "C", text: "(C) crucial" },
-            { letter: "D", text: "(D) sting" },
-            { letter: "E", text: "(E) poisonous" }
+            { letter: "A", text: "(A) destroy", isCorrect: true }
         ],
-        correctAnswer: "C",
-        videoUrl: ""
+        correctAnswer: "A",
+        hints: ["Dica: Furacões causam destruição."]
     },
-
-    // Pergunta 18
     {
         id: "q18",
         type: "mc",
-        questionText: `
-            Choose the correct word to complete the sentence:
-            <br><br>
-            The hurricane can ______ entire cities if it is strong enough.
-        `,
+        questionText: `The food smelled so bad that it was absolutely ______.`,
         options: [
-            { letter: "A", text: "(A) destroy" },
-            { letter: "B", text: "(B) sting" },
-            { letter: "C", text: "(C) slimy" },
-            { letter: "D", text: "(D) crucial" },
-            { letter: "E", text: "(E) ecosystem" }
+            { letter: "B", text: "(B) disgusting", isCorrect: true }
         ],
-        correctAnswer: "A",
-        videoUrl: ""
+        correctAnswer: "B",
+        hints: ["Dica: Smelled bad = cheiro ruim."]
     },
-
-    // Pergunta 19
     {
         id: "q19",
         type: "mc",
-        questionText: `
-            Choose the correct word to complete the sentence:
-            <br><br>
-            The food smelled so bad that it was absolutely ______.
-        `,
+        questionText: `Be careful! That bee can ______ you if you get too close.`,
         options: [
-            { letter: "A", text: "(A) slimy" },
-            { letter: "B", text: "(B) disgusting" },
-            { letter: "C", text: "(C) crucial" },
-            { letter: "D", text: "(D) ecosystem" },
-            { letter: "E", text: "(E) sting" }
+            { letter: "C", text: "(C) sting", isCorrect: true }
         ],
-        correctAnswer: "B",
-        videoUrl: ""
+        correctAnswer: "C",
+        hints: ["Dica: Cuidado com a abelha!"]
     },
-
-    // Pergunta 20
     {
         id: "q20",
         type: "mc",
-        questionText: `
-            Choose the correct word to complete the sentence:
-            <br><br>
-            Be careful! That bee can ______ you if you get too close.
-        `,
+        questionText: `The frog’s skin felt cold and ______.`,
         options: [
-            { letter: "A", text: "(A) destroy" },
-            { letter: "B", text: "(B) slimy" },
-            { letter: "C", text: "(C) sting" },
-            { letter: "D", text: "(D) crucial" },
-            { letter: "E", text: "(E) ecosystem" }
+            { letter: "B", text: "(B) slimy", isCorrect: true }
         ],
-        correctAnswer: "C",
-        videoUrl: ""
+        correctAnswer: "B",
+        hints: ["Dica: Pele de sapo costuma ser gosmenta."]
     },
-
-    // Pergunta 21
     {
         id: "q21",
         type: "mc",
-        questionText: `
-            Choose the correct word to complete the sentence:
-            <br><br>
-            The frog’s skin felt cold and ______.
-        `,
+        questionText: `Some mushrooms are ______, so you should never eat them.`,
         options: [
-            { letter: "A", text: "(A) disgusting" },
-            { letter: "B", text: "(B) slimy" },
-            { letter: "C", text: "(C) crucial" },
-            { letter: "D", text: "(D) destroy" },
-            { letter: "E", text: "(E) ecosystem" }
+            { letter: "C", text: "(C) poisonous", isCorrect: true }
         ],
-        correctAnswer: "B",
-        videoUrl: ""
+        correctAnswer: "C",
+        hints: ["Dica: Não coma cogumelos desconhecidos!"]
     },
-
-    // Pergunta 22
     {
         id: "q22",
         type: "mc",
-        questionText: `
-            Choose the correct word to complete the sentence:
-            <br><br>
-            Some mushrooms are ______, so you should never eat them.
-        `,
+        questionText: `Climate change can seriously affect the entire ______.`,
         options: [
-            { letter: "A", text: "(A) slimy" },
-            { letter: "B", text: "(B) crucial" },
-            { letter: "C", text: "(C) poisonous" },
-            { letter: "D", text: "(D) sting" },
-            { letter: "E", text: "(E) destroy" }
+            { letter: "A", text: "(A) ecosystem", isCorrect: true }
         ],
-        correctAnswer: "C",
-        videoUrl: ""
+        correctAnswer: "A",
+        hints: ["Dica: Mudanças climáticas afetam a natureza toda."]
     },
 
-    // Pergunta 23
+    // --- GRAMMAR: REFLEXIVE & PREFIXES (Questions 23-26) ---
     {
         id: "q23",
         type: "mc",
-        questionText: `
-            Choose the correct word to complete the sentence:
-            <br><br>
-            Climate change can seriously affect the entire ______.
-        `,
+        questionText: `Sobre os <strong>pronomes reflexivos</strong>, é correto afirmar que:
+        <br>I. Nunca usados após preposições.<br>II. Verbos como 'relax' não costumam pedir reflexivo.<br>III. 'Theirselves' está correto.<br>IV. Usados em 'Behave yourself!'.`,
         options: [
-            { letter: "A", text: "(A) ecosystem" },
-            { letter: "B", text: "(B) sting" },
-            { letter: "C", text: "(C) slimy" },
-            { letter: "D", text: "(D) disgusting" },
-            { letter: "E", text: "(E) crucial" }
+            { letter: "C", text: "(C) Apenas II e IV estão corretas.", isCorrect: true, rationale: "I é falsa (usa-se 'by myself'), III é falsa ('themselves' é o correto)." }
         ],
-        correctAnswer: "A",
-        videoUrl: ""
+        correctAnswer: "C",
+        hints: ["Dica: Reflexivos em inglês são menos comuns que em português em verbos de rotina."]
     },
-
-    // Pergunta 24
     {
         id: "q24",
         type: "mc",
-        questionText: `
-            Sobre as regras de uso dos pronomes reflexivos, é correto afirmar que:
-            <br><br>
-            I. Eles nunca são usados após preposições (como 'with' ou 'for').<br>
-            II. Em inglês, verbos como "relax" (relaxar) e "concentrate" (concentrar) geralmente não pedem um pronome reflexivo. (Ex: "I need to relax", e não "I need to relax myself").<br>
-            III. "Theirselves" (para 'they') e "hisself" (para 'he') são formas gramaticalmente corretas e muito usadas.<br>
-            IV. Eles são usados em expressões idiomáticas fixas, como "Behave yourself!" (Comporte-se!).
-        `,
+        questionText: `O uso do prefixo <strong>"un-"</strong> geralmente indica:`,
         options: [
-            { letter: "A", text: "(A) I, II e IV estão corretas." },
-            { letter: "B", text: "(B) II, III e IV estão corretas." },
-            { letter: "C", text: "(C) Apenas II e IV estão corretas." },
-            { letter: "D", text: "(D) Apenas I e III estão corretas." }
+            { letter: "B", text: "(B) O oposto ou negação", isCorrect: true }
         ],
-        correctAnswer: "C",
-        videoUrl: ""
+        correctAnswer: "B",
+        hints: ["Dica: Happy -> Unhappy."]
     },
-
-    // Pergunta 25
     {
         id: "q25",
         type: "mc",
-        questionText: `
-            O uso do prefixo <b>"un-"</b> antes das palavras geralmente indica:
-        `,
+        questionText: `O uso do prefixo <strong>"mis-"</strong> geralmente indica:`,
         options: [
-            { letter: "A", text: "(A) Repetição de uma ação." },
-            { letter: "B", text: "(B) O oposto ou negação." },
-            { letter: "C", text: "(C) Uma ação no passado." },
-            { letter: "D", text: "(D) Intensidade." },
-            { letter: "E", text: "(E) Algo positivo." }
+            { letter: "C", text: "(C) Algo feito de forma errada", isCorrect: true }
         ],
-        correctAnswer: "B",
-        videoUrl: ""
+        correctAnswer: "C",
+        hints: ["Dica: Understand -> Misunderstand."]
     },
-
-    // Pergunta 26
     {
         id: "q26",
         type: "mc",
-        questionText: `
-            O uso do prefixo <b>"mis-"</b> antes das palavras geralmente indica:
-        `,
+        questionText: `Diferença entre <strong>"un-"</strong> e <strong>"mis-"</strong>:`,
         options: [
-            { letter: "A", text: "(A) Algo feito corretamente." },
-            { letter: "B", text: "(B) O oposto exato." },
-            { letter: "C", text: "(C) Algo feito de forma errada ou incorreta." },
-            { letter: "D", text: "(D) Algo no futuro." },
-            { letter: "E", text: "(E) Intensidade." }
+            { letter: "C", text: "(C) 'un-' indica negação/oposto e 'mis-' indica erro ou ação incorreta.", isCorrect: true }
         ],
         correctAnswer: "C",
-        videoUrl: ""
+        hints: ["Dica: Unlucky (sem sorte) vs Mistake (erro)."]
     },
 
-    // Pergunta 27
+    // --- QUESTION TAGS (Questions 27-36) ---
     {
         id: "q27",
         type: "mc",
-        questionText: `
-            Assinale a alternativa que melhor explica a diferença entre <b>"un-"</b> e <b>"mis-"</b>:
-        `,
+        questionText: `You study abroad, ______?`,
         options: [
-            { letter: "A", text: "(A) Ambos indicam passado." },
-            { letter: "B", text: "(B) "un-" indica erro e "mis-" indica negação." },
-            { letter: "C", text: "(C) "un-" indica negação/oposto e "mis-" indica erro ou ação incorreta." },
-            { letter: "D", text: "(D) Ambos indicam futuro." },
-            { letter: "E", text: "(E) Não há diferença entre eles." }
+            { letter: "A", text: "(A) don't you?", isCorrect: true }
         ],
-        correctAnswer: "C",
-        videoUrl: ""
+        correctAnswer: "A",
+        hints: ["Dica: Frase positiva no Simple Present pede auxiliar negativo."]
     },
-
-    // Pergunta 28
     {
         id: "q28",
         type: "mc",
-        questionText: `
-            Choose the correct question tag:
-            <br><br>
-            You study abroad, ______?
-        `,
+        questionText: `She is your sister, ______?`,
         options: [
-            { letter: "A", text: "(A) don't you?" },
-            { letter: "B", text: "(B) do you?" },
-            { letter: "C", text: "(C) aren't you?" },
-            { letter: "D", text: "(D) didn't you?" },
-            { letter: "E", text: "(E) won't you?" }
+            { letter: "B", text: "(B) isn't she?", isCorrect: true }
         ],
-        correctAnswer: "A",
-        videoUrl: ""
+        correctAnswer: "B",
+        hints: ["Dica: Verbo To Be positivo vira negativo na tag."]
     },
-
-    // Pergunta 29
     {
         id: "q29",
         type: "mc",
-        questionText: `
-            Choose the correct question tag:
-            <br><br>
-            She is your sister, ______?
-        `,
+        questionText: `They went to the party, ______?`,
         options: [
-            { letter: "A", text: "(A) is she?" },
-            { letter: "B", text: "(B) isn't she?" },
-            { letter: "C", text: "(C) doesn't she?" },
-            { letter: "D", text: "(D) wasn't she?" },
-            { letter: "E", text: "(E) aren't she?" }
+            { letter: "A", text: "(A) didn't they?", isCorrect: true }
         ],
-        correctAnswer: "B",
-        videoUrl: ""
+        correctAnswer: "A",
+        hints: ["Dica: 'Went' está no passado, use o auxiliar do passado."]
     },
-
-    // Pergunta 30
     {
         id: "q30",
         type: "mc",
-        questionText: `
-            Choose the correct question tag:
-            <br><br>
-            They went to the party, ______?
-        `,
+        questionText: `He can drive, ______?`,
         options: [
-            { letter: "A", text: "(A) didn't they?" },
-            { letter: "B", text: "(B) did they?" },
-            { letter: "C", text: "(C) don't they?" },
-            { letter: "D", text: "(D) weren't they?" },
-            { letter: "E", text: "(E) aren't they?" }
+            { letter: "A", text: "(A) can't he?", isCorrect: true }
         ],
         correctAnswer: "A",
-        videoUrl: ""
+        hints: ["Dica: Repita o modal 'can' na forma negativa."]
     },
-
-    // Pergunta 31
     {
         id: "q31",
         type: "mc",
-        questionText: `
-            Choose the correct question tag:
-            <br><br>
-            He can drive, ______?
-        `,
+        questionText: `You aren’t tired, ______?`,
         options: [
-            { letter: "A", text: "(A) can't he?" },
-            { letter: "B", text: "(B) can he?" },
-            { letter: "C", text: "(C) doesn't he?" },
-            { letter: "D", text: "(D) isn't he?" },
-            { letter: "E", text: "(E) won't he?" }
+            { letter: "B", text: "(B) are you?", isCorrect: true }
         ],
-        correctAnswer: "A",
-        videoUrl: ""
+        correctAnswer: "B",
+        hints: ["Dica: Frase negativa pede tag positiva."]
     },
-
-    // Pergunta 32
     {
         id: "q32",
         type: "mc",
-        questionText: `
-            Choose the correct question tag:
-            <br><br>
-            You aren’t tired, ______?
-        `,
+        questionText: `She has finished her homework, ______?`,
         options: [
-            { letter: "A", text: "(A) aren't you?" },
-            { letter: "B", text: "(B) are you?" },
-            { letter: "C", text: "(C) do you?" },
-            { letter: "D", text: "(D) don't you?" },
-            { letter: "E", text: "(E) were you?" }
+            { letter: "A", text: "(A) hasn't she?", isCorrect: true }
         ],
-        correctAnswer: "B",
-        videoUrl: ""
+        correctAnswer: "A",
+        hints: ["Dica: Use o auxiliar 'has' do Present Perfect."]
     },
-
-    // Pergunta 33
     {
         id: "q33",
         type: "mc",
-        questionText: `
-            Choose the correct question tag:
-            <br><br>
-            She has finished her homework, ______?
-        `,
+        questionText: `We will travel tomorrow, ______?`,
         options: [
-            { letter: "A", text: "(A) hasn't she?" },
-            { letter: "B", text: "(B) has she?" },
-            { letter: "C", text: "(C) doesn't she?" },
-            { letter: "D", text: "(D) didn't she?" },
-            { letter: "E", text: "(E) isn't she?" }
+            { letter: "A", text: "(A) won't we?", isCorrect: true }
         ],
         correctAnswer: "A",
-        videoUrl: ""
+        hints: ["Dica: Will vira Won't."]
     },
-
-    // Pergunta 34
     {
         id: "q34",
         type: "mc",
-        questionText: `
-            Choose the correct question tag:
-            <br><br>
-            We will travel tomorrow, ______?
-        `,
+        questionText: `He doesn’t like coffee, ______?`,
         options: [
-            { letter: "A", text: "(A) won't we?" },
-            { letter: "B", text: "(B) will we?" },
-            { letter: "C", text: "(C) don't we?" },
-            { letter: "D", text: "(D) aren't we?" },
-            { letter: "E", text: "(E) didn't we?" }
+            { letter: "A", text: "(A) does he?", isCorrect: true }
         ],
         correctAnswer: "A",
-        videoUrl: ""
+        hints: ["Dica: doesn't -> does."]
     },
-
-    // Pergunta 35
     {
         id: "q35",
         type: "mc",
-        questionText: `
-            Choose the correct question tag:
-            <br><br>
-            He doesn’t like coffee, ______?
-        `,
+        questionText: `I am late, ______?`,
         options: [
-            { letter: "A", text: "(A) does he?" },
-            { letter: "B", text: "(B) doesn't he?" },
-            { letter: "C", text: "(C) did he?" },
-            { letter: "D", text: "(D) isn't he?" },
-            { letter: "E", text: "(E) won't he?" }
+            { letter: "A", text: "(A) aren't I?", isCorrect: true, rationale: "Exceção clássica do inglês. 'Am I not' é raro, usa-se 'aren't I'." }
         ],
         correctAnswer: "A",
-        videoUrl: ""
+        hints: ["Dica: Cuidado com a pegadinha do 'I am'!"]
     },
-
-    // Pergunta 36
     {
         id: "q36",
         type: "mc",
-        questionText: `
-            Choose the correct question tag:
-            <br><br>
-            I am late, ______?
-        `,
+        questionText: `Let’s go to the park, ______?`,
         options: [
-            { letter: "A", text: "(A) aren't I?" },
-            { letter: "B", text: "(B) am I?" },
-            { letter: "C", text: "(C) don't I?" },
-            { letter: "D", text: "(D) isn't I?" },
-            { letter: "E", text: "(E) won't I?" }
+            { letter: "A", text: "(A) shall we?", isCorrect: true, rationale: "Sugestões com 'Let's' usam sempre 'shall we?'." }
         ],
         correctAnswer: "A",
-        videoUrl: ""
+        hints: ["Dica: Let's = Shall we."]
     },
 
-    // Pergunta 37
+    // --- CONNECTORS & CONTRAST (Questions 37-41) ---
     {
         id: "q37",
         type: "mc",
-        questionText: `
-            Choose the correct question tag:
-            <br><br>
-            Let’s go to the park, ______?
-        `,
+        questionText: `Which of the following words/expressions express <strong>contrast</strong>?`,
         options: [
-            { letter: "A", text: "(A) shall we?" },
-            { letter: "B", text: "(B) will we?" },
-            { letter: "C", text: "(C) do we?" },
-            { letter: "D", text: "(D) don't we?" },
-            { letter: "E", text: "(E) aren't we?" }
+            { letter: "C", text: "(C) although / but / on the other hand / unlike", isCorrect: true }
         ],
-        correctAnswer: "A",
-        videoUrl: ""
+        correctAnswer: "C",
+        hints: ["Dica: Procure palavras que mostram diferenças."]
     },
-
-    // Pergunta 38
     {
         id: "q38",
         type: "mc",
-        questionText: `
-            Which of the following words/expressions express <b>contrast</b>?
-        `,
+        questionText: `Which of the following express <strong>similarity or comparison</strong>?`,
         options: [
-            { letter: "A", text: "(A) both / too" },
-            { letter: "B", text: "(B) alike / in the same way" },
-            { letter: "C", text: "(C) although / but / on the other hand / unlike" },
-            { letter: "D", text: "(D) too / both / alike" },
-            { letter: "E", text: "(E) in the same way / too" }
+            { letter: "C", text: "(C) alike / both / in the same way / too", isCorrect: true }
         ],
         correctAnswer: "C",
-        videoUrl: ""
+        hints: ["Dica: Procure palavras que mostram coisas iguais."]
     },
-
-    // Pergunta 39
     {
         id: "q39",
         type: "mc",
-        questionText: `
-            Which of the following words/expressions express <b>similarity or comparison</b>?
-        `,
+        questionText: `"I like pizza, ______ I don’t like hamburgers."`,
         options: [
-            { letter: "A", text: "(A) although / but" },
-            { letter: "B", text: "(B) unlike / on the other hand" },
-            { letter: "C", text: "(C) alike / both / in the same way / too" },
-            { letter: "D", text: "(D) but / too" },
-            { letter: "E", text: "(E) although / both" }
+            { letter: "C", text: "(C) but", isCorrect: true }
         ],
         correctAnswer: "C",
-        videoUrl: ""
+        hints: ["Dica: Gosto de uma coisa, NÃO gosto de outra."]
     },
-
-    // Pergunta 40
     {
         id: "q40",
         type: "mc",
-        questionText: `
-            Choose the best word to complete the sentence:
-            <br><br>
-            I like pizza, ______ I don’t like hamburgers.
-        `,
+        questionText: `"My brother and I are very ______. We have the same personality."`,
         options: [
-            { letter: "A", text: "(A) both" },
-            { letter: "B", text: "(B) too" },
-            { letter: "C", text: "(C) but" },
-            { letter: "D", text: "(D) alike" },
-            { letter: "E", text: "(E) in the same way" }
+            { letter: "B", text: "(B) alike", isCorrect: true }
         ],
-        correctAnswer: "C",
-        videoUrl: ""
+        correctAnswer: "B",
+        hints: ["Dica: Alike = parecidos."]
     },
-
-    // Pergunta 41
     {
         id: "q41",
         type: "mc",
-        questionText: `
-            Choose the best word to complete the sentence:
-            <br><br>
-            My brother and I are very ______. We have the same personality.
-        `,
+        questionText: `"She is very organized. ______, her sister is messy."`,
         options: [
-            { letter: "A", text: "(A) but" },
-            { letter: "B", text: "(B) alike" },
-            { letter: "C", text: "(C) although" },
-            { letter: "D", text: "(D) unlike" },
-            { letter: "E", text: "(E) on the other hand" }
+            { letter: "D", text: "(D) On the other hand", isCorrect: true }
         ],
-        correctAnswer: "B",
-        videoUrl: ""
+        correctAnswer: "D",
+        hints: ["Dica: Organizada vs Bagunçada."]
     },
 
-    // Pergunta 42
+    // --- FINAL VOCAB (Question 42) ---
     {
         id: "q42",
         type: "mc",
-        questionText: `
-            Choose the best word to complete the sentence:
-            <br><br>
-            She is very organized. ______, her sister is messy.
-        `,
+        questionText: `Qual a melhor tradução para a palavra <strong>"destroy"</strong>?`,
         options: [
-            { letter: "A", text: "(A) In the same way" },
-            { letter: "B", text: "(B) Too" },
-            { letter: "C", text: "(C) Both" },
-            { letter: "D", text: "(D) On the other hand" },
-            { letter: "E", text: "(E) Alike" }
+            { letter: "C", text: "(C) destruir", isCorrect: true }
         ],
-        correctAnswer: "D",
-        videoUrl: ""
+        correctAnswer: "C",
+        hints: ["Dica: Sinônimo de arruinar."]
     }
-    
 ];
-
