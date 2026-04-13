@@ -1,731 +1,97 @@
-const questionBank = [
+// ==========================================
+// BANCOS DE DADOS - 50 QUESTÕES TOTAIS
+// ==========================================
 
-    // --- BLOCO 1: QUESTÕES ADAPTADAS (AGORA COM 5 OPÇÕES) ---
+// 1. CAP 3: PAST PROGRESSIVE (10 Questões)
+const bankPastProgressive = [
+    { id: "pp-1", type: "mc", questionText: "At 8 PM last night, I ________ (watch) a movie with my family.", options: [{letter:"A", text:"watched"}, {letter:"B", text:"was watching"}, {letter:"C", text:"were watching"}, {letter:"D", text:"am watching"}], correctAnswer: "B", hints: ["Ação em progresso no passado."] },
+    { id: "pp-2", type: "mc", questionText: "The students ________ (not study) when the principal entered the room.", options: [{letter:"A", text:"wasn't studying"}, {letter:"B", text:"weren't studying"}, {letter:"C", text:"didn't study"}, {letter:"D", text:"wasn't study"}], correctAnswer: "B", hints: ["Students = plural (they)."] },
+    { id: "pp-3", type: "mc", questionText: "What ________ you ________ (do) when the power went out?", options: [{letter:"A", text:"did / do"}, {letter:"B", text:"was / doing"}, {letter:"C", text:"were / doing"}, {letter:"D", text:"was / do"}], correctAnswer: "C", hints: ["Estrutura de pergunta: Were + you + ing?"] },
+    { id: "pp-4", type: "short-answer", questionText: "Complete: While it ________ (rain), we stayed inside.", correctAnswer: "was raining", hints: ["Past continuous do verbo Rain."] },
+    { id: "pp-5", type: "mc", questionText: "They ________ (play) basketball while she ________ (read).", options: [{letter:"A", text:"were playing / was reading"}, {letter:"B", text:"was playing / were reading"}, {letter:"C", text:"played / read"}, {letter:"D", text:"playing / reading"}], correctAnswer: "A", hints: ["Duas ações simultâneas no passado."] },
+    { id: "pp-6", type: "mc", questionText: "I ________ (have) a beautiful dream when the alarm clock rang.", options: [{letter:"A", text:"had"}, {letter:"B", text:"was having"}, {letter:"C", text:"were having"}, {letter:"D", text:"have"}], correctAnswer: "B", hints: ["Ação interrompida."] },
+    { id: "pp-7", type: "short-answer", questionText: "Negative form: She ________ (not/work) yesterday at 5 PM.", correctAnswer: "was not working", hints: ["Pode usar a contração 'wasn't working'."] },
+    { id: "pp-8", type: "mc", questionText: "Why ________ she ________ (cry) when I saw her?", options: [{letter:"A", text:"did / cry"}, {letter:"B", text:"were / crying"}, {letter:"C", text:"was / crying"}, {letter:"D", text:"is / crying"}], correctAnswer: "C", hints: ["She pede o auxiliar WAS."] },
+    { id: "pp-9", type: "mc", questionText: "We ________ (cook) dinner when the guests arrived.", options: [{letter:"A", text:"were cooking"}, {letter:"B", text:"was cooking"}, {letter:"C", text:"cooked"}, {letter:"D", text:"was cook"}], correctAnswer: "A", hints: ["We = plural."] },
+    { id: "pp-10", type: "short-answer", questionText: "Interrogative: ________ they ________ (wait) for the bus?", correctAnswer: "Were they waiting", hints: ["Inicie com a letra maiúscula."] }
+];
 
-    // Pergunta 1 
-    {
-        id: "q1",
-        type: "mc",
-        questionText: `
-            Complete the sentence:
-            I ______ going to travel next week.
-        `,
-        options: [
-            { letter: "A", text: "(A) are" },
-            { letter: "B", text: "(B) is" },
-            { letter: "C", text: "(C) am" }, 
-            { letter: "D", text: "(D) do" },
-            { letter: "E", text: "(E) does" }
-        ],
-        correctAnswer: "C",
-        videoUrl: "",
-        hints: [
-            "Dica 1: O sujeito 'I' sempre usa 'am'.",
-            "Dica 2: 'Be going to' fala de planos já feitos.",
-            "Dica 3: Quando o plano já existe, usamos 'am/is/are + going to'."
-        ]
-    },
+// 2. CAP 4: INDEFINITE PRONOUNS (10 Questões)
+const bankIndefinite = [
+    { id: "ip-1", type: "mc", questionText: "I'm sure I left my keys ________ in this room.", options: [{letter:"A", text:"anywhere"}, {letter:"B", text:"somewhere"}, {letter:"C", text:"nowhere"}, {letter:"D", text:"everywhere"}], correctAnswer: "B", hints: ["Afirmativa: algum lugar."] },
+    { id: "ip-2", type: "mc", questionText: "Does ________ know the answer to this question?", options: [{letter:"A", text:"someone"}, {letter:"B", text:"no one"}, {letter:"C", text:"anyone"}, {letter:"D", text:"everyone"}], correctAnswer: "C", hints: ["Perguntas usamos ANY."] },
+    { id: "ip-3", type: "mc", questionText: "The party was boring. ________ danced.", options: [{letter:"A", text:"Somebody"}, {letter:"B", text:"Nobody"}, {letter:"C", text:"Anybody"}, {letter:"D", text:"Everybody"}], correctAnswer: "B", hints: ["Sentido negativo: ninguém."] },
+    { id: "ip-4", type: "mc", questionText: "I've looked ________, but I can't find my dog.", options: [{letter:"A", text:"everywhere"}, {letter:"B", text:"somewhere"}, {letter:"C", text:"anywhere"}, {letter:"D", text:"nowhere"}], correctAnswer: "A", hints: ["Procurou em todos os lugares."] },
+    { id: "ip-5", type: "short-answer", questionText: "Complete: There is ________ (nada) to do in this town.", correctAnswer: "nothing", hints: ["Pense em 'nada'."] },
+    { id: "ip-6", type: "mc", questionText: "________ told me that you were moving to Canada.", options: [{letter:"A", text:"Anyone"}, {letter:"B", text:"No one"}, {letter:"C", text:"Someone"}, {letter:"D", text:"Anything"}], correctAnswer: "C", hints: ["Alguém me contou."] },
+    { id: "ip-7", type: "mc", questionText: "I don't need ________ from the supermarket.", options: [{letter:"A", text:"nothing"}, {letter:"B", text:"anything"}, {letter:"C", text:"something"}, {letter:"D", text:"everything"}], correctAnswer: "B", hints: ["Frase negativa pede ANY."] },
+    { id: "ip-8", type: "short-answer", questionText: "Complete: Can ________ (alguém) help me with this box?", correctAnswer: "someone", hints: ["Em pedidos, usamos SOME mesmo em perguntas."] },
+    { id: "ip-9", type: "mc", questionText: "The room was empty. There was ________ there.", options: [{letter:"A", text:"anybody"}, {letter:"B", text:"somebody"}, {letter:"C", text:"nobody"}, {letter:"D", text:"everybody"}], correctAnswer: "C", hints: ["Se estava vazio, não tinha ninguém."] },
+    { id: "ip-10", type: "mc", questionText: "You can sit ________ you want.", options: [{letter:"A", text:"anywhere"}, {letter:"B", text:"somewhere"}, {letter:"C", text:"nowhere"}, {letter:"D", text:"everywhere"}], correctAnswer: "A", hints: ["Qualquer lugar."] }
+];
 
-    {
-        id: "q2",
-        type: "mc",
-        questionText: `
-            Complete the sentence:
-            You ______ going to start a new project today.
-        `,
-        options: [
-            { letter: "A", text: "(A) am" },
-            { letter: "B", text: "(B) is" },
-            { letter: "C", text: "(C) are" }, 
-            { letter: "D", text: "(D) do" },
-            { letter: "E", text: "(E) does" }
-        ],
-        correctAnswer: "C",
-        videoUrl: "",
-        hints: [
-            "Dica 1: 'You' sempre combina com 'are'.",
-            "Dica 2: 'Going to' indica algo planejado.",
-            "Dica 3: 'Do/does' não são usados para formar futuro."
-        ]
-    },
+// 3. CAP 5: ARTICLES (10 Questões)
+const bankArticles = [
+    { id: "art-1", type: "mc", questionText: "My father is ________ architect.", options: [{letter:"A", text:"a"}, {letter:"B", text:"an"}, {letter:"C", text:"the"}, {letter:"D", text:"X (no article)"}], correctAnswer: "B", hints: ["Architect começa com som de vogal."] },
+    { id: "art-2", type: "mc", questionText: "I want to travel to ________ United States next year.", options: [{letter:"A", text:"a"}, {letter:"B", text:"an"}, {letter:"C", text:"the"}, {letter:"D", text:"X (no article)"}], correctAnswer: "C", hints: ["Países no plural ou com 'States/Republic' usam THE."] },
+    { id: "art-3", type: "mc", questionText: "________ water in that bottle is very cold.", options: [{letter:"A", text:"A"}, {letter:"B", text:"An"}, {letter:"C", text:"The"}, {letter:"D", text:"X (no article)"}], correctAnswer: "C", hints: ["Água específica (a daquela garrafa)."] },
+    { id: "art-4", type: "mc", questionText: "I love ________ Brazilian food.", options: [{letter:"A", text:"a"}, {letter:"B", text:"an"}, {letter:"C", text:"the"}, {letter:"D", text:"X (no article)"}], correctAnswer: "D", hints: ["Conceitos gerais não usam artigo."] },
+    { id: "art-5", type: "short-answer", questionText: "Article: He is ________ honest person.", correctAnswer: "an", hints: ["Cuidado! 'Honest' tem H mudo."] },
+    { id: "art-6", type: "mc", questionText: "Paris is ________ capital of France.", options: [{letter:"A", text:"a"}, {letter:"B", text:"an"}, {letter:"C", text:"the"}, {letter:"D", text:"X (no article)"}], correctAnswer: "C", hints: ["Unicidade: só existe uma capital."] },
+    { id: "art-7", type: "mc", questionText: "She has ________ cat and ________ dog.", options: [{letter:"A", text:"a / a"}, {letter:"B", text:"an / an"}, {letter:"C", text:"the / the"}, {letter:"D", text:"X / X"}], correctAnswer: "A", hints: ["Consonantal sounds."] },
+    { id: "art-8", type: "short-answer", questionText: "Article: I saw ________ UFO last night.", correctAnswer: "a", hints: ["UFO tem som de 'Y' (consoante)."] },
+    { id: "art-9", type: "mc", questionText: "________ Moon looks beautiful tonight.", options: [{letter:"A", text:"A"}, {letter:"B", text:"An"}, {letter:"C", text:"The"}, {letter:"D", text:"X (no article)"}], correctAnswer: "C", hints: ["Corpos celestes únicos usam THE."] },
+    { id: "art-10", type: "mc", questionText: "Would you like ________ cup of tea?", options: [{letter:"A", text:"a"}, {letter:"B", text:"an"}, {letter:"C", text:"the"}, {letter:"D", text:"X (no article)"}], correctAnswer: "A", hints: ["Uma xícara qualquer."] }
+];
 
-    {
-        id: "q3",
-        type: "mc",
-        questionText: `
-            Complete the sentence:
-            Neymar ______ going to play tomorrow.
-        `,
-        options: [
-            { letter: "A", text: "(A) are" },
-            { letter: "B", text: "(B) is" },
-            { letter: "C", text: "(C) am" }, 
-            { letter: "D", text: "(D) do" },
-            { letter: "E", text: "(E) does" }
-        ],
-        correctAnswer: "B",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Neymar = 'he'.",
-            "Dica 2: 'He' sempre usa 'is'.",
-            "Dica 3: 'Is going to' mostra um plano já definido."
-        ]
-    },
+// 4. CAP 6: PAST PERFECT (10 Questões)
+const bankPastPerfect = [
+    { id: "ppf-1", type: "mc", questionText: "The train ________ (leave) when I arrived at the station.", options: [{letter:"A", text:"has left"}, {letter:"B", text:"had left"}, {letter:"C", text:"was left"}, {letter:"D", text:"leaves"}], correctAnswer: "B", hints: ["Passado do passado: Had + Particípio."] },
+    { id: "ppf-2", type: "mc", questionText: "I recognized him because I ________ (see) him before.", options: [{letter:"A", text:"saw"}, {letter:"B", text:"had seen"}, {letter:"C", text:"have seen"}, {letter:"D", text:"was seeing"}], correctAnswer: "B", hints: ["Ação anterior ao reconhecimento."] },
+    { id: "ppf-3", type: "short-answer", questionText: "Complete: They ________ (finish) the report before the deadline.", correctAnswer: "had finished", hints: ["Use o auxiliar HAD."] },
+    { id: "ppf-4", type: "mc", questionText: "She failed the test because she ________ (not/study).", options: [{letter:"A", text:"hadn't studied"}, {letter:"B", text:"haven't studied"}, {letter:"C", text:"didn't studied"}, {letter:"D", text:"wasn't study"}], correctAnswer: "A", hints: ["Negativa no Past Perfect."] },
+    { id: "ppf-5", type: "mc", questionText: "________ you ________ (eat) breakfast before you went to work?", options: [{letter:"A", text:"Had / eaten"}, {letter:"B", text:"Have / eat"}, {letter:"C", text:"Did / ate"}, {letter:"D", text:"Was / eating"}], correctAnswer: "A", hints: ["Pergunta no Past Perfect."] },
+    { id: "ppf-6", type: "short-answer", questionText: "Complete: By the time I was 20, I ________ (visit) 5 countries.", correctAnswer: "had visited", hints: ["Ação completada até um ponto no passado."] },
+    { id: "ppf-7", type: "mc", questionText: "The house was dirty because they ________ (not/clean) it for weeks.", options: [{letter:"A", text:"didn't clean"}, {letter:"B", text:"hadn't cleaned"}, {letter:"C", text:"weren't cleaning"}, {letter:"D", text:"haven't cleaned"}], correctAnswer: "B", hints: ["Causa no passado anterior."] },
+    { id: "ppf-8", type: "mc", questionText: "After we ________ (finish) dinner, we went for a walk.", options: [{letter:"A", text:"finish"}, {letter:"B", text:"have finished"}, {letter:"C", text:"had finished"}, {letter:"D", text:"were finishing"}], correctAnswer: "C", hints: ["Primeiro jantou, depois passeou."] },
+    { id: "ppf-9", type: "short-answer", questionText: "Complete: I ________ (never/be) to Japan until last year.", correctAnswer: "had never been", hints: ["Use o advérbio 'never' entre o had e o been."] },
+    { id: "ppf-10", type: "mc", questionText: "The teacher ________ (already/start) the class when I walked in.", options: [{letter:"A", text:"had already started"}, {letter:"B", text:"already started"}, {letter:"C", text:"was already starting"}, {letter:"D", text:"has already started"}], correctAnswer: "A", hints: ["Already reforça que a ação já tinha ocorrido."] }
+];
 
-    {
-        id: "q4",
-        type: "mc",
-        questionText: `
-            Complete the sentence:
-            Maria ______ going to visit her family next month.
-        `,
-        options: [
-            { letter: "A", text: "(A) am" },
-            { letter: "B", text: "(B) is" },
-            { letter: "C", text: "(C) are" }, 
-            { letter: "D", text: "(D) do" },
-            { letter: "E", text: "(E) does" }
-        ],
-        correctAnswer: "B",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Maria = 'she'.",
-            "Dica 2: 'She' sempre usa 'is'.",
-            "Dica 3: A expressão 'going to' indica um plano futuro."
-        ]
-    },
+// 5. CAP 7: CAUSATIVE VERBS (10 Questões)
+const bankCausative = [
+    { id: "cau-1", type: "mc", questionText: "I had the plumber ________ (fix) the leak.", options: [{letter:"A", text:"to fix"}, {letter:"B", text:"fix"}, {letter:"C", text:"fixing"}, {letter:"D", text:"fixed"}], correctAnswer: "B", hints: ["HAVE + person + base form."] },
+    { id: "cau-2", type: "mc", questionText: "She got her sister ________ (help) her with the project.", options: [{letter:"A", text:"help"}, {letter:"B", text:"to help"}, {letter:"C", text:"helping"}, {letter:"D", text:"helped"}], correctAnswer: "B", hints: ["GET + person + TO + verb."] },
+    { id: "cau-3", type: "mc", questionText: "The teacher made the students ________ (rewrite) the essay.", options: [{letter:"A", text:"rewrite"}, {letter:"B", text:"to rewrite"}, {letter:"C", text:"rewriting"}, {letter:"D", text:"rewrote"}], correctAnswer: "A", hints: ["MAKE + person + base form (obrigação)."] },
+    { id: "cau-4", type: "short-answer", questionText: "Complete: I need to get my hair ________ (cut).", correctAnswer: "cut", hints: ["Causativo passivo: GET + object + V3 (particípio)."] },
+    { id: "cau-5", { id: "cau-5", type: "mc", questionText: "My parents let me ________ (go) to the party.", options: [{letter:"A", text:"to go"}, {letter:"B", text:"go"}, {letter:"C", text:"going"}, {letter:"D", text:"gone"}], correctAnswer: "B", hints: ["LET + person + base form."] },
+    { id: "cau-6", type: "mc", questionText: "I'll have my assistant ________ (call) you tomorrow.", options: [{letter:"A", text:"call"}, {letter:"B", text:"to call"}, {letter:"C", text:"calling"}, {letter:"D", text:"called"}], correctAnswer: "A", hints: ["Have (causativo ativo)."] },
+    { id: "cau-7", type: "short-answer", questionText: "Complete: We had our house ________ (paint) last week.", correctAnswer: "painted", hints: ["A casa foi pintada (particípio)."] },
+    { id: "cau-8", type: "mc", questionText: "Can you help me ________ (carry) these bags?", options: [{letter:"A", text:"carry"}, {letter:"B", text:"to carry"}, {letter:"C", text:"both A and B"}, {letter:"D", text:"carrying"}], correctAnswer: "C", hints: ["O verbo HELP aceita com ou sem 'TO'."] },
+    { id: "cau-9", type: "mc", questionText: "The doctor made him ________ (stay) in bed.", options: [{letter:"A", text:"to stay"}, {letter:"B", text:"stay"}, {letter:"C", text:"stayed"}, {letter:"D", text:"staying"}], correctAnswer: "B", hints: ["Make = obrigar."] },
+    { id: "cau-10", type: "mc", questionText: "I got the computer ________ (repair) by a professional.", options: [{letter:"A", text:"repair"}, {letter:"B", text:"to repair"}, {letter:"C", text:"repaired"}, {letter:"D", text:"repairing"}], correctAnswer: "C", hints: ["Get + objeto + particípio."] }
+];
 
-    {
-        id: "q5",
-        type: "mc",
-        questionText: `
-            Complete the sentence:
-            Neymar and Maria ______ going to watch a movie tonight.
-        `,
-        options: [
-            { letter: "A", text: "(A) am" },
-            { letter: "B", text: "(B) is" },
-            { letter: "C", text: "(C) are" }, 
-            { letter: "D", text: "(D) do" },
-            { letter: "E", text: "(E) does" }
-        ],
-        correctAnswer: "C",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Dois nomes = sujeito plural.",
-            "Dica 2: Sujeitos plurais usam 'are'.",
-            "Dica 3: 'Are going to' indica plano conjunto."
-        ]
-    },
+// ==========================================
+// LÓGICA DE SORTEIO E INTEGRAÇÃO (Simulando o build)
+// ==========================================
 
-    {
-        id: "q6",
-        type: "mc",
-        questionText: `
-            Complete the sentence:
-            The children ______ going to sleep early today.
-        `,
-        options: [
-            { letter: "A", text: "(A) is" },
-            { letter: "B", text: "(B) am" },
-            { letter: "C", text: "(C) are" }, 
-            { letter: "D", text: "(D) does" },
-            { letter: "E", text: "(E) do" }
-        ],
-        correctAnswer: "C",
-        videoUrl: "",
-        hints: [
-            "Dica 1: 'Children' é plural.",
-            "Dica 2: Palavras plurais sempre usam 'are'.",
-            "Dica 3: 'Going to' mostra intenção futura."
-        ]
-    },
-
-    {
-        id: "q7",
-        type: "mc",
-        questionText: `
-            Complete the sentence:
-            The computer ______ going to update automatically.
-        `,
-        options: [
-            { letter: "A", text: "(A) are" },
-            { letter: "B", text: "(B) am" },
-            { letter: "C", text: "(C) is" }, 
-            { letter: "D", text: "(D) do" },
-            { letter: "E", text: "(E) does" }
-        ],
-        correctAnswer: "C",
-        videoUrl: "",
-        hints: [
-            "Dica 1: 'The computer' = 'it'.",
-            "Dica 2: 'It' sempre usa 'is'.",
-            "Dica 3: A forma correta é 'is going to'."
-        ]
-    },
-
-    {
-        id: "q8",
-        type: "mc",
-        questionText: `
-            Complete the sentence:
-            The book ______ going to fall off the table.
-        `,
-        options: [
-            { letter: "A", text: "(A) am" },
-            { letter: "B", text: "(B) are" },
-            { letter: "C", text: "(C) is" }, 
-            { letter: "D", text: "(D) do" },
-            { letter: "E", text: "(E) does" }
-        ],
-        correctAnswer: "C",
-        videoUrl: "",
-        hints: [
-            "Dica 1: 'The book' também é 'it'.",
-            "Dica 2: Objetos singulares usam 'is'.",
-            "Dica 3: 'Is going to' mostra previsão do que vai acontecer."
-        ]
-    },
-
-    {
-        id: "q9",
-        type: "mc",
-        questionText: `
-            Complete the sentence:
-            We ______ going to paint the house tomorrow.
-        `,
-        options: [
-            { letter: "A", text: "(A) am" },
-            { letter: "B", text: "(B) is" },
-            { letter: "C", text: "(C) are" }, 
-            { letter: "D", text: "(D) do" },
-            { letter: "E", text: "(E) does" }
-        ],
-        correctAnswer: "C",
-        videoUrl: "",
-        hints: [
-            "Dica 1: 'We' é pronome plural — usa 'are'.",
-            "Dica 2: 'Be going to' indica um plano futuro combinado.",
-            "Dica 3: 'Do/does' não formam futuro com 'going to'."
-        ]
-    },
-
-    {
-        id: "q10",
-        type: "mc",
-        questionText: `
-            Complete the sentence:
-            Ana and you ______ going to join the class tonight.
-        `,
-        options: [
-            { letter: "A", text: "(A) am" },
-            { letter: "B", text: "(B) is" },
-            { letter: "C", text: "(C) are" }, 
-            { letter: "D", text: "(D) do" },
-            { letter: "E", text: "(E) does" }
-        ],
-        correctAnswer: "C",
-        videoUrl: "",
-        hints: [
-            "Dica 1: Dois sujeitos ligados por 'and' formam um sujeito plural.",
-            "Dica 2: Sujeitos plurais exigem 'are' com 'going to'.",
-            "Dica 3: 'Ana and you' = 'you both' (plural)."
-        ]
-    },
-
-    {
-        id: "q11",
-        type: "mc",
-        questionText: `
-            Complete the sentence:
-            It ______ going to rain this afternoon.
-        `,
-        options: [
-            { letter: "A", text: "(A) are" },
-            { letter: "B", text: "(B) am" },
-            { letter: "C", text: "(C) is" }, 
-            { letter: "D", text: "(D) do" },
-            { letter: "E", text: "(E) does" }
-        ],
-        correctAnswer: "C",
-        videoUrl: "",
-        hints: [
-            "Dica 1: 'It' (clima/it neutro) usa 'is'.",
-            "Dica 2: Previsões meteorológicas frequentemente usam 'is going to'.",
-            "Dica 3: Lembre-se: 'am' só com 'I', 'is' com he/she/it, 'are' com we/you/they."
-        ]
-    },
-
+function buildFinalTest() {
+    // Sorteando 2 de cada banco para um teste de 10 questões, por exemplo:
+    const finalSelection = [
+        ...getRandom(bankPastProgressive, 2),
+        ...getRandom(bankIndefinite, 2),
+        ...getRandom(bankArticles, 2),
+        ...getRandom(bankPastPerfect, 2),
+        ...getRandom(bankCausative, 2)
+    ];
     
-    {
-    id: "q12",
-    type: "mc",
-    questionText: `
-        Complete the sentence:
-        ________ you going to study for the test tonight?
-    `,
-    options: [
-        { letter: "A", text: "(A) is" },
-        { letter: "B", text: "(B) am" },
-        { letter: "C", text: "(C) are" },
-        { letter: "D", text: "(D) do" },
-        { letter: "E", text: "(E) does" }
-    ],
-    correctAnswer: "C",
-    videoUrl: "",
-    hints: [
-        "Dica 1: Em perguntas com 'you', usamos 'are' no começo.",
-        "Dica 2: A ordem da frase interrogativa é 'Are + sujeito + going to...?'",
-        "Dica 3: 'Do/does' não formam futuro com 'going to'."
-    ]
-    } ,
-    
-    // Pergunta 13
-    {
-    id: "q13",
-    type: "mc",
-    questionText: `
-        Complete the sentence:
-        ________ Maria going to cook dinner today?
-    `,
-    options: [
-        { letter: "A", text: "(A) are" },
-        { letter: "B", text: "(B) am" },
-        { letter: "C", text: "(C) is" },
-        { letter: "D", text: "(D) do" },
-        { letter: "E", text: "(E) does" }
-    ],
-    correctAnswer: "C",
-    videoUrl: "",
-    hints: [
-        "Dica 1: Maria = she, então usamos 'is'.",
-        "Dica 2: A estrutura correta é 'Is + Maria + going to...?'.",
-        "Dica 3: 'Are' é usado somente com sujeitos plurais ou 'you'."
-    ]
-  },
-
-    // Pergunta 14
-    {
-    id: "q14",
-    type: "mc",
-    questionText: `
-        Complete the sentence:
-        ________ Neymar and Lucas going to travel next month?
-    `,
-    options: [
-        { letter: "A", text: "(A) am" },
-        { letter: "B", text: "(B) is" },
-        { letter: "C", text: "(C) are" },
-        { letter: "D", text: "(D) do" },
-        { letter: "E", text: "(E) does" }
-    ],
-    correctAnswer: "C",
-    videoUrl: "",
-    hints: [
-        "Dica 1: Dois nomes formam um sujeito plural.",
-        "Dica 2: Perguntas no plural começam com 'are'.",
-        "Dica 3: 'Is' só é usado para he/she/it (singular)."
-    ]
-   },
-
-    // Pergunta 15
-    {
-        id: "q15",
-        type: "mc",
-        questionText: `Which sentence expresses a plan or intention (not a promise)?`,
-        options: [
-            { letter: "A", text: "(A) I promise I will call you tonight." },
-            { letter: "B", text: "(B) I am going to study medicine next year." },
-            { letter: "C", text: "(C) I will always love this song." },
-            { letter: "D", text: "(D) I think it will snow tomorrow." },
-            { letter: "E", text: "(E) I'll have the steak, please." }
-        ],
-        correctAnswer: "B",
-        videoUrl: "",
-        hints: [ 
-            "Dica 1: A pergunta pede por um 'plan' (plano) ou 'intention' (intenção).",
-            "Dica 2: 'Be going to' é a estrutura principal para falar de planos.",
-            "Dica 3: As outras opções mostram promessas (A), fatos (C), opiniões (D) ou decisões do momento (E)."
-        ]
-    },
-
-    // Pergunta 16
-    {
-    id: "q15",
-    type: "mc",
-    questionText: `
-        Complete the sentence:
-        ________ the children going to visit the museum?
-    `,
-    options: [
-        { letter: "A", text: "(A) am" },
-        { letter: "B", text: "(B) is" },
-        { letter: "C", text: "(C) are" },
-        { letter: "D", text: "(D) do" },
-        { letter: "E", text: "(E) does" }
-    ],
-    correctAnswer: "C",
-    videoUrl: "",
-    hints: [
-        "Dica 1: 'Children' é plural.",
-        "Dica 2: Sujeitos plurais exigem 'are' em perguntas.",
-        "Dica 3: Estrutura interrogativa: 'Are + subject + going to...?'"
-    ]
-  },
-
-
-    {
-        id: "q18_fill_verb_will",
-        type: "fill-verb",
-        questionText: "Read the situations and choose the correct future form (Will or Be Going To).",
-        lines: [
-            { text: "(A) I've already bought the tickets. I ... (travel) to Japan next month.", verbs: ["will travel", "am going to travel"] },
-            { text: "(B) Oh no, I spilled the milk! I ... (clean) it up right now.", verbs: ["will clean", "am going to clean"] },
-            { text: "(C) Look at those dark clouds! It ... (rain) very soon.", verbs: ["will rain", "is going to rain"] }
-        ],
-        correctAnswer: ["am going to travel", "will clean", "is going to rain"],
-        videoUrl: "",
-        hints: [ 
-            "Dica 1: Use 'Be Going To' para planos feitos com antecedência (A) ou previsões com evidência (C).",
-            "Dica 2: Use 'Will' para decisões rápidas e espontâneas (B).",
-            "Dica 3: 'I've bought the tickets' é um plano. 'I spilled the milk' é uma surpresa. 'Dark clouds' é uma evidência."
-        ]
-    },
-
-    {
-    id: "q20",
-    type: "mc",
-    questionText: `
-        Questão 25:
-        <br>
-        Sobre o uso do auxiliar modal "Will" para formar o futuro em inglês, analise as afirmações abaixo e assinale a opção que contém apenas a(s) afirmativa(s) correta(s):
-        <br><br>
-        I. é usado para falar sobre planos<br>
-        II. usado para falar sobre predições baseadas em evidecias<br>
-        III. uma decisão feita antes do momento da fala<br>
-        IV. para falar sobre o passado<br>
-        V. fazer promessas
-    `,
-    options: [
-        { letter: "A", text: "(A) Apenas as afirmações I, II e III estão corretas.", isCorrect: false, rationale: "As afirmações I, II e III são incorretas. Essas ações geralmente usam 'going to', não 'will'." },
-        { letter: "B", text: "(B) Apenas a afirmação V está correta.", isCorrect: true, rationale: "O 'Will' é a forma correta de expressar promessas e ofertas." },
-        { letter: "C", text: "(C) Apenas as afirmações I e V estão corretas.", isCorrect: false, rationale: "A afirmação I ('falar sobre planos') é incorreta, pois planos e intenções pré-determinadas usam 'going to'." },
-        { letter: "D", text: "(D) Apenas as afirmações IV e V estão corretas.", isCorrect: false, rationale: "A afirmação IV ('falar sobre o passado') está incorreta. 'Will' é um auxiliar do futuro." }
-    ],
-    correctAnswer: "B",
-    videoUrl: "",
-    hints: [
-        "Dica 1 (Q25): Lembre-se que o uso do 'Will' é ideal para o que é espontâneo (decisões no momento da fala) ou incerto, e para fazer promessas, em contraste com o 'Going To' que é para planos e evidências."
-    ]
-   },
-
-    // Pergunta 21 (Placeholder - MC Simples)
-    {
-    id: "q21_goingto_garfield",
-    type: "mc",
-    questionText: `
-        Question 21:
-        <br>
-        Observe the Garfield comic strip. In the first speech bubble, Jon says: "I'm going kite flying!".
-        <br><br>
-        Which of the options below BEST describes the use of the structure "be going to" in this sentence, according to the context of the comic strip?
-        <br><br>
-        <div style="text-align: center;">
-        <img src="images/garff.jpg" alt="Garfield kite flying comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
-        </div>
-    `,
-    options: [
-        { letter: "A", text: "(A) A prediction about the future based on Jon's opinion." },
-        { letter: "B", text: "(B) A plan or intention that Jon had prior to the moment of speaking." },
-        { letter: "C", text: "(C) A spontaneous decision that Jon made at the moment of speaking." },
-        { letter: "D", text: "(D) A promise that Jon is making to Garfield." },
-        { letter: "E", text: "(E) A known fact about the weather or the day." }
-    ],
-    correctAnswer: "B", 
-    videoUrl: "",
-    hints: [ 
-        "Hint 1: Observe Jon's attitude in the first panel. He is already holding the kite, indicating he had this idea beforehand.",
-        "Hint 2: The structure 'be going to' is often used to express actions that have already been planned.",
-        "Hint 3: Compare this with the uses of 'will', which are usually for on-the-spot decisions or promises."
-    ]
-    },
-    {
-    id: "q26",
-    type: "mc",
-    questionText: `
-        Questão 25:
-        <br>
-        Sobre o uso do auxiliar modal "Will" para formar o futuro em inglês, analise as afirmações abaixo e assinale a opção que contém apenas a(s) afirmativa(s) correta(s):
-        <br><br>
-        I. é usado para falar sobre planos<br>
-        II. usado para falar sobre predições baseadas em evidecias<br>
-        III. uma decisão feita no momento da fala<br>
-        IV. para falar sobre o passado<br>
-        V. fazer promessas
-    `,
-    options: [
-        { letter: "A", text: "(A) Apenas a afirmação V está correta.", isCorrect: false, rationale: "A afirmação III ('decisão feita no momento da fala') também está correta para o uso de 'Will'." },
-        { letter: "B", text: "(B) Apenas as afirmações III e V estão corretas.", isCorrect: true, rationale: "As afirmações III ('decisão feita no momento da fala') e V ('fazer promessas') são os usos corretos do 'Will' dentre as opções listadas. As demais se referem a 'going to' ou a outros tempos verbais." },
-        { letter: "C", text: "(C) Apenas as afirmações I, III e V estão corretas.", isCorrect: false, rationale: "A afirmação I ('falar sobre planos') é incorreta, pois planos e intenções pré-determinadas usam 'going to'." },
-        { letter: "D", text: "(D) Apenas as afirmações II, III e V estão corretas.", isCorrect: false, rationale: "A afirmação II ('predições baseadas em evidecias') é incorreta, pois predições baseadas em evidências claras usam 'going to'." }
-    ],
-    correctAnswer: "B",
-    videoUrl: "",
-    hints: [
-        "Dica 1 (Q25): Lembre-se que o uso do 'Will' é ideal para o que é espontâneo (decisões no momento da fala - III) e para fazer promessas (V)."
-    ]
-},
-{
-    id: "q27",
-    type: "mc",
-    questionText: `
-        Questão 25:
-        <br>
-        Sobre o uso do auxiliar modal "Will" para formar o futuro em inglês, analise as afirmações abaixo e assinale a opção que contém apenas a(s) afirmativa(s) correta(s):
-        <br><br>
-        I. é usado para falar sobre planos<br>
-        II. usado para falar sobre predições baseadas em opniões<br>
-        III. uma decisão feita no momento da fala<br>
-        IV. para falar sobre o passado<br>
-        V. fazer promessas
-    `,
-    options: [
-        { letter: "A", text: "(A) Apenas as afirmações III e V estão corretas.", isCorrect: false, rationale: "A afirmação II ('predições baseadas em opiniões') também está correta para o uso de 'Will'." },
-        { letter: "B", text: "(B) Apenas as afirmações I, III e V estão corretas.", isCorrect: false, rationale: "A afirmação I ('falar sobre planos') é incorreta, pois planos e intenções pré-determinadas usam 'going to'." },
-        { letter: "C", text: "(C) Apenas as afirmações II, III e V estão corretas.", isCorrect: true, rationale: "As afirmações II ('predições baseadas em opiniões'), III ('decisão feita no momento da fala') e V ('fazer promessas') são os usos corretos e principais do 'Will'." },
-        { letter: "D", text: "(D) Apenas as afirmações III, IV e V estão corretas.", isCorrect: false, rationale: "A afirmação IV ('para falar sobre o passado') é incorreta. 'Will' é um auxiliar do futuro." }
-    ],
-    correctAnswer: "C",
-    videoUrl: "",
-    hints: [
-        "Dica 1 (Q25): Os três usos principais do 'Will' são: Promessas, Decisões Espontâneas (no momento da fala) e Predições baseadas em Opiniões/Palpites."
-    ]
-},
-{
-    id: "q28",
-    type: "mc",
-    questionText: `
-        Questão 25:
-        <br>
-        Sobre o uso do auxiliar modal "Will" para formar o futuro em inglês, analise as afirmações abaixo. Assinale a opção que inclui todas as afirmativas corretas:
-        <br><br>
-        I. é usado para falar sobre fatos que são considerados certos ou inevitáveis no futuro.<br>
-        II. usado para falar sobre predições baseadas em opniões<br>
-        III. uma decisão feita no momento da fala<br>
-        IV. usado para fazer ofertas de ajuda ou convites.<br>
-        V. fazer promessas<br>
-        VI. Um fato conhecido.
-    `,
-    options: [
-        { letter: "A", text: "(A) Apenas as afirmações I, III e V estão corretas.", isCorrect: false, rationale: "As afirmações II, IV e VI também representam usos válidos do 'Will' no futuro." },
-        { letter: "B", text: "(B) Apenas as afirmações II, III, V e VI estão corretas.", isCorrect: false, rationale: "As afirmações I ('fatos certos') e IV ('ofertas') também são usos corretos e válidos do auxiliar 'Will'." },
-        { letter: "C", text: "(C) Apenas as afirmações I, II, III e IV estão corretas.", isCorrect: false, rationale: "As afirmações V ('promessas') e VI ('fato conhecido') também são usos válidos e importantes do 'Will'." },
-        { letter: "D", text: "(D) Todas as afirmações (I, II, III, IV, V e VI) estão corretas.", isCorrect: true, rationale: "Todas as afirmações listadas são consideradas usos gramaticalmente corretos do 'Will' no futuro, incluindo promessas, decisões espontâneas e previsões/fatos." }
-    ],
-    correctAnswer: "D",
-    videoUrl: "",
-    hints: [
-        "Dica 1 (Q25): Lembre-se dos seis principais papéis do 'Will': Promessa, Decisão Espontânea, Oferta, Pedido, Previsão (opinião) e Fato Certo."
-    ]
-},
-{
-    id: "q29",
-    type: "mc",
-    questionText: `
-        Question 25:
-        <br>
-        Regarding the use of the modal auxiliary "Will" to form the future tense in English, analyze the statements below and choose the option that contains only the correct statement(s):
-        <br><br>
-        I. it is used to talk about plans<br>
-        II. used to talk about predictions based on evidence<br>
-        III. a decision made at the moment of speaking<br>
-        IV. to talk about the past<br>
-        V. to make promises
-    `,
-    options: [
-        { letter: "A", text: "(A) Only statement V is correct.", isCorrect: false, rationale: "Statement III ('a decision made at the moment of speaking') is also correct for the use of 'Will'." },
-        { letter: "B", text: "(B) Only statements III and V are correct.", isCorrect: true, rationale: "Statements III ('a decision made at the moment of speaking') and V ('to make promises') are the correct uses of 'Will' among the listed options. The others refer to 'going to' or other verb tenses." },
-        { letter: "C", text: "(C) Only statements I, III, and V are correct.", isCorrect: false, rationale: "Statement I ('to talk about plans') is incorrect, as predetermined plans and intentions use 'going to'." },
-        { letter: "D", text: "(D) Only statements II, III, and V are correct.", isCorrect: false, rationale: "Statement II ('predictions based on evidence') is incorrect, as predictions based on clear evidence use 'going to'." }
-    ],
-    correctAnswer: "B",
-    videoUrl: "",
-    hints: [
-        "Hint 1 (Q25): Remember that the use of 'Will' is ideal for what is spontaneous (decisions at the moment of speaking - III) and for making promises (V)."
-    ]
-},
-{
-    id: "q30",
-    type: "mc",
-    questionText: `
-        Question 25:
-        <br>
-        Regarding the use of the modal auxiliary "Will" to form the future tense in English, analyze the statements below. Choose the option that includes ALL the correct statements:
-        <br><br>
-        I. it is used to talk about facts considered certain or inevitable in the future.<br>
-        II. used to talk about predictions based on opinions<br>
-        III. a decision made at the moment of speaking<br>
-        IV. used to make offers of help or invitations.<br>
-        V. to make promises<br>
-        VI. A known fact.
-    `,
-    options: [
-        { letter: "A", text: "(A) Only statements I, III, and V are correct.", isCorrect: false, rationale: "Statements II, IV, and VI are also valid uses of 'Will'." },
-        { letter: "B", text: "(B) Only statements II, III, V, and VI are correct.", isCorrect: false, rationale: "Statements I ('certain facts') and IV ('offers') are also correct and valid uses of the auxiliary 'Will'." },
-        { letter: "C", text: "(C) Only statements I, II, III, and IV are correct.", isCorrect: false, rationale: "Statements V ('promises') and VI ('known fact') are also valid and important uses of 'Will'." },
-        { letter: "D", text: "(D) All statements (I, II, III, IV, V, and VI) are correct.", isCorrect: true, rationale: "All listed statements are considered grammatically correct uses of 'Will' for the future, including promises, spontaneous decisions, offers, predictions based on opinion, and certain facts in the future." }
-    ],
-    correctAnswer: "D",
-    videoUrl: "",
-    hints: [
-        "Hint 1 (Q25): Remember the six main roles of 'Will': Promise, Spontaneous Decision, Offer, Invitation/Request, Prediction (opinion), and Certain Fact."
-    ]
-},
-{
-    id: "q31",
-    type: "mc",
-    questionText: `
-        Questão 26:
-        <br>
-        Sobre o uso da estrutura "be going to" para formar o futuro em inglês, analise as afirmações abaixo e assinale a opção que contém apenas a(s) afirmativa(s) correta(s):
-        <br><br>
-        I. é usado para falar sobre planos ou intenções previamente definidos.<br>
-        II. usado para falar sobre predições baseadas em evidências visíveis.<br>
-        III. uma decisão feita no momento da fala.<br>
-        IV. usado para fazer promessas.<br>
-        V. é usado para descrever rotinas no presente.
-    `,
-    options: [
-        { letter: "A", text: "(A) Apenas a afirmação I está correta.", isCorrect: false, rationale: "A afirmação II ('predições baseadas em evidências') também é um uso correto da estrutura 'be going to'." },
-        { letter: "B", text: "(B) Apenas as afirmações I e II estão corretas.", isCorrect: true, rationale: "As afirmações I (Planos/Intenções) e II (Predições baseadas em evidências) são os dois principais e corretos usos da estrutura 'be going to'. As demais se referem a outros auxiliares ou tempos verbais." },
-        { letter: "C", text: "(C) Apenas as afirmações I, III e IV estão corretas.", isCorrect: false, rationale: "As afirmações III ('decisão na hora') e IV ('promessas') são usos incorretos para 'be going to', sendo típicas do auxiliar 'Will'." },
-        { letter: "D", text: "(D) Todas as afirmações estão corretas.", isCorrect: false, rationale: "As afirmações III, IV e V são incorretas para o uso da estrutura 'be going to'." }
-    ],
-    correctAnswer: "B",
-    videoUrl: "",
-    hints: [
-        "Dica 1 (Q26): O 'Going to' foca em um futuro que já está decidido, planejado ou que você tem evidência clara de que vai acontecer."
-    ]
-},
-{
-    id: "q32",
-    type: "mc",
-    questionText: `
-        Question 22:
-        <br>
-        Analyze the speech bubble from the comic strip where Calvin says: "I don't think I'll go to school today."
-        <br><br>
-        The main function of the auxiliary verb "Will" in this specific sentence is to express:
-        <br><br>
-        <div style="text-align: center;">
-        <img src="images/marvin.jpg" alt="Calvin and Hobbes comic strip" style="max-width: 100%; height: auto; margin-top: 10px;">
-        </div>
-    `,
-    options: [
-        { letter: "A", text: "(A) A spontaneous decision made at the moment of speaking." },
-        { letter: "B", text: "(B) A predetermined future plan or intention." },
-        { letter: "C", text: "(C) A prediction based on the speaker's personal opinion." },
-        { letter: "D", text: "(D) An offer of help or an invitation." },
-        { letter: "E", "text": "(E) A strong promise about a future action." }
-    ],
-    correctAnswer: "C", 
-    videoUrl: "",
-    hints: [ 
-        "Hint 1: The phrase 'I don't think...' often signals that the speaker is expressing a belief or a guess, not a fixed plan or a sudden decision.",
-        "Hint 2: 'Will' is the auxiliary used for predictions based on what someone thinks or believes.",
-        "Hint 3: 'Going to' is typically used for fixed plans and predictions based on evidence."
-    ]
-},
-{
-    id: "q16",
-    type: "mc",
-    questionText: `
-        Complete the sentence:
-        ________ the dog going to bark all night?
-    `,
-    options: [
-        { letter: "A", text: "(A) are" },
-        { letter: "B", text: "(B) am" },
-        { letter: "C", text: "(C) is" },
-        { letter: "D", text: "(D) do" },
-        { letter: "E", text: "(E) does" }
-    ],
-    correctAnswer: "C",
-    videoUrl: "",
-    hints: [
-        "Dica 1: 'The dog' é singular → usa 'is'.",
-        "Dica 2: A pergunta fica: 'Is the dog going to...?'",
-        "Dica 3: 'Are' seria usado com plural ('dogs', 'they')."
-    ]
- },
-
-{
-    id: "q34",
-    type: "mc",
-    questionText: `
-        What is the best way to complete the sentence? <br>
-        They ______ going to watch a movie tonight.
-    `,
-    options: [
-        { letter: "A", text: "(A) am" },
-        { letter: "B", text: "(B) is" },
-        { letter: "C", text: "(C) are" },
-        { letter: "D", text: "(D) be" },
-        { letter: "E", text: "(E) none" }
-    ],
-    correctAnswer: "C",
-    videoUrl: "",
-    hints: [
-        "Dica 1: O sujeito 'they' é plural.",
-        "Dica 2: Para sujeitos plurais, use 'are'.",
-        "Dica 3: Você está quase lá!"
-    ]
-},
-
-{
-    id: "q34",
-    type: "mc",
-    questionText: `
-        What is the best way to complete the sentence? <br>
-        I think it ______ rain tomorrow.
-    `,
-    options: [
-        { letter: "A", text: "(A) will" },
-        { letter: "B", text: "(B) am" },
-        { letter: "C", text: "(C) are" },
-        { letter: "D", text: "(D) is" },
-        { letter: "E", text: "(E) going" }
-    ],
-    correctAnswer: "A",
-    videoUrl: "",
-    hints: [
-        "Dica 1: Use 'will' para previsões sem evidência.",
-        "Dica 2: Não há verbo to be antes de 'will'.",
-        "Dica 3: Boa sorte!"
-    ]
-},
-
-{
-    id: "q35",
-    type: "mc",
-    questionText: `
-        What is the best way to complete the sentence? <br>
-        We ______ probably visit grandma this weekend.
-    `,
-    options: [
-        { letter: "A", text: "(A) will" },
-        { letter: "B", text: "(B) is" },
-        { letter: "C", text: "(C) are" },
-        { letter: "D", text: "(D) am" },
-        { letter: "E", text: "(E) none" }
-    ],
-    correctAnswer: "A",
-    videoUrl: "",
-    hints: [
-        "Dica 1: O advérbio 'probably' combina bem com 'will'.",
-        "Dica 2: 'Will' indica uma decisão ou suposição.",
-        "Dica 3: Você está arrasando!"
-    ]
+    console.log("Teste gerado com sucesso!");
+    return finalSelection;
 }
 
-];
+// Reutilizando sua função getRandom
+function getRandom(array, num) {
+    if (!array || array.length === 0) return [];
+    return [...array].sort(() => 0.5 - Math.random()).slice(0, num);
+}
