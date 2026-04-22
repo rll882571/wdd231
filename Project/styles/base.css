@@ -625,3 +625,36 @@ main > div:first-child h1 {
     width: 100%;
     aspect-ratio: 16 / 9; /* Proporção de vídeo widescreen */
 }
+/* Container da resposta para dar um espaçamento */
+.write-answer {
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+/* O "input" vira a linha de caderno */
+.answer-input {
+    width: 100%;
+    /* Mágica da linha: remove bordas e deixa só a de baixo */
+    border: none !important; 
+    border-bottom: 1px solid black !important;
+    border-radius: 0 !important;
+    
+    padding: 8px 0 !important;
+    background-color: transparent !important;
+    font-family: inherit;
+    font-size: 1.1rem;
+    color: #1133da; /* Cor de caneta azul ao digitar */
+    outline: none;
+}
+
+/* Quando o aluno clica para escrever, a linha destaca */
+.answer-input:focus {
+    border-bottom: 2px solid #1133da !important;
+}
+
+/* Deixa o texto de ajuda (placeholder) mais discreto */
+.answer-input::placeholder {
+    color: #999;
+    font-size: 0.9rem;
+    font-style: italic;
+}
