@@ -15,86 +15,92 @@ const studentDatabase = {
 
 const bankInterpWrite = [
     {
-        id: "int-w1-victoria-combined",
-        type: "short-answer-double",
-        questionText: `
-            <b>Texto base 1:</b><br><br>
-            <i>Victoria Falls, or "The Smoke that Thunders" (Mosi-oa-Tunya in the Tonga language), is one of the world's largest and most famous waterfalls. Located on the Zambezi River at the border between Zambia and Zimbabwe, it was described by local tribes for centuries before being documented by outsiders.The world-famous explorer David Livingstone is thought to be the first European who found the waterfall in 1855, naming it in honor of Queen Victoria. One of the most unique features of the site is its microclimate. Victoria Falls is surrounded by a rainforest where it actually rains every single day of the year. This phenomenon occurs because of the massive amount of vapor rising from the waterfall, which condenses and falls back down as constant mist and rain.</i>
-            <br><br>
-            <b>a)</b> Who is thought to be the first European to find the waterfall?
-            <input type="text" class="answer-input" data-ans-idx="0" placeholder="Escreva a resposta da 'a' aqui...">
-            <br><br>
-            <b>b)</b> Why does it rain every single day in the rainforest surrounding the falls?
-            <input type="text" class="answer-input" data-ans-idx="1" placeholder="Escreva a resposta da 'b' aqui...">
-        `,
-        correctAnswers: [
-            "The world famous explorer David Livingstone is thought be the first European who found the waterfall, naming it in honor of Queen Victoria.",
-            "Victoria Falls is surrounded by a rainforest where it actually rains every single day due to all the vapor rising from the waterfall."
-        ],
-        hints: ["Dica A: David Livingstone...", "Dica B: Vapor rising..."]
-    },
-    {
-        id: "int-w2-reef-combined",
-        type: "short-answer-double",
-        questionText: `
-            <b>Texto base 1:</b><br><br>
-            <i>The Great Barrier Reef is the world's largest coral reef system composed of over 2,900 individual reefs and 900 islands stretching for over 2,300 kilometres over an area of approximately 344,400 square kilometres. The reef is located in the Coral Sea, off the coast of Queensland, Australia. The Great Barrier Reef can be seen from outer space and is the world's biggest single structure made by living organisms. This reef structure is composed of and built by billions of tiny organisms, known as coral polyps. It supports a wide diversity of life and was selected as a World Heritage Site in 1981. CNN labelled it one of the seven natural wonders of the world. The Queensland National Trust named it a state icon of Queensland.A large part of the reef is protected by the Great Barrier Reef Marine Park, which helps to limit the impact of human use, such as fishing and tourism. Other environmental pressures on the reef and its ecosystem include runoff, climate change accompanied by mass coral bleaching, dumping of dredging sludge and cyclic population outbreaks of the crown-of-thorns starfish.
-</i>
-            <br><br>
-            <b>a)</b> Is the Great Barrier Reef visible from outer space?
-            <input type="text" class="answer-input" data-ans-idx="0" placeholder="Escreva a resposta da 'a' aqui...">
-            <br><br>
-            <b>b)</b> How many different species of fish can regularly be seen in the reef?
-            <input type="text" class="answer-input" data-ans-idx="1" placeholder="Escreva a resposta da 'b' aqui...">
-        `,
-        correctAnswers: [
-            "Being larger than many countries, the Great Barrier Reef is visible from outer space.",
-            "Over 1500 different species of fish, and a great number of turtles, sharks and seahorses can regularly be seen in the reef."
-        ],
-        hints: ["Dica A: Check the second sentence.", "Dica B: Look for the number of fish species."]
-    },
-    {
-    id: "int-w1-proofreading-combined",
+    id: "gram-have-has-fill-q4",
     type: "short-answer-double",
     questionText: `
-        <b>Texto base:</b><br><br>
-        <i>Proofreading is reading work that you or someone else has written to look for spelling or grammatical errors...</i>
+        <b>Grammar: Have vs. Has</b><br>
+        <i>Read and type the correct form of "have" or "has" to complete the sentences:</i><br><br>
+        
+        <b>a)</b> I <input type="text" class="answer-input" data-ans-idx="0" style="width: 80px !important; display: inline-block;" placeholder="..."> never been to London.<br><br>
+
+        <b>b)</b> She <input type="text" class="answer-input" data-ans-idx="1" style="width: 80px !important; display: inline-block;" placeholder="..."> already finished her homework.<br><br>
+
+        <b>c)</b> They <input type="text" class="answer-input" data-ans-idx="2" style="width: 80px !important; display: inline-block;" placeholder="..."> seen that movie before.<br><br>
+
+        <b>d)</b> He <input type="text" class="answer-input" data-ans-idx="3" style="width: 80px !important; display: inline-block;" placeholder="..."> worked here for five years.<br><br>
+
+        <b>e)</b> We <input type="text" class="answer-input" data-ans-idx="4" style="width: 80px !important; display: inline-block;" placeholder="..."> just eaten lunch.
+        
         <br><br>
-        <b>a)</b> Why can forgetting an apostrophe or misspelling a word be a problem for the meaning of a sentence?
-        <input type="text" class="answer-input" data-ans-idx="0" placeholder="Escreva a resposta da 'a' aqui...">
-        <br><br>
-        <b>b)</b> According to the text, why does our brain sometimes skip words when we are writing?
-        <input type="text" class="answer-input" data-ans-idx="1" placeholder="Escreva a resposta da 'b' aqui...">
+        <div style="margin-top: 10px; border-top: 1px dashed #ccc; padding-top: 10px;">
+            <small>📺 <b>Study Support:</b> <a href="https://www.youtube.com/watch?v=ENZ0-KRAcp0" target="_blank">Watch the explanation video</a></small>
+        </div>
     `,
-    correctAnswers: [
-        "Spelling a word incorrectly or forgetting an apostrophe can sometimes completely change the meaning of a sentence, making the work say something other than what was intended.",
-        "When we write, we know what we're trying to say, so our brains might sometimes skip out words because we already have the meaning in mind."
-    ],
+    correctAnswers: ["have", "has", "have", "has", "have"],
     hints: [
-        "Dica A: It can alter or influence the work unintentionally...",
-        "Dica B: We already know the message, so the brain skips details..."
+        "Dica: 'I, You, We, They' usam HAVE.",
+        "Dica: 'He, She, It' (3ª pessoa) usam HAS."
+    ]
+    },
+    {
+    id: "gram-have-has-fill-q5",
+    type: "short-answer-double",
+    questionText: `
+        <b>Grammar: Have vs. Has - Practice II</b><br>
+        <i>Complete the sentences by typing "have" or "has":</i><br><br>
+        
+        <b>a)</b> You <input type="text" class="answer-input" data-ans-idx="0" style="width: 80px !important; display: inline-block;" placeholder="..."> studied a lot this week.<br><br>
+
+        <b>b)</b> It <input type="text" class="answer-input" data-ans-idx="1" style="width: 80px !important; display: inline-block;" placeholder="..."> started to rain.<br><br>
+
+        <b>c)</b> My parents <input type="text" class="answer-input" data-ans-idx="2" style="width: 80px !important; display: inline-block;" placeholder="..."> traveled to Europe twice.<br><br>
+
+        <b>d)</b> She <input type="text" class="answer-input" data-ans-idx="3" style="width: 80px !important; display: inline-block;" placeholder="..."> lost her keys again!<br><br>
+
+        <b>e)</b> I <input type="text" class="answer-input" data-ans-idx="4" style="width: 80px !important; display: inline-block;" placeholder="..."> just called you.
+        
+        <br><br>
+        <div style="margin-top: 10px; border-top: 1px dashed #ccc; padding-top: 10px;">
+            <small>📺 <b>Study Support:</b> <a href="https://www.youtube.com/watch?v=ENZ0-KRAcp0" target="_blank">Watch the explanation video</a></small>
+        </div>
+    `,
+    correctAnswers: ["have", "has", "have", "has", "have"],
+    hints: [
+        "A: 'You' always takes HAVE.",
+        "B: 'It' is 3rd person singular.",
+        "C: 'My parents' = They.",
+        "D: 'She' is 3rd person singular.",
+        "E: 'I' always takes HAVE."
+    ]
+},
+    {
+    id: "gram-perf-cont-q8-fill",
+    type: "short-answer",
+    questionText: `
+        <b>Grammar: Present Perfect Continuous</b><br>
+        <i>Complete the sentence with the correct form of the verb in parentheses (<b>have/has + been + verb-ing</b>):</i><br><br>
+        
+        I <input type="text" class="answer-input" style="width: 220px !important; display: inline-block;" placeholder="type your answer here..."> (study) English for five years, and I still study every day.
+    `,
+    correctAnswer: "have been studying",
+    hints: [
+        "Dica: Para 'I', use HAVE + BEEN + o verbo com ING.",
+        "A estrutura indica uma ação que começou no passado e continua até hoje."
     ]
 },
 {
-    id: "int-w1-natural-wonders-full",
-    type: "short-answer-double",
+    id: "gram-perf-cont-q13-fill",
+    type: "short-answer",
     questionText: `
-        <b>Read the text below:</b><br><br>
-        <i>"A natural wonder of the world is something special that is naturally occurring. Natural wonders showcase the beauty and power of nature. Humans have played no part in their creation. We do sometimes play a part in their preservation and maintenance so that future generations can continue to enjoy them!"</i>
-        <br><br>
-        <b>a)</b> What is the role of humans in the creation of natural wonders?
-        <input type="text" class="answer-input" data-ans-idx="0" placeholder="Escreva a resposta da 'a' aqui...">
-        <br><br>
-        <b>b)</b> Why is human intervention important regarding the preservation of these sites?
-        <input type="text" class="answer-input" data-ans-idx="1" placeholder="Escreva a resposta da 'b' aqui...">
+        <b>Grammar: Present Perfect Continuous (Evidence)</b><br>
+        <i>Look at the context and type the correct form of the verb (<b>have/has + been + verb-ing</b>):</i><br><br>
+        
+        Look at her hands! She <input type="text" class="answer-input" style="width: 180px !important; display: inline-block;" placeholder="type here..."> (work) in the garden.
     `,
-    correctAnswers: [
-        "Humans have played no part in their creation, as natural wonders are naturally occurring.",
-        "Humans play a part in preservation and maintenance so that future generations can continue to enjoy them."
-    ],
+    correctAnswer: "has been working",
     hints: [
-        "Dica A: Check if humans help create them or if they occur naturally.",
-        "Dica B: Look for the mention of 'future generations'."
+        "Dica: Para 'She', usamos HAS + BEEN + o verbo com ING.",
+        "Usamos essa estrutura quando há uma evidência presente de uma ação que acabou de acontecer ou que continua acontecendo."
     ]
 }
    
