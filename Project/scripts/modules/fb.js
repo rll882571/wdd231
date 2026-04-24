@@ -15,7 +15,7 @@ const studentDatabase = {
 
 const bankInterpWrite = [
     {
-    id: "gram-have-has-fill-q4",
+    id: "q1",
     type: "short-answer-double",
     questionText: `
         <b>Grammar: Have vs. Has</b><br>
@@ -43,7 +43,7 @@ const bankInterpWrite = [
     ]
     },
     {
-    id: "gram-have-has-fill-q5",
+    id: "q2",
     type: "short-answer-double",
     questionText: `
         <b>Grammar: Have vs. Has - Practice II</b><br>
@@ -74,111 +74,281 @@ const bankInterpWrite = [
     ]
 },
     {
-    id: "gram-perf-cont-q8-fill",
-    type: "short-answer",
+    id: "q3",
+    type: "short-answer-double",
     questionText: `
-        <b>Grammar: Present Perfect Continuous</b><br>
-        <i>Complete the sentence with the correct form of the verb in parentheses (<b>have/has + been + verb-ing</b>):</i><br><br>
+        <b>Grammar: Present Perfect Simple</b><br>
+        <i>Complete the sentences using the Present Perfect (<b>have/has + past participle</b>):</i><br><br>
         
-        I <input type="text" class="answer-input" style="width: 220px !important; display: inline-block;" placeholder="type your answer here..."> (study) English for five years, and I still study every day.
+        <b>a)</b> I <input type="text" class="answer-input" data-ans-idx="0" style="width: 150px !important; display: inline-block;" placeholder="..."> (study) all the lessons for the test.<br><br>
+
+        <b>b)</b> She <input type="text" class="answer-input" data-ans-idx="1" style="width: 150px !important; display: inline-block;" placeholder="..."> (work) in this office for a long time.<br><br>
+
+        <b>c)</b> They <input type="text" class="answer-input" data-ans-idx="2" style="width: 150px !important; display: inline-block;" placeholder="..."> (play) this game many times.<br><br>
+
+        <b>d)</b> It <input type="text" class="answer-input" data-ans-idx="3" style="width: 150px !important; display: inline-block;" placeholder="..."> (stop) raining at last.<br><br>
+
+        <b>e)</b> We <input type="text" class="answer-input" data-ans-idx="4" style="width: 150px !important; display: inline-block;" placeholder="..."> (wait) for you since morning.
     `,
-    correctAnswer: "have been studying",
+    correctAnswers: [
+        "have studied", 
+        "has worked", 
+        "have played", 
+        "has stopped", 
+        "have waited"
+    ],
     hints: [
-        "Dica: Para 'I', use HAVE + BEEN + o verbo com ING.",
-        "A estrutura indica uma ação que começou no passado e continua até hoje."
+        "Use HAVE para: I, You, We, They.",
+        "Use HAS para: He, She, It.",
+        "Como todos esses verbos são regulares, basta adicionar -ED (ou -IED no caso de study)."
     ]
 },
 {
-    id: "gram-perf-cont-q13-fill",
-    type: "short-answer",
+    id: "q4",
+    type: "short-answer-double",
     questionText: `
-        <b>Grammar: Present Perfect Continuous (Evidence)</b><br>
-        <i>Look at the context and type the correct form of the verb (<b>have/has + been + verb-ing</b>):</i><br><br>
+        <b>Grammar: Present Perfect (Irregular Verbs)</b><br>
+        <i>Complete the sentences using the Present Perfect (<b>have/has + past participle</b>):</i><br><br>
         
-        Look at her hands! She <input type="text" class="answer-input" style="width: 180px !important; display: inline-block;" placeholder="type here..."> (work) in the garden.
+        <b>a)</b> I <input type="text" class="answer-input" data-ans-idx="0" style="width: 150px !important; display: inline-block;" placeholder="..."> (see) that movie three times.<br><br>
+
+        <b>b)</b> She <input type="text" class="answer-input" data-ans-idx="1" style="width: 150px !important; display: inline-block;" placeholder="..."> (eat) all the cake.<br><br>
+
+        <b>c)</b> They <input type="text" class="answer-input" data-ans-idx="2" style="width: 150px !important; display: inline-block;" placeholder="..."> (go) to the supermarket.<br><br>
+
+        <b>d)</b> He <input type="text" class="answer-input" data-ans-idx="3" style="width: 150px !important; display: inline-block;" placeholder="..."> (write) a very long email.<br><br>
+
+        <b>e)</b> We <input type="text" class="answer-input" data-ans-idx="4" style="width: 150px !important; display: inline-block;" placeholder="..."> (do) our homework already.
     `,
-    correctAnswer: "has been working",
+    correctAnswers: [
+        "have seen", 
+        "has eaten", 
+        "have gone", 
+        "has written", 
+        "have done"
+    ],
     hints: [
-        "Dica: Para 'She', usamos HAS + BEEN + o verbo com ING.",
-        "Usamos essa estrutura quando há uma evidência presente de uma ação que acabou de acontecer ou que continua acontecendo."
+        "Atenção: Estes verbos são IRREGULARES e não terminam em -ed.",
+        "Dicas de particípio: See -> Seen, Eat -> Eaten, Go -> Gone, Write -> Written, Do -> Done.",
+        "Não esqueça: He/She usa HAS!"
     ]
-}
+},
    
 ];
 
 const bankInterpMC = [
     {
-        id: "int-mc-w1-true-false",
-        type: "short-answer-double", 
-        questionText: `
-            <b>2. Write (T) for True or (F) for False according to the text:</b><br><br>
-            <b>a)<input type="text" class="answer-input" style="width: 50px !important;" data-ans-idx="0"></b> Natural wonders are created by humans.<br>
-            <b>b)<input type="text" class="answer-input" style="width: 50px !important;" data-ans-idx="1"></b> Humans can help in the preservation.<br>
-            <b>c)<input type="text" class="answer-input" style="width: 50px !important;" data-ans-idx="2"></b> Not naturally occurring.<br>
-            <b>d)<input type="text" class="answer-input" style="width: 50px !important;" data-ans-idx="3"></b> Showcase the power of nature.
-        `,
-        correctAnswers: ["F", "T", "F", "T"],
-        hints: ["A: Did humans create them?", "B: Check 'preservation'.", "C: Sentence 1.", "D: Power of nature?"]
-    },
-    {
-    id: "int-mc-methods-tf-custom",
+    id: "q6",
     type: "short-answer-double",
     questionText: `
-        <b>Texto base:</b><br>
-        <i>"There are many methods for proofreading. Often, the most effective for you might not be the most effective for someone else. Printing out a hard copy is good because words appear different on the page than on the screen. You can also read backwards or change font colors to help your brain spot errors. Reading aloud is a great way to find missing words, and the symbols used in this process are called 'editing marks'."</i>
+        <b>Reading: Present Perfect Structure and Usage</b><br>
+        <i>"The Present Perfect connects the past with the present. It is used to describe actions that occurred at an indefinite time, where the experience is more important than the specific date. Structurally, this tense requires a helping verb—either 'have' or 'has'—which depends on the subject of the sentence. This auxiliary is paired with the past participle form of the main verb. For regular verbs, the participle ends in -ed, while irregular verbs have unique forms that must be memorized. This tense is also used for situations that began in the past and remain true in the present."</i>
         <br><br>
-        <b>2. Write (T) for True or (F) for False according to the text:</b>
+        <b>Write (T) for True or (F) for False according to the text:</b>
         <br><br>
-        <b>a) <input type="text" class="answer-input" style="width: 50px !important; display: inline-block;" data-ans-idx="0"></b> The same proofreading method works perfectly for everyone.
+        <b>a) <input type="text" class="answer-input" style="width: 50px !important; display: inline-block;" data-ans-idx="0"></b> The specific date of the action is the most important part of this verb tense.
         <br><br>
-        <b>b) <input type="text" class="answer-input" style="width: 50px !important; display: inline-block;" data-ans-idx="1"></b> Reading aloud helps you identify words that might be missing.
+        <b>b) <input type="text" class="answer-input" style="width: 50px !important; display: inline-block;" data-ans-idx="1"></b> The choice between 'have' and 'has' depends on the subject of the sentence.
         <br><br>
-        <b>c) <input type="text" class="answer-input" style="width: 50px !important; display: inline-block;" data-ans-idx="2"></b> 'Editing marks' are the symbols used to identify errors.
+        <b>c) <input type="text" class="answer-input" style="width: 50px !important; display: inline-block;" data-ans-idx="2"></b> All verbs in the past participle form end in -ed according to the text.
         <br><br>
-        <b>d) <input type="text" class="answer-input" style="width: 50px !important; display: inline-block;" data-ans-idx="3"></b> Words look exactly the same on the screen as they do on a printed page.
+        <b>d) <input type="text" class="answer-input" style="width: 50px !important; display: inline-block;" data-ans-idx="3"></b> This tense can be used for actions that started in the past and continue now.
     `,
-    correctAnswers: ["F", "T", "T", "F"],
+    correctAnswers: ["F", "T", "F", "T"],
     hints: [
-        "A: Check the first paragraph about effectiveness.",
-        "B: Look at the 'Read aloud' section.",
-        "C: What are the symbols called?",
-        "D: Does the text say they appear different or the same?"
+        "A: Look for the words 'indefinite time' and 'importance'.",
+        "B: Check the part about the 'helping verb' and the 'subject'.",
+        "C: Does the text mention irregular verbs?",
+        "D: Read the very last sentence of the text."
+    ]
+},
+    {
+    id: "q7",
+    type: "short-answer-double",
+    questionText: `
+        <b>Reading: Questions and Common Mistakes</b><br>
+        <i>"To ask a question in the Present Perfect, you must invert the order: place the auxiliary 'have' or 'has' before the subject. A very common mistake is forgetting that the main verb must stay in the past participle form, even in questions; some students incorrectly use the present tense. Another frequent error is using 'has' for subjects like 'I' or 'You', which always require 'have'. Additionally, since this tense focuses on indefinite time, it is a mistake to use it with specific time expressions like 'yesterday' or 'last night', which belong to the Simple Past."</i>
+        <br><br>
+        <b>Write (T) for True or (F) for False according to the text:</b>
+        <br><br>
+        <b>a) <input type="text" class="answer-input" style="width: 50px !important; display: inline-block;" data-ans-idx="0"></b> In questions, the auxiliary verb comes after the subject.
+        <br><br>
+        <b>b) <input type="text" class="answer-input" style="width: 50px !important; display: inline-block;" data-ans-idx="1"></b> The main verb should change back to the present tense when asking a question.
+        <br><br>
+        <b>c) <input type="text" class="answer-input" style="width: 50px !important; display: inline-block;" data-ans-idx="2"></b> Using 'have' with the subject 'You' is the correct grammar rule.
+        <br><br>
+        <b>d) <input type="text" class="answer-input" style="width: 50px !important; display: inline-block;" data-ans-idx="3"></b> You should not use 'yesterday' with the Present Perfect because it is a specific time.
+    `,
+    correctAnswers: ["F", "F", "T", "T"],
+    hints: [
+        "A: Check the 'invert the order' part.",
+        "B: Does the verb stay in the participle or go to the present?",
+        "C: Look for the rule about 'I' and 'You'.",
+        "D: Read the last sentence about specific time expressions."
     ]
 },
 {
-    id: "myth-gods-fill",
+    id: "q8",
     type: "short-answer-double",
     questionText: `
-        <b>Greek Mythology - Complete the sentences with the correct God:</b><br>
-        <div style="border: 1px solid #000; padding: 10px; text-align: center; margin-bottom: 15px; background-color: #f9f9f9;">
-            Apollo | Athena | Hades | Aphrodite | Zeus | Ares | Demeter
+        <b>Present Perfect - Complete the rules with the correct concepts:</b><br>
+        <div style="border: 1px solid #000; padding: 10px; text-align: center; margin-bottom: 15px; background-color: #f9f9f9; font-size: 0.9em;">
+            ask questions | yesterday or last night | started in the past and has effect in the present | specific time | past participle
         </div>
         
-        <b>a)</b> <input type="text" class="answer-input" style="width: 120px !important; display: inline-block;" data-ans-idx="0"> was known as the king of the gods on Mount Olympus.
+        <b>a)</b> The Present Perfect is used to describe an action that <input type="text" class="answer-input" style="width: 320px !important; display: inline-block;" data-ans-idx="0">.
         <br><br>
-        <b>b)</b> <input type="text" class="answer-input" style="width: 120px !important; display: inline-block;" data-ans-idx="1"> was the god of war and battles.
+        <b>b)</b> We must use "have" or "has" followed by the main verb in the <input type="text" class="answer-input" style="width: 150px !important; display: inline-block;" data-ans-idx="1"> form.
         <br><br>
-        <b>c)</b> <input type="text" class="answer-input" style="width: 120px !important; display: inline-block;" data-ans-idx="2"> was the goddess of agriculture and harvest.
+        <b>c)</b> You should never use the Present Perfect when you mention a <input type="text" class="answer-input" style="width: 150px !important; display: inline-block;" data-ans-idx="2">.
         <br><br>
-        <b>d)</b> <input type="text" class="answer-input" style="width: 120px !important; display: inline-block;" data-ans-idx="3"> was known for her wisdom and intelligence.
+        <b>d)</b> Examples of words you CANNOT use with this tense are <input type="text" class="answer-input" style="width: 180px !important; display: inline-block;" data-ans-idx="3">.
         <br><br>
-        <b>e)</b> <input type="text" class="answer-input" style="width: 120px !important; display: inline-block;" data-ans-idx="4"> was the god connected to music and the sun.
-        <br><br>
-        <b>f)</b> <input type="text" class="answer-input" style="width: 120px !important; display: inline-block;" data-ans-idx="5"> ruled the world of the dead.
-        <br><br>
-        <b>g)</b> <input type="text" class="answer-input" style="width: 120px !important; display: inline-block;" data-ans-idx="6"> was the goddess of love and beauty.
+        <b>e)</b> We invert the position of the subject and the auxiliary verb to <input type="text" class="answer-input" style="width: 150px !important; display: inline-block;" data-ans-idx="4">.
     `,
-    correctAnswers: ["Zeus", "Ares", "Demeter", "Athena", "Apollo", "Hades", "Aphrodite"],
+    correctAnswers: [
+        "started in the past and has effect in the present", 
+        "past participle", 
+        "specific time", 
+        "yesterday or last night", 
+        "ask questions"
+    ],
     hints: [
-        "A: Lightning bolt/King",
-        "B: War",
-        "C: Plants/Harvest",
-        "D: Wisdom/Owl",
-        "E: Sun/Music",
-        "F: Underworld",
-        "G: Love"
+        "A: Pense na conexão entre o passado e agora.",
+        "B: É a 'terceira coluna' dos verbos.",
+        "C: O Present Perfect é sobre tempo INDEFINIDO.",
+        "D: Palavras que indicam exatamente QUANDO algo aconteceu.",
+        "E: Quando mudamos a ordem de 'You have' para 'Have you?'"
+    ]
+},
+{
+    id: "q9",
+    type: "short-answer-double",
+    questionText: `
+        <b>Reading: Adverbs of Time (Just, Already, Yet, Ever, Never)</b><br>
+        <i>"In the Present Perfect, specific adverbs change the meaning of the sentence. 'Just' is used for actions that happened a very short time ago. 'Already' indicates that something happened sooner than expected, usually in affirmative sentences. In contrast, 'Yet' is used in negatives and questions to show we are expecting something to happen, and it always comes at the end of the sentence. To talk about experiences, we use 'Ever' in questions to ask 'at any time', while 'Never' is used in affirmative structures to give a negative meaning about one's life experience."</i>
+        <br><br>
+        <b>Write (T) for True or (F) for False according to the text:</b>
+        <br><br>
+        <b>a) <input type="text" class="answer-input" style="width: 50px !important; display: inline-block;" data-ans-idx="0"></b> 'Just' is the correct adverb to use when an action happened a long time ago.
+        <br><br>
+        <b>b) <input type="text" class="answer-input" style="width: 50px !important; display: inline-block;" data-ans-idx="1"></b> According to the text, 'Yet' should be placed at the end of the sentence.
+        <br><br>
+        <b>c) <input type="text" class="answer-input" style="width: 50px !important; display: inline-block;" data-ans-idx="2"></b> 'Ever' is typically used in questions to ask about experiences.
+        <br><br>
+        <b>d) <input type="text" class="answer-input" style="width: 50px !important; display: inline-block;" data-ans-idx="3"></b> 'Already' is primarily used in negative sentences to show expectation.
+    `,
+    correctAnswers: ["F", "T", "T", "F"],
+    hints: [
+        "A: Check the definition of 'Just' in the first lines.",
+        "B: Where does the text say 'Yet' should be placed?",
+        "C: Look for the word 'Ever' and the word 'questions'.",
+        "D: Does 'Already' go in affirmative or negative sentences?"
+    ]
+},
+{
+    id: "q10",
+    type: "short-answer-double",
+    questionText: `
+        <b>Adverbs of Time - Fill in the blanks with the correct rule:</b><br>
+        <div style="border: 1px solid #000; padding: 10px; text-align: center; margin-bottom: 15px; background-color: #f9f9f9; font-size: 0.9em;">
+            just | ever | yet | already | since
+        </div>
+        
+        <b>a)</b> We use <input type="text" class="answer-input" style="width: 100px !important; display: inline-block;" data-ans-idx="0"> to talk about a specific starting point in time (ex: 2010).
+        <br><br>
+        <b>b)</b> Use <input type="text" class="answer-input" style="width: 100px !important; display: inline-block;" data-ans-idx="1"> in questions to ask if someone has done something at any time in their life.
+        <br><br>
+        <b>c)</b> The adverb <input type="text" class="answer-input" style="width: 100px !important; display: inline-block;" data-ans-idx="2"> is placed at the end of negative sentences and questions.
+        <br><br>
+        <b>d)</b> Use <input type="text" class="answer-input" style="width: 100px !important; display: inline-block;" data-ans-idx="3"> to say that something happened very recently (a moment ago).
+        <br><br>
+        <b>e)</b> We use <input type="text" class="answer-input" style="width: 100px !important; display: inline-block;" data-ans-idx="4"> to show that something happened sooner than expected.
+    `,
+    correctAnswers: [
+        "since", 
+        "ever", 
+        "yet", 
+        "just", 
+        "already"
+    ],
+    hints: [
+        "A: Indica o 'início' de um período.",
+        "B: Comum em perguntas como 'Have you ____ been to...?'",
+        "C: Esta palavra sempre 'fecha' a frase.",
+        "D: Indica uma ação que acabou de acontecer.",
+        "E: Geralmente usada em frases afirmativas para algo que já foi feito."
+    ]
+},
+{
+    id: "q11",
+    type: "short-answer-double",
+    questionText: `
+        <b>Adverbs in Context - Complete the sentences with the best option:</b><br>
+        <div style="border: 1px solid #000; padding: 10px; text-align: center; margin-bottom: 15px; background-color: #f9f9f9; font-size: 0.9em;">
+            just | ever | yet | already | never
+        </div>
+        
+        <b>a)</b> "I am not hungry. I have <input type="text" class="answer-input" style="width: 100px !important; display: inline-block;" data-ans-idx="0"> eaten a big sandwich." (A moment ago)
+        <br><br>
+        <b>b)</b> "Have you <input type="text" class="answer-input" style="width: 100px !important; display: inline-block;" data-ans-idx="1"> traveled to Japan in your life?"
+        <br><br>
+        <b>c)</b> "Don't worry about the dishes. I have <input type="text" class="answer-input" style="width: 100px !important; display: inline-block;" data-ans-idx="2"> washed them." (Before you asked)
+        <br><br>
+        <b>d)</b> "I am so sad. I have <input type="text" class="answer-input" style="width: 100px !important; display: inline-block;" data-ans-idx="3"> seen the ocean before." (Experience)
+        <br><br>
+        <b>e)</b> "The class is over, but the students haven't left the room <input type="text" class="answer-input" style="width: 100px !important; display: inline-block;" data-ans-idx="4">."
+    `,
+    correctAnswers: [
+        "just", 
+        "ever", 
+        "already", 
+        "never", 
+        "yet"
+    ],
+    hints: [
+        "A: Ação que acabou de acontecer.",
+        "B: Perguntando sobre experiências de vida.",
+        "C: Algo feito antes do esperado.",
+        "D: Sentido negativo de 'nunca'.",
+        "E: Final de frase negativa."
+    ]
+},
+{
+    id: "q12",
+    type: "short-answer-double",
+    questionText: `
+        <b>Present Perfect - Use "since" or "for" to complete the sentences:</b><br>
+        <div style="border: 1px solid #000; padding: 10px; text-align: center; margin-bottom: 15px; background-color: #f9f9f9; font-size: 0.9em;">
+            since | for
+        </div>
+        
+        <b>a)</b> "I have lived in Fortaleza <input type="text" class="answer-input" style="width: 100px !important; display: inline-block;" data-ans-idx="0"> ten years."
+        <br><br>
+        <b>b)</b> "She has worked at the State Public Prosecutor's Office <input type="text" class="answer-input" style="width: 100px !important; display: inline-block;" data-ans-idx="1"> 2015."
+        <br><br>
+        <b>c)</b> "They have been married <input type="text" class="answer-input" style="width: 100px !important; display: inline-block;" data-ans-idx="2"> a long time."
+        <br><br>
+        <b>d)</b> "We haven't seen each other <input type="text" class="answer-input" style="width: 100px !important; display: inline-block;" data-ans-idx="3"> last Christmas."
+        <br><br>
+        <b>e)</b> "He has played basketball <input type="text" class="answer-input" style="width: 100px !important; display: inline-block;" data-ans-idx="4"> two hours."
+    `,
+    correctAnswers: [
+        "for", 
+        "since", 
+        "for", 
+        "since", 
+        "for"
+    ],
+    hints: [
+        "A: 'Ten years' é um período de tempo total.",
+        "B: '2015' é o ano exato em que a ação começou.",
+        "C: 'A long time' é uma duração, não uma data.",
+        "D: 'Last Christmas' é o ponto específico no calendário.",
+        "E: 'Two hours' indica quanto tempo a ação durou."
     ]
 }
+
 ];
 
 
