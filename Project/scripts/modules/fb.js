@@ -347,62 +347,166 @@ const bankInterpMC = [
         "D: 'Last Christmas' é o ponto específico no calendário.",
         "E: 'Two hours' indica quanto tempo a ação durou."
     ]
+},
+{
+    id: "q13",
+    type: "short-answer-double",
+    questionText: `
+        <b>Grammar Repair: Rewrite the sentences correctly in the Present Perfect:</b><br>
+        <i>Identify the error in each sentence and type the full correct version below:</i><br><br>
+        
+        <b>a)</b> "I has seen that movie yesterday."<br>
+        <input type="text" class="answer-input" data-ans-idx="0" style="width: 100% !important; max-width: 400px; display: block; margin-top: 5px;" placeholder="Rewrite correctly here...">
+        <br>
+        <b>b)</b> "She have lived here since two years."<br>
+        <input type="text" class="answer-input" data-ans-idx="1" style="width: 100% !important; max-width: 400px; display: block; margin-top: 5px;" placeholder="Rewrite correctly here...">
+        <br>
+        <b>c)</b> "They have already went to the party."<br>
+        <input type="text" class="answer-input" data-ans-idx="2" style="width: 100% !important; max-width: 400px; display: block; margin-top: 5px;" placeholder="Rewrite correctly here...">
+        <br>
+        <b>d)</b> "Have you ever ate Japanese food?"<br>
+        <input type="text" class="answer-input" data-ans-idx="3" style="width: 100% !important; max-width: 400px; display: block; margin-top: 5px;" placeholder="Rewrite correctly here...">
+        <br>
+        <b>e)</b> "We have not finished the test already."<br>
+        <input type="text" class="answer-input" data-ans-idx="4" style="width: 100% !important; max-width: 400px; display: block; margin-top: 5px;" placeholder="Rewrite correctly here...">
+    `,
+    correctAnswers: [
+        "I have seen that movie", 
+        "She has lived here for two years", 
+        "They have already gone to the party", 
+        "Have you ever eaten Japanese food", 
+        "We have not finished the test yet"
+    ],
+    hints: [
+        "A: 'I' usa HAVE e não se usa 'yesterday' no Present Perfect.",
+        "B: 'She' usa HAS e para períodos de tempo usamos FOR.",
+        "C: O particípio de GO é GONE, não WENT.",
+        "D: O particípio de EAT é EATEN.",
+        "E: Em frases negativas, usamos YET no final em vez de already."
+    ]
+},
+{
+    id: "q14",
+    type: "short-answer-double",
+    questionText: `
+        <b>Present Perfect Fix: Correct the sentences:</b><br>
+        <i>Identify the error related to <b>since, for, just, yet</b> or <b>already</b> and rewrite the full correct sentence:</i><br><br>
+        
+        <b>a)</b> "I have lived here since five years."<br>
+        <input type="text" class="answer-input" data-ans-idx="0" style="width: 100% !important; max-width: 400px; display: block; margin-top: 5px;" placeholder="Type the correct sentence...">
+        <br>
+        <b>b)</b> "Have you already finished the homework?"<br>
+        <input type="text" class="answer-input" data-ans-idx="1" style="width: 100% !important; max-width: 400px; display: block; margin-top: 5px;" placeholder="Type the correct sentence...">
+        <br>
+        <b>c)</b> "She has worked here for 2010."<br>
+        <input type="text" class="answer-input" data-ans-idx="2" style="width: 100% !important; max-width: 400px; display: block; margin-top: 5px;" placeholder="Type the correct sentence...">
+        <br>
+        <b>d)</b> "We have  yet arrived at the station."<br>
+        <input type="text" class="answer-input" data-ans-idx="3" style="width: 100% !important; max-width: 400px; display: block; margin-top: 5px;" placeholder="Type the correct sentence...">
+        <br>
+        <b>e)</b> "They haven't seen that movie already."<br>
+        <input type="text" class="answer-input" data-ans-idx="4" style="width: 100% !important; max-width: 400px; display: block; margin-top: 5px;" placeholder="Type the correct sentence...">
+    `,
+    correctAnswers: [
+        "I have lived here for five years", 
+        "Have you finished the homework yet", 
+        "She has worked here since 2010", 
+        "We have just arrived at the station", 
+        "They haven't seen that movie yet"
+    ],
+    hints: [
+        "A: 'Five years' é duração, use FOR.",
+        "B: Não use 'already' e 'yet' juntos na mesma pergunta.",
+        "C: '2010' é um ponto inicial, use SINCE.",
+        "D: 'Just' e 'yet' têm funções diferentes; escolha o que indica 'agora pouco'.",
+        "E: Em frases negativas no final, o correto é YET."
+    ]
 }
 
 ];
 
 
-const bankGrammar1 = [{
-        id: "int-mc-text-victoria",
-        type: "mc",
-        questionText: `
-            <b>Reading Comprehension:</b><br><br>
-            <i>"Victoria Falls is considered to be the world's largest waterfall based on the amount of falling water – every second, some 33,000 cubic feet (935 cubic meters) of water fall over. Still water levels are not constant, and they particularly rise during the flood season from February to May."</i>
-            <br><br>
-            <b>According to the text, when do the water levels typically rise?</b>`,
-        options: [
-            { letter: "A", text: "a) From January to March" },
-            { letter: "B", text: "b) During the dry season" },
-            { letter: "C", text: "c) From February to May" },
-            { letter: "D", text: "d) Every single day of the year" }
-        ],
-        correctAnswer: "C",
-        hints: ["Look for the months mentioned at the end of the text."]
-    },
-    {
-    id: "int-mc-myth-gods",
+const bankGrammar1 = [
+       {
+    id: "q16",
     type: "mc",
     questionText: `
-        <b>Reading Comprehension - Greek Mythology:</b><br><br>
-        <i>"Mount Olympus was the home of the twelve main gods. Among them, <b>Zeus</b> was the most powerful, ruling as the king. His brother, <b>Hades</b>, did not live on Olympus, as he ruled the dark world of the dead. Meanwhile, <b>Athena</b> was admired by the Greeks not for her strength in war, like Ares, but for her great wisdom and intelligence."</i>
-        <br><br>
-        <b>According to the text, what is the main difference between Athena and Ares?</b>`,
+        <b>Grammar Analysis - Adverbs of Time</b><br><br>
+        <img src="images/presentPerfect1.jpg" alt="Present Perfect Comic" style="width: 100%; max-width: 500px; height: auto; margin-bottom: 15px; border: 1px solid #ccc;"><br>
+        In the sentence <b>"I haven't read it yet!"</b>, why is the adverb <b>"yet"</b> used?`,
     options: [
-        { letter: "A", text: "Athena lived on Mount Olympus, but Ares lived in the underworld." },
-        { letter: "B", text: "Ares was the king of the gods, while Athena was a simple goddess." },
-        { letter: "C", text: "Athena was known for her wisdom, whereas Ares was known for war." },
-        { letter: "D", text: "Ares was more powerful than Zeus, according to the Greek myths." }
+        { letter: "A", text: "a) To indicate that the action happened a very short time ago." },
+        { letter: "B", text: "b) To show that something happened sooner than expected." },
+        { letter: "C", text: "c) To show that an action hasn't happened, but is expected to happen." },
+        { letter: "D", text: "d) To ask if someone has had that experience at any time in their life." }
     ],
     correctAnswer: "C",
-    hints: ["Compare what the text says about Athena's intelligence and Ares' strength."]
+    hints: [
+        "Remember: 'yet' is used in negative sentences and questions.",
+        "It implies that the action is expected to take place in the future."
+    ]
 },
     {
-        id: "int-mc-text-reef",
-        type: "mc",
-        questionText: `
-            <b>Reading Comprehension:</b><br><br>
-            <i>"The Great Barrier Reef is visible from outer space. Over 1500 different species of fish, and a great number of turtles, sharks and seahorses can regularly be seen in the reef."</i>
-            <br><br>
-            <b>What can be said about the Great Barrier Reef's visibility?</b>`,
-        options: [
-            { letter: "A", text: "a) It can only be seen with a microscope." },
-            { letter: "B", text: "b) It is visible from outer space." },
-            { letter: "C", text: "c) It is too small to be seen from planes." },
-            { letter: "D", text: "d) It can only be seen by 1500 species of fish." }
-        ],
-        correctAnswer: "B",
-        hints: ["Check the very first sentence of the text."]
-    }];
+    id: "q17",
+    type: "mc",
+    questionText: `
+        <b>Grammar Analysis - Life Experiences</b><br><br>
+        <img src="images/presentPerfect2.jpg" alt="Charlie Brown Comic" style="width: 100%; max-width: 400px; height: auto; margin-bottom: 15px; border: 1px solid #ccc;"><br>
+        In the question <b>"Have you ever known anyone who was happy?"</b>, what is the function of the word <b>"ever"</b>?`,
+    options: [
+        { letter: "A", text: "a) To describe an action that started in the past and continues now." },
+        { letter: "B", text: "b) To ask if something has happened at any time in a person's life." },
+        { letter: "C", text: "c) To indicate that the action happened just a few seconds ago." },
+        { letter: "D", text: "d) To emphasize that the action is happening at this exact moment." }
+    ],
+    correctAnswer: "B",
+    hints: [
+        "Think about Charlie Brown's context: he is asking about a life experience.",
+        "The word 'ever' is very common in Present Perfect questions to mean 'at any time'."
+    ]
+},
+    {
+    id: "q18",
+    type: "mc",
+    questionText: `
+        <b>Grammar Analysis - Duration with "For"</b><br><br>
+        <img src="images/presentPerfect3.jpg" alt="Hagar Comic" style="width: 100%; max-width: 500px; height: auto; margin-bottom: 15px; border: 1px solid #ccc;"><br>
+        In the first panel, Hagar says: <b>"I've had a headache for weeks"</b>. Why is the word <b>"for"</b> used in this sentence?`,
+    options: [
+        { letter: "A", text: "a) To show exactly when the headache started (the specific date)." },
+        { letter: "B", text: "b) To indicate that the headache happened just a few seconds ago." },
+        { letter: "C", text: "c) To describe the total period of time or duration of the headache." },
+        { letter: "D", text: "d) To say that he doesn't have a headache anymore." }
+    ],
+    correctAnswer: "C",
+    hints: [
+        "Remember: 'for' is used to measure a period of time (days, weeks, years).",
+        "It answers the question: 'How long?'"
+    ]
+},
+{
+    id: "q19",
+    type: "mc",
+    questionText: `
+        <b>Present Perfect Master Challenge - Time Markers</b><br><br>
+        <img src="images/presentPerfect11.jpeg" alt="Present Perfect Challenges" style="width: 100%; max-width: 500px; height: auto; margin-bottom: 15px; border: 1px solid #ccc;"><br>
+        Analyze the four comic strips above. Each blue spot represents a missing time marker (<b>since, for, ever, yet</b>).<br><br>
+        What is the correct sequence of words to complete the sentences from top to bottom?`,
+    options: [
+        { letter: "A", text: "a) for, since, yet, ever" },
+        { letter: "B", text: "b) since, for, ever, yet" },
+        { letter: "C", text: "c) since, for, yet, ever" },
+        { letter: "D", text: "d) just, already, ever, since" }
+    ],
+    correctAnswer: "B",
+    hints: [
+        "1. Monday is a starting point.",
+        "2. Weeks is a duration of time.",
+        "3. Questions about life experiences usually use 'ever'.",
+        "4. Negative sentences with expectation use 'yet' at the end."
+    ]
+}
+];
 const bankGrammar2 = [{
     id: "gram-was-were-fill",
     type: "short-answer-double",
