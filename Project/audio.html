@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronunciation Master</title>
+    <link rel="stylesheet" href="audio.css"> 
+    <script src="scripts/modules/audio.js" defer></script>
+</head>
+<body>
+    <div class="quiz-container">
+        <header>
+            <h1>Pronunciation Master</h1>
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <p id="status-pergunta">Frase 1 de 10</p>
+        </header>
+
+        <main>
+            <div class="frase-box">
+                <p id="frase-alvo">Carregando...</p>
+            </div>
+
+            <div id="transcricao-box" class="transcricao-box">
+                Clique no microfone para começar!
+            </div>
+
+            <div class="controls">
+                <button id="btn-gravar" class="btn-primary">🎤 Gravar</button>
+                <button id="btn-proxima" class="btn-success" disabled>Enviar Resposta ➔</button>
+            </div>
+        </main>
+    </div>
+
+    <div id="modal-resultado" class="modal hidden">
+        <div class="modal-content">
+            <h2>Treino Concluído!</h2>
+            <p id="pontuacao-final"></p>
+            <button onclick="location.reload()" class="btn-primary">Tentar Novamente</button>
+        </div>
+    </div>
+
+</body>
+</html>
