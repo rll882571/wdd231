@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listen & Repeat</title>
+    <link rel="stylesheet" href="audio.css"> 
+    <script src="scripts/modules/audio2.js" defer></script>
+</head>
+<body>
+    <div class="quiz-container">
+        <header>
+            <h1>Listen & Repeat</h1>
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <p id="status-pergunta">Palavra 1 de 5</p>
+        </header>
+
+        <main>
+            <div class="frase-box">
+                <button id="btn-ouvir" class="btn-primary" style="background: #2c3e50;">🔊 Ouvir Palavra</button>
+                <p id="frase-alvo" class="hidden">---</p> 
+            </div>
+
+            <div id="transcricao-box" class="transcricao-box">
+                Ouça o áudio e repita!
+            </div>
+
+            <div class="controls">
+                <button id="btn-gravar" class="btn-primary">🎤 Gravar</button>
+                <button id="btn-proxima" class="btn-success" disabled>Verificar ➔</button>
+            </div>
+        </main>
+    </div>
+
+    <div id="modal-resultado" class="modal hidden">
+        <div class="modal-content">
+            <h2>Treino Concluído!</h2>
+            <p id="pontuacao-final"></p>
+            <button onclick="location.reload()" class="btn-primary">Tentar Novamente</button>
+        </div>
+    </div>
+</body>
+</html>
