@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de Audição - Pronúncia</title>
+    <link rel="stylesheet" href="random.css"> 
+    <script src="scripts/modules/random.js" defer></script>
+</head>
+<body>
+    <div class="quiz-container">
+        <header>
+            <h1>Qual é o áudio correto?</h1>
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+            <p id="status-pergunta">Carregando desafio...</p>
+        </header>
+
+        <main>
+            <div class="frase-box">
+                <p>Encontre o áudio para:</p>
+                <h2 id="palavra-alvo">---</h2>
+            </div>
+
+            <div class="audio-grid">
+                <button class="btn-audio-play" data-index="0">
+                    <span class="play-icon">▶</span>
+                    <span class="play-number"></span>
+                </button>
+                <button class="btn-audio-play" data-index="1">
+                    <span class="play-icon">▶</span>
+                    <span class="play-number"></span>
+                </button>
+                <button class="btn-audio-play" data-index="2">
+                    <span class="play-icon">▶</span>
+                    <span class="play-number"></span>
+                </button>
+                <button class="btn-audio-play" data-index="3">
+                    <span class="play-icon">▶</span>
+                    <span class="play-number"></span>
+                </button>
+                <button class="btn-audio-play" data-index="4">
+                    <span class="play-icon">▶</span>
+                    <span class="play-number"></span>
+                </button>
+            </div>
+
+            <div class="controls">
+                <button id="btn-verificar" class="btn-success" disabled>Verificar Resposta ➔</button>
+            </div>
+        </main>
+    </div>
+
+    <div id="modal-resultado" class="modal hidden">
+        <div class="modal-content">
+            <h2>Resultado</h2>
+            <p id="pontuacao-final"></p>
+            <button onclick="location.reload()" class="btn-primary">Jogar Novamente</button>
+        </div>
+    </div>
+</body>
+</html>
