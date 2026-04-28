@@ -21,12 +21,14 @@ const bancoDeDadosCompleto = [
     { audio: "audios/way.mp3", portugues: "Caminho / Jeito" }
 ];
 
-// Criamos uma cópia da lista que vamos "esvaziar" para não repetir
+// 1. Pilha de descarte para evitar repetição
 let palavrasDisponiveis = [...bancoDeDadosCompleto];
 
 let acertos = 0;
 let rodadaAtual = 0;
-const totalRodadas = 10; 
+// 2. DINÂMICO: O total de rodadas agora é o tamanho da sua lista de palavras
+const totalRodadas = bancoDeDadosCompleto.length; 
+
 let opcoesDaRodada = [];
 let indiceCorreto = null;
 let escolhaUsuario = null;
@@ -42,26 +44,24 @@ function iniciarRodada() {
     btnVerificar.disabled = true;
     botoesAudio.forEach(btn => btn.classList.remove('active'));
 
-    // 1. Sorteia a palavra CORRETA da lista de disponíveis para NÃO repetir
+    // Sorteia e remove a correta da lista de disponíveis
     const indexAleatorio = Math.floor(Math.random() * palavrasDisponiveis.length);
     const palavraCorreta = palavrasDisponiveis[indexAleatorio];
-
-    // 2. Remove a palavra escolhida da lista de disponíveis
     palavrasDisponiveis.splice(indexAleatorio, 1);
 
-    // 3. Pega outras 4 palavras aleatórias da lista COMPLETA para preencher os botões (distratores)
+    // Pega 4 distratores da lista original (que não sejam a correta)
     let outrasOpcoes = bancoDeDadosCompleto
-        .filter(p => p.audio !== palavraCorreta.audio) // Garante que não pega a correta de novo
+        .filter(p => p.audio !== palavraCorreta.audio)
         .sort(() => 0.5 - Math.random())
         .slice(0, 4);
 
-    // 4. Junta a correta com as outras e embaralha a posição nos 5 botões
+    // Embaralha as 5 opções nos botões
     opcoesDaRodada = [palavraCorreta, ...outrasOpcoes].sort(() => 0.5 - Math.random());
-    
-    // 5. Descobre em qual botão a correta caiu
     indiceCorreto = opcoesDaRodada.findIndex(p => p.audio === palavraCorreta.audio);
     
     displayPalavra.textContent = palavraCorreta.portugues;
+    
+    // Atualiza status e barra de progresso (Page Audit: Navigation & Wayfinding)
     document.getElementById('status-pergunta').textContent = `Pergunta ${rodadaAtual + 1} de ${totalRodadas}`;
     progressBar.style.width = `${(rodadaAtual / totalRodadas) * 100}%`;
 }
@@ -81,13 +81,12 @@ btnVerificar.onclick = () => {
     if (escolhaUsuario === indiceCorreto) {
         acertos++;
     } else {
-        alert(`A resposta certa era o áudio ${indiceCorreto + 1}`);
+        alert(`Resposta incorreta. O áudio certo era o número ${indiceCorreto + 1}`);
     }
 
     rodadaAtual++;
     
-    // Se ainda houver rodadas e palavras disponíveis
-    if (rodadaAtual < totalRodadas && palavrasDisponiveis.length > 0) {
+    if (rodadaAtual < totalRodadas) {
         iniciarRodada();
     } else {
         finalizarJogo();
@@ -95,8 +94,9 @@ btnVerificar.onclick = () => {
 };
 
 function finalizarJogo() {
+    progressBar.style.width = "100%";
     document.getElementById('modal-resultado').classList.remove('hidden');
-    document.getElementById('pontuacao-final').textContent = `Fim! Você acertou ${acertos} de ${rodadaAtual}.`;
+    document.getElementById('pontuacao-final').textContent = `Concluído! Você acertou ${acertos} de ${totalRodadas} palavras.`;
 }
 
 iniciarRodada();
