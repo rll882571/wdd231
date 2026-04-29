@@ -1,34 +1,33 @@
+// 1. Configurações da ElevenLabs - USE SUA CHAVE AQUI
+const API_KEY = "sk_2f650b3196aca4ee39ec79c3546e67089bce5a3f67908215"; 
+const VOICE_ID = "hpp4J3VqNfWAUOO0d1Us"; // Voz "Rachel" (Feminina/Natural)
+
 const bancoDeDadosCompleto = [
-    { audio: "audios/once.mp3", portugues: "Uma vez" },
-    { audio: "audios/there.mp3", portugues: "Lá / Ali" },
-    { audio: "audios/was.mp3", portugues: "Era / Estava" },
-    { audio: "audios/young.mp3", portugues: "Jovem" },
-    { audio: "audios/live.mp3", portugues: "Viver / Morar" },
-    { audio: "audios/with.mp3", portugues: "Com" },
-    { audio: "audios/his.mp3", portugues: "Dele" },
-    { audio: "audios/mother.mp3", portugues: "Mãe" },
-    { audio: "audios/on.mp3", portugues: "Em / Sobre" },
-    { audio: "audios/small.mp3", portugues: "Pequeno" },
-    { audio: "audios/farm.mp3", portugues: "Fazenda" },
-    { audio: "audios/at.mp3", portugues: "Em / No" },
-    { audio: "audios/foot.mp3", portugues: "Pé / Base" },
-    { audio: "audios/mountain.mp3", portugues: "Montanha" },
-    { audio: "audios/were.mp3", portugues: "Eram / Estavam" },
-    { audio: "audios/very.mp3", portugues: "Muito" },
-    { audio: "audios/poor.mp3", portugues: "Pobre" },
-    { audio: "audios/money.mp3", portugues: "Dinheiro" },
-    { audio: "audios/making.mp3", portugues: "Fazendo" },
-    { audio: "audios/way.mp3", portugues: "Caminho / Jeito" }
+    { texto: "Once", portugues: "Uma vez" },
+    { texto: "There Was", portugues: "Havia / Tinha" },
+    { texto: "Young", portugues: "Jovem" },
+    { texto: "Live", portugues: "Viver / Morar" },
+    { texto: "Lived", portugues: "Viveu / Morou" },
+    { texto: "With", portugues: "Com" },
+    { texto: "His", portugues: "Dele" },
+    { texto: "Mother", portugues: "Mãe" },
+    { texto: "On a Small Farm", portugues: "Em um apequena fazenda" },
+    { texto: "At Foot", portugues: "pé" },
+    { texto: "Mountain", portugues: "Montanha" },
+    { texto: "Were", portugues: "Eram / Estavam" },
+    { texto: "Very", portugues: "Muito" },
+    { texto: "Poor", portugues: "Pobre" },
+    { texto: "They were very Poor", portugues: "Eles eram muito pobres" },
+    { texto: "Money", portugues: "Dinheiro" },
+    { texto: "Making", portugues: "Fazendo" },
+    { texto: "Way", portugues: "Caminho / Jeito" },
+    { texto: "Their only way of making money", portugues: "A ulnima maneira deles fazerem dinheiro" }
 ];
 
-// 1. Pilha de descarte para evitar repetição
 let palavrasDisponiveis = [...bancoDeDadosCompleto];
-
 let acertos = 0;
 let rodadaAtual = 0;
-// 2. DINÂMICO: O total de rodadas agora é o tamanho da sua lista de palavras
 const totalRodadas = bancoDeDadosCompleto.length; 
-
 let opcoesDaRodada = [];
 let indiceCorreto = null;
 let escolhaUsuario = null;
@@ -39,37 +38,66 @@ const botoesAudio = document.querySelectorAll('.btn-audio-play');
 const btnVerificar = document.getElementById('btn-verificar');
 const progressBar = document.getElementById('progress-bar');
 
+// --- FUNÇÃO PARA CHAMAR A API DA ELEVENLABS ---
+async function falarComElevenLabs(texto) {
+    try {
+        const response = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`, {
+            method: "POST",
+            headers: {
+                "xi-api-key": API_KEY, // A ElevenLabs usa esse cabeçalho específico
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                text: texto,
+                model_id: "eleven_multilingual_v2",
+                voice_settings: {
+                    stability: 0.5,
+                    similarity_boost: 0.75
+                }
+            })
+        });
+
+        if (!response.ok) {
+            const erroData = await response.json();
+            console.error("Detalhes do erro:", erroData);
+            throw new Error("Erro na API da ElevenLabs.");
+        }
+
+        const blob = await response.blob();
+        const urlAudio = URL.createObjectURL(blob);
+        audioPlayer.src = urlAudio;
+        audioPlayer.play();
+    } catch (error) {
+        console.error("Erro ElevenLabs:", error);
+        alert("Ops! Verifique se a chave está ativa ou se o limite gratuito acabou.");
+    }
+}
+
 function iniciarRodada() {
     escolhaUsuario = null;
     btnVerificar.disabled = true;
     botoesAudio.forEach(btn => btn.classList.remove('active'));
 
-    // Sorteia e remove a correta da lista de disponíveis
     const indexAleatorio = Math.floor(Math.random() * palavrasDisponiveis.length);
     const palavraCorreta = palavrasDisponiveis[indexAleatorio];
     palavrasDisponiveis.splice(indexAleatorio, 1);
 
-    // Pega 4 distratores da lista original (que não sejam a correta)
     let outrasOpcoes = bancoDeDadosCompleto
-        .filter(p => p.audio !== palavraCorreta.audio)
+        .filter(p => p.texto !== palavraCorreta.texto)
         .sort(() => 0.5 - Math.random())
         .slice(0, 4);
 
-    // Embaralha as 5 opções nos botões
     opcoesDaRodada = [palavraCorreta, ...outrasOpcoes].sort(() => 0.5 - Math.random());
-    indiceCorreto = opcoesDaRodada.findIndex(p => p.audio === palavraCorreta.audio);
+    indiceCorreto = opcoesDaRodada.findIndex(p => p.texto === palavraCorreta.texto);
     
     displayPalavra.textContent = palavraCorreta.portugues;
-    
-    // Atualiza status e barra de progresso (Page Audit: Navigation & Wayfinding)
     document.getElementById('status-pergunta').textContent = `Pergunta ${rodadaAtual + 1} de ${totalRodadas}`;
     progressBar.style.width = `${(rodadaAtual / totalRodadas) * 100}%`;
 }
 
 botoesAudio.forEach((btn, index) => {
     btn.onclick = () => {
-        audioPlayer.src = opcoesDaRodada[index].audio;
-        audioPlayer.play();
+        falarComElevenLabs(opcoesDaRodada[index].texto);
         botoesAudio.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         escolhaUsuario = index;
@@ -81,22 +109,16 @@ btnVerificar.onclick = () => {
     if (escolhaUsuario === indiceCorreto) {
         acertos++;
     } else {
-        alert(`Resposta incorreta. O áudio certo era o número ${indiceCorreto + 1}`);
+        alert(`Incorreto! A resposta certa era o botão ${indiceCorreto + 1}`);
     }
-
     rodadaAtual++;
-    
-    if (rodadaAtual < totalRodadas) {
-        iniciarRodada();
-    } else {
-        finalizarJogo();
-    }
+    if (rodadaAtual < totalRodadas) iniciarRodada();
+    else finalizarJogo();
 };
 
 function finalizarJogo() {
-    progressBar.style.width = "100%";
     document.getElementById('modal-resultado').classList.remove('hidden');
-    document.getElementById('pontuacao-final').textContent = `Concluído! Você acertou ${acertos} de ${totalRodadas} palavras.`;
+    document.getElementById('pontuacao-final').textContent = `Treino concluído! Você acertou ${acertos} de ${totalRodadas}.`;
 }
 
 iniciarRodada();
