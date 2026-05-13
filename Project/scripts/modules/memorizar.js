@@ -1,23 +1,143 @@
 const words = [
     {
-        english: "Apple",
-        portuguese: "maçã"
+        english: "once",
+        portuguese: "uma vez"
     },
     {
-        english: "Dog",
-        portuguese: "cachorro"
+        english: "there was",
+        portuguese: "havia"
     },
     {
-        english: "House",
-        portuguese: "casa"
+        english: "Young men",
+        portuguese: "jovem"
     },
     {
-        english: "Book",
-        portuguese: "livro"
+        english: "lived",
+        portuguese: "morava"
     },
     {
-        english: "Water",
-        portuguese: "água"
+        english: "his",
+        portuguese: "dele"
+    },
+{
+        english: "small",
+        portuguese: "pequena"
+    },
+{
+        english: "at the foot",
+        portuguese: "no pé"
+    },
+{
+        english: "foggy",
+        portuguese: "nevoada"
+    },
+{
+        english: "mountain",
+        portuguese: "montanha"
+    },
+{
+        english: "were",
+        portuguese: "eram"
+    },
+{
+        english: "poor",
+        portuguese: "pobre"
+    },
+{
+        english: "their",
+        portuguese: "deles"
+    },
+{
+        english: "way",
+        portuguese: "maneira/jeito/caminho"
+    },
+{
+        english: "make",
+        portuguese: "fazer"
+    },
+{
+        english: "made",
+        portuguese: "fez"
+    },
+{
+        english: "of making",
+        portuguese: "de fazer"
+    },
+{
+        english: "was",
+        portuguese: "era/foi/estava/tinha(idade)"
+    },
+{
+        english: "sell",
+        portuguese: "vender"
+    },
+{
+        english: "sold",
+        portuguese: "vendeu"
+    },
+{
+        english: "was selling",
+        portuguese: "era vender/estava vendendo"
+    },
+{
+        english: "one morning",
+        portuguese: "certa manha"
+    },
+{
+        english: "his mother",
+        portuguese: "a mãe dele"
+    },
+{
+        english: "wake up",
+        portuguese: "acordar"
+    },
+{
+        english: "woke up",
+        portuguese: "acordou"
+    },
+{
+        english: "him",
+        portuguese: "ele"
+    },
+{
+        english: "early",
+        portuguese: "cedo"
+    },
+{
+        english: "late",
+        portuguese: "tarde"
+    },
+{
+        english: "go",
+        portuguese: "ir"
+    },
+{
+        english: "went",
+        portuguese: "foi"
+    },
+{
+        english: "at least",
+        portuguese: "no minimo"
+    },
+{
+        english: "less",
+        portuguese: "menos"
+    },
+{
+        english: "shout",
+        portuguese: "gritar"
+    },
+{
+        english: "half",
+        portuguese: "meio/metade"
+    },
+{
+        english: "meet",
+        portuguese: "encontar/conhecer"
+    },
+{
+        english: "met",
+        portuguese: "conheceu/encontrou"
     }
 ];
 
