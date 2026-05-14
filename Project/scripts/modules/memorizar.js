@@ -138,7 +138,116 @@ const words = [
 {
         english: "met",
         portuguese: "conheceu/encontrou"
+    },
+    {
+        english: "ask",
+        portuguese: "pedir/perguntar"
+    },
+    {
+        english: "asked",
+        portuguese: "perguntou/pediu"
+    },
+    {
+        english: "outside",
+        portuguese: "lado de fora"
+    },
+    {
+        english: "it was",
+        portuguese: "foi, era, estava"
+    },
+    {
+        english: "still",
+        portuguese: "ainda"
+    },
+    {
+        english: "dark",
+        portuguese: "escuro"
+    },
+    {
+        english: "cry",
+        portuguese: "chorar"
+    },
+    {
+        english: "crying",
+        portuguese: "chorando"
+    },
+    {
+        english: "our",
+        portuguese: "nossa"
+    },
+    {
+        english: "why",
+        portuguese: "porque"
+    },
+    {
+        english: "yawning",
+        portuguese: "bocejando"
+    },
+    {
+        english: "we",
+        portuguese: "nos"
+    },
+    {
+        english: "need",
+        portuguese: "precisar"
+    },
+    {
+        english: "fix",
+        portuguese: "concertar"
+    },
+    {
+        english: "there are",
+        portuguese: "existem/tem"
+    },
+    {
+        english: "holes",
+        portuguese: "buracos"
+    },
+    {
+        english: "roof",
+        portuguese: "teto"
+    },
+    {
+        english: "brokem",
+        portuguese: "quebrado"
+    },
+    {
+        english: "front door",
+        portuguese: "porta da frente"
+    },
+    {
+        english: "come",
+        portuguese: "vir/chegar"
+    },
+    {
+        english: "coming",
+        portuguese: "chegando/vindo"
+    },
+    {
+        english: "soon",
+        portuguese: "breve"
+    },
+    {
+        english: "if",
+        portuguese: "se"
+    },
+    {
+        english: "the cold",
+        portuguese: "o frio"
+    },
+    {
+        english: "will kill",
+        portuguese: "ira matar"
+    },
+    {
+        english: "us",
+        portuguese: "nós"
+    },
+    {
+        english: "pack",
+        portuguese: "arrumar mala"
     }
+    
 ];
 
 let currentIndex = 0;
